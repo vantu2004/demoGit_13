@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02A87476-D1ED-4CAE-8213-3890068D4DA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project_Windows_04</RootNamespace>
+    <AssemblyName>Project_Windows_04</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azure.Core, Version=1.35.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\Azure.Core.1.35.0\lib\net472\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.10.3.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>packages\Azure.Identity.1.10.3\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v22.2.Core.Desktop, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Data.SqlClient.5.2.0\lib\net462\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=4.56.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Identity.Client.4.56.0\lib\net461\Microsoft.Identity.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=4.56.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Identity.Client.Extensions.Msal.4.56.0\lib\netstandard2.0\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Abstractions.6.35.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.6.35.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Logging.6.35.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Protocols.6.35.0\lib\net472\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.6.35.0\lib\net472\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Tokens.6.35.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.6.0.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.6.0.1\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.35.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\System.IdentityModel.Tokens.Jwt.6.35.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.Data.1.0.2\lib\net461\System.Memory.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.ProtectedData.4.7.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.4.7.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\dbConnection.cs" />
+    <Compile Include="Class\Tài khoản\DangKy_DangNhap_DAO.cs" />
+    <Compile Include="Form\Chi tiết\ChiTietCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Chi tiết\ChiTietCV.Designer.cs">
+      <DependentUpon>ChiTietCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Chi tiết\ChiTietTinTuyenDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Chi tiết\ChiTietTinTuyenDung.Designer.cs">
+      <DependentUpon>ChiTietTinTuyenDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Đăng nhập\TuyenDung_UngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Đăng nhập\TuyenDung_UngVien.Designer.cs">
+      <DependentUpon>TuyenDung_UngVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Đăng nhập\DangKy_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Đăng nhập\DangKy_DangNhap.Designer.cs">
+      <DependentUpon>DangKy_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Đăng nhập\Main_TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Đăng nhập\Main_TrangChu.Designer.cs">
+      <DependentUpon>Main_TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form\Tuyển dụng\TuyenDung_TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tuyển dụng\TuyenDung_TrangChu.Designer.cs">
+      <DependentUpon>TuyenDung_TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Ứng viên\UngVien_TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Ứng viên\UngVien_TrangChu.Designer.cs">
+      <DependentUpon>UngVien_TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Tài khoản\TaiKhoan.cs" />
+    <Compile Include="Class\Tuyển dụng\TuyenDung.cs" />
+    <Compile Include="Form\Tuyển dụng\TuyenDung_DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tuyển dụng\TuyenDung_DangKy.Designer.cs">
+      <DependentUpon>TuyenDung_DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Tuyển dụng\TuyenDung_DAO.cs" />
+    <Compile Include="Class\Tuyển dụng\TuyenDung_Tin.cs" />
+    <Compile Include="Class\TrangChu_DAO.cs" />
+    <Compile Include="UC_Controls\UC_BangTin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_BangTin.Designer.cs">
+      <DependentUpon>UC_BangTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TinTuyenDung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TinTuyenDung.Designer.cs">
+      <DependentUpon>UC_TinTuyenDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TinDaDang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TinDaDang.Designer.cs">
+      <DependentUpon>UC_TinDaDang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Ứng viên\UngVien.cs" />
+    <Compile Include="Form\Ứng viên\UngVien_DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Ứng viên\UngVien_DangKy.Designer.cs">
+      <DependentUpon>UngVien_DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Ứng viên\UngVien_DAO.cs" />
+    <Compile Include="Class\Ứng viên\UngVien_Tin.cs" />
+    <Compile Include="Class\Xuất thông tin\Xuat_ThongTin.cs" />
+    <Compile Include="UC_Controls\UC_CVs_daNop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_CVs_daNop.Designer.cs">
+      <DependentUpon>UC_CVs_daNop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Xuất thông tin\Xuat_ThongTin_DAO.cs" />
+    <EmbeddedResource Include="Form\Chi tiết\ChiTietCV.resx">
+      <DependentUpon>ChiTietCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Chi tiết\ChiTietTinTuyenDung.resx">
+      <DependentUpon>ChiTietTinTuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tuyển dụng\TuyenDung_TrangChu.resx">
+      <DependentUpon>TuyenDung_TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Đăng nhập\DangKy_DangNhap.resx">
+      <DependentUpon>DangKy_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Đăng nhập\Main_TrangChu.resx">
+      <DependentUpon>Main_TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Đăng nhập\TuyenDung_UngVien.resx">
+      <DependentUpon>TuyenDung_UngVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Ứng viên\UngVien_TrangChu.resx">
+      <DependentUpon>UngVien_TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Tuyển dụng\TuyenDung_DangKy.resx">
+      <DependentUpon>TuyenDung_DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_BangTin.resx">
+      <DependentUpon>UC_BangTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_TinDaDang.resx">
+      <DependentUpon>UC_TinDaDang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_TinTuyenDung.resx">
+      <DependentUpon>UC_TinTuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Ứng viên\UngVien_DangKy.resx">
+      <DependentUpon>UngVien_DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_CVs_daNop.resx">
+      <DependentUpon>UC_CVs_daNop.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\transparent-company-icon-office-building-icon-human-resources-5f8e10bd66c854.033630951603145917421.png" />
+    <None Include="Resources\vecteezy_o-email-e-enviar-icone-preto_200096011.png" />
+    <None Include="Resources\_0669a73f-6c59-47e6-b77d-8d4b6eb6f99f1.jpeg" />
+    <None Include="Resources\_0669a73f-6c59-47e6-b77d-8d4b6eb6f99f.jpeg" />
+    <None Include="Resources\pngwing.com %283%29.png" />
+    <None Include="Resources\pngwing.com %282%29.png" />
+    <None Include="Resources\pngwing.com %281%29.png" />
+    <None Include="Resources\pngwing.com.png" />
+    <None Include="Resources\pngegg %2817%29.png" />
+    <None Include="Resources\Screenshot 2024-02-29 004258.png" />
+    <None Include="Resources\experience.png" />
+    <None Include="Resources\isometric-landing-page-design-background-template.jpg" />
+    <None Include="Resources\2fa2f5bdd1a10.png" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\2.jpg" />
+    <None Include="Resources\3.jpg" />
+    <None Include="Resources\kisspng-clip-art-computer-icons-portable-network-graphics-font-work-svg-png-icon-free-download-391838-o-5c65783be93e67.4416976315501537879554.png" />
+    <None Include="Resources\job_942800.png" />
+    <None Include="Resources\kisspng-birthday-cake-bakery-wedding-cake-computer-icons-birth-date-5b2ec694aff869.8062975015297921487208.png" />
+    <None Include="Resources\kisspng-chief-executive-computer-icons-businessperson-5aeaec59c56a80.3532939915253453698086.png" />
+    <Content Include="Resources\kisspng-clip-art-computer-icons-scalable-vector-graphics-p-earth-location-map-world-navigation-pin-marker-svg-5bf236c7224d20.4334433015426003911405.png" />
+    <Content Include="Resources\kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.6946621115304120791875.png" />
+    <None Include="Resources\noun-experience-2036014.png" />
+    <None Include="Resources\pngegg %2816%29.png" />
+    <None Include="Resources\Lovepik_com-401710061-money.png" />
+    <None Include="Resources\kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.69466211153041207918752.png" />
+    <None Include="Resources\kisspng-computer-icons-information-clip-art-5aff14d9042d81.0094381815266664570171.png" />
+    <None Include="Resources\kisspng-computer-icons-symbol-history-material-5ac8c678eea467.1147393315231074489775.png" />
+    <None Include="Resources\kisspng-registered-trademark-symbol-service-mark-logo-dollar-sign-5ac0152346edc2.4227167215225377632905.png" />
+    <None Include="Resources\kisspng-computer-icons-five-pointed-star-circle-circulo-5ac930dde65260.0800085015231346859434.png" />
+    <None Include="Resources\kisspng-scalable-vector-graphics-computer-icons-portable-n-snowbears-5cb7a84816f6b3.8180413815555400400941.png" />
+    <None Include="Resources\kisspng-corporation-corporate-services-logo-brand-corporate-identity-icon-5b4b4286bd9ff6.7704482815316588867767.png" />
+    <None Include="Resources\kisspng-computer-icons-investor-investment-bank-symbols-salary-5ab0ffad142d79.5467246115215492290827.png" />
+    <None Include="Resources\kisspng-computer-icons-experience-stagiair-experience-5b20efb2862eb5.9663932815288851705496.png" />
+    <None Include="Resources\kisspng-star-silhouette-shape-clip-art-rating-star-5b51bfe0b58f29.8480018315320841927437.png" />
+    <None Include="Resources\kisspng-computer-icons-stock-photography-email-clip-art-simblo-5b4faed30f1343.1676878115319487550618.png" />
+    <None Include="Resources\kisspng-computer-icons-download-clip-art-name-tag-5ac0f763d08452.7040853015225956838541.png" />
+    <None Include="Resources\kisspng-gender-symbol-female-5ada9ac3046e66.5026924515242759070182.png" />
+    <None Include="Resources\kisspng-hierarchical-organization-business-management-hier-5b2fc32ab90b81.829071621529856810758.png" />
+    <None Include="Resources\kisspng-computer-icons-hierarchy-5ae173f77b01a9.2322034515247247275038.png" />
+    <None Include="Resources\kisspng-stopwatch-timer-clip-art-stopwatch-cliparts-5a76b357e59d45.0215386115177285999405.png" />
+    <None Include="Resources\kisspng-stopwatch-clock-clip-art-stopwatch-cliparts-5a7600c24b7758.0680084115176828823091.png" />
+    <None Include="Resources\kisspng-computer-icons-speed-test-timer-5acae4113a3aa0.6184639815232460972385.png" />
+    <Content Include="Resources\Lovepik_com-401714979-characters-of-different-professions.png" />
+    <None Include="Resources\name-icon.png" />
+    <Content Include="Resources\pngegg %2815%29.png" />
+    <None Include="Resources\pngegg %2815%291.png" />
+    <None Include="Resources\Lovepik_com-401714979-characters-of-different-professions1.png" />
+    <None Include="Resources\kisspng-computer-icons-work-experience-clip-art-experiential-5b06897787b6b0.7873029515271550635559.png" />
+    <None Include="Resources\kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.69466211153041207918751.png" />
+    <None Include="Resources\kisspng-clip-art-computer-icons-scalable-vector-graphics-p-earth-location-map-world-navigation-pin-marker-svg-5bf236c7224d20.43344330154260039114051.png" />
+    <Content Include="Resources\pngegg %2814%29.png" />
+    <None Include="Resources\pngegg %2814%291.png" />
+    <None Include="Resources\pngegg %2818%29.png" />
+    <None Include="Resources\Resume-Bullet-Point-Examples-e1655961799309.png" />
+    <None Include="Resources\pngegg %2819%29.png" />
+    <None Include="Resources\pngegg %2820%29.png" />
+    <None Include="Resources\pngegg %2821%29.png" />
+    <None Include="Resources\pngwing.com %283%291.png" />
+    <None Include="Resources\pngwing.com1.png" />
+    <None Include="Resources\pngwing.com2.png" />
+    <None Include="Resources\pngwing.com3.png" />
+    <None Include="Resources\pngegg.png" />
+    <None Include="Resources\pngegg %2822%29.png" />
+    <None Include="Resources\pngegg %2823%29.png" />
+    <Content Include="Resources\Screenshot 2024-03-05 204513.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Data.SqlClient.SNI.5.2.0\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
+  </Target>
+</Project>
