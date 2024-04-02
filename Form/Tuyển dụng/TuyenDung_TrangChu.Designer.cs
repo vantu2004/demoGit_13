@@ -124,7 +124,7 @@
             // 
             // pnl_thongTinTinTuyenDung
             // 
-            this.pnl_thongTinTinTuyenDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnl_thongTinTinTuyenDung.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnl_thongTinTinTuyenDung.AutoScroll = true;
             this.pnl_thongTinTinTuyenDung.BackColor = System.Drawing.Color.White;
@@ -449,7 +449,7 @@
             this.btn_hoanTat.TabIndex = 84;
             this.btn_hoanTat.Text = "Complete";
             this.btn_hoanTat.UseTransparentBackground = true;
-            this.btn_hoanTat.Click += new System.EventHandler(this.btn_hoanTat_Click);
+//            this.btn_hoanTat.Click += new System.EventHandler(this.btn_hoanTat_Click);
             // 
             // tbx_tenHR
             // 

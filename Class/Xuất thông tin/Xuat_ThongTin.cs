@@ -74,19 +74,6 @@ namespace Project_Windows_04
             xuatTT_DAO.ungTuyen(this.userType, this.IdCompany, this.IdJobPostings);
         }
 
-        private void Btn_sua_tinTuyenDung(object sender, EventArgs e)
-        {
-            TuyenDung_TrangChu TD_TC = new TuyenDung_TrangChu();
-            TD_TC.btn_hoanTat_Click(sender, e);
-
-            //  xóa tin đã đăng và cập nhật tin mới dựa vào IdJobPostings mới và IdJobPostings cũ
-            xuatTT_DAO.xoa_tinTuyenDung(this.IdJobPostings);
-            xuatTT_DAO.capNhat_IdJobPostings(TD_TC.IdJobPostings, this.IdJobPostings);
-
-            //load lại form
-            TD_TC.TuyenDung_TrangChu_Load(sender, e);
-        }
-
         public UC_TinDaDang them_tinDaDang(string IdCompany, string IdJobPostings, string tenCongViec, string ngayDang)
         {
             UC_TinDaDang UC_tinDaDang = new UC_TinDaDang();
@@ -94,28 +81,30 @@ namespace Project_Windows_04
             UC_tinDaDang.lbl_ngayDang.Text = ngayDang;
             UC_tinDaDang.lbl_tenCongViec.Text = tenCongViec;
 
-            // Lưu trữ thông tin vào thuộc tính Tag của nút btn_xoaTin
-            UC_tinDaDang.Tag = new Tuple<string, string>(IdCompany, IdJobPostings);
-            UC_tinDaDang.btn_xoaTin.Click += Btn_xoaTin_Click;
+            // Truyền trực tiếp biến vào phương thức xử lý sự kiện
+            UC_tinDaDang.btn_xoaTin.Click += (sender, e) => Btn_xoaTin_Click(IdCompany, IdJobPostings);
+            UC_tinDaDang.btn_suaTin.Click += (sender, e) => Btn_suaTin_Click(sender, e, IdCompany, IdJobPostings);
 
             return UC_tinDaDang;
         }
 
-        private void Btn_xoaTin_Click(object sender, EventArgs e)
+        private void Btn_xoaTin_Click(string IdCompany, string IdJobPostings)
         {
-            Button btnXoaTin = sender as Button;
-            UC_TinDaDang myObject = btnXoaTin.Parent as UC_TinDaDang;
+            xuatTT_DAO.xoa_tinTuyenDung(IdCompany, IdJobPostings);
+        }
 
-            // Lấy thông tin từ thuộc tính Tag của nút
-            Tuple<string, string> tagData = myObject.btn_xoaTin.Tag as Tuple<string, string>;
+        private void Btn_suaTin_Click(object sender, EventArgs e, string IdCompany, string IdJobPostings)
+        {
+            //TuyenDung_TrangChu TD_TC = new TuyenDung_TrangChu();
+            //TD_TC.Btn_hoanTat_Click(sender, e);
 
-            // Truy cập vào các phần tử trong Tuple để lấy giá trị IdCompany và IdJobPostings
-            string IdCompany = tagData.Item1;
-            string IdJobPostings = tagData.Item2;
+            ////  xóa tin đã đăng và cập nhật tin mới dựa vào IdJobPostings mới và IdJobPostings cũ
+            //xuatTT_DAO.xoa_tinTuyenDung(IdCompany, IdJobPostings);
+            ////  cập nhật IdJobPostings cho Applications
+            //xuatTT_DAO.capNhat_IdJobPostings(TD_TC.IdJobPostings, IdJobPostings);
 
-            MessageBox.Show(IdCompany + " " + IdJobPostings);
-
-            //xuatTT_DAO.xoa_tinTuyenDung()
+            ////load lại form
+            //TD_TC.TuyenDung_TrangChu_Load(sender, e);
         }
 
         private void UC_tinDaDang_Click(object sender, EventArgs e)

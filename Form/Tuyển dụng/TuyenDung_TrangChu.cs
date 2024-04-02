@@ -60,7 +60,7 @@ namespace Project_Windows_04
         }
 
         //  mặc định thông tin của 1 NTD sẽ không đổi và chỉ thay đổi đc tin tuyển dụng
-        public void btn_hoanTat_Click(object sender, EventArgs e)
+        public void Btn_hoanTat_Click(object sender, EventArgs e)
         {
             //  tự động tạo IdJobPostings cho tin tuyển dụng
             Guid g = Guid.NewGuid();
@@ -79,7 +79,7 @@ namespace Project_Windows_04
 
                 //  mặc định khi tạo tin thì cũng add 1 UC_tinTuyenDung và 1 UC_tinDaDang vào flowlayoupanel
                 UC_BangTin_NTD.flpl_danhSachTinTuyenDung.Controls.Add(xuat_TT.them_tinTuyenDung(t, t.UserType));
-                //flpl_tinDaDang.Controls.Add(xuat_TT.them_tinDaDang(t.IdCompany, t.IdJobPostings, t.TenCongViec, t.NgayDang));
+                flpl_tinDaDang.Controls.Add(xuat_TT.them_tinDaDang(t.IdCompany, t.IdJobPostings, t.TenCongViec, t.NgayDang));
 
                 NTD_DAO.taoTin(t);
             }

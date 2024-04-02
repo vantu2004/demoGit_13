@@ -100,11 +100,12 @@ namespace Project_Windows_04
                     //  tạo 1 đối tương TuyenDung chứa thông tin tài khoản hiện tại đang đăng nhập để truyền Id + thông tin tài khoản hiện tại cho form TuyenDung_TrangChu
                     TuyenDung t = new TuyenDung(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(6), data.GetString(7), data.GetString(8));
                     TuyenDung_TrangChu TD_TC = new TuyenDung_TrangChu();
+
                     //  đổ thông tin vào form
                     TD_TC.layDuLieu(t);
                     TD_TC.ShowDialog();
                     //  gọi event click để thực thi chức năng nút btn_hoanTat để tạo tin tuyển dụng
-                    TD_TC.btn_hoanTat.Click += TD_TC.btn_hoanTat_Click;
+                    TD_TC.btn_hoanTat.Click += TD_TC.Btn_hoanTat_Click;
                 }
                 else
                     MessageBox.Show("Not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
