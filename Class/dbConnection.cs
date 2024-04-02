@@ -105,7 +105,7 @@ namespace Project_Windows_04
                     TD_TC.layDuLieu(t);
                     TD_TC.ShowDialog();
                     //  gọi event click để thực thi chức năng nút btn_hoanTat để tạo tin tuyển dụng
-                    TD_TC.btn_hoanTat.Click += TD_TC.Btn_hoanTat_Click;
+                    TD_TC.UC_taoTin.btn_hoanTat.Click += TD_TC.Btn_hoanTat_Click1;
                 }
                 else
                     MessageBox.Show("Not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -236,6 +236,38 @@ namespace Project_Windows_04
             {
                 conn.Close();
             }
+        }
+
+        public TuyenDung_Tin thucThi_chiTietTin(string sqlQuery_chiTietTin)
+        {
+            try
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sqlQuery_chiTietTin, conn);
+                SqlDataReader data = cmd.ExecuteReader();
+
+                if (data.Read() == true)
+                {
+                    TuyenDung_Tin t = new TuyenDung_Tin(data.GetString(0), data.GetString(10), data.GetString(1), data.GetString(11), data.GetString(6), data.GetString(8),
+                        data.GetString(7), data.GetString(12), data.GetString(13), Convert.ToDouble(data.GetDecimal(14)), data.GetString(15), data.GetString(16), data.GetString(2),
+                        data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(17), data.GetString(18), data.GetString(19), data.GetString(20), data.GetString(21));
+
+                    return t;
+                }
+                else
+                    MessageBox.Show("Not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! '\n" + ex, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
         }
     }
 }

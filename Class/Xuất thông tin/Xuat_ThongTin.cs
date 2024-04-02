@@ -95,16 +95,11 @@ namespace Project_Windows_04
 
         private void Btn_suaTin_Click(object sender, EventArgs e, string IdCompany, string IdJobPostings)
         {
-            //TuyenDung_TrangChu TD_TC = new TuyenDung_TrangChu();
-            //TD_TC.Btn_hoanTat_Click(sender, e);
+            TuyenDung_ChinhSuaTin TD_CST = new TuyenDung_ChinhSuaTin();
 
-            ////  xóa tin đã đăng và cập nhật tin mới dựa vào IdJobPostings mới và IdJobPostings cũ
-            //xuatTT_DAO.xoa_tinTuyenDung(IdCompany, IdJobPostings);
-            ////  cập nhật IdJobPostings cho Applications
-            //xuatTT_DAO.capNhat_IdJobPostings(TD_TC.IdJobPostings, IdJobPostings);
+            TD_CST.layDuLieu(xuatTT_DAO.chiTietTin(IdCompany, IdJobPostings));
 
-            ////load lại form
-            //TD_TC.TuyenDung_TrangChu_Load(sender, e);
+            TD_CST.ShowDialog();
         }
 
         private void UC_tinDaDang_Click(object sender, EventArgs e)

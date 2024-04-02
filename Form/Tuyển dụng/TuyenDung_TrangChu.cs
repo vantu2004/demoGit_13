@@ -30,7 +30,13 @@ namespace Project_Windows_04
             NTD_DAO.load_tinDaDang(flpl_tinDaDang, IdCompany);
         }
 
-        private void pbx_logoCongTy_Click_1(object sender, EventArgs e)
+        private void UC_taoTin_Load(object sender, EventArgs e)
+        {
+            UC_taoTin.pbx_logoCongTy.Click += Pbx_logoCongTy_Click;
+            UC_taoTin.btn_hoanTat.Click += Btn_hoanTat_Click1;
+        }
+
+        private void Pbx_logoCongTy_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
@@ -39,8 +45,8 @@ namespace Project_Windows_04
                 Image image = Image.FromFile(ofd.FileName);
 
                 // Thiết lập hình ảnh cho PictureBox và điều chỉnh SizeMode
-                pbx_logoCongTy.Image = image;
-                pbx_logoCongTy.SizeMode = PictureBoxSizeMode.StretchImage;
+                UC_taoTin.pbx_logoCongTy.Image = image;
+                UC_taoTin.pbx_logoCongTy.SizeMode = PictureBoxSizeMode.StretchImage;
                 this.linkAnh = ofd.FileName;
             }
         }
@@ -50,17 +56,17 @@ namespace Project_Windows_04
             //  lấy Id tài khoản hiện tại đang đăng nhập
             this.IdCompany = NTD.Id;
             //  xuất toàn bộ thông tin của NTD đã đăng ký trước đó lên form
-            tbx_tenCongTy.Text = NTD.TenCongTy;
-            tbx_mangXaHoi.Text = NTD.MangXaHoi;
-            tbx_diaChi.Text = NTD.DiaChiCongTy;
-            tbx_tenHR.Text = NTD.TenHR;
-            tbx_emailHR.Text = NTD.EmailHR;
-            tbx_sdtHR.Text = NTD.SdtHR;
-            tbx_viTriCongTacHR.Text = NTD.ViTriCongTacHR;
+            UC_taoTin.tbx_tenCongTy.Text = NTD.TenCongTy;
+            UC_taoTin.tbx_mangXaHoi.Text = NTD.MangXaHoi;
+            UC_taoTin.tbx_diaChi.Text = NTD.DiaChiCongTy;
+            UC_taoTin.tbx_tenHR.Text = NTD.TenHR;
+            UC_taoTin.tbx_emailHR.Text = NTD.EmailHR;
+            UC_taoTin.tbx_sdtHR.Text = NTD.SdtHR;
+            UC_taoTin.tbx_viTriCongTacHR.Text = NTD.ViTriCongTacHR;
         }
 
         //  mặc định thông tin của 1 NTD sẽ không đổi và chỉ thay đổi đc tin tuyển dụng
-        public void Btn_hoanTat_Click(object sender, EventArgs e)
+        public void Btn_hoanTat_Click1(object sender, EventArgs e)
         {
             //  tự động tạo IdJobPostings cho tin tuyển dụng
             Guid g = Guid.NewGuid();
@@ -72,10 +78,10 @@ namespace Project_Windows_04
             if (kiemTra_null())
             {
                 //  dùng TuyenDung_Tin vì TuyenDung chỉ lưu thông tin cơ bản của NTD
-                TuyenDung_Tin t = new TuyenDung_Tin(IdCompany, g.ToString(), "Employer", linkAnh, tbx_tenCongTy.Text, tbx_mangXaHoi.Text, tbx_diaChi.Text,
-                cbx_nganhNghe.Text, tbx_tenCongViec.Text, Convert.ToDouble(tbx_luong.Text), cbx_kinhNghiem.Text, cbx_hinhThucLamViec.Text,
-                tbx_tenHR.Text, tbx_emailHR.Text, tbx_sdtHR.Text, tbx_viTriCongTacHR.Text, dtpr_ngayDang.Value.ToShortDateString(),
-                dtpr_hanChot.Value.ToShortDateString(), rtbx_moTaCongViec.Text, rtbx_yeuCauUngVien.Text, rtbx_quyenLoi.Text);
+                TuyenDung_Tin t = new TuyenDung_Tin(IdCompany, g.ToString(), "Employer", linkAnh, UC_taoTin.tbx_tenCongTy.Text, UC_taoTin.tbx_mangXaHoi.Text, UC_taoTin.tbx_diaChi.Text,
+                UC_taoTin.cbx_nganhNghe.Text, UC_taoTin.tbx_tenCongViec.Text, Convert.ToDouble(UC_taoTin.tbx_luong.Text), UC_taoTin.cbx_kinhNghiem.Text, UC_taoTin.cbx_hinhThucLamViec.Text,
+                UC_taoTin.tbx_tenHR.Text, UC_taoTin.tbx_emailHR.Text, UC_taoTin.tbx_sdtHR.Text, UC_taoTin.tbx_viTriCongTacHR.Text, UC_taoTin.dtpr_ngayDang.Value.ToShortDateString(),
+                UC_taoTin.dtpr_hanChot.Value.ToShortDateString(), UC_taoTin.rtbx_moTaCongViec.Text, UC_taoTin.rtbx_yeuCauUngVien.Text, UC_taoTin.rtbx_quyenLoi.Text);
 
                 //  mặc định khi tạo tin thì cũng add 1 UC_tinTuyenDung và 1 UC_tinDaDang vào flowlayoupanel
                 UC_BangTin_NTD.flpl_danhSachTinTuyenDung.Controls.Add(xuat_TT.them_tinTuyenDung(t, t.UserType));
@@ -89,9 +95,9 @@ namespace Project_Windows_04
 
         private bool kiemTra_null()
         {
-            if (string.IsNullOrEmpty(linkAnh) || string.IsNullOrEmpty(cbx_nganhNghe.Text) || string.IsNullOrEmpty(tbx_tenCongViec.Text)
-                || string.IsNullOrEmpty(tbx_luong.Text) || string.IsNullOrEmpty(cbx_kinhNghiem.Text) || string.IsNullOrEmpty(cbx_hinhThucLamViec.Text)
-                || string.IsNullOrEmpty(rtbx_moTaCongViec.Text) || string.IsNullOrEmpty(rtbx_yeuCauUngVien.Text) || string.IsNullOrEmpty(rtbx_quyenLoi.Text))
+            if (string.IsNullOrEmpty(linkAnh) || string.IsNullOrEmpty(UC_taoTin.cbx_nganhNghe.Text) || string.IsNullOrEmpty(UC_taoTin.tbx_tenCongViec.Text)
+                || string.IsNullOrEmpty(UC_taoTin.tbx_luong.Text) || string.IsNullOrEmpty(UC_taoTin.cbx_kinhNghiem.Text) || string.IsNullOrEmpty(UC_taoTin.cbx_hinhThucLamViec.Text)
+                || string.IsNullOrEmpty(UC_taoTin.rtbx_moTaCongViec.Text) || string.IsNullOrEmpty(UC_taoTin.rtbx_yeuCauUngVien.Text) || string.IsNullOrEmpty(UC_taoTin.rtbx_quyenLoi.Text))
                 return false;
             return true;
         }

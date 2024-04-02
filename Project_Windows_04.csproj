@@ -171,6 +171,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\Tuyển dụng\TuyenDung_ChinhSuaTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Tuyển dụng\TuyenDung_ChinhSuaTin.Designer.cs">
+      <DependentUpon>TuyenDung_ChinhSuaTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\dbConnection.cs" />
     <Compile Include="Class\Tài khoản\DangKy_DangNhap_DAO.cs" />
     <Compile Include="Form\Chi tiết\ChiTietCV.cs">
@@ -227,7 +233,8 @@
     </Compile>
     <Compile Include="Class\Tuyển dụng\TuyenDung_DAO.cs" />
     <Compile Include="Class\Tuyển dụng\TuyenDung_Tin.cs" />
-    <Compile Include="Class\TrangChu_DAO.cs" />
+    <Compile Include="Class\Tài khoản\TrangChu_DAO.cs" />
+    <Compile Include="Class\Tuyển dụng\TuyenDung_ChinhSuaTin_DAO.cs" />
     <Compile Include="UC_Controls\UC_BangTin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -263,6 +270,15 @@
       <DependentUpon>UC_CVs_daNop.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Xuất thông tin\Xuat_ThongTin_DAO.cs" />
+    <Compile Include="UC_Controls\UC_taoTin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_taoTin.Designer.cs">
+      <DependentUpon>UC_taoTin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\Tuyển dụng\TuyenDung_ChinhSuaTin.resx">
+      <DependentUpon>TuyenDung_ChinhSuaTin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Chi tiết\ChiTietCV.resx">
       <DependentUpon>ChiTietCV.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Controls\UC_CVs_daNop.resx">
       <DependentUpon>UC_CVs_daNop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_taoTin.resx">
+      <DependentUpon>UC_taoTin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

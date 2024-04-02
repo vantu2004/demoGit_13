@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Project_Windows_04
 {
@@ -29,11 +30,18 @@ namespace Project_Windows_04
             db.thucThi_taoTin_chinhSuaTin(sqlQuery_xoa_tinTuyenDung);
         }
 
-        public void capNhat_IdJobPostings(string IdJobPostings, string IdJobPostings_hienTai)
-        {
-            string sqlQuery_capNhat_IdJobPostings = string.Format("UPDATE Applications SET IdJobPostings = '{0}' WHERE IdJobPostings = '{1}'", IdJobPostings, IdJobPostings_hienTai);
+        //public void capNhat_IdJobPostings(string IdJobPostings, string IdJobPostings_hienTai)
+        //{
+        //    string sqlQuery_capNhat_IdJobPostings = string.Format("UPDATE Applications SET IdJobPostings = '{0}' WHERE IdJobPostings = '{1}'", IdJobPostings, IdJobPostings_hienTai);
 
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_capNhat_IdJobPostings);
+        //    db.thucThi_taoTin_chinhSuaTin(sqlQuery_capNhat_IdJobPostings);
+        //}
+
+        public TuyenDung_Tin chiTietTin(string IdCompany, string IdJobPostings)
+        {
+            string sqlQuery_chiTietTin = string.Format("SELECT * FROM NHATUYENDUNG INNER JOIN JobPostings ON NHATUYENDUNG.Id = JobPostings.IdCompany WHERE JobPostings.IdCompany = '{0}' AND JobPostings.IdJobPostings = '{1}'", IdCompany, IdJobPostings);
+
+            return db.thucThi_chiTietTin(sqlQuery_chiTietTin);
         }
     }
 }
