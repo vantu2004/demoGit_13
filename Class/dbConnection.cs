@@ -209,7 +209,6 @@ namespace Project_Windows_04
             }
         }
 
-
         public void thucThi_load_tinDaDang(string sqlQuery_xuat_tinDaDang, FlowLayoutPanel flowLayoutPanel)
         {
             try
@@ -254,6 +253,69 @@ namespace Project_Windows_04
                         data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(17), data.GetString(18), data.GetString(19), data.GetString(20), data.GetString(21));
 
                     return t;
+                }
+                else
+                    MessageBox.Show("Not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! '\n" + ex, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+
+        public void thucThi_load_DS_CV(FlowLayoutPanel flpl, string sqlQuery_load_DS_CV)
+        {
+            try
+            {
+                conn.Open();
+
+                Xuat_ThongTin xuat_TT = new Xuat_ThongTin();
+
+                SqlCommand cmd = new SqlCommand(sqlQuery_load_DS_CV, conn);
+                SqlDataReader data = cmd.ExecuteReader();
+
+                //  cập nhật ngày nộp là ngày hiện tại
+                DateTime dt = DateTime.Now;
+
+                while (data.Read() == true)
+                {
+                    //  cứ 1 vòng lặp thì add 1 UC_CVs_daNop vào flowlayoutpanel
+                    //  truyền IdCompany, IdJobPostings, IdCandidate để dùng cho event xóa, phản hồi CV
+                    //  truyền tên, ngày cập nhật CV để dùng cho giao diện CV đã nộp
+                    flpl.Controls.Add(xuat_TT.them_CV(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(5), dt.ToString("dd/MM/yyyy")));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! '\n" + ex, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public UngVien_Tin thucThi_chiTietCV(string sqlQuery_chiTietCV)
+        {
+            try
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sqlQuery_chiTietCV, conn);
+                SqlDataReader data = cmd.ExecuteReader();
+
+                if (data.Read() == true)
+                {
+                    UngVien_Tin u = new UngVien_Tin(data.GetString(0), data.GetString(10), data.GetString(2), data.GetString(4), data.GetString(8), data.GetString(7), 
+                        data.GetString(5), data.GetString(3), data.GetString(6), data.GetString(11), data.GetString(15), data.GetString(12), data.GetString(13), data.GetString(14));
+
+                    return u;
                 }
                 else
                     MessageBox.Show("Not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -1,6 +1,6 @@
 ﻿namespace Project_Windows_04
 {
-    partial class TuyenDung_ChinhSuaTin
+    partial class TuyenDung_DS_CVs
     {
         /// <summary>
         /// Required designer variable.
@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.UC_taoTin = new Project_Windows_04.UC_taoTin();
+            this.flpl_danhSachCV = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // UC_taoTin
+            // flpl_danhSachCV
             // 
-            this.UC_taoTin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.UC_taoTin.Location = new System.Drawing.Point(0, 0);
-            this.UC_taoTin.Name = "UC_taoTin";
-            this.UC_taoTin.Size = new System.Drawing.Size(1142, 994);
-            this.UC_taoTin.TabIndex = 0;
-            this.UC_taoTin.Load += new System.EventHandler(this.UC_taoTin_Load_1);
+            this.flpl_danhSachCV.AutoScroll = true;
+            this.flpl_danhSachCV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpl_danhSachCV.Location = new System.Drawing.Point(0, 0);
+            this.flpl_danhSachCV.Name = "flpl_danhSachCV";
+            this.flpl_danhSachCV.Size = new System.Drawing.Size(1127, 703);
+            this.flpl_danhSachCV.TabIndex = 0;
             // 
-            // TuyenDung_ChinhSuaTin
+            // TuyenDung_DS_CVs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 994);
-            this.Controls.Add(this.UC_taoTin);
-            this.Name = "TuyenDung_ChinhSuaTin";
+            this.ClientSize = new System.Drawing.Size(1127, 703);
+            this.Controls.Add(this.flpl_danhSachCV);
+            this.Name = "TuyenDung_DS_CVs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit news";
+            this.Text = "CV list";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        public UC_taoTin UC_taoTin;
+        public System.Windows.Forms.FlowLayoutPanel flpl_danhSachCV;
     }
 }

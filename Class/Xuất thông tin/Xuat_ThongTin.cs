@@ -62,7 +62,8 @@ namespace Project_Windows_04
             else
             {
                 chiTiet_tin.btn_ungTuyen.Click += Btn_ungTuyen_Click;
-            }    
+            }   
+            
             //  xuất dữ liệu lên controls trong ChiTietTinTuyenDung
             chiTiet_tin.xuatDuLieu(t);
 
@@ -81,11 +82,22 @@ namespace Project_Windows_04
             UC_tinDaDang.lbl_ngayDang.Text = ngayDang;
             UC_tinDaDang.lbl_tenCongViec.Text = tenCongViec;
 
+            UC_tinDaDang.Click += (sender, e) => UC_tinDaDang_Click1(sender, e, IdCompany, IdJobPostings);
             // Truyền trực tiếp biến vào phương thức xử lý sự kiện
             UC_tinDaDang.btn_xoaTin.Click += (sender, e) => Btn_xoaTin_Click(IdCompany, IdJobPostings);
-            UC_tinDaDang.btn_suaTin.Click += (sender, e) => Btn_suaTin_Click(sender, e, IdCompany, IdJobPostings);
+            UC_tinDaDang.btn_suaTin.Click += (sender, e) => Btn_suaTin_Click(IdCompany, IdJobPostings);
 
             return UC_tinDaDang;
+        }
+
+        private void UC_tinDaDang_Click1(object sender, EventArgs e, string IdCompany, string IdJobPostings)
+        {
+            UC_TinDaDang myObject = sender as UC_TinDaDang;
+            TuyenDung_DS_CVs DSCV = new TuyenDung_DS_CVs();
+
+            xuatTT_DAO.load_DS_CV(DSCV.flpl_danhSachCV, IdCompany, IdJobPostings);
+
+            DSCV.ShowDialog();
         }
 
         private void Btn_xoaTin_Click(string IdCompany, string IdJobPostings)
@@ -93,7 +105,7 @@ namespace Project_Windows_04
             xuatTT_DAO.xoa_tinTuyenDung(IdCompany, IdJobPostings);
         }
 
-        private void Btn_suaTin_Click(object sender, EventArgs e, string IdCompany, string IdJobPostings)
+        private void Btn_suaTin_Click(string IdCompany, string IdJobPostings)
         {
             TuyenDung_ChinhSuaTin TD_CST = new TuyenDung_ChinhSuaTin();
 
@@ -102,12 +114,31 @@ namespace Project_Windows_04
             TD_CST.ShowDialog();
         }
 
-        private void UC_tinDaDang_Click(object sender, EventArgs e)
+        public UC_CVs_daNop them_CV(string IdCompany, string IdJobPostings, string IdCandidate, string tenCongViec, string ngayDang)
         {
-            //UC_TinDaDang myObject = sender as UC_TinDaDang;
-            //DanhSach_CV_DaNop danhSach_CV_DaNop = new DanhSach_CV_DaNop();
+            UC_CVs_daNop UC_CV = new UC_CVs_daNop();
 
-            //danhSach_CV_DaNop.ShowDialog();
+            UC_CV.lbl_ngayDang.Text = ngayDang;
+            UC_CV.lbl_fullName.Text = tenCongViec;
+
+            UC_CV.Click += (sender, e) => UC_CV_Click(sender, e, IdCandidate);
+            UC_CV.btn_xoaCV.Click += (sender, e) => Btn_xoaCV_Click(sender, e, IdCompany, IdJobPostings, IdCandidate);
+
+            return UC_CV;
+        }
+
+        private void Btn_xoaCV_Click(object sender, EventArgs e, string IdCompany, string IdJobPostings, string IdCandidate)
+        {
+            xuatTT_DAO.xoaCV(IdCompany, IdJobPostings, IdCandidate);
+        }
+
+        private void UC_CV_Click(object sender, EventArgs e, string IdCandidate)
+        {
+            ChiTietCV CV = new ChiTietCV();
+
+            CV.layDuLieu(xuatTT_DAO.chiTiet_CV(IdCandidate));
+            
+            CV.ShowDialog();
         }
     }
 }

@@ -17,16 +17,6 @@ namespace Project_Windows_04
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main_TrangChu());
-            //Application.Run(new TuyenDung_UngVien());
-            //Application.Run(new DangKy_DangNhap());
-            //Application.Run(new TuyenDung_DangKy());
-            //Application.Run(new UngVien_DangKy());
-            //Application.Run(new TuyenDung_TrangChu());
-            //Application.Run(new UngVien_TrangChu());
-            //Application.Run(new ChiTietTinTuyenDung());
-            //Application.Run(new ChiTietCV());
-            //Application.Run(new DanhSach_CV_DaNop());
-
         }
     }
 }

@@ -31,35 +31,35 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.rtbx_kinhNghiem = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rtbx_hocVan = new System.Windows.Forms.RichTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbx_mucTieuNgheNghiep = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lbl_ngayCapNhat = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_gioiTinh = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbl_ngaySinh = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.pbx_avatar = new System.Windows.Forms.PictureBox();
+            this.lbl_email = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbl_sdt = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbl_viTriUngTuyen = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_diaChi = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_mangXaHoi = new System.Windows.Forms.Label();
+            this.lbl_ten = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -68,7 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_avatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -82,11 +82,11 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.richTextBox3);
+            this.panel1.Controls.Add(this.rtbx_kinhNghiem);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.richTextBox2);
+            this.panel1.Controls.Add(this.rtbx_hocVan);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.rtbx_mucTieuNgheNghiep);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -111,17 +111,17 @@
             this.panel6.Size = new System.Drawing.Size(500, 2);
             this.panel6.TabIndex = 68;
             // 
-            // richTextBox3
+            // rtbx_kinhNghiem
             // 
-            this.richTextBox3.BackColor = System.Drawing.Color.White;
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.richTextBox3.Location = new System.Drawing.Point(27, 623);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(653, 600);
-            this.richTextBox3.TabIndex = 67;
-            this.richTextBox3.Text = "";
+            this.rtbx_kinhNghiem.BackColor = System.Drawing.Color.White;
+            this.rtbx_kinhNghiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbx_kinhNghiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_kinhNghiem.Location = new System.Drawing.Point(27, 623);
+            this.rtbx_kinhNghiem.Name = "rtbx_kinhNghiem";
+            this.rtbx_kinhNghiem.ReadOnly = true;
+            this.rtbx_kinhNghiem.Size = new System.Drawing.Size(653, 600);
+            this.rtbx_kinhNghiem.TabIndex = 67;
+            this.rtbx_kinhNghiem.Text = "";
             // 
             // label4
             // 
@@ -134,17 +134,17 @@
             this.label4.TabIndex = 66;
             this.label4.Text = "|| Experience:";
             // 
-            // richTextBox2
+            // rtbx_hocVan
             // 
-            this.richTextBox2.BackColor = System.Drawing.Color.White;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.richTextBox2.Location = new System.Drawing.Point(27, 336);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(653, 212);
-            this.richTextBox2.TabIndex = 65;
-            this.richTextBox2.Text = "";
+            this.rtbx_hocVan.BackColor = System.Drawing.Color.White;
+            this.rtbx_hocVan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbx_hocVan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_hocVan.Location = new System.Drawing.Point(27, 336);
+            this.rtbx_hocVan.Name = "rtbx_hocVan";
+            this.rtbx_hocVan.ReadOnly = true;
+            this.rtbx_hocVan.Size = new System.Drawing.Size(653, 212);
+            this.rtbx_hocVan.TabIndex = 65;
+            this.rtbx_hocVan.Text = "";
             // 
             // label6
             // 
@@ -157,17 +157,17 @@
             this.label6.TabIndex = 64;
             this.label6.Text = "|| Education:";
             // 
-            // richTextBox1
+            // rtbx_mucTieuNgheNghiep
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.richTextBox1.Location = new System.Drawing.Point(27, 46);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(653, 212);
-            this.richTextBox1.TabIndex = 63;
-            this.richTextBox1.Text = "";
+            this.rtbx_mucTieuNgheNghiep.BackColor = System.Drawing.Color.White;
+            this.rtbx_mucTieuNgheNghiep.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbx_mucTieuNgheNghiep.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_mucTieuNgheNghiep.Location = new System.Drawing.Point(27, 46);
+            this.rtbx_mucTieuNgheNghiep.Name = "rtbx_mucTieuNgheNghiep";
+            this.rtbx_mucTieuNgheNghiep.ReadOnly = true;
+            this.rtbx_mucTieuNgheNghiep.Size = new System.Drawing.Size(653, 212);
+            this.rtbx_mucTieuNgheNghiep.TabIndex = 63;
+            this.rtbx_mucTieuNgheNghiep.Text = "";
             // 
             // label10
             // 
@@ -193,28 +193,29 @@
             // 
             // panel4
             // 
+            this.panel4.AutoScroll = true;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.lbl_ngayCapNhat);
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Controls.Add(this.label11);
             this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.lbl_gioiTinh);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.lbl_ngaySinh);
             this.panel4.Controls.Add(this.pictureBox11);
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.pbx_avatar);
+            this.panel4.Controls.Add(this.lbl_email);
             this.panel4.Controls.Add(this.pictureBox10);
-            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.lbl_sdt);
             this.panel4.Controls.Add(this.pictureBox9);
-            this.panel4.Controls.Add(this.label12);
+            this.panel4.Controls.Add(this.lbl_viTriUngTuyen);
             this.panel4.Controls.Add(this.pictureBox8);
-            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.lbl_diaChi);
             this.panel4.Controls.Add(this.pictureBox6);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.lbl_mangXaHoi);
+            this.panel4.Controls.Add(this.lbl_ten);
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
@@ -244,16 +245,16 @@
             this.label16.TabIndex = 114;
             this.label16.Text = "Update date";
             // 
-            // label17
+            // lbl_ngayCapNhat
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(92, 816);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(121, 28);
-            this.label17.TabIndex = 113;
-            this.label17.Text = "Update date";
+            this.lbl_ngayCapNhat.AutoSize = true;
+            this.lbl_ngayCapNhat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_ngayCapNhat.ForeColor = System.Drawing.Color.Black;
+            this.lbl_ngayCapNhat.Location = new System.Drawing.Point(92, 816);
+            this.lbl_ngayCapNhat.Name = "lbl_ngayCapNhat";
+            this.lbl_ngayCapNhat.Size = new System.Drawing.Size(121, 28);
+            this.lbl_ngayCapNhat.TabIndex = 113;
+            this.lbl_ngayCapNhat.Text = "Update date";
             // 
             // pictureBox4
             // 
@@ -287,16 +288,16 @@
             this.label9.TabIndex = 110;
             this.label9.Text = "Contact";
             // 
-            // label7
+            // lbl_gioiTinh
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(92, 409);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 28);
-            this.label7.TabIndex = 109;
-            this.label7.Text = "Gender";
+            this.lbl_gioiTinh.AutoSize = true;
+            this.lbl_gioiTinh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_gioiTinh.ForeColor = System.Drawing.Color.Black;
+            this.lbl_gioiTinh.Location = new System.Drawing.Point(92, 409);
+            this.lbl_gioiTinh.Name = "lbl_gioiTinh";
+            this.lbl_gioiTinh.Size = new System.Drawing.Size(76, 28);
+            this.lbl_gioiTinh.TabIndex = 109;
+            this.lbl_gioiTinh.Text = "Gender";
             // 
             // pictureBox3
             // 
@@ -308,16 +309,16 @@
             this.pictureBox3.TabIndex = 108;
             this.pictureBox3.TabStop = false;
             // 
-            // label15
+            // lbl_ngaySinh
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(92, 368);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(85, 28);
-            this.label15.TabIndex = 107;
-            this.label15.Text = "Birthday";
+            this.lbl_ngaySinh.AutoSize = true;
+            this.lbl_ngaySinh.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_ngaySinh.ForeColor = System.Drawing.Color.Black;
+            this.lbl_ngaySinh.Location = new System.Drawing.Point(92, 368);
+            this.lbl_ngaySinh.Name = "lbl_ngaySinh";
+            this.lbl_ngaySinh.Size = new System.Drawing.Size(85, 28);
+            this.lbl_ngaySinh.TabIndex = 107;
+            this.lbl_ngaySinh.Text = "Birthday";
             // 
             // pictureBox11
             // 
@@ -329,26 +330,27 @@
             this.pictureBox11.TabIndex = 106;
             this.pictureBox11.TabStop = false;
             // 
-            // pictureBox1
+            // pbx_avatar
             // 
-            this.pictureBox1.BackgroundImage = global::Project_Windows_04.Properties.Resources.pngwing_com__3_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(72, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 243);
-            this.pictureBox1.TabIndex = 104;
-            this.pictureBox1.TabStop = false;
+            this.pbx_avatar.BackgroundImage = global::Project_Windows_04.Properties.Resources.pngwing_com__3_;
+            this.pbx_avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbx_avatar.Location = new System.Drawing.Point(72, 15);
+            this.pbx_avatar.Name = "pbx_avatar";
+            this.pbx_avatar.Size = new System.Drawing.Size(256, 243);
+            this.pbx_avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_avatar.TabIndex = 104;
+            this.pbx_avatar.TabStop = false;
             // 
-            // label14
+            // lbl_email
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(92, 630);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 28);
-            this.label14.TabIndex = 103;
-            this.label14.Text = "Email";
+            this.lbl_email.AutoSize = true;
+            this.lbl_email.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_email.ForeColor = System.Drawing.Color.Black;
+            this.lbl_email.Location = new System.Drawing.Point(92, 630);
+            this.lbl_email.Name = "lbl_email";
+            this.lbl_email.Size = new System.Drawing.Size(59, 28);
+            this.lbl_email.TabIndex = 103;
+            this.lbl_email.Text = "Email";
             // 
             // pictureBox10
             // 
@@ -360,16 +362,16 @@
             this.pictureBox10.TabIndex = 102;
             this.pictureBox10.TabStop = false;
             // 
-            // label13
+            // lbl_sdt
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(92, 589);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(140, 28);
-            this.label13.TabIndex = 101;
-            this.label13.Text = "Phone number";
+            this.lbl_sdt.AutoSize = true;
+            this.lbl_sdt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_sdt.ForeColor = System.Drawing.Color.Black;
+            this.lbl_sdt.Location = new System.Drawing.Point(92, 589);
+            this.lbl_sdt.Name = "lbl_sdt";
+            this.lbl_sdt.Size = new System.Drawing.Size(140, 28);
+            this.lbl_sdt.TabIndex = 101;
+            this.lbl_sdt.Text = "Phone number";
             // 
             // pictureBox9
             // 
@@ -381,16 +383,16 @@
             this.pictureBox9.TabIndex = 100;
             this.pictureBox9.TabStop = false;
             // 
-            // label12
+            // lbl_viTriUngTuyen
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(92, 723);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(158, 28);
-            this.label12.TabIndex = 99;
-            this.label12.Text = "Applied position";
+            this.lbl_viTriUngTuyen.AutoSize = true;
+            this.lbl_viTriUngTuyen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_viTriUngTuyen.ForeColor = System.Drawing.Color.Black;
+            this.lbl_viTriUngTuyen.Location = new System.Drawing.Point(92, 723);
+            this.lbl_viTriUngTuyen.Name = "lbl_viTriUngTuyen";
+            this.lbl_viTriUngTuyen.Size = new System.Drawing.Size(158, 28);
+            this.lbl_viTriUngTuyen.TabIndex = 99;
+            this.lbl_viTriUngTuyen.Text = "Applied position";
             // 
             // pictureBox8
             // 
@@ -402,16 +404,16 @@
             this.pictureBox8.TabIndex = 76;
             this.pictureBox8.TabStop = false;
             // 
-            // label5
+            // lbl_diaChi
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(92, 450);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 28);
-            this.label5.TabIndex = 95;
-            this.label5.Text = "Address";
+            this.lbl_diaChi.AutoSize = true;
+            this.lbl_diaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_diaChi.ForeColor = System.Drawing.Color.Black;
+            this.lbl_diaChi.Location = new System.Drawing.Point(92, 450);
+            this.lbl_diaChi.Name = "lbl_diaChi";
+            this.lbl_diaChi.Size = new System.Drawing.Size(82, 28);
+            this.lbl_diaChi.TabIndex = 95;
+            this.lbl_diaChi.Text = "Address";
             // 
             // pictureBox6
             // 
@@ -423,27 +425,27 @@
             this.pictureBox6.TabIndex = 74;
             this.pictureBox6.TabStop = false;
             // 
-            // label3
+            // lbl_mangXaHoi
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(92, 491);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 28);
-            this.label3.TabIndex = 94;
-            this.label3.Text = "Link";
+            this.lbl_mangXaHoi.AutoSize = true;
+            this.lbl_mangXaHoi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_mangXaHoi.ForeColor = System.Drawing.Color.Black;
+            this.lbl_mangXaHoi.Location = new System.Drawing.Point(92, 491);
+            this.lbl_mangXaHoi.Name = "lbl_mangXaHoi";
+            this.lbl_mangXaHoi.Size = new System.Drawing.Size(47, 28);
+            this.lbl_mangXaHoi.TabIndex = 94;
+            this.lbl_mangXaHoi.Text = "Link";
             // 
-            // label1
+            // lbl_ten
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(92, 327);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 28);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Full name";
+            this.lbl_ten.AutoSize = true;
+            this.lbl_ten.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_ten.ForeColor = System.Drawing.Color.Black;
+            this.lbl_ten.Location = new System.Drawing.Point(92, 327);
+            this.lbl_ten.Name = "lbl_ten";
+            this.lbl_ten.Size = new System.Drawing.Size(96, 28);
+            this.lbl_ten.TabIndex = 37;
+            this.lbl_ten.Text = "Full name";
             // 
             // pictureBox2
             // 
@@ -486,7 +488,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_avatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -498,39 +500,39 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel panel7;
+        public System.Windows.Forms.Panel panel6;
+        public System.Windows.Forms.RichTextBox rtbx_kinhNghiem;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.RichTextBox rtbx_hocVan;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.RichTextBox rtbx_mucTieuNgheNghiep;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label lbl_ten;
+        public System.Windows.Forms.Label lbl_diaChi;
+        public System.Windows.Forms.Label lbl_mangXaHoi;
+        public System.Windows.Forms.Label lbl_viTriUngTuyen;
+        public System.Windows.Forms.PictureBox pictureBox8;
+        public System.Windows.Forms.PictureBox pictureBox6;
+        public System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.Label lbl_sdt;
+        public System.Windows.Forms.PictureBox pictureBox9;
+        public System.Windows.Forms.Label lbl_email;
+        public System.Windows.Forms.PictureBox pictureBox10;
+        public System.Windows.Forms.PictureBox pbx_avatar;
+        public System.Windows.Forms.Label lbl_ngaySinh;
+        public System.Windows.Forms.PictureBox pictureBox11;
+        public System.Windows.Forms.Label lbl_gioiTinh;
+        public System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.PictureBox pictureBox4;
+        public System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Label lbl_ngayCapNhat;
     }
 }

@@ -22,5 +22,22 @@ namespace Project_Windows_04
         {
 
         }
+
+        public void layDuLieu(UngVien_Tin u)
+        {
+            pbx_avatar.Image = Image.FromFile(u.AnhDaiDien);
+            lbl_ten.Text = u.TenUV;
+            lbl_ngaySinh.Text = u.NgaySinhUV;
+            lbl_gioiTinh.Text = u.GioiTinhUV;
+            lbl_diaChi.Text = u.DiaChi;
+            lbl_mangXaHoi.Text = u.MangXaHoi;
+            lbl_sdt.Text = u.SdtUV;
+            lbl_email.Text = u.EmailUV;
+            lbl_viTriUngTuyen.Text = u.ViTriUngTuyen;
+            lbl_ngayCapNhat.Text = u.NgayCapNhatCV;
+            rtbx_mucTieuNgheNghiep.Text = u.MucTieuNgheNghiep;
+            rtbx_hocVan.Text = u.HocVan;
+            rtbx_kinhNghiem.Text = u.KinhNghiem;
+        }
     }
 }
