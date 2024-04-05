@@ -197,6 +197,17 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_chat_room_online_chat_web_chat_message_box_5acea927f288e3_5629845315234931599934 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3." +
+                        "5629845315234931599934", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_computer_icons_door_symbol_building_5b383c2f2dc4f1_6946621115304120791875 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.6946621115304120791875" +

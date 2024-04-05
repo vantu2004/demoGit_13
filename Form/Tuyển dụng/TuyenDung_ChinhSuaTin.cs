@@ -78,7 +78,7 @@ namespace Project_Windows_04
                     UC_taoTin.cbx_nganhNghe.Text, UC_taoTin.tbx_tenCongViec.Text, Convert.ToDouble(UC_taoTin.tbx_luong.Text), UC_taoTin.cbx_kinhNghiem.Text, UC_taoTin.cbx_hinhThucLamViec.Text,
                     UC_taoTin.tbx_tenHR.Text, UC_taoTin.tbx_emailHR.Text, UC_taoTin.tbx_sdtHR.Text, UC_taoTin.tbx_viTriCongTacHR.Text, UC_taoTin.dtpr_ngayDang.Value.ToShortDateString(),
                     UC_taoTin.dtpr_hanChot.Value.ToShortDateString(), UC_taoTin.rtbx_moTaCongViec.Text, UC_taoTin.rtbx_yeuCauUngVien.Text, UC_taoTin.rtbx_quyenLoi.Text);
-                MessageBox.Show(t.IdCompany + "\n" + t.IdJobPostings);
+
                 TD_CST_DAO.chinhSuaTin(t);
             }
             else

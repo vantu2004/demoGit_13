@@ -16,8 +16,8 @@ namespace Project_Windows_04
     {
         UngVien_DAO UV_DAO = new UngVien_DAO();
         public string Id;
-        string userType;
         private string linkAnh;
+        private string gioiTinh;
 
         public UngVien_TrangChu()
         {
@@ -34,44 +34,31 @@ namespace Project_Windows_04
             UV_DAO.load_tinTuyenDung(UC_BangTin_UV.flpl_danhSachTinTuyenDung, this.Id);
         }
 
-        public void layDuLieu(UngVien UV)
+        public void layDuLieu()
         {
-            //tbx_tenUV.Text = UV.Ten;
-            //dtpr_ngaySinhUV.Value = Convert.ToDateTime(UV.NgaySinh);
-            //if (UV.GioiTinh == "Male")
-            //    rbn_nam.Checked = true;
-            //else
-            //    rbn_nu.Checked = true;
-            //cbx_diaChiUV.Text = UV.DiaChi;
-            //tbx_mangXaHoi.Text = UV.MangXaHoi;
-            //tbx_sdtUV.Text = UV.Sdt;
-            //tbx_emaiUV.Text = UV.Email;
-            //rtbx_mucTIeuNgheNghiep.Text = UV.MucTieuNgheNghiep;
-            //rtbx_hocVan.Text = UV.HocVan;
-            //rtbx_kinhNghiem.Text = UV.KinhNghiem;
-            //pbx_avatar.Image = Image.FromFile(this.linkAnh);
+            UngVien_Tin u = UV_DAO.chiTiet_CV(this.Id);
 
-            //this.Id = UV.Id;
-            //this.userType = "Candidate";
-
-            tbx_tenUV.Text = UV.Ten;
-            dtpr_ngaySinhUV.Value = Convert.ToDateTime(UV.NgaySinh);
-            if (UV.GioiTinh == "Male")
-                rbn_nam.Checked = true;
-            else
-                rbn_nu.Checked = true;
-            cbx_diaChiUV.Text = UV.DiaChi;
-            tbx_mangXaHoi.Text = UV.MangXaHoi;
-            tbx_sdtUV.Text = UV.Sdt;
-            tbx_emaiUV.Text = UV.Email;
-
-            if (this.linkAnh != null)
+            if (u != null)
             {
-                pbx_avatar.Image = Image.FromFile(this.linkAnh);
-            }
+                pbx_avatar.Image = Image.FromFile(u.AnhDaiDien);
+                tbx_tenUV.Text = u.TenUV;
+                dtpr_ngaySinhUV.Value = Convert.ToDateTime(u.NgaySinhUV);
+                if (u.GioiTinhUV == "Male")
+                    rbn_nam.Checked = true;
+                else
+                    rbn_nu.Checked = true;
+                cbx_diaChiUV.Text = u.DiaChi;
+                tbx_mangXaHoi.Text = u.MangXaHoi;
+                tbx_sdtUV.Text = u.SdtUV;
+                tbx_emaiUV.Text = u.EmailUV;
+                cbx_viTriUngTuyen.Text = u.ViTriUngTuyen;
+                rtbx_mucTIeuNgheNghiep.Text = u.MucTieuNgheNghiep;
+                rtbx_hocVan.Text = u.HocVan;
+                rtbx_kinhNghiem.Text = u.KinhNghiem;
 
-            this.Id = UV.Id;
-            this.userType = "Candidate";
+                //  giả sử ko tương tác gì với avatar thì mặc định sẽ lấy avatar cũ
+                this.linkAnh = u.AnhDaiDien;
+            }
         }
 
         private void pbx_avatar_Click(object sender, EventArgs e)
@@ -91,28 +78,39 @@ namespace Project_Windows_04
 
         public UngVien_Tin taoUngVien()
         {
-            try
-            {
-                string gioiTinh;
-                if (rbn_nam.Checked)
-                    gioiTinh = "Male";
-                else
-                    gioiTinh = "Female";
+            //  phải xác định giới tính trước để dùng cho hàm kiemTra_null
+            if (rbn_nam.Checked)
+                this.gioiTinh = rbn_nam.Text;
+            else
+                this.gioiTinh = rbn_nu.Text;
 
+            if (kiemTra_null())
+            {
+                // thời gian cập nhật CV
                 DateTime dt = DateTime.Now;
 
-                UngVien_Tin u = new UngVien_Tin(Id, this.linkAnh, tbx_tenUV.Text, dtpr_ngaySinhUV.Value.ToShortDateString(), gioiTinh,
+                UngVien_Tin u = new UngVien_Tin(this.Id, this.linkAnh, tbx_tenUV.Text, dtpr_ngaySinhUV.Value.ToShortDateString(), gioiTinh,
                     cbx_diaChiUV.Text, tbx_mangXaHoi.Text, tbx_sdtUV.Text, tbx_emaiUV.Text, cbx_viTriUngTuyen.Text,
                     dt.ToString("dd/MM/yyyy"), rtbx_mucTIeuNgheNghiep.Text, rtbx_hocVan.Text, rtbx_kinhNghiem.Text);
 
                 return u;
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error! + \n" + ex, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You must fill in all information!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return null;
             }
-            return null;
         }
+
+        private bool kiemTra_null()
+        {
+            if (string.IsNullOrEmpty(this.linkAnh) || string.IsNullOrEmpty(tbx_tenUV.Text) || string.IsNullOrEmpty(this.gioiTinh) || string.IsNullOrEmpty(cbx_diaChiUV.Text) 
+                || string.IsNullOrEmpty(tbx_mangXaHoi.Text) || string.IsNullOrEmpty(tbx_sdtUV.Text) || string.IsNullOrEmpty(tbx_emaiUV.Text) || string.IsNullOrEmpty(cbx_viTriUngTuyen.Text) 
+                || string.IsNullOrEmpty(rtbx_mucTIeuNgheNghiep.Text) || string.IsNullOrEmpty(rtbx_hocVan.Text) || string.IsNullOrEmpty(rtbx_kinhNghiem.Text))
+                return false;
+            return true;
+        }
+
         public void btn_hoanTat_Click(object sender, EventArgs e)
         {
             UV_DAO.taoTin(taoUngVien());

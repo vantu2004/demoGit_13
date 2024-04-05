@@ -134,8 +134,8 @@ namespace Project_Windows_04
                     //UngVien_Tin u = new UngVien_Tin(data.GetString(0), data.GetString(10), data.GetString(2), data.GetString(4), data.GetString(8), data.GetString(7), data.GetString(5), data.GetString(3), data.GetString(6), data.GetString(11), data.GetString(15), data.GetString(12), data.GetString(13), data.GetString(14));
                     UngVien u = new UngVien(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(6), data.GetString(7), data.GetString(8));
                     UngVien_TrangChu UV_TC = new UngVien_TrangChu();
-                    UV_TC.layDuLieu(u);
                     UV_TC.Id = u.Id;
+                    UV_TC.layDuLieu();
                     UV_TC.ShowDialog();
                     UV_TC.btn_hoanTat.Click += UV_TC.btn_hoanTat_Click;
                     UV_TC.btn_luuChinhSua.Click += UV_TC.btn_luuChinhSua_Click;

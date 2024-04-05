@@ -30,19 +30,37 @@ namespace Project_Windows_04
 
         private void btn_hoanTat_Click(object sender, EventArgs e)
         {
-            if (tbx_matKhau_TD.Text == tbx_nhapLaiMatKhau_TD.Text)
+            if (kiemTra_null())
             {
-                Guid g = Guid.NewGuid();
+                if (tbx_matKhau_TD.Text == tbx_nhapLaiMatKhau_TD.Text)
+                {
+                    Guid g = Guid.NewGuid();
 
-                TuyenDung t = new TuyenDung(g.ToString(), "Employer", tbx_ten_HR.Text, tbx_email_HR.Text, tbx_sdt_HR.Text, cbx_viTriCongTac_HR.Text, tbx_ten_CongTy.Text, cbx_diaChi_CongTy.Text, tbx_mangXaHoi_CongTy.Text);
-                TaiKhoan tk = new TaiKhoan(g.ToString(), "Employer", tbx_tenDangNhap_TD.Text, tbx_matKhau_TD.Text);
-                if (cbx_dongYDieuKhoan.Checked == true)
-                    NTD_DAO.dangKy(t, tk);
+                    TuyenDung t = new TuyenDung(g.ToString(), "Employer", tbx_ten_HR.Text, tbx_email_HR.Text, tbx_sdt_HR.Text, cbx_viTriCongTac_HR.Text, tbx_ten_CongTy.Text, cbx_diaChi_CongTy.Text, tbx_mangXaHoi_CongTy.Text);
+                    TaiKhoan tk = new TaiKhoan(g.ToString(), "Employer", tbx_tenDangNhap_TD.Text, tbx_matKhau_TD.Text);
+                    if (cbx_dongYDieuKhoan.Checked == true)
+                    {
+                        NTD_DAO.dangKy(t, tk);
+                        this.Close();
+                    }    
+                    else
+                        MessageBox.Show("You must accept all terms!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
-                    MessageBox.Show("You must accept all terms!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("You must re-enter the correct password!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
-                MessageBox.Show("You must re-enter the correct password!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("You must fill in all information!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private bool kiemTra_null()
+        {
+            if (string.IsNullOrEmpty(tbx_tenDangNhap_TD.Text) || string.IsNullOrEmpty(tbx_matKhau_TD.Text) || string.IsNullOrEmpty(tbx_nhapLaiMatKhau_TD.Text)
+                || string.IsNullOrEmpty(tbx_ten_HR.Text) || string.IsNullOrEmpty(tbx_email_HR.Text) || string.IsNullOrEmpty(tbx_sdt_HR.Text)
+                || string.IsNullOrEmpty(cbx_viTriCongTac_HR.Text) || string.IsNullOrEmpty(tbx_ten_CongTy.Text) || string.IsNullOrEmpty(cbx_diaChi_CongTy.Text) || string.IsNullOrEmpty(tbx_mangXaHoi_CongTy.Text))
+                return false;
+            return true;
         }
     }
 }

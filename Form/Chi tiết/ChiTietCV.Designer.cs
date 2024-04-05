@@ -62,6 +62,8 @@
             this.lbl_ten = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_hoanTat = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -74,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -195,6 +198,7 @@
             // 
             this.panel4.AutoScroll = true;
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel4.Controls.Add(this.panel2);
             this.panel4.Controls.Add(this.pictureBox5);
             this.panel4.Controls.Add(this.label16);
             this.panel4.Controls.Add(this.lbl_ngayCapNhat);
@@ -469,6 +473,40 @@
             this.label2.TabIndex = 36;
             this.label2.Text = "Individual";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btn_hoanTat);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 894);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(411, 161);
+            this.panel2.TabIndex = 117;
+            // 
+            // btn_hoanTat
+            // 
+            this.btn_hoanTat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_hoanTat.Animated = true;
+            this.btn_hoanTat.BackColor = System.Drawing.Color.Transparent;
+            this.btn_hoanTat.BorderRadius = 10;
+            this.btn_hoanTat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_hoanTat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_hoanTat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_hoanTat.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_hoanTat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_hoanTat.FillColor = System.Drawing.Color.Green;
+            this.btn_hoanTat.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_hoanTat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_hoanTat.ForeColor = System.Drawing.Color.White;
+            this.btn_hoanTat.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_chat_room_online_chat_web_chat_message_box_5acea927f288e3_5629845315234931599934;
+            this.btn_hoanTat.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_hoanTat.IndicateFocus = true;
+            this.btn_hoanTat.Location = new System.Drawing.Point(53, 107);
+            this.btn_hoanTat.Name = "btn_hoanTat";
+            this.btn_hoanTat.Size = new System.Drawing.Size(329, 42);
+            this.btn_hoanTat.TabIndex = 117;
+            this.btn_hoanTat.Text = "Feedback";
+            this.btn_hoanTat.UseTransparentBackground = true;
+            // 
             // ChiTietCV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -494,6 +532,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -534,5 +573,7 @@
         public System.Windows.Forms.PictureBox pictureBox5;
         public System.Windows.Forms.Label label16;
         public System.Windows.Forms.Label lbl_ngayCapNhat;
+        private System.Windows.Forms.Panel panel2;
+        public Guna.UI2.WinForms.Guna2GradientButton btn_hoanTat;
     }
 }

@@ -32,7 +32,6 @@
             this.lbl_fullName = new System.Windows.Forms.Label();
             this.lbl_ngayDang = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.btn_phanHoiCV = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_xoaCV = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -85,28 +84,6 @@
             this.pictureBox12.TabIndex = 114;
             this.pictureBox12.TabStop = false;
             // 
-            // btn_phanHoiCV
-            // 
-            this.btn_phanHoiCV.Animated = true;
-            this.btn_phanHoiCV.BackColor = System.Drawing.Color.Transparent;
-            this.btn_phanHoiCV.BorderRadius = 10;
-            this.btn_phanHoiCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_phanHoiCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_phanHoiCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_phanHoiCV.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_phanHoiCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_phanHoiCV.FillColor = System.Drawing.Color.Green;
-            this.btn_phanHoiCV.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_phanHoiCV.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_phanHoiCV.ForeColor = System.Drawing.Color.White;
-            this.btn_phanHoiCV.IndicateFocus = true;
-            this.btn_phanHoiCV.Location = new System.Drawing.Point(779, 10);
-            this.btn_phanHoiCV.Name = "btn_phanHoiCV";
-            this.btn_phanHoiCV.Size = new System.Drawing.Size(190, 35);
-            this.btn_phanHoiCV.TabIndex = 126;
-            this.btn_phanHoiCV.Text = "Feedback";
-            this.btn_phanHoiCV.UseTransparentBackground = true;
-            // 
             // btn_xoaCV
             // 
             this.btn_xoaCV.Animated = true;
@@ -134,7 +111,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btn_phanHoiCV);
             this.Controls.Add(this.btn_xoaCV);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.guna2PictureBox2);
@@ -155,7 +131,6 @@
         public System.Windows.Forms.Label lbl_fullName;
         public System.Windows.Forms.Label lbl_ngayDang;
         public System.Windows.Forms.PictureBox pictureBox12;
-        public Guna.UI2.WinForms.Guna2GradientButton btn_phanHoiCV;
         public Guna.UI2.WinForms.Guna2GradientButton btn_xoaCV;
     }
 }
