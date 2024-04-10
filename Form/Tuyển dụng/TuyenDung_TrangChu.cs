@@ -34,6 +34,12 @@ namespace Project_Windows_04
         {
             UC_taoTin.pbx_logoCongTy.Click += Pbx_logoCongTy_Click;
             UC_taoTin.btn_hoanTat.Click += Btn_hoanTat_Click1;
+
+            UC_BangTin_NTD.cbx_loc_Luong.SelectedIndexChanged += UC_BangTin_NTD.cbx_loc_Luong_SelectedIndexChanged;
+            UC_BangTin_NTD.cbx_loc_nganhNghe.SelectedIndexChanged += UC_BangTin_NTD.cbx_loc_nganhNghe_SelectedIndexChanged;
+            UC_BangTin_NTD.cbx_loc_sapXep.SelectedIndexChanged += UC_BangTin_NTD.cbx_loc_sapXep_SelectedIndexChanged;
+            UC_BangTin_NTD.cbx_loc_kinhNghiem.SelectedIndexChanged += UC_BangTin_NTD.cbx_loc_kinhNghiem_SelectedIndexChanged;
+            UC_BangTin_NTD.cbx_loc_diaChi.SelectedIndexChanged += UC_BangTin_NTD.cbx_loc_diaChi_SelectedIndexChanged;
         }
 
         private void Pbx_logoCongTy_Click(object sender, EventArgs e)

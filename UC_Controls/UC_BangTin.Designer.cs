@@ -43,7 +43,6 @@
             this.cbx_loc_kinhNghiem = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbx_loc_Luong = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.btn_loc_timKiem = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -177,12 +176,12 @@
             this.cbx_loc_sapXep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbx_loc_sapXep.ItemHeight = 30;
             this.cbx_loc_sapXep.Items.AddRange(new object[] {
-            "Salary",
-            "Update date"});
+            "Salary"});
             this.cbx_loc_sapXep.Location = new System.Drawing.Point(56, 72);
             this.cbx_loc_sapXep.Name = "cbx_loc_sapXep";
             this.cbx_loc_sapXep.Size = new System.Drawing.Size(252, 36);
             this.cbx_loc_sapXep.TabIndex = 7;
+            this.cbx_loc_sapXep.SelectedIndexChanged += new System.EventHandler(this.cbx_loc_sapXep_SelectedIndexChanged);
             // 
             // btn_loc_sapXep
             // 
@@ -307,11 +306,11 @@
             this.cbx_loc_Luong.Name = "cbx_loc_Luong";
             this.cbx_loc_Luong.Size = new System.Drawing.Size(252, 36);
             this.cbx_loc_Luong.TabIndex = 11;
+            this.cbx_loc_Luong.SelectedIndexChanged += new System.EventHandler(this.cbx_loc_Luong_SelectedIndexChanged);
             // 
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.BackColor = System.Drawing.Color.PaleGreen;
-            this.guna2GradientPanel2.Controls.Add(this.btn_loc_timKiem);
             this.guna2GradientPanel2.Controls.Add(this.pictureBox5);
             this.guna2GradientPanel2.Controls.Add(this.btn_loc_sapXep);
             this.guna2GradientPanel2.Controls.Add(this.cbx_loc_sapXep);
@@ -329,31 +328,6 @@
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(314, 633);
             this.guna2GradientPanel2.TabIndex = 1;
-            // 
-            // btn_loc_timKiem
-            // 
-            this.btn_loc_timKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_loc_timKiem.Animated = true;
-            this.btn_loc_timKiem.BackColor = System.Drawing.Color.Transparent;
-            this.btn_loc_timKiem.BorderRadius = 5;
-            this.btn_loc_timKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_loc_timKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_loc_timKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_loc_timKiem.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_loc_timKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_loc_timKiem.FillColor = System.Drawing.Color.White;
-            this.btn_loc_timKiem.FillColor2 = System.Drawing.Color.White;
-            this.btn_loc_timKiem.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btn_loc_timKiem.ForeColor = System.Drawing.Color.Gray;
-            this.btn_loc_timKiem.Image = global::Project_Windows_04.Properties.Resources.pngegg__17_;
-            this.btn_loc_timKiem.IndicateFocus = true;
-            this.btn_loc_timKiem.Location = new System.Drawing.Point(12, 575);
-            this.btn_loc_timKiem.Name = "btn_loc_timKiem";
-            this.btn_loc_timKiem.Size = new System.Drawing.Size(296, 46);
-            this.btn_loc_timKiem.TabIndex = 13;
-            this.btn_loc_timKiem.Text = "Search";
-            this.btn_loc_timKiem.UseTransparentBackground = true;
             // 
             // pictureBox5
             // 
@@ -531,7 +505,6 @@
         public Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         public System.Windows.Forms.PictureBox pictureBox2;
         public Guna.UI2.WinForms.Guna2ComboBox cbx_loc_diaChi;
-        public Guna.UI2.WinForms.Guna2GradientButton btn_loc_timKiem;
         public Guna.UI2.WinForms.Guna2ComboBox cbx_loc_sapXep;
         public Guna.UI2.WinForms.Guna2GradientButton btn_loc_sapXep;
         public Guna.UI2.WinForms.Guna2GradientButton btn_dangKy;

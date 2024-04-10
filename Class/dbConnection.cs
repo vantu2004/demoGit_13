@@ -53,7 +53,7 @@ namespace Project_Windows_04
 
                 if (data.Read() == true)
                 {
-                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                     if (data.GetString(1) == "Employer")
                     {

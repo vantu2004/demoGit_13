@@ -633,6 +633,7 @@
             this.UC_BangTin_UV.Name = "UC_BangTin_UV";
             this.UC_BangTin_UV.Size = new System.Drawing.Size(1138, 1041);
             this.UC_BangTin_UV.TabIndex = 0;
+            this.UC_BangTin_UV.Load += new System.EventHandler(this.UC_BangTin_UV_Load);
             // 
             // guna2TabControl1
             // 

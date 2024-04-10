@@ -120,5 +120,14 @@ namespace Project_Windows_04
         {
             UV_DAO.chinhSuaTin(taoUngVien());
         }
+
+        private void UC_BangTin_UV_Load(object sender, EventArgs e)
+        {
+            UC_BangTin_UV.cbx_loc_Luong.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_Luong_SelectedIndexChanged;
+            UC_BangTin_UV.cbx_loc_nganhNghe.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_nganhNghe_SelectedIndexChanged;
+            UC_BangTin_UV.cbx_loc_sapXep.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_sapXep_SelectedIndexChanged;
+            UC_BangTin_UV.cbx_loc_kinhNghiem.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_kinhNghiem_SelectedIndexChanged;
+            UC_BangTin_UV.cbx_loc_diaChi.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_diaChi_SelectedIndexChanged;
+        }
     }
 }

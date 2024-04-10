@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\form\\\u0111\u0103ng nh\u1EADp\\main_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:form\\\u0111\u0103ng nh\u1EADp\\main_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\uc_controls\\uc_cvs_danop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:uc_controls\\uc_cvs_danop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\form\\tuy\u1EC3n d\u1EE5ng\\tuyendung_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:form\\tuy\u1EC3n d\u1EE5ng\\tuyendung_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,14 +39,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Main_TrangChu.cs [Design]",
-              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\\u0110\u0103ng nh\u1EADp\\Main_TrangChu.cs",
-              "RelativeDocumentMoniker": "Form\\\u0110\u0103ng nh\u1EADp\\Main_TrangChu.cs",
-              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\\u0110\u0103ng nh\u1EADp\\Main_TrangChu.cs [Design]",
-              "RelativeToolTip": "Form\\\u0110\u0103ng nh\u1EADp\\Main_TrangChu.cs [Design]",
+              "Title": "UC_CVs_daNop.cs [Design]",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\UC_Controls\\UC_CVs_daNop.cs",
+              "RelativeDocumentMoniker": "UC_Controls\\UC_CVs_daNop.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\UC_Controls\\UC_CVs_daNop.cs [Design]",
+              "RelativeToolTip": "UC_Controls\\UC_CVs_daNop.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T03:24:01.446Z",
+              "WhenOpened": "2024-04-09T16:12:50.107Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TuyenDung_TrangChu.cs [Design]",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_TrangChu.cs",
+              "RelativeDocumentMoniker": "Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_TrangChu.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_TrangChu.cs [Design]",
+              "RelativeToolTip": "Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_TrangChu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T16:12:09.861Z"
             }
           ]
         }
