@@ -123,9 +123,60 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _CITYPNG_COM_Flat_Green_Like_Heart_Icon_Silhouette_Transparent_Background___4000x4000 {
+            get {
+                object obj = ResourceManager.GetObject("[CITYPNG.COM]Flat Green Like Heart Icon Silhouette Transparent Background - 4000x" +
+                        "4000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap experience {
             get {
                 object obj = ResourceManager.GetObject("experience", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap follow_42_32 {
+            get {
+                object obj = ResourceManager.GetObject("follow-42-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap heart_icon_3339 {
+            get {
+                object obj = ResourceManager.GetObject("heart-icon-3339", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap heart_icon_33391 {
+            get {
+                object obj = ResourceManager.GetObject("heart-icon-33391", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap heart_icon_3351 {
+            get {
+                object obj = ResourceManager.GetObject("heart-icon-3351", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -240,6 +291,17 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_editing_vector_graphics_editor_edit_pen_write_icon_5ab06a247f5929_0215497815215109485216 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-editing-vector-graphics-editor-edit-pen-write-icon-5ab06a2" +
+                        "47f5929.0215497815215109485216", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_computer_icons_experience_stagiair_experience_5b20efb2862eb5_9663932815288851705496 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-experience-stagiair-experience-5b20efb2862eb5.966393281528" +
@@ -255,6 +317,27 @@ namespace Project_Windows_04.Properties {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-five-pointed-star-circle-circulo-5ac930dde65260.0800085015" +
                         "231346859434", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_floppy_disk_clip_art_save_button_5ac537556da855_9206579915228741974492 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-floppy-disk-clip-art-save-button-5ac537556da855.9206579915" +
+                        "228741974492", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_ {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-gear-setting-5b132e719ea563.8000613215279837296498 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -287,6 +370,28 @@ namespace Project_Windows_04.Properties {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-investor-investment-bank-symbols-salary-5ab0ffad142d79.546" +
                         "7246115215492290827", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_license_symbol_contract_5b34684f58b2f9_7362197615301612313634 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-license-symbol-contract-5b34684f58b2f9.7362197615301612313" +
+                        "634", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_public_key_certificate_font_awesome_5b2e4473618a98_7364413415297588353995 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-public-key-certificate-font-awesome-5b2e4473618a98.7364413" +
+                        "415297588353995", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -380,6 +485,17 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_rubbish_bins_waste_paper_baskets_computer_icons_lixo_5b25c01b15f310_9266541715292006670899 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-rubbish-bins-waste-paper-baskets-computer-icons-lixo-5b25c01b15f310.92665" +
+                        "41715292006670899", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_scalable_vector_graphics_computer_icons_portable_n_snowbears_5cb7a84816f6b3_8180413815555400400941 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-scalable-vector-graphics-computer-icons-portable-n-snowbears-5cb7a84816f6" +
@@ -464,6 +580,16 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Lovepik_com_400306429_photo_album {
+            get {
+                object obj = ResourceManager.GetObject("Lovepik_com-400306429-photo-album", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lovepik_com_401710061_money {
             get {
                 object obj = ResourceManager.GetObject("Lovepik_com-401710061-money", resourceCulture);
@@ -487,6 +613,16 @@ namespace Project_Windows_04.Properties {
         internal static System.Drawing.Bitmap name_icon {
             get {
                 object obj = ResourceManager.GetObject("name-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NicePng_hamburger_menu_png_1276180 {
+            get {
+                object obj = ResourceManager.GetObject("NicePng_hamburger-menu-png_1276180", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -607,6 +743,16 @@ namespace Project_Windows_04.Properties {
         internal static System.Drawing.Bitmap pngegg__23_ {
             get {
                 object obj = ResourceManager.GetObject("pngegg (23)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngfind_com_ticket_icon_png_3159127 {
+            get {
+                object obj = ResourceManager.GetObject("pngfind.com-ticket-icon-png-3159127", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

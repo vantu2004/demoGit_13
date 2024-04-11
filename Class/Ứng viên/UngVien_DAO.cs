@@ -25,16 +25,16 @@ namespace Project_Windows_04
 
         public void taoTin(UngVien_Tin u)
         {
-            string sqlQuery_taoTin = string.Format("INSERT INTO CVs(Id, Avatar, JobPos, CareerGoal, Education, Experience, UploadDate) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')",
-                u.Id, u.AnhDaiDien, u.ViTriUngTuyen, u.MucTieuNgheNghiep, u.HocVan, u.KinhNghiem, u.NgayCapNhatCV);
+            string sqlQuery_taoTin = string.Format("INSERT INTO CVs(Id, Avatar, JobPos, CareerGoal, Education, Experience, Activity, Award, Certificate, UploadDate) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')",
+                u.Id, u.AnhDaiDien, u.ViTriUngTuyen, u.MucTieuNgheNghiep, u.HocVan, u.KinhNghiem, u.HoatDong, u.GiaiThuong, u.ChungChi, u.NgayCapNhatCV);
 
             db.thucThi_taoTin_chinhSuaTin(sqlQuery_taoTin);
         }
 
         public void chinhSuaTin(UngVien_Tin u)
         {
-            string sqlQuery_chinhSuaTin_CVs = string.Format("UPDATE CVs SET Avatar = '{0}', JobPos = '{1}', CareerGoal = '{2}', Education = '{3}', Experience = '{4}', UploadDate = '{5}' WHERE Id = '{6}'",
-                u.AnhDaiDien, u.ViTriUngTuyen, u.MucTieuNgheNghiep, u.HocVan, u.KinhNghiem, u.NgayCapNhatCV, u.Id);
+            string sqlQuery_chinhSuaTin_CVs = string.Format("UPDATE CVs SET Avatar = '{0}', JobPos = '{1}', CareerGoal = '{2}', Education = '{3}', Experience = '{4}', Activity = '{5}', Award = '{6}', Certificate = '{7}', UploadDate = '{8}' WHERE Id = '{9}'",
+                u.AnhDaiDien, u.ViTriUngTuyen, u.MucTieuNgheNghiep, u.HocVan, u.KinhNghiem, u.HoatDong, u.GiaiThuong, u.ChungChi, u.NgayCapNhatCV, u.Id);
 
             db.thucThi_taoTin_chinhSuaTin(sqlQuery_chinhSuaTin_CVs);
 

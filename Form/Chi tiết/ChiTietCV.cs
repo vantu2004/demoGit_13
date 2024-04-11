@@ -38,6 +38,17 @@ namespace Project_Windows_04
             rtbx_mucTieuNgheNghiep.Text = u.MucTieuNgheNghiep;
             rtbx_hocVan.Text = u.HocVan;
             rtbx_kinhNghiem.Text = u.KinhNghiem;
+            rtbx_hoatDong.Text = u.HoatDong;
+            rtbx_giaiThuong.Text = u.GiaiThuong;
+            rtbx_chungChi.Text = u.ChungChi;
+
+            //  chỉnh kích cỡ các richtextbox
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_mucTieuNgheNghiep);
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_hocVan);
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_kinhNghiem);
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_hoatDong);
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_giaiThuong);
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_chungChi);
         }
     }
 }

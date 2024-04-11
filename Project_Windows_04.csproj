@@ -171,6 +171,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\ChinhKichThuoc_rtbx.cs" />
     <Compile Include="Form\Tuyển dụng\TuyenDung_ChinhSuaTin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +357,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\[CITYPNG.COM]Flat Green Like Heart Icon Silhouette Transparent Background - 4000x4000.png" />
     <None Include="Resources\transparent-company-icon-office-building-icon-human-resources-5f8e10bd66c854.033630951603145917421.png" />
     <None Include="Resources\vecteezy_o-email-e-enviar-icone-preto_200096011.png" />
     <None Include="Resources\_0669a73f-6c59-47e6-b77d-8d4b6eb6f99f1.jpeg" />
@@ -376,6 +378,10 @@
     <None Include="Resources\job_942800.png" />
     <None Include="Resources\kisspng-birthday-cake-bakery-wedding-cake-computer-icons-birth-date-5b2ec694aff869.8062975015297921487208.png" />
     <None Include="Resources\kisspng-chief-executive-computer-icons-businessperson-5aeaec59c56a80.3532939915253453698086.png" />
+    <None Include="Resources\follow-42-32.png" />
+    <None Include="Resources\heart-icon-3339.png" />
+    <None Include="Resources\heart-icon-33391.png" />
+    <None Include="Resources\heart-icon-3351.png" />
     <Content Include="Resources\kisspng-clip-art-computer-icons-scalable-vector-graphics-p-earth-location-map-world-navigation-pin-marker-svg-5bf236c7224d20.4334433015426003911405.png" />
     <None Include="Resources\kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3.5629845315234931599934.png" />
     <Content Include="Resources\kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.6946621115304120791875.png" />
@@ -400,8 +406,16 @@
     <None Include="Resources\kisspng-stopwatch-timer-clip-art-stopwatch-cliparts-5a76b357e59d45.0215386115177285999405.png" />
     <None Include="Resources\kisspng-stopwatch-clock-clip-art-stopwatch-cliparts-5a7600c24b7758.0680084115176828823091.png" />
     <None Include="Resources\kisspng-computer-icons-speed-test-timer-5acae4113a3aa0.6184639815232460972385.png" />
+    <None Include="Resources\kisspng-rubbish-bins-waste-paper-baskets-computer-icons-lixo-5b25c01b15f310.9266541715292006670899.png" />
+    <None Include="Resources\kisspng-computer-icons-floppy-disk-clip-art-save-button-5ac537556da855.9206579915228741974492.png" />
+    <None Include="Resources\kisspng-computer-icons-editing-vector-graphics-editor-edit-pen-write-icon-5ab06a247f5929.0215497815215109485216.png" />
+    <None Include="Resources\kisspng-computer-icons-gear-setting-5b132e719ea563.8000613215279837296498 %281%29.png" />
+    <None Include="Resources\kisspng-computer-icons-license-symbol-contract-5b34684f58b2f9.7362197615301612313634.png" />
+    <None Include="Resources\kisspng-computer-icons-public-key-certificate-font-awesome-5b2e4473618a98.7364413415297588353995.png" />
+    <None Include="Resources\Lovepik_com-400306429-photo-album.png" />
     <Content Include="Resources\Lovepik_com-401714979-characters-of-different-professions.png" />
     <None Include="Resources\name-icon.png" />
+    <None Include="Resources\NicePng_hamburger-menu-png_1276180.png" />
     <Content Include="Resources\pngegg %2815%29.png" />
     <None Include="Resources\pngegg %2815%291.png" />
     <None Include="Resources\Lovepik_com-401714979-characters-of-different-professions1.png" />
@@ -422,6 +436,7 @@
     <None Include="Resources\pngegg.png" />
     <None Include="Resources\pngegg %2822%29.png" />
     <None Include="Resources\pngegg %2823%29.png" />
+    <None Include="Resources\pngfind.com-ticket-icon-png-3159127.png" />
     <Content Include="Resources\Screenshot 2024-03-05 204513.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

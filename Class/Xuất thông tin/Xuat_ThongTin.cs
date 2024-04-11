@@ -38,6 +38,12 @@ namespace Project_Windows_04
             //  lấy userType của tài khoản đang đăng nhập
             this.userType = userType;
 
+            //  ẩn checkbox theo dõi tin nếu chưa đăng nhập hoặc là NTD
+            if (this.userType == "Employer" || this.userType == "null")
+            {
+                UC_tinTuyenDung.cbx_theoDoi.Hide();
+            }
+
             UC_tinTuyenDung.Click += UC_tinTuyenDung_Click;
 
             //  phải return UC_tinTuyenDung vì cần add 1 control vào flowlayoutpanel

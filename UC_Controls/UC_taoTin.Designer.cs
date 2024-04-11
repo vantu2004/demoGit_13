@@ -29,15 +29,30 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnl_thongTinTinTuyenDung = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.rtbx_quyenLoi = new System.Windows.Forms.RichTextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.rtbx_yeuCauUngVien = new System.Windows.Forms.RichTextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.rtbx_moTaCongViec = new System.Windows.Forms.RichTextBox();
+            this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rtbx_yeuCauUngVien = new System.Windows.Forms.RichTextBox();
+            this.guna2GradientCircleButton2 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label8 = new System.Windows.Forms.Label();
+            this.rtbx_quyenLoi = new System.Windows.Forms.RichTextBox();
+            this.guna2GradientCircleButton3 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.label10 = new System.Windows.Forms.Label();
+            this.rtbx_hoatDong = new System.Windows.Forms.RichTextBox();
+            this.guna2GradientCircleButton4 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label12 = new System.Windows.Forms.Label();
+            this.rtbx_giaiThuong = new System.Windows.Forms.RichTextBox();
+            this.guna2GradientCircleButton5 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pbx_giayPhep = new System.Windows.Forms.PictureBox();
             this.pnl_thongTinCongTy = new System.Windows.Forms.Panel();
             this.tbx_diaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbx_tenCongViec = new Guna.UI2.WinForms.Guna2TextBox();
@@ -66,7 +81,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.pnl_thongTinTinTuyenDung.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_giayPhep)).BeginInit();
             this.pnl_thongTinCongTy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logoCongTy)).BeginInit();
             this.panel3.SuspendLayout();
@@ -74,7 +93,8 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pnl_thongTinTinTuyenDung);
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.tabControl1);
             this.panel1.Controls.Add(this.pnl_thongTinCongTy);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -82,105 +102,342 @@
             this.panel1.Size = new System.Drawing.Size(1142, 1041);
             this.panel1.TabIndex = 0;
             // 
-            // pnl_thongTinTinTuyenDung
+            // tabControl1
             // 
-            this.pnl_thongTinTinTuyenDung.AutoScroll = true;
-            this.pnl_thongTinTinTuyenDung.BackColor = System.Drawing.Color.White;
-            this.pnl_thongTinTinTuyenDung.Controls.Add(this.panel7);
-            this.pnl_thongTinTinTuyenDung.Controls.Add(this.panel6);
-            this.pnl_thongTinTinTuyenDung.Controls.Add(this.rtbx_quyenLoi);
-            this.pnl_thongTinTinTuyenDung.Controls.Add(this.label4);
-            this.pnl_thongTinTinTuyenDung.Controls.Add(this.rtbx_yeuCauUngVien);
-            this.pnl_thongTinTinTuyenDung.Controls.Add(this.label6);
-            this.pnl_thongTinTinTuyenDung.Controls.Add(this.rtbx_moTaCongViec);
-            this.pnl_thongTinTinTuyenDung.Controls.Add(this.label10);
-            this.pnl_thongTinTinTuyenDung.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_thongTinTinTuyenDung.Location = new System.Drawing.Point(414, 0);
-            this.pnl_thongTinTinTuyenDung.Name = "pnl_thongTinTinTuyenDung";
-            this.pnl_thongTinTinTuyenDung.Size = new System.Drawing.Size(727, 1041);
-            this.pnl_thongTinTinTuyenDung.TabIndex = 32;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tabControl1.Location = new System.Drawing.Point(414, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(728, 1041);
+            this.tabControl1.TabIndex = 32;
             // 
-            // panel7
+            // tabPage1
             // 
-            this.panel7.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel7.Location = new System.Drawing.Point(108, 735);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(500, 2);
-            this.panel7.TabIndex = 69;
+            this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.flowLayoutPanel1);
+            this.tabPage1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(720, 1000);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Detail";
             // 
-            // panel6
+            // flowLayoutPanel1
             // 
-            this.panel6.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel6.Location = new System.Drawing.Point(108, 296);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(500, 2);
-            this.panel6.TabIndex = 68;
-            // 
-            // rtbx_quyenLoi
-            // 
-            this.rtbx_quyenLoi.BackColor = System.Drawing.Color.White;
-            this.rtbx_quyenLoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbx_quyenLoi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rtbx_quyenLoi.Location = new System.Drawing.Point(29, 778);
-            this.rtbx_quyenLoi.Name = "rtbx_quyenLoi";
-            this.rtbx_quyenLoi.Size = new System.Drawing.Size(653, 600);
-            this.rtbx_quyenLoi.TabIndex = 67;
-            this.rtbx_quyenLoi.Text = "";
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.label4);
+            this.flowLayoutPanel1.Controls.Add(this.rtbx_moTaCongViec);
+            this.flowLayoutPanel1.Controls.Add(this.guna2GradientCircleButton1);
+            this.flowLayoutPanel1.Controls.Add(this.guna2Separator1);
+            this.flowLayoutPanel1.Controls.Add(this.label6);
+            this.flowLayoutPanel1.Controls.Add(this.rtbx_yeuCauUngVien);
+            this.flowLayoutPanel1.Controls.Add(this.guna2GradientCircleButton2);
+            this.flowLayoutPanel1.Controls.Add(this.guna2Separator2);
+            this.flowLayoutPanel1.Controls.Add(this.label8);
+            this.flowLayoutPanel1.Controls.Add(this.rtbx_quyenLoi);
+            this.flowLayoutPanel1.Controls.Add(this.guna2GradientCircleButton3);
+            this.flowLayoutPanel1.Controls.Add(this.guna2Separator3);
+            this.flowLayoutPanel1.Controls.Add(this.label10);
+            this.flowLayoutPanel1.Controls.Add(this.rtbx_hoatDong);
+            this.flowLayoutPanel1.Controls.Add(this.guna2GradientCircleButton4);
+            this.flowLayoutPanel1.Controls.Add(this.guna2Separator4);
+            this.flowLayoutPanel1.Controls.Add(this.label12);
+            this.flowLayoutPanel1.Controls.Add(this.rtbx_giaiThuong);
+            this.flowLayoutPanel1.Controls.Add(this.guna2GradientCircleButton5);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(714, 994);
+            this.flowLayoutPanel1.TabIndex = 32;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(24, 750);
+            this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 28);
-            this.label4.TabIndex = 66;
-            this.label4.Text = "|| Benefit:";
+            this.label4.Size = new System.Drawing.Size(207, 31);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "|| Job description:";
             // 
-            // rtbx_yeuCauUngVien
+            // rtbx_moTaCongViec
             // 
-            this.rtbx_yeuCauUngVien.BackColor = System.Drawing.Color.White;
-            this.rtbx_yeuCauUngVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbx_yeuCauUngVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rtbx_yeuCauUngVien.Location = new System.Drawing.Point(29, 341);
-            this.rtbx_yeuCauUngVien.Name = "rtbx_yeuCauUngVien";
-            this.rtbx_yeuCauUngVien.Size = new System.Drawing.Size(653, 368);
-            this.rtbx_yeuCauUngVien.TabIndex = 65;
-            this.rtbx_yeuCauUngVien.Text = "";
+            this.rtbx_moTaCongViec.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbx_moTaCongViec.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_moTaCongViec.Location = new System.Drawing.Point(3, 34);
+            this.rtbx_moTaCongViec.Name = "rtbx_moTaCongViec";
+            this.rtbx_moTaCongViec.Size = new System.Drawing.Size(639, 100);
+            this.rtbx_moTaCongViec.TabIndex = 72;
+            this.rtbx_moTaCongViec.Text = "";
+            this.rtbx_moTaCongViec.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged);
+            // 
+            // guna2GradientCircleButton1
+            // 
+            this.guna2GradientCircleButton1.Animated = true;
+            this.guna2GradientCircleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientCircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientCircleButton1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton1.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientCircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton1.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
+            this.guna2GradientCircleButton1.IndicateFocus = true;
+            this.guna2GradientCircleButton1.Location = new System.Drawing.Point(648, 34);
+            this.guna2GradientCircleButton1.Name = "guna2GradientCircleButton1";
+            this.guna2GradientCircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2GradientCircleButton1.Size = new System.Drawing.Size(30, 30);
+            this.guna2GradientCircleButton1.TabIndex = 71;
+            this.guna2GradientCircleButton1.UseTransparentBackground = true;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2Separator1.FillStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2Separator1.FillThickness = 3;
+            this.guna2Separator1.Location = new System.Drawing.Point(3, 140);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(675, 10);
+            this.guna2Separator1.TabIndex = 73;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(24, 313);
+            this.label6.Location = new System.Drawing.Point(3, 153);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(264, 28);
-            this.label6.TabIndex = 64;
+            this.label6.Size = new System.Drawing.Size(299, 31);
+            this.label6.TabIndex = 74;
             this.label6.Text = "|| Candidate requirements:";
             // 
-            // rtbx_moTaCongViec
+            // rtbx_yeuCauUngVien
             // 
-            this.rtbx_moTaCongViec.BackColor = System.Drawing.Color.White;
-            this.rtbx_moTaCongViec.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbx_moTaCongViec.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.rtbx_moTaCongViec.Location = new System.Drawing.Point(29, 55);
-            this.rtbx_moTaCongViec.Name = "rtbx_moTaCongViec";
-            this.rtbx_moTaCongViec.Size = new System.Drawing.Size(653, 212);
-            this.rtbx_moTaCongViec.TabIndex = 63;
-            this.rtbx_moTaCongViec.Text = "";
+            this.rtbx_yeuCauUngVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbx_yeuCauUngVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_yeuCauUngVien.Location = new System.Drawing.Point(3, 187);
+            this.rtbx_yeuCauUngVien.Name = "rtbx_yeuCauUngVien";
+            this.rtbx_yeuCauUngVien.Size = new System.Drawing.Size(639, 100);
+            this.rtbx_yeuCauUngVien.TabIndex = 75;
+            this.rtbx_yeuCauUngVien.Text = "";
+            this.rtbx_yeuCauUngVien.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged);
+            // 
+            // guna2GradientCircleButton2
+            // 
+            this.guna2GradientCircleButton2.Animated = true;
+            this.guna2GradientCircleButton2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientCircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientCircleButton2.FillColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton2.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientCircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientCircleButton2.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton2.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
+            this.guna2GradientCircleButton2.IndicateFocus = true;
+            this.guna2GradientCircleButton2.Location = new System.Drawing.Point(648, 187);
+            this.guna2GradientCircleButton2.Name = "guna2GradientCircleButton2";
+            this.guna2GradientCircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2GradientCircleButton2.Size = new System.Drawing.Size(30, 30);
+            this.guna2GradientCircleButton2.TabIndex = 88;
+            this.guna2GradientCircleButton2.UseTransparentBackground = true;
+            // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2Separator2.FillStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2Separator2.FillThickness = 3;
+            this.guna2Separator2.Location = new System.Drawing.Point(3, 293);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(675, 10);
+            this.guna2Separator2.TabIndex = 89;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label8.Location = new System.Drawing.Point(3, 306);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(120, 31);
+            this.label8.TabIndex = 90;
+            this.label8.Text = "|| Benefit:";
+            // 
+            // rtbx_quyenLoi
+            // 
+            this.rtbx_quyenLoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbx_quyenLoi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_quyenLoi.Location = new System.Drawing.Point(3, 340);
+            this.rtbx_quyenLoi.Name = "rtbx_quyenLoi";
+            this.rtbx_quyenLoi.Size = new System.Drawing.Size(639, 100);
+            this.rtbx_quyenLoi.TabIndex = 91;
+            this.rtbx_quyenLoi.Text = "";
+            this.rtbx_quyenLoi.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged);
+            // 
+            // guna2GradientCircleButton3
+            // 
+            this.guna2GradientCircleButton3.Animated = true;
+            this.guna2GradientCircleButton3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientCircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientCircleButton3.FillColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton3.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientCircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientCircleButton3.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton3.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
+            this.guna2GradientCircleButton3.IndicateFocus = true;
+            this.guna2GradientCircleButton3.Location = new System.Drawing.Point(648, 340);
+            this.guna2GradientCircleButton3.Name = "guna2GradientCircleButton3";
+            this.guna2GradientCircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2GradientCircleButton3.Size = new System.Drawing.Size(30, 30);
+            this.guna2GradientCircleButton3.TabIndex = 101;
+            this.guna2GradientCircleButton3.UseTransparentBackground = true;
+            // 
+            // guna2Separator3
+            // 
+            this.guna2Separator3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2Separator3.FillStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2Separator3.FillThickness = 3;
+            this.guna2Separator3.Location = new System.Drawing.Point(3, 446);
+            this.guna2Separator3.Name = "guna2Separator3";
+            this.guna2Separator3.Size = new System.Drawing.Size(675, 10);
+            this.guna2Separator3.TabIndex = 102;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(24, 24);
+            this.label10.Location = new System.Drawing.Point(3, 459);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(182, 28);
-            this.label10.TabIndex = 62;
-            this.label10.Text = "|| Job description:";
+            this.label10.Size = new System.Drawing.Size(125, 31);
+            this.label10.TabIndex = 103;
+            this.label10.Text = "|| Activity:";
+            // 
+            // rtbx_hoatDong
+            // 
+            this.rtbx_hoatDong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbx_hoatDong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_hoatDong.Location = new System.Drawing.Point(3, 493);
+            this.rtbx_hoatDong.Name = "rtbx_hoatDong";
+            this.rtbx_hoatDong.Size = new System.Drawing.Size(639, 100);
+            this.rtbx_hoatDong.TabIndex = 104;
+            this.rtbx_hoatDong.Text = "";
+            this.rtbx_hoatDong.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged);
+            // 
+            // guna2GradientCircleButton4
+            // 
+            this.guna2GradientCircleButton4.Animated = true;
+            this.guna2GradientCircleButton4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientCircleButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton4.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientCircleButton4.FillColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton4.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientCircleButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientCircleButton4.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton4.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
+            this.guna2GradientCircleButton4.IndicateFocus = true;
+            this.guna2GradientCircleButton4.Location = new System.Drawing.Point(648, 493);
+            this.guna2GradientCircleButton4.Name = "guna2GradientCircleButton4";
+            this.guna2GradientCircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2GradientCircleButton4.Size = new System.Drawing.Size(30, 30);
+            this.guna2GradientCircleButton4.TabIndex = 111;
+            this.guna2GradientCircleButton4.UseTransparentBackground = true;
+            // 
+            // guna2Separator4
+            // 
+            this.guna2Separator4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2Separator4.FillStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.guna2Separator4.FillThickness = 3;
+            this.guna2Separator4.Location = new System.Drawing.Point(3, 599);
+            this.guna2Separator4.Name = "guna2Separator4";
+            this.guna2Separator4.Size = new System.Drawing.Size(675, 10);
+            this.guna2Separator4.TabIndex = 112;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label12.Location = new System.Drawing.Point(3, 612);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 31);
+            this.label12.TabIndex = 113;
+            this.label12.Text = "|| Award:";
+            // 
+            // rtbx_giaiThuong
+            // 
+            this.rtbx_giaiThuong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbx_giaiThuong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_giaiThuong.Location = new System.Drawing.Point(3, 646);
+            this.rtbx_giaiThuong.Name = "rtbx_giaiThuong";
+            this.rtbx_giaiThuong.Size = new System.Drawing.Size(639, 100);
+            this.rtbx_giaiThuong.TabIndex = 114;
+            this.rtbx_giaiThuong.Text = "";
+            this.rtbx_giaiThuong.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged);
+            // 
+            // guna2GradientCircleButton5
+            // 
+            this.guna2GradientCircleButton5.Animated = true;
+            this.guna2GradientCircleButton5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientCircleButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientCircleButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton5.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientCircleButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientCircleButton5.FillColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton5.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientCircleButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GradientCircleButton5.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientCircleButton5.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
+            this.guna2GradientCircleButton5.IndicateFocus = true;
+            this.guna2GradientCircleButton5.Location = new System.Drawing.Point(648, 646);
+            this.guna2GradientCircleButton5.Name = "guna2GradientCircleButton5";
+            this.guna2GradientCircleButton5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2GradientCircleButton5.Size = new System.Drawing.Size(30, 30);
+            this.guna2GradientCircleButton5.TabIndex = 118;
+            this.guna2GradientCircleButton5.UseTransparentBackground = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.pbx_giayPhep);
+            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tabPage2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.tabPage2.Location = new System.Drawing.Point(4, 37);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(720, 1000);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "License";
+            // 
+            // pbx_giayPhep
+            // 
+            this.pbx_giayPhep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbx_giayPhep.Image = global::Project_Windows_04.Properties.Resources.Lovepik_com_400306429_photo_album;
+            this.pbx_giayPhep.Location = new System.Drawing.Point(3, 3);
+            this.pbx_giayPhep.Name = "pbx_giayPhep";
+            this.pbx_giayPhep.Size = new System.Drawing.Size(714, 994);
+            this.pbx_giayPhep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_giayPhep.TabIndex = 0;
+            this.pbx_giayPhep.TabStop = false;
             // 
             // pnl_thongTinCongTy
             // 
@@ -706,8 +963,12 @@
             this.Name = "UC_taoTin";
             this.Size = new System.Drawing.Size(1142, 1041);
             this.panel1.ResumeLayout(false);
-            this.pnl_thongTinTinTuyenDung.ResumeLayout(false);
-            this.pnl_thongTinTinTuyenDung.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_giayPhep)).EndInit();
             this.pnl_thongTinCongTy.ResumeLayout(false);
             this.pnl_thongTinCongTy.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logoCongTy)).EndInit();
@@ -717,15 +978,6 @@
         }
 
         #endregion
-        public System.Windows.Forms.Panel pnl_thongTinTinTuyenDung;
-        public System.Windows.Forms.Panel panel7;
-        public System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.RichTextBox rtbx_quyenLoi;
-        public System.Windows.Forms.Label label4;
-        public System.Windows.Forms.RichTextBox rtbx_yeuCauUngVien;
-        public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.RichTextBox rtbx_moTaCongViec;
-        public System.Windows.Forms.Label label10;
         public System.Windows.Forms.Panel pnl_thongTinCongTy;
         public Guna.UI2.WinForms.Guna2TextBox tbx_diaChi;
         public Guna.UI2.WinForms.Guna2TextBox tbx_tenCongViec;
@@ -754,5 +1006,29 @@
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.PictureBox pbx_logoCongTy;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.RichTextBox rtbx_moTaCongViec;
+        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton1;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.RichTextBox rtbx_yeuCauUngVien;
+        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton2;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.RichTextBox rtbx_quyenLoi;
+        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton3;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.RichTextBox rtbx_hoatDong;
+        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton4;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.RichTextBox rtbx_giaiThuong;
+        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton5;
+        public System.Windows.Forms.PictureBox pbx_giayPhep;
     }
 }

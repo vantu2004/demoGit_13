@@ -35,21 +35,22 @@
             this.lbl_luong = new System.Windows.Forms.Label();
             this.lbl_kinhNghiem = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_nganhNghe = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbx_logoCongTy = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.lbl_nganhNghe = new System.Windows.Forms.Label();
+            this.cbx_theoDoi = new Guna.UI2.WinForms.Guna2ImageCheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logoCongTy)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_tenCongViec
@@ -122,6 +123,36 @@
             this.panel2.Size = new System.Drawing.Size(9, 200);
             this.panel2.TabIndex = 12;
             // 
+            // lbl_nganhNghe
+            // 
+            this.lbl_nganhNghe.AutoSize = true;
+            this.lbl_nganhNghe.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbl_nganhNghe.Location = new System.Drawing.Point(269, 158);
+            this.lbl_nganhNghe.Name = "lbl_nganhNghe";
+            this.lbl_nganhNghe.Size = new System.Drawing.Size(62, 25);
+            this.lbl_nganhNghe.TabIndex = 19;
+            this.lbl_nganhNghe.Text = "Career";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::Project_Windows_04.Properties.Resources.kisspng_clip_art_computer_icons_portable_network_graphics_font_work_svg_png_icon_free_download_391838_o_5c65783be93e67_4416976315501537879554;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(228, 155);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox7.TabIndex = 20;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::Project_Windows_04.Properties.Resources.kisspng_scalable_vector_graphics_computer_icons_portable_n_snowbears_5cb7a84816f6b3_8180413815555400400941;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(588, 155);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox6.TabIndex = 18;
+            this.pictureBox6.TabStop = false;
+            // 
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImage = global::Project_Windows_04.Properties.Resources.pngegg__21_;
@@ -173,41 +204,27 @@
             this.pbx_logoCongTy.TabIndex = 13;
             this.pbx_logoCongTy.TabStop = false;
             // 
-            // pictureBox6
+            // cbx_theoDoi
             // 
-            this.pictureBox6.BackgroundImage = global::Project_Windows_04.Properties.Resources.kisspng_scalable_vector_graphics_computer_icons_portable_n_snowbears_5cb7a84816f6b3_8180413815555400400941;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(588, 155);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox6.TabIndex = 18;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::Project_Windows_04.Properties.Resources.kisspng_clip_art_computer_icons_portable_network_graphics_font_work_svg_png_icon_free_download_391838_o_5c65783be93e67_4416976315501537879554;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(228, 155);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(35, 35);
-            this.pictureBox7.TabIndex = 20;
-            this.pictureBox7.TabStop = false;
-            // 
-            // lbl_nganhNghe
-            // 
-            this.lbl_nganhNghe.AutoSize = true;
-            this.lbl_nganhNghe.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_nganhNghe.Location = new System.Drawing.Point(269, 158);
-            this.lbl_nganhNghe.Name = "lbl_nganhNghe";
-            this.lbl_nganhNghe.Size = new System.Drawing.Size(62, 25);
-            this.lbl_nganhNghe.TabIndex = 19;
-            this.lbl_nganhNghe.Text = "Career";
+            this.cbx_theoDoi.BackColor = System.Drawing.Color.Transparent;
+            this.cbx_theoDoi.CheckedState.Image = global::Project_Windows_04.Properties.Resources.pngfind_com_ticket_icon_png_3159127;
+            this.cbx_theoDoi.Image = global::Project_Windows_04.Properties.Resources.heart_icon_3351;
+            this.cbx_theoDoi.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cbx_theoDoi.ImageRotate = 0F;
+            this.cbx_theoDoi.ImageSize = new System.Drawing.Size(35, 35);
+            this.cbx_theoDoi.IndicateFocus = true;
+            this.cbx_theoDoi.Location = new System.Drawing.Point(953, 12);
+            this.cbx_theoDoi.Name = "cbx_theoDoi";
+            this.cbx_theoDoi.Size = new System.Drawing.Size(44, 39);
+            this.cbx_theoDoi.TabIndex = 131;
+            this.cbx_theoDoi.UseTransparentBackground = true;
             // 
             // UC_TinTuyenDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cbx_theoDoi);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.lbl_nganhNghe);
             this.Controls.Add(this.pictureBox6);
@@ -226,13 +243,13 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UC_TinTuyenDung";
             this.Size = new System.Drawing.Size(1018, 200);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logoCongTy)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +272,6 @@
         public System.Windows.Forms.PictureBox pictureBox6;
         public System.Windows.Forms.PictureBox pictureBox7;
         public System.Windows.Forms.Label lbl_nganhNghe;
+        public Guna.UI2.WinForms.Guna2ImageCheckBox cbx_theoDoi;
     }
 }

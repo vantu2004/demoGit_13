@@ -64,7 +64,6 @@ namespace Project_Windows_04
                     }
                     else
                     {
-                        //string sqlQuery_UV = string.Format("SELECT * FROM UNGVIEN INNER JOIN CVs ON UNGVIEN.Id = CVs.Id WHERE UNGVIEN.Id = '{0}'", data.GetString(0));
                         //  lấy toàn bộ thông tin của UV thông qua Id của tài khoản đăng nhập vào
                         string sqlQuery_UV = string.Format("SELECT * FROM UNGVIEN  WHERE Id = '{0}'", data.GetString(0));
                         conn.Close();
@@ -131,7 +130,6 @@ namespace Project_Windows_04
 
                 if (data.Read() == true)
                 {
-                    //UngVien_Tin u = new UngVien_Tin(data.GetString(0), data.GetString(10), data.GetString(2), data.GetString(4), data.GetString(8), data.GetString(7), data.GetString(5), data.GetString(3), data.GetString(6), data.GetString(11), data.GetString(15), data.GetString(12), data.GetString(13), data.GetString(14));
                     UngVien u = new UngVien(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(6), data.GetString(7), data.GetString(8));
                     UngVien_TrangChu UV_TC = new UngVien_TrangChu();
                     UV_TC.Id = u.Id;
@@ -194,7 +192,7 @@ namespace Project_Windows_04
                     //  cứ 1 vòng lặp là tạo 1 đối tượng t để truyền vào sử cho lớp Xuat_ThongTin
                     TuyenDung_Tin t = new TuyenDung_Tin(data.GetString(0), data.GetString(10), data.GetString(1), data.GetString(11), data.GetString(6), data.GetString(8), 
                         data.GetString(7), data.GetString(12), data.GetString(13), Convert.ToDouble(data.GetDecimal(14)), data.GetString(15), data.GetString(16), data.GetString(2), 
-                        data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(17), data.GetString(18), data.GetString(19), data.GetString(20), data.GetString(21));
+                        data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(17), data.GetString(18), data.GetString(19), data.GetString(20), data.GetString(21), data.GetString(22), data.GetString(23), data.GetString(24));
 
                     flowLayoutPanel.Controls.Add(xuat_TT.them_tinTuyenDung(t, kieuNguoiDung));
                 }
@@ -250,7 +248,7 @@ namespace Project_Windows_04
                 {
                     TuyenDung_Tin t = new TuyenDung_Tin(data.GetString(0), data.GetString(10), data.GetString(1), data.GetString(11), data.GetString(6), data.GetString(8),
                         data.GetString(7), data.GetString(12), data.GetString(13), Convert.ToDouble(data.GetDecimal(14)), data.GetString(15), data.GetString(16), data.GetString(2),
-                        data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(17), data.GetString(18), data.GetString(19), data.GetString(20), data.GetString(21));
+                        data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(17), data.GetString(18), data.GetString(19), data.GetString(20), data.GetString(21), data.GetString(22), data.GetString(23), data.GetString(24));
 
                     return t;
                 }
@@ -313,7 +311,7 @@ namespace Project_Windows_04
                 if (data.Read() == true)
                 {
                     UngVien_Tin u = new UngVien_Tin(data.GetString(0), data.GetString(10), data.GetString(2), data.GetString(4), data.GetString(8), data.GetString(7), 
-                        data.GetString(5), data.GetString(3), data.GetString(6), data.GetString(11), data.GetString(15), data.GetString(12), data.GetString(13), data.GetString(14));
+                        data.GetString(5), data.GetString(3), data.GetString(6), data.GetString(11), data.GetString(18), data.GetString(12), data.GetString(13), data.GetString(14), data.GetString(15), data.GetString(16), data.GetString(17));
 
                     return u;
                 }

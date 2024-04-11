@@ -13,27 +13,15 @@ namespace Project_Windows_04
 {
     public partial class ChiTietTinTuyenDung : Form
     {
-        //public UngTuyen UT = new UngTuyen();
-        //private UngTuyen_DAO UT_DAO = new UngTuyen_DAO();
-
         public ChiTietTinTuyenDung()
         {
             InitializeComponent();
         }
 
-        private void Btn_ungTuyen_Click(object sender, EventArgs e)
-        {
-            //if (UT.UserType == "Employer")
-            //    MessageBox.Show("You are the employer!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //else if (UT.UserType == "null")
-            //    MessageBox.Show("You must log in or sign up!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //else
-            //    UT_DAO.ungTuyen(UT);
-        }
-
         public void xuatDuLieu(TuyenDung_Tin t)
         {
             pbx_logoCongTy.Image = Image.FromFile(t.LogoCongTy);
+            pbx_giayPhep.Image = Image.FromFile(t.GiayPhep);
             lbl_tenCongTy.Text = t.TenCongTy;
             lbl_mangXaHoi.Text = t.MangXaHoi;
             lbl_DiaChi.Text = t.DiaChi;
@@ -50,7 +38,16 @@ namespace Project_Windows_04
             lbl_hanChot.Text = t.HanChot;
             rtbx_moTaCongViec.Text = t.MoTaCongViec;
             rtbx_yeuCauUngVien.Text = t.YeuCau;
-            rtbx_loiIch.Text = t.LoiIch;
+            rtbx_quyenLoi.Text = t.LoiIch;
+            rtbx_hoatDong.Text = t.HoatDong;
+            rtbx_giaiThuong.Text = t.GiaiThuong;
+
+            //  chỉnh kích thước rtbx
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_moTaCongViec);
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_yeuCauUngVien);
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_quyenLoi);
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_hoatDong);
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_giaiThuong);
         }
     }
 }

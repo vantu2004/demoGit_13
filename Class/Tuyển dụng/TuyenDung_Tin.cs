@@ -30,10 +30,13 @@ namespace Project_Windows_04
         private string moTaCongViec;
         private string yeuCau;
         private string loiIch;
+        private string hoatDong;
+        private string giaiThuong;
+        private string giayPhep;
 
         public TuyenDung_Tin() { }
         public TuyenDung_Tin(string idCompany, string idJobPosting, string userType, string logoCongTy, string tenCongTy, string mangXaHoi, string diaChi, string nganhNghe, string tenCongViec, double luong, string kinhNghiem, 
-            string hinhThucLamViec, string tenHR, string emailHR, string sdtHR, string viTriCongTacHR, string ngayDang, string hanChot, string moTaCongViec, string yeuCau, string loiIch)
+            string hinhThucLamViec, string tenHR, string emailHR, string sdtHR, string viTriCongTacHR, string ngayDang, string hanChot, string moTaCongViec, string yeuCau, string loiIch, string hoatDong, string giaiThuong, string giayPhep)
         {
             IdCompany = idCompany;
             IdJobPostings = idJobPosting;
@@ -56,6 +59,9 @@ namespace Project_Windows_04
             MoTaCongViec = moTaCongViec;
             YeuCau = yeuCau;
             LoiIch = loiIch;
+            HoatDong = hoatDong;
+            GiaiThuong = giaiThuong;
+            GiayPhep = giayPhep;
         }
 
         public string UserType { get => userType; set => userType = value; }
@@ -79,5 +85,8 @@ namespace Project_Windows_04
         public string IdJobPostings { get => idJobPostings; set => idJobPostings = value; }
         public string TenCongViec { get => tenCongViec; set => tenCongViec = value; }
         public string LogoCongTy { get => logoCongTy; set => logoCongTy = value; }
+        public string HoatDong { get => hoatDong; set => hoatDong = value; }
+        public string GiaiThuong { get => giaiThuong; set => giaiThuong = value; }
+        public string GiayPhep { get => giayPhep; set => giayPhep = value; }
     }
 }

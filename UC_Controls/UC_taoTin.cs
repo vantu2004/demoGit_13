@@ -16,5 +16,13 @@ namespace Project_Windows_04
         {
             InitializeComponent();
         }
+
+        //  phải gọi sự kiện textchange trong UCControls đề dùng cho 2 form TuyenDung_TrangChu và TuyenDung_ChinhSuaTin
+        private void rtbx_moTaCongViec_TextChanged(object sender, EventArgs e)
+        {
+            // Tính toán lại chiều cao của RichTextBox khi văn bản thay đổi
+            RichTextBox rtbx = (RichTextBox)sender;
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx);
+        }
     }
 }

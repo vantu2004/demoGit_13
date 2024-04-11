@@ -52,9 +52,20 @@ namespace Project_Windows_04
                 tbx_sdtUV.Text = u.SdtUV;
                 tbx_emaiUV.Text = u.EmailUV;
                 cbx_viTriUngTuyen.Text = u.ViTriUngTuyen;
-                rtbx_mucTIeuNgheNghiep.Text = u.MucTieuNgheNghiep;
+                rtbx_mucTieuNgheNghiep.Text = u.MucTieuNgheNghiep;
                 rtbx_hocVan.Text = u.HocVan;
                 rtbx_kinhNghiem.Text = u.KinhNghiem;
+                rtbx_hoatDong.Text = u.HoatDong;
+                rtbx_giaiThuong.Text = u.GiaiThuong;
+                rtbx_chungChi.Text = u.ChungChi;
+
+                //  chỉnh kích cỡ các richtextbox
+                ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_mucTieuNgheNghiep);
+                ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_hocVan);
+                ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_kinhNghiem);
+                ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_hoatDong);
+                ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_giaiThuong);
+                ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx_chungChi);
 
                 //  giả sử ko tương tác gì với avatar thì mặc định sẽ lấy avatar cũ
                 this.linkAnh = u.AnhDaiDien;
@@ -91,7 +102,7 @@ namespace Project_Windows_04
 
                 UngVien_Tin u = new UngVien_Tin(this.Id, this.linkAnh, tbx_tenUV.Text, dtpr_ngaySinhUV.Value.ToShortDateString(), gioiTinh,
                     cbx_diaChiUV.Text, tbx_mangXaHoi.Text, tbx_sdtUV.Text, tbx_emaiUV.Text, cbx_viTriUngTuyen.Text,
-                    dt.ToString("dd/MM/yyyy"), rtbx_mucTIeuNgheNghiep.Text, rtbx_hocVan.Text, rtbx_kinhNghiem.Text);
+                    dt.ToString("dd/MM/yyyy"), rtbx_mucTieuNgheNghiep.Text, rtbx_hocVan.Text, rtbx_kinhNghiem.Text, rtbx_hoatDong.Text, rtbx_giaiThuong.Text, rtbx_chungChi.Text);
 
                 return u;
             }
@@ -105,8 +116,8 @@ namespace Project_Windows_04
         private bool kiemTra_null()
         {
             if (string.IsNullOrEmpty(this.linkAnh) || string.IsNullOrEmpty(tbx_tenUV.Text) || string.IsNullOrEmpty(this.gioiTinh) || string.IsNullOrEmpty(cbx_diaChiUV.Text) 
-                || string.IsNullOrEmpty(tbx_mangXaHoi.Text) || string.IsNullOrEmpty(tbx_sdtUV.Text) || string.IsNullOrEmpty(tbx_emaiUV.Text) || string.IsNullOrEmpty(cbx_viTriUngTuyen.Text) 
-                || string.IsNullOrEmpty(rtbx_mucTIeuNgheNghiep.Text) || string.IsNullOrEmpty(rtbx_hocVan.Text) || string.IsNullOrEmpty(rtbx_kinhNghiem.Text))
+                || string.IsNullOrEmpty(tbx_mangXaHoi.Text) || string.IsNullOrEmpty(tbx_sdtUV.Text) || string.IsNullOrEmpty(tbx_emaiUV.Text) || string.IsNullOrEmpty(cbx_viTriUngTuyen.Text) || string.IsNullOrEmpty(rtbx_mucTieuNgheNghiep.Text) 
+                || string.IsNullOrEmpty(rtbx_hocVan.Text) || string.IsNullOrEmpty(rtbx_kinhNghiem.Text) || string.IsNullOrEmpty(rtbx_hoatDong.Text) || string.IsNullOrEmpty(rtbx_giaiThuong.Text) || string.IsNullOrEmpty(rtbx_chungChi.Text))
                 return false;
             return true;
         }
@@ -121,6 +132,7 @@ namespace Project_Windows_04
             UV_DAO.chinhSuaTin(taoUngVien());
         }
 
+        //  load hàm chức năng của phần lọc trong bảng tin
         private void UC_BangTin_UV_Load(object sender, EventArgs e)
         {
             UC_BangTin_UV.cbx_loc_Luong.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_Luong_SelectedIndexChanged;
@@ -128,6 +140,13 @@ namespace Project_Windows_04
             UC_BangTin_UV.cbx_loc_sapXep.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_sapXep_SelectedIndexChanged;
             UC_BangTin_UV.cbx_loc_kinhNghiem.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_kinhNghiem_SelectedIndexChanged;
             UC_BangTin_UV.cbx_loc_diaChi.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_diaChi_SelectedIndexChanged;
+        }
+
+        private void rtbx_mucTieuNgheNghiep_TextChanged_1(object sender, EventArgs e)
+        {
+            // Tính toán lại chiều cao của RichTextBox khi văn bản thay đổi
+            RichTextBox rtbx = (RichTextBox)sender;
+            ChinhKichThuoc_rtbx.chinhKichThuoc(rtbx);
         }
     }
 }

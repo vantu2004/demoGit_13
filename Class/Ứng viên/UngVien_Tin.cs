@@ -22,8 +22,12 @@ namespace Project_Windows_04
         private string mucTieuNgheNghiep;
         private string hocVan;
         private string kinhNghiem;
+        private string hoatDong;
+        private string giaiThuong;
+        private string chungChi;
 
-        public UngVien_Tin(string id, string anhDaiDien, string tenUV, string ngaySinhUV, string gioiTinhUV, string diaChi, string mangXaHoi, string sdtUV, string emailUV, string viTriUngTuyen, string ngayCapNhatCV, string mucTieuNgheNghiep, string hocVan, string kinhNghiem)
+        public UngVien_Tin(string id, string anhDaiDien, string tenUV, string ngaySinhUV, string gioiTinhUV, string diaChi, string mangXaHoi, string sdtUV, string emailUV, 
+            string viTriUngTuyen, string ngayCapNhatCV, string mucTieuNgheNghiep, string hocVan, string kinhNghiem, string hoatDong, string giaiThuong, string chungChi)
         {
             Id = id;
             AnhDaiDien = anhDaiDien;
@@ -39,6 +43,9 @@ namespace Project_Windows_04
             MucTieuNgheNghiep = mucTieuNgheNghiep;
             HocVan = hocVan;
             KinhNghiem = kinhNghiem;
+            HoatDong = hoatDong;
+            GiaiThuong = giaiThuong;
+            ChungChi = chungChi;
         }
 
         public string Id { get => id; set => id = value; }
@@ -55,5 +62,8 @@ namespace Project_Windows_04
         public string HocVan { get => hocVan; set => hocVan = value; }
         public string KinhNghiem { get => kinhNghiem; set => kinhNghiem = value; }
         public string AnhDaiDien { get => anhDaiDien; set => anhDaiDien = value; }
+        public string HoatDong { get => hoatDong; set => hoatDong = value; }
+        public string GiaiThuong { get => giaiThuong; set => giaiThuong = value; }
+        public string ChungChi { get => chungChi; set => chungChi = value; }
     }
 }
