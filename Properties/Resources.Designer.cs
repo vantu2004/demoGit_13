@@ -540,6 +540,16 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_template_green_frame_5a7fd510f0a857_8461228615183270569857 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-template-green-frame-5a7fd510f0a857.8461228615183270569857", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap klipartz_com {
             get {
                 object obj = ResourceManager.GetObject("klipartz.com", resourceCulture);
@@ -603,6 +613,16 @@ namespace Project_Windows_04.Properties {
         internal static System.Drawing.Bitmap Lovepik_com_401714979_characters_of_different_professions {
             get {
                 object obj = ResourceManager.GetObject("Lovepik_com-401714979-characters-of-different-professions", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lovepik_com_450161447_Cute_frame_border_png_picture_image {
+            get {
+                object obj = ResourceManager.GetObject("Lovepik_com-450161447-Cute frame border png picture image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

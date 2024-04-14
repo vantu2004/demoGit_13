@@ -124,6 +124,9 @@
   <data name="NicePng_hamburger-menu-png_1276180" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NicePng_hamburger-menu-png_1276180.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="klipartz.com (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\klipartz.com (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kisspng-computer-icons-work-experience-clip-art-experiential-5b06897787b6b0.7873029515271550635559" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-work-experience-clip-art-experiential-5b06897787b6b0.7873029515271550635559.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,6 +141,9 @@
   </data>
   <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kisspng-computer-icons-gear-setting-5b132e719ea563.8000613215279837296498 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-gear-setting-5b132e719ea563.8000613215279837296498 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngegg (21)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngegg (21).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,6 +163,9 @@
   <data name="pngwing.com (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngwing.com (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Lovepik_com-450161447-Cute frame border png picture image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lovepik_com-450161447-Cute frame border png picture image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Lovepik_com-401710061-money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lovepik_com-401710061-money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,9 +183,6 @@
   </data>
   <data name="kisspng-star-silhouette-shape-clip-art-rating-star-5b51bfe0b58f29.8480018315320841927437" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-star-silhouette-shape-clip-art-rating-star-5b51bfe0b58f29.8480018315320841927437.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kisspng-hierarchical-organization-business-management-hier-5b2fc32ab90b81.829071621529856810758" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-hierarchical-organization-business-management-hier-5b2fc32ab90b81.829071621529856810758.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vecteezy_o-email-e-enviar-icone-preto_200096011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vecteezy_o-email-e-enviar-icone-preto_200096011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +259,8 @@
   <data name="kisspng-computer-icons-symbol-history-material-5ac8c678eea467.1147393315231074489775" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-symbol-history-material-5ac8c678eea467.1147393315231074489775.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-computer-icons-gear-setting-5b132e719ea563.8000613215279837296498 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-computer-icons-gear-setting-5b132e719ea563.8000613215279837296498 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lovepik_com-400306429-photo-album" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lovepik_com-400306429-photo-album.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-clip-art-computer-icons-scalable-vector-graphics-p-earth-location-map-world-navigation-pin-marker-svg-5bf236c7224d20.4334433015426003911405" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-clip-art-computer-icons-scalable-vector-graphics-p-earth-location-map-world-navigation-pin-marker-svg-5bf236c7224d20.43344330154260039114051.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -352,8 +358,8 @@
   <data name="kisspng-computer-icons-hierarchy-5ae173f77b01a9.2322034515247247275038" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-hierarchy-5ae173f77b01a9.2322034515247247275038.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="klipartz.com (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\klipartz.com (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-hierarchical-organization-business-management-hier-5b2fc32ab90b81.829071621529856810758" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-hierarchical-organization-business-management-hier-5b2fc32ab90b81.829071621529856810758.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-chief-executive-computer-icons-businessperson-5aeaec59c56a80.3532939915253453698086" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-chief-executive-computer-icons-businessperson-5aeaec59c56a80.3532939915253453698086.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -361,7 +367,7 @@
   <data name="follow-42-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\follow-42-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lovepik_com-400306429-photo-album" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lovepik_com-400306429-photo-album.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-template-green-frame-5a7fd510f0a857.8461228615183270569857" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-template-green-frame-5a7fd510f0a857.8461228615183270569857.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

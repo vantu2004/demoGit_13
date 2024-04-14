@@ -283,6 +283,12 @@
     <Compile Include="UC_Controls\UC_taoTin.Designer.cs">
       <DependentUpon>UC_taoTin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_phanHoiCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_phanHoiCV.Designer.cs">
+      <DependentUpon>UC_phanHoiCV.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\Tuyển dụng\TuyenDung_ChinhSuaTin.resx">
       <DependentUpon>TuyenDung_ChinhSuaTin.cs</DependentUpon>
     </EmbeddedResource>
@@ -335,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Controls\UC_taoTin.resx">
       <DependentUpon>UC_taoTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_phanHoiCV.resx">
+      <DependentUpon>UC_phanHoiCV.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -413,9 +422,11 @@
     <None Include="Resources\kisspng-computer-icons-license-symbol-contract-5b34684f58b2f9.7362197615301612313634.png" />
     <None Include="Resources\kisspng-computer-icons-public-key-certificate-font-awesome-5b2e4473618a98.7364413415297588353995.png" />
     <None Include="Resources\Lovepik_com-400306429-photo-album.png" />
+    <None Include="Resources\kisspng-template-green-frame-5a7fd510f0a857.8461228615183270569857.png" />
     <Content Include="Resources\Lovepik_com-401714979-characters-of-different-professions.png" />
     <None Include="Resources\name-icon.png" />
     <None Include="Resources\NicePng_hamburger-menu-png_1276180.png" />
+    <None Include="Resources\Lovepik_com-450161447-Cute frame border png picture image.png" />
     <Content Include="Resources\pngegg %2815%29.png" />
     <None Include="Resources\pngegg %2815%291.png" />
     <None Include="Resources\Lovepik_com-401714979-characters-of-different-professions1.png" />
