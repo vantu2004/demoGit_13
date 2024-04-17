@@ -13,6 +13,7 @@ namespace Project_Windows_04
     public partial class TuyenDung_ChinhSuaTin : Form
     {
         TuyenDung_ChinhSuaTin_DAO TD_CST_DAO = new TuyenDung_ChinhSuaTin_DAO();
+
         private string IdCompany;
         private string IdJobPostings;
         private string linkLogo;
