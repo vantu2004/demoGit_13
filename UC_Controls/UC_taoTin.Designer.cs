@@ -34,23 +34,23 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.rtbx_moTaCongViec = new System.Windows.Forms.RichTextBox();
-            this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.btn_dinhDang_motaCongViec = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label6 = new System.Windows.Forms.Label();
             this.rtbx_yeuCauUngVien = new System.Windows.Forms.RichTextBox();
-            this.guna2GradientCircleButton2 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.btn_dinhDang_yeuCauUngVien = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.label8 = new System.Windows.Forms.Label();
             this.rtbx_quyenLoi = new System.Windows.Forms.RichTextBox();
-            this.guna2GradientCircleButton3 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.btn_dinhDang_loiIch = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.label10 = new System.Windows.Forms.Label();
             this.rtbx_hoatDong = new System.Windows.Forms.RichTextBox();
-            this.guna2GradientCircleButton4 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.btn_dinhDang_hoatDong = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.label12 = new System.Windows.Forms.Label();
             this.rtbx_giaiThuong = new System.Windows.Forms.RichTextBox();
-            this.guna2GradientCircleButton5 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
+            this.btn_dinhDang_giaiThuong = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pbx_giayPhep = new System.Windows.Forms.PictureBox();
             this.pnl_thongTinCongTy = new System.Windows.Forms.Panel();
@@ -80,6 +80,7 @@
             this.tbx_tenCongTy = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_taiLaiTrang = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -132,23 +133,23 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.label4);
             this.flowLayoutPanel1.Controls.Add(this.rtbx_moTaCongViec);
-            this.flowLayoutPanel1.Controls.Add(this.guna2GradientCircleButton1);
+            this.flowLayoutPanel1.Controls.Add(this.btn_dinhDang_motaCongViec);
             this.flowLayoutPanel1.Controls.Add(this.guna2Separator1);
             this.flowLayoutPanel1.Controls.Add(this.label6);
             this.flowLayoutPanel1.Controls.Add(this.rtbx_yeuCauUngVien);
-            this.flowLayoutPanel1.Controls.Add(this.guna2GradientCircleButton2);
+            this.flowLayoutPanel1.Controls.Add(this.btn_dinhDang_yeuCauUngVien);
             this.flowLayoutPanel1.Controls.Add(this.guna2Separator2);
             this.flowLayoutPanel1.Controls.Add(this.label8);
             this.flowLayoutPanel1.Controls.Add(this.rtbx_quyenLoi);
-            this.flowLayoutPanel1.Controls.Add(this.guna2GradientCircleButton3);
+            this.flowLayoutPanel1.Controls.Add(this.btn_dinhDang_loiIch);
             this.flowLayoutPanel1.Controls.Add(this.guna2Separator3);
             this.flowLayoutPanel1.Controls.Add(this.label10);
             this.flowLayoutPanel1.Controls.Add(this.rtbx_hoatDong);
-            this.flowLayoutPanel1.Controls.Add(this.guna2GradientCircleButton4);
+            this.flowLayoutPanel1.Controls.Add(this.btn_dinhDang_hoatDong);
             this.flowLayoutPanel1.Controls.Add(this.guna2Separator4);
             this.flowLayoutPanel1.Controls.Add(this.label12);
             this.flowLayoutPanel1.Controls.Add(this.rtbx_giaiThuong);
-            this.flowLayoutPanel1.Controls.Add(this.guna2GradientCircleButton5);
+            this.flowLayoutPanel1.Controls.Add(this.btn_dinhDang_giaiThuong);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -175,29 +176,29 @@
             this.rtbx_moTaCongViec.Size = new System.Drawing.Size(639, 100);
             this.rtbx_moTaCongViec.TabIndex = 72;
             this.rtbx_moTaCongViec.Text = "";
-            this.rtbx_moTaCongViec.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged);
+            this.rtbx_moTaCongViec.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged_1);
             // 
-            // guna2GradientCircleButton1
+            // btn_dinhDang_motaCongViec
             // 
-            this.guna2GradientCircleButton1.Animated = true;
-            this.guna2GradientCircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientCircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientCircleButton1.FillColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton1.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientCircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton1.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
-            this.guna2GradientCircleButton1.IndicateFocus = true;
-            this.guna2GradientCircleButton1.Location = new System.Drawing.Point(648, 34);
-            this.guna2GradientCircleButton1.Name = "guna2GradientCircleButton1";
-            this.guna2GradientCircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2GradientCircleButton1.Size = new System.Drawing.Size(30, 30);
-            this.guna2GradientCircleButton1.TabIndex = 71;
-            this.guna2GradientCircleButton1.UseTransparentBackground = true;
+            this.btn_dinhDang_motaCongViec.Animated = true;
+            this.btn_dinhDang_motaCongViec.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dinhDang_motaCongViec.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dinhDang_motaCongViec.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dinhDang_motaCongViec.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dinhDang_motaCongViec.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dinhDang_motaCongViec.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_dinhDang_motaCongViec.FillColor = System.Drawing.Color.White;
+            this.btn_dinhDang_motaCongViec.FillColor2 = System.Drawing.Color.White;
+            this.btn_dinhDang_motaCongViec.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_dinhDang_motaCongViec.ForeColor = System.Drawing.Color.White;
+            this.btn_dinhDang_motaCongViec.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
+            this.btn_dinhDang_motaCongViec.IndicateFocus = true;
+            this.btn_dinhDang_motaCongViec.Location = new System.Drawing.Point(648, 34);
+            this.btn_dinhDang_motaCongViec.Name = "btn_dinhDang_motaCongViec";
+            this.btn_dinhDang_motaCongViec.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_dinhDang_motaCongViec.Size = new System.Drawing.Size(30, 30);
+            this.btn_dinhDang_motaCongViec.TabIndex = 71;
+            this.btn_dinhDang_motaCongViec.UseTransparentBackground = true;
             // 
             // guna2Separator1
             // 
@@ -229,29 +230,29 @@
             this.rtbx_yeuCauUngVien.Size = new System.Drawing.Size(639, 100);
             this.rtbx_yeuCauUngVien.TabIndex = 75;
             this.rtbx_yeuCauUngVien.Text = "";
-            this.rtbx_yeuCauUngVien.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged);
+            this.rtbx_yeuCauUngVien.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged_1);
             // 
-            // guna2GradientCircleButton2
+            // btn_dinhDang_yeuCauUngVien
             // 
-            this.guna2GradientCircleButton2.Animated = true;
-            this.guna2GradientCircleButton2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientCircleButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientCircleButton2.FillColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton2.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientCircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientCircleButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton2.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
-            this.guna2GradientCircleButton2.IndicateFocus = true;
-            this.guna2GradientCircleButton2.Location = new System.Drawing.Point(648, 187);
-            this.guna2GradientCircleButton2.Name = "guna2GradientCircleButton2";
-            this.guna2GradientCircleButton2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2GradientCircleButton2.Size = new System.Drawing.Size(30, 30);
-            this.guna2GradientCircleButton2.TabIndex = 88;
-            this.guna2GradientCircleButton2.UseTransparentBackground = true;
+            this.btn_dinhDang_yeuCauUngVien.Animated = true;
+            this.btn_dinhDang_yeuCauUngVien.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dinhDang_yeuCauUngVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dinhDang_yeuCauUngVien.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dinhDang_yeuCauUngVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dinhDang_yeuCauUngVien.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dinhDang_yeuCauUngVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_dinhDang_yeuCauUngVien.FillColor = System.Drawing.Color.White;
+            this.btn_dinhDang_yeuCauUngVien.FillColor2 = System.Drawing.Color.White;
+            this.btn_dinhDang_yeuCauUngVien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_dinhDang_yeuCauUngVien.ForeColor = System.Drawing.Color.White;
+            this.btn_dinhDang_yeuCauUngVien.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
+            this.btn_dinhDang_yeuCauUngVien.IndicateFocus = true;
+            this.btn_dinhDang_yeuCauUngVien.Location = new System.Drawing.Point(648, 187);
+            this.btn_dinhDang_yeuCauUngVien.Name = "btn_dinhDang_yeuCauUngVien";
+            this.btn_dinhDang_yeuCauUngVien.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_dinhDang_yeuCauUngVien.Size = new System.Drawing.Size(30, 30);
+            this.btn_dinhDang_yeuCauUngVien.TabIndex = 88;
+            this.btn_dinhDang_yeuCauUngVien.UseTransparentBackground = true;
             // 
             // guna2Separator2
             // 
@@ -283,29 +284,29 @@
             this.rtbx_quyenLoi.Size = new System.Drawing.Size(639, 100);
             this.rtbx_quyenLoi.TabIndex = 91;
             this.rtbx_quyenLoi.Text = "";
-            this.rtbx_quyenLoi.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged);
+            this.rtbx_quyenLoi.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged_1);
             // 
-            // guna2GradientCircleButton3
+            // btn_dinhDang_loiIch
             // 
-            this.guna2GradientCircleButton3.Animated = true;
-            this.guna2GradientCircleButton3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientCircleButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientCircleButton3.FillColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton3.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientCircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientCircleButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton3.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
-            this.guna2GradientCircleButton3.IndicateFocus = true;
-            this.guna2GradientCircleButton3.Location = new System.Drawing.Point(648, 340);
-            this.guna2GradientCircleButton3.Name = "guna2GradientCircleButton3";
-            this.guna2GradientCircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2GradientCircleButton3.Size = new System.Drawing.Size(30, 30);
-            this.guna2GradientCircleButton3.TabIndex = 101;
-            this.guna2GradientCircleButton3.UseTransparentBackground = true;
+            this.btn_dinhDang_loiIch.Animated = true;
+            this.btn_dinhDang_loiIch.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dinhDang_loiIch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dinhDang_loiIch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dinhDang_loiIch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dinhDang_loiIch.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dinhDang_loiIch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_dinhDang_loiIch.FillColor = System.Drawing.Color.White;
+            this.btn_dinhDang_loiIch.FillColor2 = System.Drawing.Color.White;
+            this.btn_dinhDang_loiIch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_dinhDang_loiIch.ForeColor = System.Drawing.Color.White;
+            this.btn_dinhDang_loiIch.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
+            this.btn_dinhDang_loiIch.IndicateFocus = true;
+            this.btn_dinhDang_loiIch.Location = new System.Drawing.Point(648, 340);
+            this.btn_dinhDang_loiIch.Name = "btn_dinhDang_loiIch";
+            this.btn_dinhDang_loiIch.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_dinhDang_loiIch.Size = new System.Drawing.Size(30, 30);
+            this.btn_dinhDang_loiIch.TabIndex = 101;
+            this.btn_dinhDang_loiIch.UseTransparentBackground = true;
             // 
             // guna2Separator3
             // 
@@ -337,29 +338,29 @@
             this.rtbx_hoatDong.Size = new System.Drawing.Size(639, 100);
             this.rtbx_hoatDong.TabIndex = 104;
             this.rtbx_hoatDong.Text = "";
-            this.rtbx_hoatDong.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged);
+            this.rtbx_hoatDong.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged_1);
             // 
-            // guna2GradientCircleButton4
+            // btn_dinhDang_hoatDong
             // 
-            this.guna2GradientCircleButton4.Animated = true;
-            this.guna2GradientCircleButton4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientCircleButton4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton4.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientCircleButton4.FillColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton4.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientCircleButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientCircleButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton4.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
-            this.guna2GradientCircleButton4.IndicateFocus = true;
-            this.guna2GradientCircleButton4.Location = new System.Drawing.Point(648, 493);
-            this.guna2GradientCircleButton4.Name = "guna2GradientCircleButton4";
-            this.guna2GradientCircleButton4.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2GradientCircleButton4.Size = new System.Drawing.Size(30, 30);
-            this.guna2GradientCircleButton4.TabIndex = 111;
-            this.guna2GradientCircleButton4.UseTransparentBackground = true;
+            this.btn_dinhDang_hoatDong.Animated = true;
+            this.btn_dinhDang_hoatDong.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dinhDang_hoatDong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dinhDang_hoatDong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dinhDang_hoatDong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dinhDang_hoatDong.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dinhDang_hoatDong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_dinhDang_hoatDong.FillColor = System.Drawing.Color.White;
+            this.btn_dinhDang_hoatDong.FillColor2 = System.Drawing.Color.White;
+            this.btn_dinhDang_hoatDong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_dinhDang_hoatDong.ForeColor = System.Drawing.Color.White;
+            this.btn_dinhDang_hoatDong.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
+            this.btn_dinhDang_hoatDong.IndicateFocus = true;
+            this.btn_dinhDang_hoatDong.Location = new System.Drawing.Point(648, 493);
+            this.btn_dinhDang_hoatDong.Name = "btn_dinhDang_hoatDong";
+            this.btn_dinhDang_hoatDong.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_dinhDang_hoatDong.Size = new System.Drawing.Size(30, 30);
+            this.btn_dinhDang_hoatDong.TabIndex = 111;
+            this.btn_dinhDang_hoatDong.UseTransparentBackground = true;
             // 
             // guna2Separator4
             // 
@@ -391,29 +392,29 @@
             this.rtbx_giaiThuong.Size = new System.Drawing.Size(639, 100);
             this.rtbx_giaiThuong.TabIndex = 114;
             this.rtbx_giaiThuong.Text = "";
-            this.rtbx_giaiThuong.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged);
+            this.rtbx_giaiThuong.TextChanged += new System.EventHandler(this.rtbx_moTaCongViec_TextChanged_1);
             // 
-            // guna2GradientCircleButton5
+            // btn_dinhDang_giaiThuong
             // 
-            this.guna2GradientCircleButton5.Animated = true;
-            this.guna2GradientCircleButton5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2GradientCircleButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientCircleButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton5.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientCircleButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientCircleButton5.FillColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton5.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientCircleButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientCircleButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientCircleButton5.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
-            this.guna2GradientCircleButton5.IndicateFocus = true;
-            this.guna2GradientCircleButton5.Location = new System.Drawing.Point(648, 646);
-            this.guna2GradientCircleButton5.Name = "guna2GradientCircleButton5";
-            this.guna2GradientCircleButton5.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2GradientCircleButton5.Size = new System.Drawing.Size(30, 30);
-            this.guna2GradientCircleButton5.TabIndex = 118;
-            this.guna2GradientCircleButton5.UseTransparentBackground = true;
+            this.btn_dinhDang_giaiThuong.Animated = true;
+            this.btn_dinhDang_giaiThuong.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dinhDang_giaiThuong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dinhDang_giaiThuong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dinhDang_giaiThuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dinhDang_giaiThuong.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dinhDang_giaiThuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_dinhDang_giaiThuong.FillColor = System.Drawing.Color.White;
+            this.btn_dinhDang_giaiThuong.FillColor2 = System.Drawing.Color.White;
+            this.btn_dinhDang_giaiThuong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_dinhDang_giaiThuong.ForeColor = System.Drawing.Color.White;
+            this.btn_dinhDang_giaiThuong.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_gear_setting_5b132e719ea563_8000613215279837296498__1_;
+            this.btn_dinhDang_giaiThuong.IndicateFocus = true;
+            this.btn_dinhDang_giaiThuong.Location = new System.Drawing.Point(648, 646);
+            this.btn_dinhDang_giaiThuong.Name = "btn_dinhDang_giaiThuong";
+            this.btn_dinhDang_giaiThuong.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_dinhDang_giaiThuong.Size = new System.Drawing.Size(30, 30);
+            this.btn_dinhDang_giaiThuong.TabIndex = 118;
+            this.btn_dinhDang_giaiThuong.UseTransparentBackground = true;
             // 
             // tabPage2
             // 
@@ -609,6 +610,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btn_taiLaiTrang);
             this.panel3.Controls.Add(this.tbx_viTriCongTacHR);
             this.panel3.Controls.Add(this.btn_hoanTat);
             this.panel3.Controls.Add(this.tbx_tenHR);
@@ -616,7 +618,7 @@
             this.panel3.Controls.Add(this.tbx_sdtHR);
             this.panel3.Location = new System.Drawing.Point(21, 982);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(353, 287);
+            this.panel3.Size = new System.Drawing.Size(353, 326);
             this.panel3.TabIndex = 89;
             // 
             // tbx_viTriCongTacHR
@@ -661,7 +663,7 @@
             this.btn_hoanTat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_hoanTat.ForeColor = System.Drawing.Color.White;
             this.btn_hoanTat.IndicateFocus = true;
-            this.btn_hoanTat.Location = new System.Drawing.Point(32, 231);
+            this.btn_hoanTat.Location = new System.Drawing.Point(32, 277);
             this.btn_hoanTat.Name = "btn_hoanTat";
             this.btn_hoanTat.Size = new System.Drawing.Size(303, 42);
             this.btn_hoanTat.TabIndex = 84;
@@ -955,6 +957,29 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Contact";
             // 
+            // btn_taiLaiTrang
+            // 
+            this.btn_taiLaiTrang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_taiLaiTrang.Animated = true;
+            this.btn_taiLaiTrang.BackColor = System.Drawing.Color.Transparent;
+            this.btn_taiLaiTrang.BorderRadius = 10;
+            this.btn_taiLaiTrang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_taiLaiTrang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_taiLaiTrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_taiLaiTrang.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_taiLaiTrang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_taiLaiTrang.FillColor = System.Drawing.Color.Green;
+            this.btn_taiLaiTrang.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_taiLaiTrang.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_taiLaiTrang.ForeColor = System.Drawing.Color.White;
+            this.btn_taiLaiTrang.IndicateFocus = true;
+            this.btn_taiLaiTrang.Location = new System.Drawing.Point(32, 229);
+            this.btn_taiLaiTrang.Name = "btn_taiLaiTrang";
+            this.btn_taiLaiTrang.Size = new System.Drawing.Size(303, 42);
+            this.btn_taiLaiTrang.TabIndex = 96;
+            this.btn_taiLaiTrang.Text = "Reload";
+            this.btn_taiLaiTrang.UseTransparentBackground = true;
+            // 
             // UC_taoTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1012,23 +1037,24 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.RichTextBox rtbx_moTaCongViec;
-        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.RichTextBox rtbx_yeuCauUngVien;
-        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton2;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.RichTextBox rtbx_quyenLoi;
-        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton3;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.RichTextBox rtbx_hoatDong;
-        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton4;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.RichTextBox rtbx_giaiThuong;
-        private Guna.UI2.WinForms.Guna2GradientCircleButton guna2GradientCircleButton5;
         public System.Windows.Forms.PictureBox pbx_giayPhep;
+        public Guna.UI2.WinForms.Guna2GradientCircleButton btn_dinhDang_motaCongViec;
+        public Guna.UI2.WinForms.Guna2GradientCircleButton btn_dinhDang_yeuCauUngVien;
+        public Guna.UI2.WinForms.Guna2GradientCircleButton btn_dinhDang_loiIch;
+        public Guna.UI2.WinForms.Guna2GradientCircleButton btn_dinhDang_hoatDong;
+        public Guna.UI2.WinForms.Guna2GradientCircleButton btn_dinhDang_giaiThuong;
+        public Guna.UI2.WinForms.Guna2GradientButton btn_taiLaiTrang;
     }
 }

@@ -43,6 +43,7 @@
             this.cbx_loc_kinhNghiem = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbx_loc_Luong = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_dangXuat = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -50,6 +51,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbx_loc_diaChi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btn_taiLai = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
@@ -311,6 +313,8 @@
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.BackColor = System.Drawing.Color.PaleGreen;
+            this.guna2GradientPanel2.Controls.Add(this.btn_taiLai);
+            this.guna2GradientPanel2.Controls.Add(this.btn_dangXuat);
             this.guna2GradientPanel2.Controls.Add(this.pictureBox5);
             this.guna2GradientPanel2.Controls.Add(this.btn_loc_sapXep);
             this.guna2GradientPanel2.Controls.Add(this.cbx_loc_sapXep);
@@ -328,6 +332,29 @@
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(314, 633);
             this.guna2GradientPanel2.TabIndex = 1;
+            // 
+            // btn_dangXuat
+            // 
+            this.btn_dangXuat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_dangXuat.Animated = true;
+            this.btn_dangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.btn_dangXuat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_dangXuat.BorderRadius = 10;
+            this.btn_dangXuat.BorderThickness = 2;
+            this.btn_dangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_dangXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dangXuat.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_dangXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_dangXuat.FillColor = System.Drawing.Color.White;
+            this.btn_dangXuat.FillColor2 = System.Drawing.Color.White;
+            this.btn_dangXuat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_dangXuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_dangXuat.Location = new System.Drawing.Point(12, 527);
+            this.btn_dangXuat.Name = "btn_dangXuat";
+            this.btn_dangXuat.Size = new System.Drawing.Size(296, 46);
+            this.btn_dangXuat.TabIndex = 12;
+            this.btn_dangXuat.Text = "Log out";
             // 
             // pictureBox5
             // 
@@ -464,6 +491,30 @@
             // 
             this.guna2Elipse1.BorderRadius = 20;
             // 
+            // btn_taiLai
+            // 
+            this.btn_taiLai.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_taiLai.Animated = true;
+            this.btn_taiLai.BackColor = System.Drawing.Color.Transparent;
+            this.btn_taiLai.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_taiLai.BorderRadius = 10;
+            this.btn_taiLai.BorderThickness = 2;
+            this.btn_taiLai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_taiLai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_taiLai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_taiLai.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_taiLai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_taiLai.FillColor = System.Drawing.Color.White;
+            this.btn_taiLai.FillColor2 = System.Drawing.Color.White;
+            this.btn_taiLai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_taiLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_taiLai.Location = new System.Drawing.Point(12, 579);
+            this.btn_taiLai.Name = "btn_taiLai";
+            this.btn_taiLai.Size = new System.Drawing.Size(296, 46);
+            this.btn_taiLai.TabIndex = 13;
+            this.btn_taiLai.Text = "Reset";
+            this.btn_taiLai.Click += new System.EventHandler(this.btn_taiLai_Click);
+            // 
             // UC_BangTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -511,6 +562,8 @@
         public Guna.UI2.WinForms.Guna2GradientButton btn_dangNhap;
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public System.Windows.Forms.FlowLayoutPanel flpl_danhSachTinTuyenDung;
+        public Guna.UI2.WinForms.Guna2GradientButton btn_dangXuat;
+        public Guna.UI2.WinForms.Guna2GradientButton btn_taiLai;
     }
 }
 

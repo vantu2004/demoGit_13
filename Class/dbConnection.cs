@@ -54,7 +54,7 @@ namespace Project_Windows_04
                 if (data.Read() == true)
                 {
                     //MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
                     if (data.GetString(1) == "Employer")
                     {
                         //  lấy toàn bộ thông tin NTD thông qua Id cua tài khoản đăng nhập vào
@@ -68,7 +68,7 @@ namespace Project_Windows_04
                         string sqlQuery_UV = string.Format("SELECT * FROM UNGVIEN  WHERE Id = '{0}'", data.GetString(0));
                         conn.Close();
                         thucThi_layDuLieu_UV(sqlQuery_UV);
-                    }    
+                    }
                 }
                 else
                 {
@@ -176,6 +176,29 @@ namespace Project_Windows_04
             }
         }
 
+        //  hàm thực hiện chỉ với 1 lệnh truy vấn nhưng ko xuất messagebox
+        public void thucThi_taoTin_chinhSuaTin_koMessageBox(string sqlQuery_taoTin_chinhSuaTin)
+        {
+            try
+            {
+                {
+                    conn.Open();
+
+                    SqlCommand cmd_TT = new SqlCommand(sqlQuery_taoTin_chinhSuaTin, conn);
+                    cmd_TT.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public void thucThi_load_tinTuyenDung(string sqlQuery_xuat_tinTuyenDung, FlowLayoutPanel flowLayoutPanel, string kieuNguoiDung)
         {
             try
@@ -190,8 +213,8 @@ namespace Project_Windows_04
                 while (data.Read() == true)
                 {
                     //  cứ 1 vòng lặp là tạo 1 đối tượng t để truyền vào sử cho lớp Xuat_ThongTin
-                    TuyenDung_Tin t = new TuyenDung_Tin(data.GetString(0), data.GetString(10), data.GetString(1), data.GetString(11), data.GetString(6), data.GetString(8), 
-                        data.GetString(7), data.GetString(12), data.GetString(13), Convert.ToDouble(data.GetDecimal(14)), data.GetString(15), data.GetString(16), data.GetString(2), 
+                    TuyenDung_Tin t = new TuyenDung_Tin(data.GetString(0), data.GetString(10), data.GetString(1), data.GetString(11), data.GetString(6), data.GetString(8),
+                        data.GetString(7), data.GetString(12), data.GetString(13), Convert.ToDouble(data.GetDecimal(14)), data.GetString(15), data.GetString(16), data.GetString(2),
                         data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(17), data.GetString(18), data.GetString(19), data.GetString(20), data.GetString(21), data.GetString(22), data.GetString(23), data.GetString(24));
 
                     flowLayoutPanel.Controls.Add(xuat_TT.them_tinTuyenDung(t, kieuNguoiDung));
@@ -254,7 +277,6 @@ namespace Project_Windows_04
                 }
                 else
                     MessageBox.Show("Not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
             catch (Exception ex)
             {
@@ -310,14 +332,40 @@ namespace Project_Windows_04
 
                 if (data.Read() == true)
                 {
-                    UngVien_Tin u = new UngVien_Tin(data.GetString(0), data.GetString(10), data.GetString(2), data.GetString(4), data.GetString(8), data.GetString(7), 
+                    UngVien_Tin u = new UngVien_Tin(data.GetString(0), data.GetString(10), data.GetString(2), data.GetString(4), data.GetString(8), data.GetString(7),
                         data.GetString(5), data.GetString(3), data.GetString(6), data.GetString(11), data.GetString(18), data.GetString(12), data.GetString(13), data.GetString(14), data.GetString(15), data.GetString(16), data.GetString(17));
 
                     return u;
                 }
                 else
                     MessageBox.Show("Not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! '\n" + ex, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
 
+        public TuyenDung_DinhDang_rtbx thucThi_layDinhDang(string sqlQuery_layDinhDang)
+        {
+            try
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sqlQuery_layDinhDang, conn);
+                SqlDataReader data = cmd.ExecuteReader();
+
+                if (data.Read() == true)
+                {
+                    TuyenDung_DinhDang_rtbx dd = new TuyenDung_DinhDang_rtbx(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), data.GetString(5), Convert.ToDouble(data.GetDecimal(6)));
+
+                    return dd;
+                }
             }
             catch (Exception ex)
             {

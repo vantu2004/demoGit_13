@@ -49,6 +49,7 @@
             this.Name = "TuyenDung_ChinhSuaTin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit news";
+            this.Load += new System.EventHandler(this.TuyenDung_ChinhSuaTin_Load);
             this.ResumeLayout(false);
 
         }

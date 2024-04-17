@@ -13,6 +13,7 @@ namespace Project_Windows_04
     public partial class TuyenDung_ChinhSuaTin : Form
     {
         TuyenDung_ChinhSuaTin_DAO TD_CST_DAO = new TuyenDung_ChinhSuaTin_DAO();
+        private List<TuyenDung_DinhDang_rtbx> list_TD_dinhDang = new List<TuyenDung_DinhDang_rtbx>();
 
         private string IdCompany;
         private string IdJobPostings;
@@ -29,6 +30,15 @@ namespace Project_Windows_04
             //  gọi sự kiện thêm ảnh
             UC_taoTin.pbx_logoCongTy.Click += Pbx_logoCongTy_Click;
             UC_taoTin.pbx_giayPhep.Click += Pbx_giayPhep_Click;
+
+            //  gọi sự kiện định dạng rtbx
+            //  không thể sender về btn r dùng btn.Name nên buộc phải truyền vậy để lấy thuộc tính khóa RtbxStyle
+            UC_taoTin.btn_dinhDang_motaCongViec.Click += (s, ev) => TuyenDung_ApDung_DinhDang_rtbx.Btn_dinhDang_rtbx_Click(s, ev, UC_taoTin.rtbx_moTaCongViec.Name, UC_taoTin.rtbx_moTaCongViec, IdCompany, IdJobPostings, list_TD_dinhDang);
+            UC_taoTin.btn_dinhDang_yeuCauUngVien.Click += (s, ev) => TuyenDung_ApDung_DinhDang_rtbx.Btn_dinhDang_rtbx_Click(s, ev, UC_taoTin.rtbx_yeuCauUngVien.Name, UC_taoTin.rtbx_yeuCauUngVien, IdCompany, IdJobPostings, list_TD_dinhDang);
+            UC_taoTin.btn_dinhDang_loiIch.Click += (s, ev) => TuyenDung_ApDung_DinhDang_rtbx.Btn_dinhDang_rtbx_Click(s, ev, UC_taoTin.rtbx_quyenLoi.Name, UC_taoTin.rtbx_quyenLoi, IdCompany, IdJobPostings, list_TD_dinhDang);
+            UC_taoTin.btn_dinhDang_hoatDong.Click += (s, ev) => TuyenDung_ApDung_DinhDang_rtbx.Btn_dinhDang_rtbx_Click(s, ev, UC_taoTin.rtbx_hoatDong.Name, UC_taoTin.rtbx_hoatDong, IdCompany, IdJobPostings, list_TD_dinhDang);
+            UC_taoTin.btn_dinhDang_giaiThuong.Click += (s, ev) => TuyenDung_ApDung_DinhDang_rtbx.Btn_dinhDang_rtbx_Click(s, ev, UC_taoTin.rtbx_giaiThuong.Name, UC_taoTin.rtbx_giaiThuong, IdCompany, IdJobPostings, list_TD_dinhDang);
+
             //  gọi sự kiện hoàn tất chỉnh sửa
             UC_taoTin.btn_hoanTat.Click += Btn_hoanTat_Click1;
         }
@@ -118,6 +128,9 @@ namespace Project_Windows_04
                     UC_taoTin.dtpr_hanChot.Value.ToShortDateString(), UC_taoTin.rtbx_moTaCongViec.Text, UC_taoTin.rtbx_yeuCauUngVien.Text, UC_taoTin.rtbx_quyenLoi.Text, UC_taoTin.rtbx_hoatDong.Text, UC_taoTin.rtbx_giaiThuong.Text, this.linkGiayPhep);
 
                 TD_CST_DAO.chinhSuaTin(t);
+
+                //  buộc phải tạo tin trước mới được tạo định dạng cho rtbx
+                taoDinhDang();
             }
             else
                 MessageBox.Show("You must fill in all information!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -130,6 +143,33 @@ namespace Project_Windows_04
                 || string.IsNullOrEmpty(UC_taoTin.rtbx_moTaCongViec.Text) || string.IsNullOrEmpty(UC_taoTin.rtbx_yeuCauUngVien.Text) || string.IsNullOrEmpty(UC_taoTin.rtbx_quyenLoi.Text) || string.IsNullOrEmpty(UC_taoTin.rtbx_hoatDong.Text) || string.IsNullOrEmpty(UC_taoTin.rtbx_giaiThuong.Text) || string.IsNullOrEmpty(this.linkGiayPhep))
                 return false;
             return true;
+        }
+
+        private void taoDinhDang()
+        {
+            foreach (var i in list_TD_dinhDang)
+            {
+                TD_CST_DAO.dinhDang_rtbx_NTD(i);
+            }
+        }
+
+        private void TuyenDung_ChinhSuaTin_Load(object sender, EventArgs e)
+        {
+            //  chỉ có tạo tin mới được reload để tạo IdJobPostings mới còn chỉnh sửa tin thì không
+            UC_taoTin.btn_taiLaiTrang.Hide();
+
+            dinhDang_rtbx(UC_taoTin.rtbx_moTaCongViec);
+            dinhDang_rtbx(UC_taoTin.rtbx_yeuCauUngVien);
+            dinhDang_rtbx(UC_taoTin.rtbx_quyenLoi);
+            dinhDang_rtbx(UC_taoTin.rtbx_hoatDong);
+            dinhDang_rtbx(UC_taoTin.rtbx_giaiThuong);
+        }
+
+        private void dinhDang_rtbx(RichTextBox rtbx)
+        {
+            TuyenDung_DinhDang_rtbx dd = TD_CST_DAO.layDinhDang(IdCompany, IdJobPostings, rtbx.Name);
+            if (dd != null)
+                TuyenDung_ApDung_DinhDang_rtbx.apDungDinhDang(rtbx, dd);
         }
     }
 }

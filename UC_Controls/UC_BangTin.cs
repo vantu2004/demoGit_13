@@ -47,13 +47,13 @@ namespace Project_Windows_04
             // Phân tích chuỗi của ComboBox để xác định khoảng giá tiền
             switch (selectedRange)
             {
-                case "<10m":
-                    return price < 10000000; // 10m = 10,000,000
+                case "< 10m":
+                    return price <= 10000000;
                 case "10m - 20m":
                     return price > 10000000 && price <= 20000000;
                 case "20m - 30m":
                     return price > 20000000 && price <= 30000000;
-                case ">30m":
+                case "> 30m":
                     return price > 30000000;
                 default:
                     return false;
@@ -156,7 +156,15 @@ namespace Project_Windows_04
                 {
                     flpl_danhSachTinTuyenDung.Controls.Add(uc);
                 }
-            }    
+            }
+        }
+
+        private void btn_taiLai_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in flpl_danhSachTinTuyenDung.Controls)
+            {
+                control.Visible = true;
+            }
         }
     }
 }

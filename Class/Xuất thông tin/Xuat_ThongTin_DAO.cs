@@ -22,9 +22,15 @@ namespace Project_Windows_04
 
         public void xoa_tinTuyenDung(string IdCompany, string IdJobPostings)
         {
-            // vì Applications tham chiếu đến JObPOstings nên phải xóa nó trước
+            //  vì Applications tham chiếu đến JobPostings nên phải xóa nó trước
+            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
             string sqlQuery_xoa_DSUngVien = string.Format("DELETE FROM Applications WHERE IdCompany = '{0}' AND IdJobPostings = '{1}'", IdCompany, IdJobPostings);
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_xoa_DSUngVien);
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoa_DSUngVien);
+
+            //  vì DinhDang_rtbx_NTD tham chiếu đến JobPostings nên phải xóa nó trước
+            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
+            string sqlQuery_xoa_dinhDang_rtbx = string.Format("DELETE FROM DinhDang_rtbx_NTD WHERE IdCompany = '{0}' AND IdJobPostings = '{1}'", IdCompany, IdJobPostings);
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoa_dinhDang_rtbx);
 
             string sqlQuery_xoa_tinTuyenDung = string.Format("DELETE FROM JobPostings WHERE IdJobPostings = '{0}'", IdJobPostings);
             db.thucThi_taoTin_chinhSuaTin(sqlQuery_xoa_tinTuyenDung);

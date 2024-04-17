@@ -44,6 +44,9 @@ namespace Project_Windows_04
             UC_Main_TrangChu.cbx_loc_kinhNghiem.SelectedIndexChanged += UC_Main_TrangChu.cbx_loc_kinhNghiem_SelectedIndexChanged;
             UC_Main_TrangChu.cbx_loc_diaChi.SelectedIndexChanged += UC_Main_TrangChu.cbx_loc_diaChi_SelectedIndexChanged;
 
+            //  ẩn nút đăng xuất
+            UC_Main_TrangChu.btn_dangXuat.Hide();
+
             TC_DAO.load_tinTuyenDung(UC_Main_TrangChu.flpl_danhSachTinTuyenDung, "null");
         }
     }

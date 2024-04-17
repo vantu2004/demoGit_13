@@ -171,7 +171,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\ChiTietTinTuyenDung_DAO.cs" />
     <Compile Include="Class\ChinhKichThuoc_rtbx.cs" />
+    <Compile Include="Form\Chi tiết\DinhDangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Chi tiết\DinhDangChu.Designer.cs">
+      <DependentUpon>DinhDangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Tuyển dụng\TuyenDung_ChinhSuaTin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +249,8 @@
     <Compile Include="Form\Tuyển dụng\TuyenDung_DS_CVs.Designer.cs">
       <DependentUpon>TuyenDung_DS_CVs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Tuyển dụng\TuyenDung_ApDung_DinhDang_rtbx.cs" />
+    <Compile Include="Class\Tuyển dụng\TuyenDung_DinhDang_rtbx.cs" />
     <Compile Include="UC_Controls\UC_BangTin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -282,6 +291,12 @@
     </Compile>
     <Compile Include="UC_Controls\UC_taoTin.Designer.cs">
       <DependentUpon>UC_taoTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Controls\UC_DinhDang_rtbx.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_DinhDang_rtbx.Designer.cs">
+      <DependentUpon>UC_DinhDang_rtbx.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_phanHoiCV.cs">
       <SubType>UserControl</SubType>

@@ -34,6 +34,23 @@ namespace Project_Windows_04
             UV_DAO.load_tinTuyenDung(UC_BangTin_UV.flpl_danhSachTinTuyenDung, this.Id);
         }
 
+        //  load hàm chức năng của phần lọc trong bảng tin
+        private void UC_BangTin_UV_Load(object sender, EventArgs e)
+        {
+            UC_BangTin_UV.cbx_loc_Luong.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_Luong_SelectedIndexChanged;
+            UC_BangTin_UV.cbx_loc_nganhNghe.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_nganhNghe_SelectedIndexChanged;
+            UC_BangTin_UV.cbx_loc_sapXep.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_sapXep_SelectedIndexChanged;
+            UC_BangTin_UV.cbx_loc_kinhNghiem.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_kinhNghiem_SelectedIndexChanged;
+            UC_BangTin_UV.cbx_loc_diaChi.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_diaChi_SelectedIndexChanged;
+
+            UC_BangTin_UV.btn_dangXuat.Click += Btn_dangXuat_Click;
+        }
+
+        private void Btn_dangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public void layDuLieu()
         {
             UngVien_Tin u = UV_DAO.chiTiet_CV(this.Id);
@@ -115,8 +132,8 @@ namespace Project_Windows_04
 
         private bool kiemTra_null()
         {
-            if (string.IsNullOrEmpty(this.linkAnh) || string.IsNullOrEmpty(tbx_tenUV.Text) || string.IsNullOrEmpty(this.gioiTinh) || string.IsNullOrEmpty(cbx_diaChiUV.Text) 
-                || string.IsNullOrEmpty(tbx_mangXaHoi.Text) || string.IsNullOrEmpty(tbx_sdtUV.Text) || string.IsNullOrEmpty(tbx_emaiUV.Text) || string.IsNullOrEmpty(cbx_viTriUngTuyen.Text) || string.IsNullOrEmpty(rtbx_mucTieuNgheNghiep.Text) 
+            if (string.IsNullOrEmpty(this.linkAnh) || string.IsNullOrEmpty(tbx_tenUV.Text) || string.IsNullOrEmpty(this.gioiTinh) || string.IsNullOrEmpty(cbx_diaChiUV.Text)
+                || string.IsNullOrEmpty(tbx_mangXaHoi.Text) || string.IsNullOrEmpty(tbx_sdtUV.Text) || string.IsNullOrEmpty(tbx_emaiUV.Text) || string.IsNullOrEmpty(cbx_viTriUngTuyen.Text) || string.IsNullOrEmpty(rtbx_mucTieuNgheNghiep.Text)
                 || string.IsNullOrEmpty(rtbx_hocVan.Text) || string.IsNullOrEmpty(rtbx_kinhNghiem.Text) || string.IsNullOrEmpty(rtbx_hoatDong.Text) || string.IsNullOrEmpty(rtbx_giaiThuong.Text) || string.IsNullOrEmpty(rtbx_chungChi.Text))
                 return false;
             return true;
@@ -130,16 +147,6 @@ namespace Project_Windows_04
         public void btn_luuChinhSua_Click(object sender, EventArgs e)
         {
             UV_DAO.chinhSuaTin(taoUngVien());
-        }
-
-        //  load hàm chức năng của phần lọc trong bảng tin
-        private void UC_BangTin_UV_Load(object sender, EventArgs e)
-        {
-            UC_BangTin_UV.cbx_loc_Luong.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_Luong_SelectedIndexChanged;
-            UC_BangTin_UV.cbx_loc_nganhNghe.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_nganhNghe_SelectedIndexChanged;
-            UC_BangTin_UV.cbx_loc_sapXep.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_sapXep_SelectedIndexChanged;
-            UC_BangTin_UV.cbx_loc_kinhNghiem.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_kinhNghiem_SelectedIndexChanged;
-            UC_BangTin_UV.cbx_loc_diaChi.SelectedIndexChanged += UC_BangTin_UV.cbx_loc_diaChi_SelectedIndexChanged;
         }
 
         private void rtbx_mucTieuNgheNghiep_TextChanged_1(object sender, EventArgs e)

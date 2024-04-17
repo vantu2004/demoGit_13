@@ -21,5 +21,25 @@ namespace Project_Windows_04
 
             db.thucThi_taoTin_chinhSuaTin(sqlQuery_chinhSuaTin);
         }
+
+        public void dinhDang_rtbx_NTD(TuyenDung_DinhDang_rtbx TD_dinhDang)
+        {
+            //  vxóa bộ đã tồn tại trước đó để thêm bộ mới đã chỉnh sửa vào
+            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
+            string sqlQuery_xoa_dinhDang_rtbx = string.Format("DELETE FROM DinhDang_rtbx_NTD WHERE IdCompany = '{0}' AND IdJobPostings = '{1}' AND RtbxStyle = '{2}'", TD_dinhDang.IdCompany, TD_dinhDang.IdJobPostings, TD_dinhDang.Kieu_rtbx);
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoa_dinhDang_rtbx);
+
+            string sqlQuery_taoDinhDang = string.Format("INSERT INTO DinhDang_rtbx_NTD(IdCompany, IdJobPostings, RtbxStyle, Color, Font, FontStyle, Size) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')"
+                , TD_dinhDang.IdCompany, TD_dinhDang.IdJobPostings, TD_dinhDang.Kieu_rtbx, TD_dinhDang.MauSac, TD_dinhDang.KieuChu, TD_dinhDang.HieuUng, TD_dinhDang.KichCo);
+            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_taoDinhDang);
+        }
+
+        public TuyenDung_DinhDang_rtbx layDinhDang(string IdCompany, string IdJobPostings, string tenRtbx)
+        {
+            string sqlQuery_layDinhDang = string.Format("SELECT * FROM DinhDang_rtbx_NTD WHERE IdCompany = '{0}' AND IdJobPostings = '{1}' AND RtbxStyle = '{2}'",
+                IdCompany, IdJobPostings, tenRtbx);
+            return db.thucThi_layDinhDang(sqlQuery_layDinhDang);
+        }
     }
 }

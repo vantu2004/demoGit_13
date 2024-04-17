@@ -802,6 +802,7 @@
             this.Name = "ChiTietTinTuyenDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detail";
+            this.Load += new System.EventHandler(this.ChiTietTinTuyenDung_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
