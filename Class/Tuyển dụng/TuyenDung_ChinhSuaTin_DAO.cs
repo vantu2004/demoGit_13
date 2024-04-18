@@ -24,7 +24,7 @@ namespace Project_Windows_04
 
         public void dinhDang_rtbx_NTD(TuyenDung_DinhDang_rtbx TD_dinhDang)
         {
-            //  vxóa bộ đã tồn tại trước đó để thêm bộ mới đã chỉnh sửa vào
+            //  xóa bộ đã tồn tại trước đó để thêm bộ mới đã chỉnh sửa vào
             //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
             string sqlQuery_xoa_dinhDang_rtbx = string.Format("DELETE FROM DinhDang_rtbx_NTD WHERE IdCompany = '{0}' AND IdJobPostings = '{1}' AND RtbxStyle = '{2}'", TD_dinhDang.IdCompany, TD_dinhDang.IdJobPostings, TD_dinhDang.Kieu_rtbx);
             db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoa_dinhDang_rtbx);
@@ -39,7 +39,7 @@ namespace Project_Windows_04
         {
             string sqlQuery_layDinhDang = string.Format("SELECT * FROM DinhDang_rtbx_NTD WHERE IdCompany = '{0}' AND IdJobPostings = '{1}' AND RtbxStyle = '{2}'",
                 IdCompany, IdJobPostings, tenRtbx);
-            return db.thucThi_layDinhDang(sqlQuery_layDinhDang);
+            return db.thucThi_layDinhDang_NTD(sqlQuery_layDinhDang);
         }
     }
 }

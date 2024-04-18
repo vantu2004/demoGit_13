@@ -171,6 +171,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\ChiTietCV_DAO.cs" />
     <Compile Include="Class\ChiTietTinTuyenDung_DAO.cs" />
     <Compile Include="Class\ChinhKichThuoc_rtbx.cs" />
     <Compile Include="Form\Chi tiết\DinhDangChu.cs">
@@ -304,6 +305,8 @@
     <Compile Include="UC_phanHoiCV.Designer.cs">
       <DependentUpon>UC_phanHoiCV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\Ứng viên\UngVien_DinhDang_rtbx.cs" />
+    <Compile Include="Class\Ứng viên\UngVien_ApDung_DinhDang_rtbx.cs" />
     <EmbeddedResource Include="Form\Tuyển dụng\TuyenDung_ChinhSuaTin.resx">
       <DependentUpon>TuyenDung_ChinhSuaTin.cs</DependentUpon>
     </EmbeddedResource>

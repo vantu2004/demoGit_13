@@ -13,6 +13,9 @@ namespace Project_Windows_04
 {
     public partial class ChiTietCV : Form
     {
+        ChiTietCV_DAO chiTietCV_DAO = new ChiTietCV_DAO();
+        private string Id;
+
         public ChiTietCV()
         {
             InitializeComponent();
@@ -20,11 +23,27 @@ namespace Project_Windows_04
 
         private void ChiTietCV_Load(object sender, EventArgs e)
         {
+            //  load định dạng từ csdl lên cho các rtbx
+            dinhDang_rtbx(rtbx_mucTieuNgheNghiep);
+            dinhDang_rtbx(rtbx_hocVan);
+            dinhDang_rtbx(rtbx_kinhNghiem);
+            dinhDang_rtbx(rtbx_hoatDong);
+            dinhDang_rtbx(rtbx_giaiThuong);
+            dinhDang_rtbx(rtbx_chungChi);
+        }
 
+        private void dinhDang_rtbx(RichTextBox rtbx)
+        {
+            UngVien_DinhDang_rtbx dd = chiTietCV_DAO.layDinhDang(this.Id, rtbx.Name);
+            if (dd != null)
+                UngVien_ApDung_DinhDang_rtbx.apDungDinhDang(rtbx, dd);
         }
 
         public void layDuLieu(UngVien_Tin u)
         {
+            //  lấy Id ứng viên dùng cho hàm dinhDang_rtbx
+            this.Id = u.Id;
+
             pbx_avatar.Image = Image.FromFile(u.AnhDaiDien);
             lbl_ten.Text = u.TenUV;
             lbl_ngaySinh.Text = u.NgaySinhUV;

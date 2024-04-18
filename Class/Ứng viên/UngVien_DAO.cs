@@ -41,7 +41,7 @@ namespace Project_Windows_04
             string sqlQuery_chinhSuaTin_UNGVIEN = string.Format("UPDATE UNGVIEN SET Fname = '{0}', Phone = '{1}', BirthDate = '{2}', Link = '{3}', Email = '{4}', Address_C = '{5}', Gender = '{6}' WHERE Id = '{7}'",
                 u.TenUV, u.SdtUV, u.NgaySinhUV, u.MangXaHoi, u.EmailUV, u.DiaChi, u.GioiTinhUV, u.Id);
 
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_chinhSuaTin_UNGVIEN);
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_chinhSuaTin_UNGVIEN);
         }
 
         public void load_tinTuyenDung(FlowLayoutPanel flowLayoutPanel, string kieuNguoiDung)
@@ -56,6 +56,26 @@ namespace Project_Windows_04
             string sqlQuery_chiTietCV = string.Format("SELECT * FROM UNGVIEN INNER JOIN CVs ON UNGVIEN.Id = CVs.Id WHERE UNGVIEN.Id = '{0}'", IdCandidate);
 
             return db.thucThi_chiTietCV(sqlQuery_chiTietCV);
+        }
+
+        public void dinhDang_rtbx_UV(UngVien_DinhDang_rtbx UV_dinhDang)
+        {
+            //  xóa bộ đã tồn tại trước đó để thêm bộ mới đã chỉnh sửa vào
+            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
+            string sqlQuery_xoa_dinhDang_rtbx = string.Format("DELETE FROM DinhDang_rtbx_UV WHERE Id = '{0}' AND RtbxStyle = '{1}'", UV_dinhDang.Id, UV_dinhDang.Kieu_rtbx);
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoa_dinhDang_rtbx);
+
+            string sqlQuery_taoDinhDang = string.Format("INSERT INTO DinhDang_rtbx_UV(Id, RtbxStyle, Color, Font, FontStyle, Size) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')"
+                , UV_dinhDang.Id, UV_dinhDang.Kieu_rtbx, UV_dinhDang.MauSac, UV_dinhDang.KieuChu, UV_dinhDang.HieuUng, UV_dinhDang.KichCo);
+            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_taoDinhDang);
+        }
+
+        public UngVien_DinhDang_rtbx layDinhDang(string Id, string tenRtbx)
+        {
+            string sqlQuery_layDinhDang = string.Format("SELECT * FROM DinhDang_rtbx_UV WHERE Id = '{0}' AND RtbxStyle = '{1}'",
+                Id, tenRtbx);
+            return db.thucThi_layDinhDang_UV(sqlQuery_layDinhDang);
         }
     }
 }

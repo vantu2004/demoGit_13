@@ -54,7 +54,7 @@ namespace Project_Windows_04
             UC_taoTin.pbx_giayPhep.Click += Pbx_giayPhep_Click;
 
             //  gọi sự kiện định dạng rtbx
-            //  không thể ép sender về btn r dùng btn.Name nên buộc phải truyền vậy để lấy thuộc tính khóa RtbxStyle
+            //  không thể ép sender về rtbx rồi dùng rtbx.Name nên buộc phải truyền vậy để lấy thuộc tính khóa RtbxStyle
             UC_taoTin.btn_dinhDang_motaCongViec.Click += (s, ev) => TuyenDung_ApDung_DinhDang_rtbx.Btn_dinhDang_rtbx_Click(s, ev, UC_taoTin.rtbx_moTaCongViec.Name, UC_taoTin.rtbx_moTaCongViec, this.IdCompany, this.IdJobPostings, list_TD_dinhDang);
             UC_taoTin.btn_dinhDang_yeuCauUngVien.Click += (s, ev) => TuyenDung_ApDung_DinhDang_rtbx.Btn_dinhDang_rtbx_Click(s, ev, UC_taoTin.rtbx_yeuCauUngVien.Name, UC_taoTin.rtbx_yeuCauUngVien, this.IdCompany, this.IdJobPostings, list_TD_dinhDang);
             UC_taoTin.btn_dinhDang_loiIch.Click += (s, ev) => TuyenDung_ApDung_DinhDang_rtbx.Btn_dinhDang_rtbx_Click(s, ev, UC_taoTin.rtbx_quyenLoi.Name, UC_taoTin.rtbx_quyenLoi, this.IdCompany, this.IdJobPostings, list_TD_dinhDang);

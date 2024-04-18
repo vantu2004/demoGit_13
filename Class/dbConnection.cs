@@ -351,7 +351,7 @@ namespace Project_Windows_04
             return null;
         }
 
-        public TuyenDung_DinhDang_rtbx thucThi_layDinhDang(string sqlQuery_layDinhDang)
+        public TuyenDung_DinhDang_rtbx thucThi_layDinhDang_NTD(string sqlQuery_layDinhDang)
         {
             try
             {
@@ -363,6 +363,33 @@ namespace Project_Windows_04
                 if (data.Read() == true)
                 {
                     TuyenDung_DinhDang_rtbx dd = new TuyenDung_DinhDang_rtbx(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), data.GetString(5), Convert.ToDouble(data.GetDecimal(6)));
+
+                    return dd;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! '\n" + ex, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
+        }
+
+        public UngVien_DinhDang_rtbx thucThi_layDinhDang_UV(string sqlQuery_layDinhDang)
+        {
+            try
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sqlQuery_layDinhDang, conn);
+                SqlDataReader data = cmd.ExecuteReader();
+
+                if (data.Read() == true)
+                {
+                    UngVien_DinhDang_rtbx dd = new UngVien_DinhDang_rtbx(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), Convert.ToDouble(data.GetDecimal(5)));
 
                     return dd;
                 }

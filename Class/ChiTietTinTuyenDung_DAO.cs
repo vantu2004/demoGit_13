@@ -16,7 +16,7 @@ namespace Project_Windows_04
         {
             string sqlQuery_layDinhDang = string.Format("SELECT * FROM DinhDang_rtbx_NTD WHERE IdCompany = '{0}' AND IdJobPostings = '{1}' AND RtbxStyle = '{2}'",
                 IdCompany, IdJobPostings, tenRtbx);
-            return db.thucThi_layDinhDang(sqlQuery_layDinhDang);
+            return db.thucThi_layDinhDang_NTD(sqlQuery_layDinhDang);
         }
     }
 }
