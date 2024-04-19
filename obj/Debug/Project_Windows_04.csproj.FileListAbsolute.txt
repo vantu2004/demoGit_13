@@ -267,3 +267,7 @@ D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Deb
 D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.TuyenDung_DS_CVs.resources
 D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.UC_Thu.resources
 D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.ChiTietThu.resources
+D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\bin\Debug\EntityFramework.dll
+D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\bin\Debug\EntityFramework.SqlServer.dll
+D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\bin\Debug\EntityFramework.xml
+D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\bin\Debug\EntityFramework.SqlServer.xml

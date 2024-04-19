@@ -53,7 +53,7 @@ namespace Project_Windows_04
 
         public void load_thuXacNhan(FlowLayoutPanel flpl, string Id)
         {
-            string sqlQuery_xuat_thuXacNhan = string.Format("SELECT * FROM Letter WHERE IdCandidate = '{0}'", Id);
+            string sqlQuery_xuat_thuXacNhan = string.Format("SELECT * FROM Letter INNER JOIN JobPostings ON Letter.IdCompany = JobPostings.IdCompany AND Letter.IdJobPostings = JobPostings.IdJobPostings WHERE Letter.IdCandidate = '{0}'", Id);
             db.thucThi_load_thuXacNhan(sqlQuery_xuat_thuXacNhan, flpl);
         }
 

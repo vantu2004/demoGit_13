@@ -58,14 +58,16 @@
             this.tbx_nguoiGui.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbx_nguoiGui.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbx_nguoiGui.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbx_nguoiGui.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tbx_nguoiGui.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbx_nguoiGui.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbx_nguoiGui.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic);
             this.tbx_nguoiGui.ForeColor = System.Drawing.Color.Black;
             this.tbx_nguoiGui.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbx_nguoiGui.Location = new System.Drawing.Point(93, 44);
             this.tbx_nguoiGui.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbx_nguoiGui.Name = "tbx_nguoiGui";
             this.tbx_nguoiGui.PasswordChar = '\0';
+            this.tbx_nguoiGui.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbx_nguoiGui.PlaceholderText = "Sender\n";
             this.tbx_nguoiGui.SelectedText = "";
             this.tbx_nguoiGui.Size = new System.Drawing.Size(630, 28);
@@ -74,6 +76,7 @@
             // 
             // rtbx_noiDung
             // 
+            this.rtbx_noiDung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.rtbx_noiDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbx_noiDung.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rtbx_noiDung.Location = new System.Drawing.Point(37, 209);
@@ -115,6 +118,7 @@
             // 
             this.tbx_nguoiNhan.Animated = true;
             this.tbx_nguoiNhan.AutoRoundedCorners = true;
+            this.tbx_nguoiNhan.BorderColor = System.Drawing.Color.Gray;
             this.tbx_nguoiNhan.BorderRadius = 13;
             this.tbx_nguoiNhan.BorderThickness = 0;
             this.tbx_nguoiNhan.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -123,14 +127,16 @@
             this.tbx_nguoiNhan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbx_nguoiNhan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbx_nguoiNhan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbx_nguoiNhan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tbx_nguoiNhan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbx_nguoiNhan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbx_nguoiNhan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic);
             this.tbx_nguoiNhan.ForeColor = System.Drawing.Color.Black;
             this.tbx_nguoiNhan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbx_nguoiNhan.Location = new System.Drawing.Point(93, 95);
             this.tbx_nguoiNhan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbx_nguoiNhan.Name = "tbx_nguoiNhan";
             this.tbx_nguoiNhan.PasswordChar = '\0';
+            this.tbx_nguoiNhan.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbx_nguoiNhan.PlaceholderText = "Receiver";
             this.tbx_nguoiNhan.SelectedText = "";
             this.tbx_nguoiNhan.Size = new System.Drawing.Size(630, 28);
@@ -149,14 +155,16 @@
             this.tbx_chuDe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbx_chuDe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.tbx_chuDe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbx_chuDe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tbx_chuDe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbx_chuDe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbx_chuDe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.tbx_chuDe.ForeColor = System.Drawing.Color.Black;
             this.tbx_chuDe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbx_chuDe.Location = new System.Drawing.Point(37, 146);
             this.tbx_chuDe.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbx_chuDe.Name = "tbx_chuDe";
             this.tbx_chuDe.PasswordChar = '\0';
+            this.tbx_chuDe.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.tbx_chuDe.PlaceholderText = "Title";
             this.tbx_chuDe.SelectedText = "";
             this.tbx_chuDe.Size = new System.Drawing.Size(686, 39);
@@ -214,8 +222,8 @@
             this.btn_dong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_dong.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_dong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_dong.FillColor = System.Drawing.Color.White;
-            this.btn_dong.FillColor2 = System.Drawing.Color.White;
+            this.btn_dong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_dong.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_dong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_dong.ForeColor = System.Drawing.Color.White;
             this.btn_dong.Image = global::Project_Windows_04.Properties.Resources.Iconsmind_Outline_Close_Window_512;
@@ -260,7 +268,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.guna2Separator4);
             this.Controls.Add(this.btn_dong);
             this.Controls.Add(this.btn_gui);
@@ -275,6 +284,7 @@
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.rtbx_noiDung);
             this.Controls.Add(this.tbx_nguoiGui);
+            this.DoubleBuffered = true;
             this.Name = "UC_Thu";
             this.Size = new System.Drawing.Size(763, 570);
             this.ResumeLayout(false);

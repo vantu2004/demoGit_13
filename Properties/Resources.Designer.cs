@@ -1030,6 +1030,16 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_04_19_093538 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-04-19 093538", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap send_2089310 {
             get {
                 object obj = ResourceManager.GetObject("send_2089310", resourceCulture);

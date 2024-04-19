@@ -167,7 +167,7 @@ namespace Project_Windows_04
             ChiTietThu thu = new ChiTietThu();
 
             //  tìm mail của HR đã tạo tin, tìm mail người nộp CV sau đó đổ thông tin vào ChiTetThu
-            thu.xuatDuLieu(xuatTT_DAO.chiTietTin(IdCompany, IdJobPostings), xuatTT_DAO.chiTiet_CV(IdCandidate));
+            thu.xuatDuLieu_khiGui(xuatTT_DAO.chiTietTin(IdCompany, IdJobPostings), xuatTT_DAO.chiTiet_CV(IdCandidate));
 
             thu.UC_Thu.btn_gui.Click += (s, ev) => Btn_gui_Click(s, ev, thu, IdCompany, IdJobPostings, IdCandidate);
 
@@ -185,6 +185,33 @@ namespace Project_Windows_04
             }
             else
                 MessageBox.Show("You must fill in all information!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        //  thêm 1 thư xác nhận vào danh sách bên ứng viên
+        public UC_TinDaDang them_thuXacNhan(string tenCongViec, string ngayDang, Thu t)
+        {
+            UC_TinDaDang UC_tinDaDang = new UC_TinDaDang();
+
+            UC_tinDaDang.lbl_ngayDang.Text = ngayDang;
+            UC_tinDaDang.lbl_tenCongViec.Text = tenCongViec;
+
+            UC_tinDaDang.Click += (sender, e) => UC_tinDaDang_Click(sender, e, t);
+
+            //  ẩn nút chỉnh sửa và xóa
+            UC_tinDaDang.btn_xoaTin.Hide();
+            UC_tinDaDang.btn_suaTin.Hide();
+
+            return UC_tinDaDang;
+        }
+
+        //  sự kiện khi click vào thì hiện chi tiết thư
+        private void UC_tinDaDang_Click(object sender, EventArgs e, Thu t)
+        {
+            ChiTietThu chiTiet_thu = new ChiTietThu();
+
+            chiTiet_thu.xuatDuLieu_khiNhan(t);
+
+            chiTiet_thu.ShowDialog();
         }
     }
 }

@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DeTai_02_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Applications">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+      <PropertyRef Name="IdCandidate" />
+    </Key>
+    <Property Name="IdCompany" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdCandidate" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CVs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Avatar" Type="varchar" MaxLength="100" />
+    <Property Name="JobPos" Type="nvarchar" MaxLength="62" />
+    <Property Name="CareerGoal" Type="text" />
+    <Property Name="Education" Type="text" />
+    <Property Name="Experience" Type="text" />
+    <Property Name="Activity" Type="text" />
+    <Property Name="Award" Type="text" />
+    <Property Name="Certificate" Type="text" />
+    <Property Name="UploadDate" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DinhDang_rtbx_NTD">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+      <PropertyRef Name="RtbxStyle" />
+    </Key>
+    <Property Name="IdCompany" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RtbxStyle" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Color" Type="varchar" MaxLength="100" />
+    <Property Name="Font" Type="varchar" MaxLength="100" />
+    <Property Name="FontStyle" Type="varchar" MaxLength="100" />
+    <Property Name="Size" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="DinhDang_rtbx_UV">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="RtbxStyle" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RtbxStyle" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Color" Type="varchar" MaxLength="100" />
+    <Property Name="Font" Type="varchar" MaxLength="100" />
+    <Property Name="FontStyle" Type="varchar" MaxLength="100" />
+    <Property Name="Size" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="JobPostings">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+    </Key>
+    <Property Name="IdCompany" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IconCompany" Type="varchar" MaxLength="100" />
+    <Property Name="Job" Type="nvarchar" MaxLength="30" />
+    <Property Name="JobName" Type="nvarchar" MaxLength="62" />
+    <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Experience" Type="nvarchar" MaxLength="100" />
+    <Property Name="WorkFormat" Type="nvarchar" MaxLength="100" />
+    <Property Name="DatePosted" Type="varchar" MaxLength="50" />
+    <Property Name="Deadline" Type="varchar" MaxLength="50" />
+    <Property Name="JobDescription" Type="ntext" />
+    <Property Name="Requirements" Type="ntext" />
+    <Property Name="Benefit" Type="ntext" />
+    <Property Name="Activity" Type="ntext" />
+    <Property Name="Award" Type="ntext" />
+    <Property Name="License" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Letter">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+      <PropertyRef Name="IdCandidate" />
+    </Key>
+    <Property Name="IdCompany" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdCandidate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Receiver" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Content" Type="text" Nullable="false" />
+    <Property Name="DateSent" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NHATUYENDUNG">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="62" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="62" Nullable="false" />
+    <Property Name="PhoneNTD" Type="nvarchar" MaxLength="12" Nullable="false" />
+    <Property Name="JobPos" Type="nvarchar" MaxLength="62" Nullable="false" />
+    <Property Name="Company" Type="nvarchar" MaxLength="62" Nullable="false" />
+    <Property Name="JobLocation" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SocialNetwork" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UNGVIEN">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="BirthDate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Link" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="62" Nullable="false" />
+    <Property Name="Address_C" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Applicati__IdCan__42ACE4D4">
+    <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
+    <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Applications">
+        <PropertyRef Name="IdCandidate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Applications__2AA05119">
+    <End Role="JobPostings" Type="Self.JobPostings" Multiplicity="1" />
+    <End Role="Applications" Type="Self.Applications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobPostings">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+      </Principal>
+      <Dependent Role="Applications">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CVs__Id__3429BB53">
+    <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
+    <End Role="CVs" Type="Self.CVs" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CVs">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DinhDang_rtb__Id__0539C240">
+    <End Role="CVs" Type="Self.CVs" Multiplicity="1" />
+    <End Role="DinhDang_rtbx_UV" Type="Self.DinhDang_rtbx_UV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CVs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DinhDang_rtbx_UV">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DinhDang_rtbx_NT__6D6238AF">
+    <End Role="JobPostings" Type="Self.JobPostings" Multiplicity="1" />
+    <End Role="DinhDang_rtbx_NTD" Type="Self.DinhDang_rtbx_NTD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobPostings">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+      </Principal>
+      <Dependent Role="DinhDang_rtbx_NTD">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__JobPostin__IdCom__2B947552">
+    <End Role="NHATUYENDUNG" Type="Self.NHATUYENDUNG" Multiplicity="1" />
+    <End Role="JobPostings" Type="Self.JobPostings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHATUYENDUNG">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobPostings">
+        <PropertyRef Name="IdCompany" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Letter__1387E197">
+    <End Role="Applications" Type="Self.Applications" Multiplicity="1" />
+    <End Role="Letter" Type="Self.Letter" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Applications">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+        <PropertyRef Name="IdCandidate" />
+      </Principal>
+      <Dependent Role="Letter">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+        <PropertyRef Name="IdCandidate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NHATUYENDUNG__Id__6A30C649">
+    <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
+    <End Role="NHATUYENDUNG" Type="Self.NHATUYENDUNG" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NHATUYENDUNG">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UNGVIEN__Id__6E01572D">
+    <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
+    <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DeTai_02_ModelStoreContainer">
+    <EntitySet Name="Applications" EntityType="Self.Applications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CVs" EntityType="Self.CVs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DinhDang_rtbx_NTD" EntityType="Self.DinhDang_rtbx_NTD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DinhDang_rtbx_UV" EntityType="Self.DinhDang_rtbx_UV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobPostings" EntityType="Self.JobPostings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Letter" EntityType="Self.Letter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHATUYENDUNG" EntityType="Self.NHATUYENDUNG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UNGVIEN" EntityType="Self.UNGVIEN" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Applicati__IdCan__42ACE4D4" Association="Self.FK__Applicati__IdCan__42ACE4D4">
+      <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+      <End Role="Applications" EntitySet="Applications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Applications__2AA05119" Association="Self.FK__Applications__2AA05119">
+      <End Role="JobPostings" EntitySet="JobPostings" />
+      <End Role="Applications" EntitySet="Applications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CVs__Id__3429BB53" Association="Self.FK__CVs__Id__3429BB53">
+      <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+      <End Role="CVs" EntitySet="CVs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DinhDang_rtb__Id__0539C240" Association="Self.FK__DinhDang_rtb__Id__0539C240">
+      <End Role="CVs" EntitySet="CVs" />
+      <End Role="DinhDang_rtbx_UV" EntitySet="DinhDang_rtbx_UV" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DinhDang_rtbx_NT__6D6238AF" Association="Self.FK__DinhDang_rtbx_NT__6D6238AF">
+      <End Role="JobPostings" EntitySet="JobPostings" />
+      <End Role="DinhDang_rtbx_NTD" EntitySet="DinhDang_rtbx_NTD" />
+    </AssociationSet>
+    <AssociationSet Name="FK__JobPostin__IdCom__2B947552" Association="Self.FK__JobPostin__IdCom__2B947552">
+      <End Role="NHATUYENDUNG" EntitySet="NHATUYENDUNG" />
+      <End Role="JobPostings" EntitySet="JobPostings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Letter__1387E197" Association="Self.FK__Letter__1387E197">
+      <End Role="Applications" EntitySet="Applications" />
+      <End Role="Letter" EntitySet="Letter" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NHATUYENDUNG__Id__6A30C649" Association="Self.FK__NHATUYENDUNG__Id__6A30C649">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+      <End Role="NHATUYENDUNG" EntitySet="NHATUYENDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UNGVIEN__Id__6E01572D" Association="Self.FK__UNGVIEN__Id__6E01572D">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
+      <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

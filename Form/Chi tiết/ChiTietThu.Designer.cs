@@ -40,7 +40,8 @@
             // 
             // UC_Thu
             // 
-            this.UC_Thu.BackColor = System.Drawing.Color.White;
+            this.UC_Thu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.UC_Thu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.UC_Thu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UC_Thu.Location = new System.Drawing.Point(0, 0);
             this.UC_Thu.Name = "UC_Thu";
@@ -51,6 +52,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(765, 570);
             this.Controls.Add(this.UC_Thu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

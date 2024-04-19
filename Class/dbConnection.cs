@@ -404,5 +404,41 @@ namespace Project_Windows_04
             }
             return null;
         }
+
+        public void thucThi_load_thuXacNhan(string sqlQuery_xuat_thuXacNhan, FlowLayoutPanel flpl)
+        {
+            try
+            {
+                conn.Open();
+
+                Xuat_ThongTin xuat_TT = new Xuat_ThongTin();
+
+                SqlCommand cmd = new SqlCommand(sqlQuery_xuat_thuXacNhan, conn);
+                SqlDataReader data = cmd.ExecuteReader();
+
+                while (data.Read() == true)
+                {
+                    ////  dùng entity framework để truy cập lấy JobName, UpdatePost dễ dàng hơn thông qua IdJobPostings
+                    //using (var context = new DeTai_02Entities())
+                    //{
+                    //    var query = context.JobPostings.Where(x => x.IdJobPostings == data.GetString(1)).ToList();
+                    //}
+
+                    Thu t = new Thu(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(6), data.GetString(7));
+
+                    //  cứ 1 vòng lặp thì add 1 UC_tinDaDang vào flowlayoutpanel
+                    //  truyền DatePosted, JobName, t
+                    flpl.Controls.Add(xuat_TT.them_thuXacNhan(data.GetString(12), data.GetString(16), t));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! '\n" + ex, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

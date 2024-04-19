@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DeTai_02_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Application">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+      <PropertyRef Name="IdCandidate" />
+    </Key>
+    <Property Name="IdCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdJobPostings" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdCandidate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="UNGVIEN" Relationship="Self.FK__Applicati__IdCan__42ACE4D4" FromRole="Applications" ToRole="UNGVIEN" />
+    <NavigationProperty Name="JobPosting" Relationship="Self.FK__Applications__2AA05119" FromRole="Applications" ToRole="JobPostings" />
+    <NavigationProperty Name="Letter" Relationship="Self.FK__Letter__1387E197" FromRole="Applications" ToRole="Letter" />
+  </EntityType>
+  <EntityType Name="CV">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JobPos" Type="String" MaxLength="62" FixedLength="false" Unicode="true" />
+    <Property Name="CareerGoal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Education" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Experience" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Activity" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Award" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Certificate" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UploadDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UNGVIEN" Relationship="Self.FK__CVs__Id__3429BB53" FromRole="CVs" ToRole="UNGVIEN" />
+    <NavigationProperty Name="DinhDang_rtbx_UV" Relationship="Self.FK__DinhDang_rtb__Id__0539C240" FromRole="CVs" ToRole="DinhDang_rtbx_UV" />
+  </EntityType>
+  <EntityType Name="DinhDang_rtbx_NTD">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+      <PropertyRef Name="RtbxStyle" />
+    </Key>
+    <Property Name="IdCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdJobPostings" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RtbxStyle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Color" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Font" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FontStyle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Size" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="JobPosting" Relationship="Self.FK__DinhDang_rtbx_NT__6D6238AF" FromRole="DinhDang_rtbx_NTD" ToRole="JobPostings" />
+  </EntityType>
+  <EntityType Name="DinhDang_rtbx_UV">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="RtbxStyle" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RtbxStyle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Color" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Font" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="FontStyle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Size" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="CV" Relationship="Self.FK__DinhDang_rtb__Id__0539C240" FromRole="DinhDang_rtbx_UV" ToRole="CVs" />
+  </EntityType>
+  <EntityType Name="JobPosting">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+    </Key>
+    <Property Name="IdCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdJobPostings" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IconCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Job" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="JobName" Type="String" MaxLength="62" FixedLength="false" Unicode="true" />
+    <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Experience" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WorkFormat" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DatePosted" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Deadline" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Requirements" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Benefit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Activity" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Award" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="License" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Applications" Relationship="Self.FK__Applications__2AA05119" FromRole="JobPostings" ToRole="Applications" />
+    <NavigationProperty Name="DinhDang_rtbx_NTD" Relationship="Self.FK__DinhDang_rtbx_NT__6D6238AF" FromRole="JobPostings" ToRole="DinhDang_rtbx_NTD" />
+    <NavigationProperty Name="NHATUYENDUNG" Relationship="Self.FK__JobPostin__IdCom__2B947552" FromRole="JobPostings" ToRole="NHATUYENDUNG" />
+  </EntityType>
+  <EntityType Name="Letter">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+      <PropertyRef Name="IdCandidate" />
+    </Key>
+    <Property Name="IdCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdJobPostings" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdCandidate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sender" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Receiver" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateSent" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Application" Relationship="Self.FK__Letter__1387E197" FromRole="Letter" ToRole="Applications" />
+  </EntityType>
+  <EntityType Name="NHATUYENDUNG">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fname" Type="String" MaxLength="62" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="62" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PhoneNTD" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JobPos" Type="String" MaxLength="62" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Company" Type="String" MaxLength="62" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JobLocation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SocialNetwork" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="JobPostings" Relationship="Self.FK__JobPostin__IdCom__2B947552" FromRole="NHATUYENDUNG" ToRole="JobPostings" />
+    <NavigationProperty Name="TAIKHOAN" Relationship="Self.FK__NHATUYENDUNG__Id__6A30C649" FromRole="NHATUYENDUNG" ToRole="TAIKHOAN" />
+  </EntityType>
+  <EntityType Name="TAIKHOAN">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="NHATUYENDUNG" Relationship="Self.FK__NHATUYENDUNG__Id__6A30C649" FromRole="TAIKHOAN" ToRole="NHATUYENDUNG" />
+    <NavigationProperty Name="UNGVIEN" Relationship="Self.FK__UNGVIEN__Id__6E01572D" FromRole="TAIKHOAN" ToRole="UNGVIEN" />
+  </EntityType>
+  <EntityType Name="UNGVIEN">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BirthDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Link" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="62" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address_C" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Applications" Relationship="Self.FK__Applicati__IdCan__42ACE4D4" FromRole="UNGVIEN" ToRole="Applications" />
+    <NavigationProperty Name="CV" Relationship="Self.FK__CVs__Id__3429BB53" FromRole="UNGVIEN" ToRole="CVs" />
+    <NavigationProperty Name="TAIKHOAN" Relationship="Self.FK__UNGVIEN__Id__6E01572D" FromRole="UNGVIEN" ToRole="TAIKHOAN" />
+  </EntityType>
+  <Association Name="FK__Applicati__IdCan__42ACE4D4">
+    <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
+    <End Role="Applications" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Applications">
+        <PropertyRef Name="IdCandidate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Applications__2AA05119">
+    <End Role="JobPostings" Type="Self.JobPosting" Multiplicity="1" />
+    <End Role="Applications" Type="Self.Application" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobPostings">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+      </Principal>
+      <Dependent Role="Applications">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Letter__1387E197">
+    <End Role="Applications" Type="Self.Application" Multiplicity="1" />
+    <End Role="Letter" Type="Self.Letter" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Applications">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+        <PropertyRef Name="IdCandidate" />
+      </Principal>
+      <Dependent Role="Letter">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+        <PropertyRef Name="IdCandidate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CVs__Id__3429BB53">
+    <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
+    <End Role="CVs" Type="Self.CV" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CVs">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DinhDang_rtb__Id__0539C240">
+    <End Role="CVs" Type="Self.CV" Multiplicity="1" />
+    <End Role="DinhDang_rtbx_UV" Type="Self.DinhDang_rtbx_UV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CVs">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DinhDang_rtbx_UV">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DinhDang_rtbx_NT__6D6238AF">
+    <End Role="JobPostings" Type="Self.JobPosting" Multiplicity="1" />
+    <End Role="DinhDang_rtbx_NTD" Type="Self.DinhDang_rtbx_NTD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobPostings">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+      </Principal>
+      <Dependent Role="DinhDang_rtbx_NTD">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__JobPostin__IdCom__2B947552">
+    <End Role="NHATUYENDUNG" Type="Self.NHATUYENDUNG" Multiplicity="1" />
+    <End Role="JobPostings" Type="Self.JobPosting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NHATUYENDUNG">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobPostings">
+        <PropertyRef Name="IdCompany" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NHATUYENDUNG__Id__6A30C649">
+    <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
+    <End Role="NHATUYENDUNG" Type="Self.NHATUYENDUNG" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NHATUYENDUNG">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UNGVIEN__Id__6E01572D">
+    <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
+    <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TAIKHOAN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DeTai_02_Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Applications" EntityType="Self.Application" />
+    <EntitySet Name="CVs" EntityType="Self.CV" />
+    <EntitySet Name="DinhDang_rtbx_NTD" EntityType="Self.DinhDang_rtbx_NTD" />
+    <EntitySet Name="DinhDang_rtbx_UV" EntityType="Self.DinhDang_rtbx_UV" />
+    <EntitySet Name="JobPostings" EntityType="Self.JobPosting" />
+    <EntitySet Name="Letters" EntityType="Self.Letter" />
+    <EntitySet Name="NHATUYENDUNGs" EntityType="Self.NHATUYENDUNG" />
+    <EntitySet Name="TAIKHOANs" EntityType="Self.TAIKHOAN" />
+    <EntitySet Name="UNGVIENs" EntityType="Self.UNGVIEN" />
+    <AssociationSet Name="FK__Applicati__IdCan__42ACE4D4" Association="Self.FK__Applicati__IdCan__42ACE4D4">
+      <End Role="UNGVIEN" EntitySet="UNGVIENs" />
+      <End Role="Applications" EntitySet="Applications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Applications__2AA05119" Association="Self.FK__Applications__2AA05119">
+      <End Role="JobPostings" EntitySet="JobPostings" />
+      <End Role="Applications" EntitySet="Applications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Letter__1387E197" Association="Self.FK__Letter__1387E197">
+      <End Role="Applications" EntitySet="Applications" />
+      <End Role="Letter" EntitySet="Letters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CVs__Id__3429BB53" Association="Self.FK__CVs__Id__3429BB53">
+      <End Role="UNGVIEN" EntitySet="UNGVIENs" />
+      <End Role="CVs" EntitySet="CVs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DinhDang_rtb__Id__0539C240" Association="Self.FK__DinhDang_rtb__Id__0539C240">
+      <End Role="CVs" EntitySet="CVs" />
+      <End Role="DinhDang_rtbx_UV" EntitySet="DinhDang_rtbx_UV" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DinhDang_rtbx_NT__6D6238AF" Association="Self.FK__DinhDang_rtbx_NT__6D6238AF">
+      <End Role="JobPostings" EntitySet="JobPostings" />
+      <End Role="DinhDang_rtbx_NTD" EntitySet="DinhDang_rtbx_NTD" />
+    </AssociationSet>
+    <AssociationSet Name="FK__JobPostin__IdCom__2B947552" Association="Self.FK__JobPostin__IdCom__2B947552">
+      <End Role="NHATUYENDUNG" EntitySet="NHATUYENDUNGs" />
+      <End Role="JobPostings" EntitySet="JobPostings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NHATUYENDUNG__Id__6A30C649" Association="Self.FK__NHATUYENDUNG__Id__6A30C649">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+      <End Role="NHATUYENDUNG" EntitySet="NHATUYENDUNGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UNGVIEN__Id__6E01572D" Association="Self.FK__UNGVIEN__Id__6E01572D">
+      <End Role="TAIKHOAN" EntitySet="TAIKHOANs" />
+      <End Role="UNGVIEN" EntitySet="UNGVIENs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

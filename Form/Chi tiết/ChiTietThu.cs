@@ -35,11 +35,28 @@ namespace Project_Windows_04
             return true;
         }
 
-        public void xuatDuLieu(TuyenDung_Tin t, UngVien_Tin u)
+        public void xuatDuLieu_khiGui(TuyenDung_Tin t, UngVien_Tin u)
         {
             UC_Thu.tbx_nguoiGui.Text = t.EmailHR;
             UC_Thu.tbx_nguoiNhan.Text = u.EmailUV;
             UC_Thu.lbl_ngayGui.Text = DateTime.Now.ToString();
+        }
+
+        public void xuatDuLieu_khiNhan(Thu t)
+        {
+            UC_Thu.tbx_nguoiGui.Text = t.NguoiGui;
+            UC_Thu.tbx_nguoiNhan.Text = t.NguoiNhan;
+            UC_Thu.tbx_chuDe.Text = t.ChuDe;
+            UC_Thu.rtbx_noiDung.Text = t.NoiDung;
+            UC_Thu.lbl_ngayGui.Text = t.NgayGui;
+
+            //  mặc định chỉ đọc ko đc tương tác
+            UC_Thu.tbx_nguoiGui.ReadOnly = true;
+            UC_Thu.tbx_nguoiNhan.ReadOnly = true;
+            UC_Thu.tbx_chuDe.ReadOnly = true;
+            UC_Thu.rtbx_noiDung.ReadOnly = true;
+
+            UC_Thu.btn_gui.Hide();
         }
     }
 }
