@@ -51,6 +51,12 @@ namespace Project_Windows_04
             db.thucThi_load_tinTuyenDung(sqlQuery_xuat_tinTuyenDung, flowLayoutPanel, kieuNguoiDung);
         }
 
+        public void load_thuXacNhan(FlowLayoutPanel flpl, string Id)
+        {
+            string sqlQuery_xuat_thuXacNhan = string.Format("SELECT * FROM Letter WHERE IdCandidate = '{0}'", Id);
+            db.thucThi_load_thuXacNhan(sqlQuery_xuat_thuXacNhan, flpl);
+        }
+
         public UngVien_Tin chiTiet_CV(string IdCandidate)
         {
             string sqlQuery_chiTietCV = string.Format("SELECT * FROM UNGVIEN INNER JOIN CVs ON UNGVIEN.Id = CVs.Id WHERE UNGVIEN.Id = '{0}'", IdCandidate);

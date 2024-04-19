@@ -265,4 +265,5 @@ D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Deb
 D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.UC_taoTin.resources
 D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.TuyenDung_ChinhSuaTin.resources
 D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.TuyenDung_DS_CVs.resources
-D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.UC_phanHoiCV.resources
+D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.UC_Thu.resources
+D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.ChiTietThu.resources

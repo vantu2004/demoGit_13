@@ -54,7 +54,7 @@
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_hoanTat = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_phanHoi = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.lbl_ngayCapNhat = new System.Windows.Forms.Label();
@@ -405,37 +405,37 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btn_hoanTat);
+            this.panel2.Controls.Add(this.btn_phanHoi);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 937);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(411, 118);
             this.panel2.TabIndex = 117;
             // 
-            // btn_hoanTat
+            // btn_phanHoi
             // 
-            this.btn_hoanTat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_hoanTat.Animated = true;
-            this.btn_hoanTat.BackColor = System.Drawing.Color.Transparent;
-            this.btn_hoanTat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_hoanTat.BorderRadius = 10;
-            this.btn_hoanTat.BorderThickness = 2;
-            this.btn_hoanTat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_hoanTat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_hoanTat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_hoanTat.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_hoanTat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_hoanTat.FillColor = System.Drawing.Color.Ivory;
-            this.btn_hoanTat.FillColor2 = System.Drawing.Color.White;
-            this.btn_hoanTat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btn_hoanTat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_hoanTat.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_chat_room_online_chat_web_chat_message_box_5acea927f288e3_5629845315234931599934;
-            this.btn_hoanTat.ImageSize = new System.Drawing.Size(35, 35);
-            this.btn_hoanTat.Location = new System.Drawing.Point(53, 64);
-            this.btn_hoanTat.Name = "btn_hoanTat";
-            this.btn_hoanTat.Size = new System.Drawing.Size(329, 42);
-            this.btn_hoanTat.TabIndex = 117;
-            this.btn_hoanTat.Text = "Feedback";
+            this.btn_phanHoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_phanHoi.Animated = true;
+            this.btn_phanHoi.BackColor = System.Drawing.Color.Transparent;
+            this.btn_phanHoi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_phanHoi.BorderRadius = 10;
+            this.btn_phanHoi.BorderThickness = 2;
+            this.btn_phanHoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_phanHoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_phanHoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_phanHoi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_phanHoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_phanHoi.FillColor = System.Drawing.Color.Ivory;
+            this.btn_phanHoi.FillColor2 = System.Drawing.Color.White;
+            this.btn_phanHoi.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_phanHoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_phanHoi.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_chat_room_online_chat_web_chat_message_box_5acea927f288e3_5629845315234931599934;
+            this.btn_phanHoi.ImageSize = new System.Drawing.Size(35, 35);
+            this.btn_phanHoi.Location = new System.Drawing.Point(53, 64);
+            this.btn_phanHoi.Name = "btn_phanHoi";
+            this.btn_phanHoi.Size = new System.Drawing.Size(329, 42);
+            this.btn_phanHoi.TabIndex = 117;
+            this.btn_phanHoi.Text = "Feedback";
             // 
             // pictureBox5
             // 
@@ -730,7 +730,7 @@
         public System.Windows.Forms.Label label16;
         public System.Windows.Forms.Label lbl_ngayCapNhat;
         private System.Windows.Forms.Panel panel2;
-        public Guna.UI2.WinForms.Guna2GradientButton btn_hoanTat;
+        public Guna.UI2.WinForms.Guna2GradientButton btn_phanHoi;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator4;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator3;

@@ -252,6 +252,13 @@
     </Compile>
     <Compile Include="Class\Tuyển dụng\TuyenDung_ApDung_DinhDang_rtbx.cs" />
     <Compile Include="Class\Tuyển dụng\TuyenDung_DinhDang_rtbx.cs" />
+    <Compile Include="Form\Chi tiết\ChiTietThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Chi tiết\ChiTietThu.Designer.cs">
+      <DependentUpon>ChiTietThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Thu.cs" />
     <Compile Include="UC_Controls\UC_BangTin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -299,11 +306,11 @@
     <Compile Include="UC_Controls\UC_DinhDang_rtbx.Designer.cs">
       <DependentUpon>UC_DinhDang_rtbx.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_phanHoiCV.cs">
+    <Compile Include="UC_Controls\UC_Thu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_phanHoiCV.Designer.cs">
-      <DependentUpon>UC_phanHoiCV.cs</DependentUpon>
+    <Compile Include="UC_Controls\UC_Thu.Designer.cs">
+      <DependentUpon>UC_Thu.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Ứng viên\UngVien_DinhDang_rtbx.cs" />
     <Compile Include="Class\Ứng viên\UngVien_ApDung_DinhDang_rtbx.cs" />
@@ -342,6 +349,9 @@
     <EmbeddedResource Include="Form\Tuyển dụng\TuyenDung_DangKy.resx">
       <DependentUpon>TuyenDung_DangKy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Chi tiết\ChiTietThu.resx">
+      <DependentUpon>ChiTietThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Controls\UC_BangTin.resx">
       <DependentUpon>UC_BangTin.cs</DependentUpon>
     </EmbeddedResource>
@@ -360,8 +370,8 @@
     <EmbeddedResource Include="UC_Controls\UC_taoTin.resx">
       <DependentUpon>UC_taoTin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_phanHoiCV.resx">
-      <DependentUpon>UC_phanHoiCV.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Controls\UC_Thu.resx">
+      <DependentUpon>UC_Thu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -384,6 +394,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\user-login-avatar-11925.png" />
+    <None Include="Resources\send_2089310.png" />
     <None Include="Resources\[CITYPNG.COM]Flat Green Like Heart Icon Silhouette Transparent Background - 4000x4000.png" />
     <None Include="Resources\transparent-company-icon-office-building-icon-human-resources-5f8e10bd66c854.033630951603145917421.png" />
     <None Include="Resources\vecteezy_o-email-e-enviar-icone-preto_200096011.png" />
@@ -409,6 +421,17 @@
     <None Include="Resources\heart-icon-3339.png" />
     <None Include="Resources\heart-icon-33391.png" />
     <None Include="Resources\heart-icon-3351.png" />
+    <None Include="Resources\Iconsmind-Outline-Close-Window.512.png" />
+    <None Include="Resources\date-and-time-icon.png" />
+    <None Include="Resources\calendar-checkmark-icon.png" />
+    <None Include="Resources\Calendar.png" />
+    <None Include="Resources\Calendar1.png" />
+    <None Include="Resources\calendar-with-check-mark_75624.png" />
+    <None Include="Resources\job-post.png" />
+    <None Include="Resources\job-post1.png" />
+    <None Include="Resources\briefcase.png" />
+    <None Include="Resources\avatar.png" />
+    <None Include="Resources\512x512.png" />
     <Content Include="Resources\kisspng-clip-art-computer-icons-scalable-vector-graphics-p-earth-location-map-world-navigation-pin-marker-svg-5bf236c7224d20.4334433015426003911405.png" />
     <None Include="Resources\kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3.5629845315234931599934.png" />
     <Content Include="Resources\kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.6946621115304120791875.png" />
@@ -466,6 +489,8 @@
     <None Include="Resources\pngegg %2822%29.png" />
     <None Include="Resources\pngegg %2823%29.png" />
     <None Include="Resources\pngfind.com-ticket-icon-png-3159127.png" />
+    <None Include="Resources\Roundicons-100-Free-Solid-Cancel.512.png" />
+    <None Include="Resources\salary.png" />
     <Content Include="Resources\Screenshot 2024-03-05 204513.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

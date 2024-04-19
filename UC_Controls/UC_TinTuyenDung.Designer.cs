@@ -36,6 +36,7 @@
             this.lbl_kinhNghiem = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_nganhNghe = new System.Windows.Forms.Label();
+            this.cbx_theoDoi = new Guna.UI2.WinForms.Guna2ImageCheckBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -43,7 +44,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbx_logoCongTy = new System.Windows.Forms.PictureBox();
-            this.cbx_theoDoi = new Guna.UI2.WinForms.Guna2ImageCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -133,6 +133,21 @@
             this.lbl_nganhNghe.TabIndex = 19;
             this.lbl_nganhNghe.Text = "Career";
             // 
+            // cbx_theoDoi
+            // 
+            this.cbx_theoDoi.BackColor = System.Drawing.Color.Transparent;
+            this.cbx_theoDoi.CheckedState.Image = global::Project_Windows_04.Properties.Resources.pngfind_com_ticket_icon_png_3159127;
+            this.cbx_theoDoi.Image = global::Project_Windows_04.Properties.Resources.heart_icon_3351;
+            this.cbx_theoDoi.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cbx_theoDoi.ImageRotate = 0F;
+            this.cbx_theoDoi.ImageSize = new System.Drawing.Size(35, 35);
+            this.cbx_theoDoi.IndicateFocus = true;
+            this.cbx_theoDoi.Location = new System.Drawing.Point(953, 12);
+            this.cbx_theoDoi.Name = "cbx_theoDoi";
+            this.cbx_theoDoi.Size = new System.Drawing.Size(44, 39);
+            this.cbx_theoDoi.TabIndex = 131;
+            this.cbx_theoDoi.UseTransparentBackground = true;
+            // 
             // pictureBox7
             // 
             this.pictureBox7.BackgroundImage = global::Project_Windows_04.Properties.Resources.kisspng_clip_art_computer_icons_portable_network_graphics_font_work_svg_png_icon_free_download_391838_o_5c65783be93e67_4416976315501537879554;
@@ -175,7 +190,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_investor_investment_bank_symbols_salary_5ab0ffad142d79_5467246115215492290827;
+            this.pictureBox3.BackgroundImage = global::Project_Windows_04.Properties.Resources.salary;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(228, 110);
             this.pictureBox3.Name = "pictureBox3";
@@ -203,21 +218,6 @@
             this.pbx_logoCongTy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_logoCongTy.TabIndex = 13;
             this.pbx_logoCongTy.TabStop = false;
-            // 
-            // cbx_theoDoi
-            // 
-            this.cbx_theoDoi.BackColor = System.Drawing.Color.Transparent;
-            this.cbx_theoDoi.CheckedState.Image = global::Project_Windows_04.Properties.Resources.pngfind_com_ticket_icon_png_3159127;
-            this.cbx_theoDoi.Image = global::Project_Windows_04.Properties.Resources.heart_icon_3351;
-            this.cbx_theoDoi.ImageOffset = new System.Drawing.Point(0, 0);
-            this.cbx_theoDoi.ImageRotate = 0F;
-            this.cbx_theoDoi.ImageSize = new System.Drawing.Size(35, 35);
-            this.cbx_theoDoi.IndicateFocus = true;
-            this.cbx_theoDoi.Location = new System.Drawing.Point(953, 12);
-            this.cbx_theoDoi.Name = "cbx_theoDoi";
-            this.cbx_theoDoi.Size = new System.Drawing.Size(44, 39);
-            this.cbx_theoDoi.TabIndex = 131;
-            this.cbx_theoDoi.UseTransparentBackground = true;
             // 
             // UC_TinTuyenDung
             // 

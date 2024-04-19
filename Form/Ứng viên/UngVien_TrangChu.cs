@@ -51,6 +51,7 @@ namespace Project_Windows_04
 
             //  thay vì truyền userType thì truyền Id để dùng cho hàm Btn_ungTuyen_Click bên Xuat_ThongTin
             UV_DAO.load_tinTuyenDung(UC_BangTin_UV.flpl_danhSachTinTuyenDung, this.Id);
+            UV_DAO.load_thuXacNhan(flpl_thuXacNhan, this.Id);
         }
 
         //  load hàm chức năng của phần lọc trong bảng tin

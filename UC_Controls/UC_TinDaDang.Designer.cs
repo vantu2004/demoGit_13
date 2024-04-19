@@ -32,12 +32,12 @@
             this.lbl_ngayDang = new System.Windows.Forms.Label();
             this.lbl_tenCongViec = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_suaTin = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_xoaTin = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_ngayDang
@@ -45,7 +45,7 @@
             this.lbl_ngayDang.AutoSize = true;
             this.lbl_ngayDang.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_ngayDang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbl_ngayDang.Location = new System.Drawing.Point(68, 11);
+            this.lbl_ngayDang.Location = new System.Drawing.Point(71, 11);
             this.lbl_ngayDang.Name = "lbl_ngayDang";
             this.lbl_ngayDang.Size = new System.Drawing.Size(145, 31);
             this.lbl_ngayDang.TabIndex = 86;
@@ -56,7 +56,7 @@
             this.lbl_tenCongViec.AutoSize = true;
             this.lbl_tenCongViec.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbl_tenCongViec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbl_tenCongViec.Location = new System.Drawing.Point(358, 11);
+            this.lbl_tenCongViec.Location = new System.Drawing.Point(71, 52);
             this.lbl_tenCongViec.Name = "lbl_tenCongViec";
             this.lbl_tenCongViec.Size = new System.Drawing.Size(229, 31);
             this.lbl_tenCongViec.TabIndex = 87;
@@ -66,6 +66,26 @@
             // 
             this.guna2Elipse1.BorderRadius = 10;
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Project_Windows_04.Properties.Resources.briefcase;
+            this.pictureBox2.Location = new System.Drawing.Point(30, 52);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 126;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Project_Windows_04.Properties.Resources.date_and_time_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(30, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 125;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_suaTin
             // 
@@ -78,14 +98,14 @@
             this.btn_suaTin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_suaTin.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_suaTin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_suaTin.FillColor = System.Drawing.Color.White;
-            this.btn_suaTin.FillColor2 = System.Drawing.Color.White;
+            this.btn_suaTin.FillColor = System.Drawing.SystemColors.Control;
+            this.btn_suaTin.FillColor2 = System.Drawing.SystemColors.Control;
             this.btn_suaTin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_suaTin.ForeColor = System.Drawing.Color.White;
+            this.btn_suaTin.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_suaTin.Image = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_editing_vector_graphics_editor_edit_pen_write_icon_5ab06a247f5929_0215497815215109485216;
             this.btn_suaTin.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_suaTin.IndicateFocus = true;
-            this.btn_suaTin.Location = new System.Drawing.Point(997, 9);
+            this.btn_suaTin.Location = new System.Drawing.Point(422, 31);
             this.btn_suaTin.Name = "btn_suaTin";
             this.btn_suaTin.Size = new System.Drawing.Size(52, 43);
             this.btn_suaTin.TabIndex = 124;
@@ -109,56 +129,28 @@
             this.btn_xoaTin.Image = global::Project_Windows_04.Properties.Resources.kisspng_rubbish_bins_waste_paper_baskets_computer_icons_lixo_5b25c01b15f310_9266541715292006670899;
             this.btn_xoaTin.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_xoaTin.IndicateFocus = true;
-            this.btn_xoaTin.Location = new System.Drawing.Point(1055, 9);
+            this.btn_xoaTin.Location = new System.Drawing.Point(480, 31);
             this.btn_xoaTin.Name = "btn_xoaTin";
             this.btn_xoaTin.Size = new System.Drawing.Size(52, 43);
             this.btn_xoaTin.TabIndex = 123;
             this.btn_xoaTin.UseTransparentBackground = true;
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.BackgroundImage = global::Project_Windows_04.Properties.Resources.pngegg__22_;
-            this.guna2PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox2.Image = global::Project_Windows_04.Properties.Resources.job_942800;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(27, 11);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(35, 35);
-            this.guna2PictureBox2.TabIndex = 89;
-            this.guna2PictureBox2.TabStop = false;
-            this.guna2PictureBox2.UseTransparentBackground = true;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BackgroundImage = global::Project_Windows_04.Properties.Resources.job_942800;
-            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox1.Image = global::Project_Windows_04.Properties.Resources.job_942800;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(317, 11);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.guna2PictureBox1.TabIndex = 88;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
             // UC_TinDaDang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_suaTin);
             this.Controls.Add(this.btn_xoaTin);
-            this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.lbl_tenCongViec);
             this.Controls.Add(this.lbl_ngayDang);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "UC_TinDaDang";
-            this.Size = new System.Drawing.Size(1132, 55);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(560, 100);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,10 +159,10 @@
         #endregion
         public System.Windows.Forms.Label lbl_ngayDang;
         public System.Windows.Forms.Label lbl_tenCongViec;
-        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         public Guna.UI2.WinForms.Guna2GradientButton btn_xoaTin;
         public Guna.UI2.WinForms.Guna2GradientButton btn_suaTin;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

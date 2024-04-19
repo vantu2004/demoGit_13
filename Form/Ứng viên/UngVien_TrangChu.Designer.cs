@@ -78,6 +78,7 @@
             this.UC_BangTin_UV = new Project_Windows_04.UC_BangTin();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.flpl_thuXacNhan = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -85,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbx_avatar)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.guna2TabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -929,6 +931,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.flpl_thuXacNhan);
             this.tabPage2.Location = new System.Drawing.Point(184, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -936,6 +939,15 @@
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Inbox";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // flpl_thuXacNhan
+            // 
+            this.flpl_thuXacNhan.BackColor = System.Drawing.Color.White;
+            this.flpl_thuXacNhan.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flpl_thuXacNhan.Location = new System.Drawing.Point(3, 3);
+            this.flpl_thuXacNhan.Name = "flpl_thuXacNhan";
+            this.flpl_thuXacNhan.Size = new System.Drawing.Size(1141, 1041);
+            this.flpl_thuXacNhan.TabIndex = 1;
             // 
             // UngVien_TrangChu
             // 
@@ -957,6 +969,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbx_avatar)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.guna2TabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1013,5 +1026,6 @@
         public Guna.UI2.WinForms.Guna2GradientCircleButton btn_hoatDong;
         public Guna.UI2.WinForms.Guna2GradientCircleButton btn_giaiThuong;
         public Guna.UI2.WinForms.Guna2GradientCircleButton btn_chungChi;
+        public System.Windows.Forms.FlowLayoutPanel flpl_thuXacNhan;
     }
 }

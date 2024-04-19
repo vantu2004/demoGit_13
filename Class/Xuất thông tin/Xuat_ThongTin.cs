@@ -19,6 +19,7 @@ namespace Project_Windows_04
 
         public Xuat_ThongTin() { }
 
+        //  up tin lên trang chủ
         public UC_TinTuyenDung them_tinTuyenDung(TuyenDung_Tin t, string userType)
         {
             UC_TinTuyenDung UC_tinTuyenDung = new UC_TinTuyenDung();
@@ -50,6 +51,7 @@ namespace Project_Windows_04
             return UC_tinTuyenDung;
         }
 
+        //  xem chi tiết tin tuyển dụng
         private void UC_tinTuyenDung_Click(object sender, EventArgs e)
         {
             UC_TinTuyenDung myObject = sender as UC_TinTuyenDung;
@@ -76,11 +78,13 @@ namespace Project_Windows_04
             chiTiet_tin.ShowDialog();
         }
 
+        //  ứng viên nộp CV
         private void Btn_ungTuyen_Click(object sender, EventArgs e)
         {
             xuatTT_DAO.ungTuyen(this.userType, this.IdCompany, this.IdJobPostings);
         }
 
+        //  thêm tin vừa đăng vào danh sách tin đã đăng bên nhà tuyển dụng
         public UC_TinDaDang them_tinDaDang(string IdCompany, string IdJobPostings, string tenCongViec, string ngayDang)
         {
             UC_TinDaDang UC_tinDaDang = new UC_TinDaDang();
@@ -96,9 +100,9 @@ namespace Project_Windows_04
             return UC_tinDaDang;
         }
 
+        //  load toàn bộ danh sách CV đã nộp vào 1 tin tuyên dụng
         private void UC_tinDaDang_Click1(object sender, EventArgs e, string IdCompany, string IdJobPostings)
         {
-            UC_TinDaDang myObject = sender as UC_TinDaDang;
             TuyenDung_DS_CVs DSCV = new TuyenDung_DS_CVs();
 
             xuatTT_DAO.load_DS_CV(DSCV.flpl_danhSachCV, IdCompany, IdJobPostings);
@@ -106,11 +110,13 @@ namespace Project_Windows_04
             DSCV.ShowDialog();
         }
 
+        //  xóa 1 tin tuyển dụng trong danh sách tin đã đăng
         private void Btn_xoaTin_Click(string IdCompany, string IdJobPostings)
         {
             xuatTT_DAO.xoa_tinTuyenDung(IdCompany, IdJobPostings);
         }
 
+        //  sửa 1 tin tuyển dụng trong danh sách tin đã đăng
         private void Btn_suaTin_Click(string IdCompany, string IdJobPostings)
         {
             TuyenDung_ChinhSuaTin TD_CST = new TuyenDung_ChinhSuaTin();
@@ -120,6 +126,7 @@ namespace Project_Windows_04
             TD_CST.ShowDialog();
         }
 
+        //  add 1 CV vào flpl, được dùng bên dbConnection
         public UC_CVs_daNop them_CV(string IdCompany, string IdJobPostings, string IdCandidate, string tenCongViec, string ngayDang)
         {
             UC_CVs_daNop UC_CV = new UC_CVs_daNop();
@@ -127,24 +134,57 @@ namespace Project_Windows_04
             UC_CV.lbl_ngayDang.Text = ngayDang;
             UC_CV.lbl_fullName.Text = tenCongViec;
 
-            UC_CV.Click += (sender, e) => UC_CV_Click(sender, e, IdCandidate);
+            //  truyền đủ IdCompany, IdJobPostings, IdCandidate để dùng cho Btn_phanHoi_Click giúp khởi tạo đối tượng Thu
+            UC_CV.Click += (sender, e) => UC_CV_Click(sender, e, IdCompany, IdJobPostings, IdCandidate);
+            //  truyền đủ IdCompany, IdJobPostings, IdCandidate để tìm và xóa 1 CV
             UC_CV.btn_xoaCV.Click += (sender, e) => Btn_xoaCV_Click(sender, e, IdCompany, IdJobPostings, IdCandidate);
 
             return UC_CV;
         }
 
+        //  xóa CV của 1 ứng viên ra khỏi danh sách CV đã nộp
         private void Btn_xoaCV_Click(object sender, EventArgs e, string IdCompany, string IdJobPostings, string IdCandidate)
         {
             xuatTT_DAO.xoaCV(IdCompany, IdJobPostings, IdCandidate);
         }
 
-        private void UC_CV_Click(object sender, EventArgs e, string IdCandidate)
+        //  xem chi tiết thông tin 1 CV của 1 ứng viên
+        private void UC_CV_Click(object sender, EventArgs e, string IdCompany, string IdJobPostings, string IdCandidate)
         {
             ChiTietCV CV = new ChiTietCV();
 
             CV.layDuLieu(xuatTT_DAO.chiTiet_CV(IdCandidate));
-            
+
+            //  gọi sự kiện cho nút feedback
+            CV.btn_phanHoi.Click += (s, ev) => Btn_phanHoi_Click(s, ev, IdCompany, IdJobPostings, IdCandidate);
+
             CV.ShowDialog();
+        }
+
+        //  phản hồi về CV cho 1 ứng viên
+        private void Btn_phanHoi_Click(object sender, EventArgs e, string IdCompany, string IdJobPostings, string IdCandidate)
+        {
+            ChiTietThu thu = new ChiTietThu();
+
+            //  tìm mail của HR đã tạo tin, tìm mail người nộp CV sau đó đổ thông tin vào ChiTetThu
+            thu.xuatDuLieu(xuatTT_DAO.chiTietTin(IdCompany, IdJobPostings), xuatTT_DAO.chiTiet_CV(IdCandidate));
+
+            thu.UC_Thu.btn_gui.Click += (s, ev) => Btn_gui_Click(s, ev, thu, IdCompany, IdJobPostings, IdCandidate);
+
+            thu.ShowDialog();
+        }
+
+        private void Btn_gui_Click(object sender, EventArgs e, ChiTietThu thu, string IdCompany, string IdJobPostings, string IdCandidate)
+        {
+            //  mặc định ko được bỏ trống nội dung thư
+            if (thu.kiemTraNull())
+            {
+
+                Thu t = new Thu(IdCompany, IdJobPostings, IdCandidate, thu.UC_Thu.tbx_nguoiGui.Text, thu.UC_Thu.tbx_nguoiNhan.Text, thu.UC_Thu.tbx_chuDe.Text, thu.UC_Thu.rtbx_noiDung.Text, thu.UC_Thu.lbl_ngayGui.Text);
+                xuatTT_DAO.luuThu(t);
+            }
+            else
+                MessageBox.Show("You must fill in all information!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

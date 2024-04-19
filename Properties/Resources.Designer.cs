@@ -123,10 +123,90 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _512x512 {
+            get {
+                object obj = ResourceManager.GetObject("512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _CITYPNG_COM_Flat_Green_Like_Heart_Icon_Silhouette_Transparent_Background___4000x4000 {
             get {
                 object obj = ResourceManager.GetObject("[CITYPNG.COM]Flat Green Like Heart Icon Silhouette Transparent Background - 4000x" +
                         "4000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap avatar {
+            get {
+                object obj = ResourceManager.GetObject("avatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap briefcase {
+            get {
+                object obj = ResourceManager.GetObject("briefcase", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Calendar {
+            get {
+                object obj = ResourceManager.GetObject("Calendar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_checkmark_icon {
+            get {
+                object obj = ResourceManager.GetObject("calendar-checkmark-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_with_check_mark_75624 {
+            get {
+                object obj = ResourceManager.GetObject("calendar-with-check-mark_75624", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Calendar1 {
+            get {
+                object obj = ResourceManager.GetObject("Calendar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap date_and_time_icon {
+            get {
+                object obj = ResourceManager.GetObject("date-and-time-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -184,6 +264,16 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Iconsmind_Outline_Close_Window_512 {
+            get {
+                object obj = ResourceManager.GetObject("Iconsmind-Outline-Close-Window.512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap isometric_landing_page_design_background_template {
             get {
                 object obj = ResourceManager.GetObject("isometric-landing-page-design-background-template", resourceCulture);
@@ -197,6 +287,26 @@ namespace Project_Windows_04.Properties {
         internal static System.Drawing.Bitmap job_942800 {
             get {
                 object obj = ResourceManager.GetObject("job_942800", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap job_post {
+            get {
+                object obj = ResourceManager.GetObject("job-post", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap job_post1 {
+            get {
+                object obj = ResourceManager.GetObject("job-post1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -870,6 +980,26 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Roundicons_100_Free_Solid_Cancel_512 {
+            get {
+                object obj = ResourceManager.GetObject("Roundicons-100-Free-Solid-Cancel.512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salary {
+            get {
+                object obj = ResourceManager.GetObject("salary", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2024_02_29_004258 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2024-02-29 004258", resourceCulture);
@@ -900,10 +1030,30 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap send_2089310 {
+            get {
+                object obj = ResourceManager.GetObject("send_2089310", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap transparent_company_icon_office_building_icon_human_resources_5f8e10bd66c854_033630951603145917421 {
             get {
                 object obj = ResourceManager.GetObject("transparent-company-icon-office-building-icon-human-resources-5f8e10bd66c854.0336" +
                         "30951603145917421", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_login_avatar_11925 {
+            get {
+                object obj = ResourceManager.GetObject("user-login-avatar-11925", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -60,8 +60,15 @@ namespace Project_Windows_04
         public void xoaCV(string IdCompany, string IdJobPostings, string IdCandidate)
         {
             string sqlQuery_xoaCV = string.Format("DELETE FROM Applications WHERE IdCompany = '{0}' AND IdJobPostings = '{1}' AND IdCandidate = '{2}'", IdCompany, IdJobPostings, IdCandidate);
-
             db.thucThi_taoTin_chinhSuaTin(sqlQuery_xoaCV);
+        }
+ 
+        public void luuThu(Thu t)
+        {
+            string sqlQuery_ungTuyen = string.Format("INSERT INTO Letter(IdCompany, IdJobPostings, IdCandidate, Sender, Receiver, Title, Content, DateSent) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", 
+                t.IdCompany, t.IdJobPostings, t.IdCandidate, t.NguoiGui, t.NguoiNhan, t.ChuDe, t.NoiDung, t.NgayGui);
+
+            db.thucThi_taoTin_chinhSuaTin(sqlQuery_ungTuyen);
         }
     }
 }
