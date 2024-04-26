@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbx_dongYDieuKhoan = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btn_hoanTat = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@
             this.tbx_tenDangNhap_UV = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.cbx_dongYDieuKhoan = new Guna.UI2.WinForms.Guna2CheckBox();
             this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -95,6 +95,25 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(834, 632);
             this.panel4.TabIndex = 8;
+            // 
+            // cbx_dongYDieuKhoan
+            // 
+            this.cbx_dongYDieuKhoan.AutoSize = true;
+            this.cbx_dongYDieuKhoan.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbx_dongYDieuKhoan.CheckedState.BorderRadius = 0;
+            this.cbx_dongYDieuKhoan.CheckedState.BorderThickness = 0;
+            this.cbx_dongYDieuKhoan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbx_dongYDieuKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic);
+            this.cbx_dongYDieuKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.cbx_dongYDieuKhoan.Location = new System.Drawing.Point(40, 505);
+            this.cbx_dongYDieuKhoan.Name = "cbx_dongYDieuKhoan";
+            this.cbx_dongYDieuKhoan.Size = new System.Drawing.Size(353, 24);
+            this.cbx_dongYDieuKhoan.TabIndex = 21;
+            this.cbx_dongYDieuKhoan.Text = "\"I agree to the Terms of Service of TopCV.\"";
+            this.cbx_dongYDieuKhoan.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.cbx_dongYDieuKhoan.UncheckedState.BorderRadius = 0;
+            this.cbx_dongYDieuKhoan.UncheckedState.BorderThickness = 0;
+            this.cbx_dongYDieuKhoan.UncheckedState.FillColor = System.Drawing.Color.White;
             // 
             // btn_hoanTat
             // 
@@ -294,9 +313,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(25, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 28);
+            this.label3.Size = new System.Drawing.Size(88, 28);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Bỉthday";
+            this.label3.Text = "Birthday";
             // 
             // label9
             // 
@@ -733,25 +752,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(50, 49);
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
-            // 
-            // cbx_dongYDieuKhoan
-            // 
-            this.cbx_dongYDieuKhoan.AutoSize = true;
-            this.cbx_dongYDieuKhoan.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbx_dongYDieuKhoan.CheckedState.BorderRadius = 0;
-            this.cbx_dongYDieuKhoan.CheckedState.BorderThickness = 0;
-            this.cbx_dongYDieuKhoan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbx_dongYDieuKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic);
-            this.cbx_dongYDieuKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.cbx_dongYDieuKhoan.Location = new System.Drawing.Point(40, 505);
-            this.cbx_dongYDieuKhoan.Name = "cbx_dongYDieuKhoan";
-            this.cbx_dongYDieuKhoan.Size = new System.Drawing.Size(353, 24);
-            this.cbx_dongYDieuKhoan.TabIndex = 21;
-            this.cbx_dongYDieuKhoan.Text = "\"I agree to the Terms of Service of TopCV.\"";
-            this.cbx_dongYDieuKhoan.UncheckedState.BorderColor = System.Drawing.Color.White;
-            this.cbx_dongYDieuKhoan.UncheckedState.BorderRadius = 0;
-            this.cbx_dongYDieuKhoan.UncheckedState.BorderThickness = 0;
-            this.cbx_dongYDieuKhoan.UncheckedState.FillColor = System.Drawing.Color.White;
             // 
             // UngVien_DangKy
             // 

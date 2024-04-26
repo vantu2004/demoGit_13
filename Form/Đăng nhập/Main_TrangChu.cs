@@ -39,10 +39,10 @@ namespace Project_Windows_04
             UC_Main_TrangChu.btn_dangTinTuyenDung.Click += Btn_dangNhap_Click;
 
             UC_Main_TrangChu.cbx_loc_Luong.SelectedIndexChanged += UC_Main_TrangChu.cbx_loc_Luong_SelectedIndexChanged;
-            UC_Main_TrangChu.cbx_loc_nganhNghe.SelectedIndexChanged += UC_Main_TrangChu.cbx_loc_nganhNghe_SelectedIndexChanged;
+            UC_Main_TrangChu.cbx_loc_nganhNghe.SelectedIndexChanged += UC_Main_TrangChu.locTheoDieuKien;
             UC_Main_TrangChu.cbx_loc_sapXep.SelectedIndexChanged += UC_Main_TrangChu.cbx_loc_sapXep_SelectedIndexChanged;
-            UC_Main_TrangChu.cbx_loc_kinhNghiem.SelectedIndexChanged += UC_Main_TrangChu.cbx_loc_kinhNghiem_SelectedIndexChanged;
-            UC_Main_TrangChu.cbx_loc_diaChi.SelectedIndexChanged += UC_Main_TrangChu.cbx_loc_diaChi_SelectedIndexChanged;
+            UC_Main_TrangChu.cbx_loc_kinhNghiem.SelectedIndexChanged += UC_Main_TrangChu.locTheoDieuKien;
+            UC_Main_TrangChu.cbx_loc_diaChi.SelectedIndexChanged += UC_Main_TrangChu.locTheoDieuKien;
 
             //  ẩn nút đăng xuất
             UC_Main_TrangChu.btn_dangXuat.Hide();

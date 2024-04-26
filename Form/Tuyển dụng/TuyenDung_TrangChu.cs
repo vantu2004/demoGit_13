@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-//using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Project_Windows_04
@@ -80,10 +79,10 @@ namespace Project_Windows_04
         private void UC_BangTin_NTD_Load(object sender, EventArgs e)
         {
             UC_BangTin_NTD.cbx_loc_Luong.SelectedIndexChanged += UC_BangTin_NTD.cbx_loc_Luong_SelectedIndexChanged;
-            UC_BangTin_NTD.cbx_loc_nganhNghe.SelectedIndexChanged += UC_BangTin_NTD.cbx_loc_nganhNghe_SelectedIndexChanged;
+            UC_BangTin_NTD.cbx_loc_nganhNghe.SelectedIndexChanged += UC_BangTin_NTD.locTheoDieuKien;
             UC_BangTin_NTD.cbx_loc_sapXep.SelectedIndexChanged += UC_BangTin_NTD.cbx_loc_sapXep_SelectedIndexChanged;
-            UC_BangTin_NTD.cbx_loc_kinhNghiem.SelectedIndexChanged += UC_BangTin_NTD.cbx_loc_kinhNghiem_SelectedIndexChanged;
-            UC_BangTin_NTD.cbx_loc_diaChi.SelectedIndexChanged += UC_BangTin_NTD.cbx_loc_diaChi_SelectedIndexChanged;
+            UC_BangTin_NTD.cbx_loc_kinhNghiem.SelectedIndexChanged += UC_BangTin_NTD.locTheoDieuKien;
+            UC_BangTin_NTD.cbx_loc_diaChi.SelectedIndexChanged += UC_BangTin_NTD.locTheoDieuKien;
 
             //  đăng xuất
             UC_BangTin_NTD.btn_dangXuat.Click += Btn_dangXuat_Click;

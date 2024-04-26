@@ -70,5 +70,27 @@ namespace Project_Windows_04
 
             db.thucThi_taoTin_chinhSuaTin(sqlQuery_ungTuyen);
         }
+
+        public void luuTin(string tableName, string IdCompany, string IdJobPostings, string IdCandidate)
+        {
+            string sqlQuery_xoaTinDaLuu = string.Format("DELETE FROM {0} WHERE IdCompany = '{1}' AND IdJobPostings = '{2}' AND IdCandidate = '{3}'", tableName, IdCompany, IdJobPostings, IdCandidate);
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoaTinDaLuu);
+
+            string sqlQuery_ungTuyen = string.Format("INSERT INTO {0} (IdCompany, IdJobPostings, IdCandidate, Follow) VALUES ('{1}', '{2}', '{3}', '{4}')", tableName, IdCompany, IdJobPostings, IdCandidate, "flw");
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_ungTuyen);
+        }
+
+        public void xoaTinDaLuu(string tableName, string IdCompany, string IdJobPostings, string IdCandidate)
+        {
+            string sqlQuery_xoaTinDaLuu = string.Format("DELETE FROM {0} WHERE IdCompany = '{1}' AND IdJobPostings = '{2}' AND IdCandidate = '{3}'", tableName, IdCompany, IdJobPostings, IdCandidate);
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoaTinDaLuu);
+        }
+
+        public string trangThai_checkChanged(string tableName, string IdCompany, string IdJobPostings, string IdCandidate)
+        {
+            string sqlQuery_trangThai_checkChanged = string.Format("SELECT * FROM {0} WHERE IdCompany = '{1}' AND IdJobPostings = '{2}' AND IdCandidate = '{3}'", tableName, IdCompany, IdJobPostings, IdCandidate);
+
+            return db.thucThi_trangThai_checkChanged(sqlQuery_trangThai_checkChanged);
+        }
     }
 }

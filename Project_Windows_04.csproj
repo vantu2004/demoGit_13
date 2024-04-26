@@ -443,6 +443,8 @@
     <None Include="Resources\briefcase.png" />
     <None Include="Resources\avatar.png" />
     <None Include="Resources\512x512.png" />
+    <None Include="Resources\favpng_dollar-sign-currency-symbol-united-states-dollar-icon.png" />
+    <None Include="Resources\favpng_dollar-sign-currency-symbol-united-states-dollar-icon1.png" />
     <Content Include="Resources\kisspng-clip-art-computer-icons-scalable-vector-graphics-p-earth-location-map-world-navigation-pin-marker-svg-5bf236c7224d20.4334433015426003911405.png" />
     <None Include="Resources\kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3.5629845315234931599934.png" />
     <Content Include="Resources\kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.6946621115304120791875.png" />

@@ -33,12 +33,12 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.UC_taoTin = new Project_Windows_04.UC_taoTin();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.flpl_tinDaDang = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.UC_BangTin_NTD = new Project_Windows_04.UC_BangTin();
-            this.UC_taoTin = new Project_Windows_04.UC_taoTin();
+            this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -67,6 +67,15 @@
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Create news";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // UC_taoTin
+            // 
+            this.UC_taoTin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UC_taoTin.Location = new System.Drawing.Point(3, 3);
+            this.UC_taoTin.Name = "UC_taoTin";
+            this.UC_taoTin.Size = new System.Drawing.Size(1138, 1041);
+            this.UC_taoTin.TabIndex = 0;
+            this.UC_taoTin.Load += new System.EventHandler(this.UC_taoTin_Load);
             // 
             // tabPage2
             // 
@@ -98,6 +107,16 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "News";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // UC_BangTin_NTD
+            // 
+            this.UC_BangTin_NTD.BackColor = System.Drawing.Color.White;
+            this.UC_BangTin_NTD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UC_BangTin_NTD.Location = new System.Drawing.Point(3, 3);
+            this.UC_BangTin_NTD.Name = "UC_BangTin_NTD";
+            this.UC_BangTin_NTD.Size = new System.Drawing.Size(1138, 1041);
+            this.UC_BangTin_NTD.TabIndex = 0;
+            this.UC_BangTin_NTD.Load += new System.EventHandler(this.UC_BangTin_NTD_Load);
             // 
             // guna2TabControl1
             // 
@@ -131,25 +150,6 @@
             this.guna2TabControl1.TabButtonTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2TabControl1.TabIndex = 0;
             this.guna2TabControl1.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            // 
-            // UC_BangTin_NTD
-            // 
-            this.UC_BangTin_NTD.BackColor = System.Drawing.Color.White;
-            this.UC_BangTin_NTD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UC_BangTin_NTD.Location = new System.Drawing.Point(3, 3);
-            this.UC_BangTin_NTD.Name = "UC_BangTin_NTD";
-            this.UC_BangTin_NTD.Size = new System.Drawing.Size(1138, 1041);
-            this.UC_BangTin_NTD.TabIndex = 0;
-            this.UC_BangTin_NTD.Load += new System.EventHandler(this.UC_BangTin_NTD_Load);
-            // 
-            // UC_taoTin
-            // 
-            this.UC_taoTin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UC_taoTin.Location = new System.Drawing.Point(3, 3);
-            this.UC_taoTin.Name = "UC_taoTin";
-            this.UC_taoTin.Size = new System.Drawing.Size(1138, 1041);
-            this.UC_taoTin.TabIndex = 0;
-            this.UC_taoTin.Load += new System.EventHandler(this.UC_taoTin_Load);
             // 
             // TuyenDung_TrangChu
             // 

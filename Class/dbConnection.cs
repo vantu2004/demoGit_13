@@ -418,12 +418,6 @@ namespace Project_Windows_04
 
                 while (data.Read() == true)
                 {
-                    ////  dùng entity framework để truy cập lấy JobName, UpdatePost dễ dàng hơn thông qua IdJobPostings
-                    //using (var context = new DeTai_02Entities())
-                    //{
-                    //    var query = context.JobPostings.Where(x => x.IdJobPostings == data.GetString(1)).ToList();
-                    //}
-
                     Thu t = new Thu(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(6), data.GetString(7));
 
                     //  cứ 1 vòng lặp thì add 1 UC_tinDaDang vào flowlayoutpanel
@@ -439,6 +433,31 @@ namespace Project_Windows_04
             {
                 conn.Close();
             }
+        }
+
+        public string thucThi_trangThai_checkChanged(string sqlQuery_trangThai_checkChanged)
+        {
+            try
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(sqlQuery_trangThai_checkChanged, conn);
+                SqlDataReader data = cmd.ExecuteReader();
+
+                if (data.Read() == true)
+                {
+                    return data.GetString(3);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! '\n" + ex, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return null;
         }
     }
 }

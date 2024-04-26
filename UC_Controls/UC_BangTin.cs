@@ -60,63 +60,36 @@ namespace Project_Windows_04
             }
         }
 
-        public void cbx_loc_nganhNghe_SelectedIndexChanged(object sender, EventArgs e)
+        public void locTheoDieuKien(object sender, EventArgs e)
         {
-            string selectedRange = cbx_loc_nganhNghe.SelectedItem.ToString();
-            foreach (Control control in flpl_danhSachTinTuyenDung.Controls)
-            {
-                if (control is UC_TinTuyenDung cbx)
-                {
-                    if (kiemTra_nganhNghe_kinhNghiem_diaChi(cbx.lbl_nganhNghe.Text, selectedRange))
-                    {
-                        // Hiển thị UserControl
-                        control.Visible = true;
-                    }
-                    else
-                    {
-                        // Ẩn UserControl nếu không nằm trong khoảng
-                        control.Visible = false;
-                    }
-                }
-            }
-        }
+            ComboBox cbx = (ComboBox)sender;
+            string selectedRange = cbx.SelectedItem.ToString();
 
-        public void cbx_loc_kinhNghiem_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedRange = cbx_loc_kinhNghiem.SelectedItem.ToString();
             foreach (Control control in flpl_danhSachTinTuyenDung.Controls)
             {
-                if (control is UC_TinTuyenDung cbx)
+                if (control is UC_TinTuyenDung ucTinTuyenDung)
                 {
-                    if (kiemTra_nganhNghe_kinhNghiem_diaChi(cbx.lbl_kinhNghiem.Text, selectedRange))
-                    {
-                        // Hiển thị UserControl
-                        control.Visible = true;
-                    }
-                    else
-                    {
-                        // Ẩn UserControl nếu không nằm trong khoảng
-                        control.Visible = false;
-                    }
-                }
-            }
-        }
+                    string fieldToCompare = string.Empty;
 
-        public void cbx_loc_diaChi_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedRange = cbx_loc_diaChi.SelectedItem.ToString();
-            foreach (Control control in flpl_danhSachTinTuyenDung.Controls)
-            {
-                if (control is UC_TinTuyenDung cbx)
-                {
-                    if (kiemTra_nganhNghe_kinhNghiem_diaChi(cbx.lbl_diaChi.Text, selectedRange))
+                    switch (cbx.Name)
                     {
-                        // Hiển thị UserControl
+                        case "cbx_loc_nganhNghe":
+                            fieldToCompare = ucTinTuyenDung.lbl_nganhNghe.Text;
+                            break;
+                        case "cbx_loc_kinhNghiem":
+                            fieldToCompare = ucTinTuyenDung.lbl_kinhNghiem.Text;
+                            break;
+                        case "cbx_loc_diaChi":
+                            fieldToCompare = ucTinTuyenDung.lbl_diaChi.Text;
+                            break;
+                    }
+
+                    if (kiemTra_nganhNghe_kinhNghiem_diaChi(fieldToCompare, selectedRange))
+                    {
                         control.Visible = true;
                     }
                     else
                     {
-                        // Ẩn UserControl nếu không nằm trong khoảng
                         control.Visible = false;
                     }
                 }
@@ -133,7 +106,7 @@ namespace Project_Windows_04
         public void cbx_loc_sapXep_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedRange = cbx_loc_sapXep.SelectedItem.ToString();
-            //if ()
+
             selectedRange = "Salary";
             {
                 UserControl[] userControls = flpl_danhSachTinTuyenDung.Controls.OfType<UserControl>().ToArray();

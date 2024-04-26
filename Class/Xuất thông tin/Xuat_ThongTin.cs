@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 using static DevExpress.Skins.SolidColorHelper;
+using Guna.UI2.WinForms;
 
 namespace Project_Windows_04
 {
@@ -44,11 +45,31 @@ namespace Project_Windows_04
             {
                 UC_tinTuyenDung.cbx_theoDoi.Hide();
             }
-
+            else
+            {
+                //  lấy dữ liệu từ table LuuTin rồi load trạng thái đã check vào checkbox
+                //  truyền tableName "LuuTin" để 2 sự kiện checkchanged của 2 cbx tận dụng các hàm truy vấn 
+                if (xuatTT_DAO.trangThai_checkChanged("LuuTin", t.IdCompany, t.IdJobPostings, userType) == "flw")
+                    UC_tinTuyenDung.cbx_theoDoi.Checked = true;
+            }    
+           
+            //  truyền IdCompany, IdJobPostings, và userType(nếu đăng nhập bằng acc ứng viên thì userType lúc này là IdCandidate) để lưu vào table lưu tin
+            UC_tinTuyenDung.cbx_theoDoi.CheckedChanged += (sender, e) => Cbx_theoDoi_CheckedChanged1(sender, e, "LuuTin", t.IdCompany, t.IdJobPostings, userType);
             UC_tinTuyenDung.Click += UC_tinTuyenDung_Click;
 
             //  phải return UC_tinTuyenDung vì cần add 1 control vào flowlayoutpanel
             return UC_tinTuyenDung;
+        }
+
+        private void Cbx_theoDoi_CheckedChanged1(object sender, EventArgs e, string tableName, string IdCompany, string IdJobPostings, string IdCandidate)
+        {
+            //  vì dùng checkbox trong guna nên phải ép nó theo guna
+            Guna2ImageCheckBox cbx = sender as Guna2ImageCheckBox;
+
+            if (cbx.Checked)
+                xuatTT_DAO.luuTin(tableName, IdCompany, IdJobPostings, IdCandidate);
+            else
+                xuatTT_DAO.xoaTinDaLuu(tableName, IdCompany, IdJobPostings, IdCandidate);
         }
 
         //  xem chi tiết tin tuyển dụng
@@ -100,7 +121,7 @@ namespace Project_Windows_04
             return UC_tinDaDang;
         }
 
-        //  load toàn bộ danh sách CV đã nộp vào 1 tin tuyên dụng
+        //  load toàn bộ danh sách CV đã nộp vào 1 tin tuyển dụng
         private void UC_tinDaDang_Click1(object sender, EventArgs e, string IdCompany, string IdJobPostings)
         {
             TuyenDung_DS_CVs DSCV = new TuyenDung_DS_CVs();
@@ -134,10 +155,18 @@ namespace Project_Windows_04
             UC_CV.lbl_ngayDang.Text = ngayDang;
             UC_CV.lbl_fullName.Text = tenCongViec;
 
+            //  lấy dữ liệu từ table LuuTin rồi load trạng thái đã check vào checkbox
+            //  truyền tableName "LuuCV" để 2 sự kiện checkchanged của 2 cbx tận dụng các hàm truy vấn 
+            if (xuatTT_DAO.trangThai_checkChanged("LuuCV", IdCompany, IdJobPostings, IdCandidate) == "flw")
+                UC_CV.cbx_theoDoi.Checked = true;
+
             //  truyền đủ IdCompany, IdJobPostings, IdCandidate để dùng cho Btn_phanHoi_Click giúp khởi tạo đối tượng Thu
             UC_CV.Click += (sender, e) => UC_CV_Click(sender, e, IdCompany, IdJobPostings, IdCandidate);
+
             //  truyền đủ IdCompany, IdJobPostings, IdCandidate để tìm và xóa 1 CV
             UC_CV.btn_xoaCV.Click += (sender, e) => Btn_xoaCV_Click(sender, e, IdCompany, IdJobPostings, IdCandidate);
+            //  tận dụng hàm checkchanged của cbx trong phần lưu tin của ứng viên
+            UC_CV.cbx_theoDoi.CheckedChanged += (sender, e) => Cbx_theoDoi_CheckedChanged1(sender, e, "LuuCV", IdCompany, IdJobPostings, IdCandidate);
 
             return UC_CV;
         }
@@ -179,7 +208,6 @@ namespace Project_Windows_04
             //  mặc định ko được bỏ trống nội dung thư
             if (thu.kiemTraNull())
             {
-
                 Thu t = new Thu(IdCompany, IdJobPostings, IdCandidate, thu.UC_Thu.tbx_nguoiGui.Text, thu.UC_Thu.tbx_nguoiNhan.Text, thu.UC_Thu.tbx_chuDe.Text, thu.UC_Thu.rtbx_noiDung.Text, thu.UC_Thu.lbl_ngayGui.Text);
                 xuatTT_DAO.luuThu(t);
             }

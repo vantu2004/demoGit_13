@@ -62,6 +62,7 @@
             this.dtpr_ngayDang = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_taiLaiTrang = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tbx_viTriCongTacHR = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_hoanTat = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tbx_tenHR = new Guna.UI2.WinForms.Guna2TextBox();
@@ -80,7 +81,6 @@
             this.tbx_tenCongTy = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_taiLaiTrang = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -621,6 +621,29 @@
             this.panel3.Size = new System.Drawing.Size(353, 326);
             this.panel3.TabIndex = 89;
             // 
+            // btn_taiLaiTrang
+            // 
+            this.btn_taiLaiTrang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_taiLaiTrang.Animated = true;
+            this.btn_taiLaiTrang.BackColor = System.Drawing.Color.Transparent;
+            this.btn_taiLaiTrang.BorderRadius = 10;
+            this.btn_taiLaiTrang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_taiLaiTrang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_taiLaiTrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_taiLaiTrang.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_taiLaiTrang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_taiLaiTrang.FillColor = System.Drawing.Color.Green;
+            this.btn_taiLaiTrang.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_taiLaiTrang.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_taiLaiTrang.ForeColor = System.Drawing.Color.White;
+            this.btn_taiLaiTrang.IndicateFocus = true;
+            this.btn_taiLaiTrang.Location = new System.Drawing.Point(32, 229);
+            this.btn_taiLaiTrang.Name = "btn_taiLaiTrang";
+            this.btn_taiLaiTrang.Size = new System.Drawing.Size(303, 42);
+            this.btn_taiLaiTrang.TabIndex = 96;
+            this.btn_taiLaiTrang.Text = "Reload";
+            this.btn_taiLaiTrang.UseTransparentBackground = true;
+            // 
             // tbx_viTriCongTacHR
             // 
             this.tbx_viTriCongTacHR.BorderRadius = 10;
@@ -956,29 +979,6 @@
             this.label1.Size = new System.Drawing.Size(85, 28);
             this.label1.TabIndex = 35;
             this.label1.Text = "Contact";
-            // 
-            // btn_taiLaiTrang
-            // 
-            this.btn_taiLaiTrang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_taiLaiTrang.Animated = true;
-            this.btn_taiLaiTrang.BackColor = System.Drawing.Color.Transparent;
-            this.btn_taiLaiTrang.BorderRadius = 10;
-            this.btn_taiLaiTrang.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_taiLaiTrang.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_taiLaiTrang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_taiLaiTrang.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_taiLaiTrang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_taiLaiTrang.FillColor = System.Drawing.Color.Green;
-            this.btn_taiLaiTrang.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_taiLaiTrang.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btn_taiLaiTrang.ForeColor = System.Drawing.Color.White;
-            this.btn_taiLaiTrang.IndicateFocus = true;
-            this.btn_taiLaiTrang.Location = new System.Drawing.Point(32, 229);
-            this.btn_taiLaiTrang.Name = "btn_taiLaiTrang";
-            this.btn_taiLaiTrang.Size = new System.Drawing.Size(303, 42);
-            this.btn_taiLaiTrang.TabIndex = 96;
-            this.btn_taiLaiTrang.Text = "Reload";
-            this.btn_taiLaiTrang.UseTransparentBackground = true;
             // 
             // UC_taoTin
             // 

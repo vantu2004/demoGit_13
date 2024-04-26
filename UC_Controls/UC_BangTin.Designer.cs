@@ -43,6 +43,7 @@
             this.cbx_loc_kinhNghiem = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbx_loc_Luong = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btn_taiLai = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_dangXuat = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -51,7 +52,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbx_loc_diaChi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btn_taiLai = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
@@ -333,6 +333,30 @@
             this.guna2GradientPanel2.Size = new System.Drawing.Size(314, 633);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
+            // btn_taiLai
+            // 
+            this.btn_taiLai.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_taiLai.Animated = true;
+            this.btn_taiLai.BackColor = System.Drawing.Color.Transparent;
+            this.btn_taiLai.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_taiLai.BorderRadius = 10;
+            this.btn_taiLai.BorderThickness = 2;
+            this.btn_taiLai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_taiLai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_taiLai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_taiLai.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_taiLai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_taiLai.FillColor = System.Drawing.Color.White;
+            this.btn_taiLai.FillColor2 = System.Drawing.Color.White;
+            this.btn_taiLai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
+            this.btn_taiLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_taiLai.Location = new System.Drawing.Point(12, 579);
+            this.btn_taiLai.Name = "btn_taiLai";
+            this.btn_taiLai.Size = new System.Drawing.Size(296, 46);
+            this.btn_taiLai.TabIndex = 13;
+            this.btn_taiLai.Text = "Reset";
+            this.btn_taiLai.Click += new System.EventHandler(this.btn_taiLai_Click);
+            // 
             // btn_dangXuat
             // 
             this.btn_dangXuat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -358,7 +382,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.BackgroundImage = global::Project_Windows_04.Properties.Resources.kisspng_computer_icons_investor_investment_bank_symbols_salary_5ab0ffad142d79_5467246115215492290827;
+            this.pictureBox5.BackgroundImage = global::Project_Windows_04.Properties.Resources.favpng_dollar_sign_currency_symbol_united_states_dollar_icon;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(12, 206);
             this.pictureBox5.Name = "pictureBox5";
@@ -490,30 +514,6 @@
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 20;
-            // 
-            // btn_taiLai
-            // 
-            this.btn_taiLai.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_taiLai.Animated = true;
-            this.btn_taiLai.BackColor = System.Drawing.Color.Transparent;
-            this.btn_taiLai.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_taiLai.BorderRadius = 10;
-            this.btn_taiLai.BorderThickness = 2;
-            this.btn_taiLai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_taiLai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_taiLai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_taiLai.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_taiLai.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_taiLai.FillColor = System.Drawing.Color.White;
-            this.btn_taiLai.FillColor2 = System.Drawing.Color.White;
-            this.btn_taiLai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btn_taiLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_taiLai.Location = new System.Drawing.Point(12, 579);
-            this.btn_taiLai.Name = "btn_taiLai";
-            this.btn_taiLai.Size = new System.Drawing.Size(296, 46);
-            this.btn_taiLai.TabIndex = 13;
-            this.btn_taiLai.Text = "Reset";
-            this.btn_taiLai.Click += new System.EventHandler(this.btn_taiLai_Click);
             // 
             // UC_BangTin
             // 

@@ -190,7 +190,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackgroundImage = global::Project_Windows_04.Properties.Resources.salary;
+            this.pictureBox3.BackgroundImage = global::Project_Windows_04.Properties.Resources.favpng_dollar_sign_currency_symbol_united_states_dollar_icon1;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(228, 110);
             this.pictureBox3.Name = "pictureBox3";
