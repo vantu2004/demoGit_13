@@ -124,14 +124,11 @@
   <data name="Roundicons-100-Free-Solid-Cancel.512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Roundicons-100-Free-Solid-Cancel.512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="klipartz.com (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\klipartz.com (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="kisspng-computer-icons-work-experience-clip-art-experiential-5b06897787b6b0.7873029515271550635559" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-work-experience-clip-art-experiential-5b06897787b6b0.7873029515271550635559.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="favpng_dollar-sign-currency-symbol-united-states-dollar-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\favpng_dollar-sign-currency-symbol-united-states-dollar-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-chief-executive-computer-icons-businessperson-5aeaec59c56a80.3532939915253453698086" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-chief-executive-computer-icons-businessperson-5aeaec59c56a80.3532939915253453698086.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-clip-art-computer-icons-portable-network-graphics-font-work-svg-png-icon-free-download-391838-o-5c65783be93e67.4416976315501537879554" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-clip-art-computer-icons-portable-network-graphics-font-work-svg-png-icon-free-download-391838-o-5c65783be93e67.4416976315501537879554.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,6 +196,9 @@
   <data name="kisspng-star-silhouette-shape-clip-art-rating-star-5b51bfe0b58f29.8480018315320841927437" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-star-silhouette-shape-clip-art-rating-star-5b51bfe0b58f29.8480018315320841927437.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="experience" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\experience.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="vecteezy_o-email-e-enviar-icone-preto_200096011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vecteezy_o-email-e-enviar-icone-preto_200096011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -229,8 +229,8 @@
   <data name="kisspng-computer-icons-five-pointed-star-circle-circulo-5ac930dde65260.0800085015231346859434" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-five-pointed-star-circle-circulo-5ac930dde65260.0800085015231346859434.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-stopwatch-clock-clip-art-stopwatch-cliparts-5a7600c24b7758.0680084115176828823091" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-stopwatch-clock-clip-art-stopwatch-cliparts-5a7600c24b7758.0680084115176828823091.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3.5629845315234931599934" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3.5629845315234931599934.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-template-green-frame-5a7fd510f0a857.8461228615183270569857" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-template-green-frame-5a7fd510f0a857.8461228615183270569857.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,8 +250,8 @@
   <data name="Screenshot 2024-03-05 2045131" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screenshot 2024-03-05 204513.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-registered-trademark-symbol-service-mark-logo-dollar-sign-5ac0152346edc2.4227167215225377632905" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-registered-trademark-symbol-service-mark-logo-dollar-sign-5ac0152346edc2.4227167215225377632905.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="heart-icon-3339" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\heart-icon-3339.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-birthday-cake-bakery-wedding-cake-computer-icons-birth-date-5b2ec694aff869.8062975015297921487208" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-birthday-cake-bakery-wedding-cake-computer-icons-birth-date-5b2ec694aff869.8062975015297921487208.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,8 +259,8 @@
   <data name="kisspng-computer-icons-floppy-disk-clip-art-save-button-5ac537556da855.9206579915228741974492" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-floppy-disk-clip-art-save-button-5ac537556da855.9206579915228741974492.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3.5629845315234931599934" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3.5629845315234931599934.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="favpng_dollar-sign-currency-symbol-united-states-dollar-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\favpng_dollar-sign-currency-symbol-united-states-dollar-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngegg (23)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngegg (23).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,8 +331,8 @@
   <data name="pngfind.com-ticket-icon-png-3159127" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngfind.com-ticket-icon-png-3159127.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="heart-icon-3339" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\heart-icon-3339.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-registered-trademark-symbol-service-mark-logo-dollar-sign-5ac0152346edc2.4227167215225377632905" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-registered-trademark-symbol-service-mark-logo-dollar-sign-5ac0152346edc2.4227167215225377632905.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-computer-icons-editing-vector-graphics-editor-edit-pen-write-icon-5ab06a247f5929.0215497815215109485216" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-editing-vector-graphics-editor-edit-pen-write-icon-5ab06a247f5929.0215497815215109485216.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,6 +343,9 @@
   <data name="_0669a73f-6c59-47e6-b77d-8d4b6eb6f99f" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_0669a73f-6c59-47e6-b77d-8d4b6eb6f99f.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="favpng_dollar-sign-currency-symbol-united-states-dollar-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\favpng_dollar-sign-currency-symbol-united-states-dollar-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kisspng-computer-icons-download-clip-art-name-tag-5ac0f763d08452.7040853015225956838541" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-download-clip-art-name-tag-5ac0f763d08452.7040853015225956838541.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -352,8 +355,8 @@
   <data name="pngwing.com (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngwing.com (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="experience" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\experience.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngegg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngegg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="briefcase" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\briefcase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -397,8 +400,8 @@
   <data name="kisspng-computer-icons-experience-stagiair-experience-5b20efb2862eb5.9663932815288851705496" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-experience-stagiair-experience-5b20efb2862eb5.9663932815288851705496.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pngegg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngegg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-stopwatch-clock-clip-art-stopwatch-cliparts-5a7600c24b7758.0680084115176828823091" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-stopwatch-clock-clip-art-stopwatch-cliparts-5a7600c24b7758.0680084115176828823091.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.6946621115304120791875" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.69466211153041207918751.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -409,19 +412,22 @@
   <data name="kisspng-hierarchical-organization-business-management-hier-5b2fc32ab90b81.829071621529856810758" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\kisspng-hierarchical-organization-business-management-hier-5b2fc32ab90b81.829071621529856810758.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="z4468612678019_a1ed4c31f8a777a04d3d7f81b4d58e66" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z4468612678019_a1ed4c31f8a777a04d3d7f81b4d58e66.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Calendar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Calendar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kisspng-chief-executive-computer-icons-businessperson-5aeaec59c56a80.3532939915253453698086" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kisspng-chief-executive-computer-icons-businessperson-5aeaec59c56a80.3532939915253453698086.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="klipartz.com (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\klipartz.com (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="follow-42-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\follow-42-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="favpng_dollar-sign-currency-symbol-united-states-dollar-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\favpng_dollar-sign-currency-symbol-united-states-dollar-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="z5011919728665_08ca092652c4fe51aa8a16cc1aac04a1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z5011919728665_08ca092652c4fe51aa8a16cc1aac04a1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

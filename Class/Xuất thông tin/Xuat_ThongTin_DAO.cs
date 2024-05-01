@@ -65,10 +65,20 @@ namespace Project_Windows_04
  
         public void luuThu(Thu t)
         {
-            string sqlQuery_ungTuyen = string.Format("INSERT INTO Letter(IdCompany, IdJobPostings, IdCandidate, Sender, Receiver, Title, Content, DateSent) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", 
-                t.IdCompany, t.IdJobPostings, t.IdCandidate, t.NguoiGui, t.NguoiNhan, t.ChuDe, t.NoiDung, t.NgayGui);
+            string sqlQuery_luuThu = string.Format("INSERT INTO Letter(IdCompany, IdJobPostings, IdCandidate, Sender, Receiver, Title, Content, DateSent, InterviewDate, InterviewTime) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')", 
+                t.IdCompany, t.IdJobPostings, t.IdCandidate, t.NguoiGui, t.NguoiNhan, t.ChuDe, t.NoiDung, t.NgayGui, t.NgayPhongVan, t.ThoiGianPhongVan);
+            db.thucThi_taoTin_chinhSuaTin(sqlQuery_luuThu);
 
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_ungTuyen);
+            //  tận dụng hàm thucThi_chiTietTin bên dbConnection để lấy UpdateDate, JobName
+            TuyenDung_Tin tt = chiTietTin(t.IdCompany, t.IdJobPostings);
+
+            //  tận dụng hàm thucThi_chiTietCV bên dbConnection để lấy LinkAvatar, CandidateName
+            UngVien_Tin u = chiTiet_CV(t.IdCandidate);
+
+            //  lưu lịch phỏng vấn
+            string sqlQuery_luuLichPhongVan = string.Format("INSERT INTO LichPhongVan(IdCompany, IdJobPostings, IdCandidate, LinkAvatar, UpdateDate, InterviewDate, InterviewTime, JobName, CandidateName) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')",
+                t.IdCompany, t.IdJobPostings, t.IdCandidate, u.AnhDaiDien, tt.NgayDang, t.NgayPhongVan, t.ThoiGianPhongVan, tt.TenCongViec, u.TenUV);
+            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_luuLichPhongVan);
         }
 
         public void luuTin(string tableName, string IdCompany, string IdJobPostings, string IdCandidate)

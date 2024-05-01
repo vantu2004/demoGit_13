@@ -1107,5 +1107,25 @@ namespace Project_Windows_04.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z4468612678019_a1ed4c31f8a777a04d3d7f81b4d58e66 {
+            get {
+                object obj = ResourceManager.GetObject("z4468612678019_a1ed4c31f8a777a04d3d7f81b4d58e66", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z5011919728665_08ca092652c4fe51aa8a16cc1aac04a1 {
+            get {
+                object obj = ResourceManager.GetObject("z5011919728665_08ca092652c4fe51aa8a16cc1aac04a1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

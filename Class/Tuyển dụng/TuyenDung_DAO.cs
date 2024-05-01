@@ -51,5 +51,12 @@ namespace Project_Windows_04
             //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
             db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_taoDinhDang);
         }
+
+        public void load_lichPhongVan(FlowLayoutPanel flpl, string IdCompany)
+        {
+            string sqlQuery_lichPhongVan = string.Format("SELECT * FROM LichPhongVan WHERE IdCompany = '{0}'", IdCompany);
+
+            db.thucThi_load_lichPhongVan(sqlQuery_lichPhongVan, flpl);
+        }
     }
 }

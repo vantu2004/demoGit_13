@@ -16,8 +16,10 @@ namespace Project_Windows_04
         private string chuDe;
         private string noiDung;
         private string ngayGui;
+        private string ngayPhongVan;
+        private string thoiGianPhongVan;
 
-        public Thu(string idCompany, string idJobPostings, string idCandidate, string nguoiGui, string nguoiNhan, string chuDe, string noiDung, string ngayGui)
+        public Thu(string idCompany, string idJobPostings, string idCandidate, string nguoiGui, string nguoiNhan, string chuDe, string noiDung, string ngayGui, string ngayPhongVan, string thoiGianPhongVan)
         {
             IdCompany = idCompany;
             IdJobPostings = idJobPostings;
@@ -27,6 +29,8 @@ namespace Project_Windows_04
             ChuDe = chuDe;
             NoiDung = noiDung;
             NgayGui = ngayGui;
+            NgayPhongVan = ngayPhongVan;
+            ThoiGianPhongVan = thoiGianPhongVan;
         }
 
         public string IdCompany { get => idCompany; set => idCompany = value; }
@@ -37,5 +41,7 @@ namespace Project_Windows_04
         public string ChuDe { get => chuDe; set => chuDe = value; }
         public string NoiDung { get => noiDung; set => noiDung = value; }
         public string NgayGui { get => ngayGui; set => ngayGui = value; }
+        public string NgayPhongVan { get => ngayPhongVan; set => ngayPhongVan = value; }
+        public string ThoiGianPhongVan { get => thoiGianPhongVan; set => thoiGianPhongVan = value; }
     }
 }

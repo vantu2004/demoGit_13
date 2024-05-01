@@ -208,7 +208,9 @@ namespace Project_Windows_04
             //  mặc định ko được bỏ trống nội dung thư
             if (thu.kiemTraNull())
             {
-                Thu t = new Thu(IdCompany, IdJobPostings, IdCandidate, thu.UC_Thu.tbx_nguoiGui.Text, thu.UC_Thu.tbx_nguoiNhan.Text, thu.UC_Thu.tbx_chuDe.Text, thu.UC_Thu.rtbx_noiDung.Text, thu.UC_Thu.lbl_ngayGui.Text);
+                Thu t = new Thu(IdCompany, IdJobPostings, IdCandidate, thu.UC_Thu.tbx_nguoiGui.Text, thu.UC_Thu.tbx_nguoiNhan.Text, thu.UC_Thu.tbx_chuDe.Text, 
+                    thu.UC_Thu.rtbx_noiDung.Text, thu.UC_Thu.lbl_ngayGui.Text, thu.UC_Thu.dtpr_ngayPhongVan.Value.ToString(), thu.UC_Thu.dtpr_thoiGIanPhongVan.Value.ToString());
+
                 xuatTT_DAO.luuThu(t);
             }
             else
@@ -240,6 +242,19 @@ namespace Project_Windows_04
             chiTiet_thu.xuatDuLieu_khiNhan(t);
 
             chiTiet_thu.ShowDialog();
+        }
+
+        public UC_LichPhongVan them_lichPhongVan(LichPhongVan lichPV)
+        {
+            UC_LichPhongVan uc_lichPV = new UC_LichPhongVan();
+
+            uc_lichPV.pbx_avatar.Image = Image.FromFile(lichPV.LinkAvatar);
+            uc_lichPV.lbl_ngayDang.Text = lichPV.NgayDang;
+            uc_lichPV.lbl_ngayPhongVan.Text = lichPV.NgayPhongVan;
+            uc_lichPV.lbl_tenCongViec.Text = lichPV.TenCongViec;
+            uc_lichPV.lbl_tenUngVien.Text = lichPV.TenUngVien;
+
+            return uc_lichPV;
         }
     }
 }

@@ -49,12 +49,16 @@ namespace Project_Windows_04
             UC_Thu.tbx_chuDe.Text = t.ChuDe;
             UC_Thu.rtbx_noiDung.Text = t.NoiDung;
             UC_Thu.lbl_ngayGui.Text = t.NgayGui;
+            UC_Thu.dtpr_ngayPhongVan.Value = Convert.ToDateTime(t.NgayPhongVan);
+            UC_Thu.dtpr_thoiGIanPhongVan.Value = Convert.ToDateTime(t.ThoiGianPhongVan);
 
             //  mặc định chỉ đọc ko đc tương tác
             UC_Thu.tbx_nguoiGui.ReadOnly = true;
             UC_Thu.tbx_nguoiNhan.ReadOnly = true;
             UC_Thu.tbx_chuDe.ReadOnly = true;
             UC_Thu.rtbx_noiDung.ReadOnly = true;
+            UC_Thu.dtpr_ngayPhongVan.Enabled = false;
+            UC_Thu.dtpr_thoiGIanPhongVan.Enabled = false;
 
             UC_Thu.btn_gui.Hide();
         }

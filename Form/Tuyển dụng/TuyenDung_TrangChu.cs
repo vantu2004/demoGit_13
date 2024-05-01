@@ -33,6 +33,9 @@ namespace Project_Windows_04
             //  load toàn bộ tin đã đăng của 1 NTD lên flowlayoutpanel, click vào để xem danh sách ứng viên đã nộp CV, truyền IdCompany để xác định mỗi tin đc đăng
             NTD_DAO.load_tinDaDang(flpl_tinDaDang, IdCompany);
 
+            //  load cụ thể 1 vài thông tin về CV đã gửi mail, đồng thời hiện lịch phỏng vấn
+            NTD_DAO.load_lichPhongVan(flpl_lichPhongVan, IdCompany);
+
             //  tạo IdJobPostings để dùng cho các hàm định dạng rtbx và hàm hoàn tất
             tao_IdJobPostings();
         }

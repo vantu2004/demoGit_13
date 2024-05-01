@@ -418,11 +418,11 @@ namespace Project_Windows_04
 
                 while (data.Read() == true)
                 {
-                    Thu t = new Thu(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(6), data.GetString(7));
+                    Thu t = new Thu(data.GetString(0), data.GetString(1), data.GetString(2), data.GetString(3), data.GetString(4), data.GetString(5), data.GetString(6), data.GetString(7), data.GetString(8), data.GetString(9));
 
                     //  cứ 1 vòng lặp thì add 1 UC_tinDaDang vào flowlayoutpanel
                     //  truyền DatePosted, JobName, t
-                    flpl.Controls.Add(xuat_TT.them_thuXacNhan(data.GetString(12), data.GetString(16), t));
+                    flpl.Controls.Add(xuat_TT.them_thuXacNhan(data.GetString(13), data.GetString(18), t));
                 }
             }
             catch (Exception ex)
@@ -458,6 +458,36 @@ namespace Project_Windows_04
                 conn.Close();
             }
             return null;
+        }
+
+        public void thucThi_load_lichPhongVan(string sqlQuery_xuat_thuXacNhan, FlowLayoutPanel flpl)
+        {
+            try
+            {
+                conn.Open();
+
+                Xuat_ThongTin xuat_TT = new Xuat_ThongTin();
+
+                SqlCommand cmd = new SqlCommand(sqlQuery_xuat_thuXacNhan, conn);
+                SqlDataReader data = cmd.ExecuteReader();
+
+                while (data.Read() == true)
+                {
+
+                    LichPhongVan lichPV = new LichPhongVan(data.GetString(3), data.GetString(4), Convert.ToDateTime(data.GetString(5)).ToShortDateString() + " " + Convert.ToDateTime(data.GetString(6)).ToShortTimeString(), data.GetString(7), data.GetString(8));
+                    //  cứ 1 vòng lặp thì add 1 UC_LichPhongVan vào flowlayoutpanel
+                    //  truyền DatePosted, JobName, t
+                    flpl.Controls.Add(xuat_TT.them_lichPhongVan(lichPV));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! '\n" + ex, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

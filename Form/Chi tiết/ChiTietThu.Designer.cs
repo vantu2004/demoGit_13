@@ -45,7 +45,7 @@
             this.UC_Thu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UC_Thu.Location = new System.Drawing.Point(0, 0);
             this.UC_Thu.Name = "UC_Thu";
-            this.UC_Thu.Size = new System.Drawing.Size(765, 570);
+            this.UC_Thu.Size = new System.Drawing.Size(765, 623);
             this.UC_Thu.TabIndex = 0;
             // 
             // ChiTietThu
@@ -53,7 +53,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(765, 570);
+            this.ClientSize = new System.Drawing.Size(765, 623);
             this.Controls.Add(this.UC_Thu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChiTietThu";

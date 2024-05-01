@@ -226,6 +226,7 @@
     <Compile Include="Form\Đăng nhập\Main_TrangChu.Designer.cs">
       <DependentUpon>Main_TrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\LichPhongVan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Form\Tuyển dụng\TuyenDung_TrangChu.cs">
@@ -322,6 +323,12 @@
     </Compile>
     <Compile Include="Class\Ứng viên\UngVien_DinhDang_rtbx.cs" />
     <Compile Include="Class\Ứng viên\UngVien_ApDung_DinhDang_rtbx.cs" />
+    <Compile Include="UC_Controls\UC_LichPhongVan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_LichPhongVan.Designer.cs">
+      <DependentUpon>UC_LichPhongVan.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\Tuyển dụng\TuyenDung_ChinhSuaTin.resx">
       <DependentUpon>TuyenDung_ChinhSuaTin.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Controls\UC_BangTin.resx">
       <DependentUpon>UC_BangTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_LichPhongVan.resx">
+      <DependentUpon>UC_LichPhongVan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Controls\UC_TinDaDang.resx">
       <DependentUpon>UC_TinDaDang.cs</DependentUpon>
@@ -404,6 +414,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\z5011919728665_08ca092652c4fe51aa8a16cc1aac04a1.jpg" />
+    <None Include="Resources\z4468612678019_a1ed4c31f8a777a04d3d7f81b4d58e66.jpg" />
     <None Include="Resources\Screenshot 2024-04-19 093538.png" />
     <None Include="Resources\user-login-avatar-11925.png" />
     <None Include="Resources\send_2089310.png" />

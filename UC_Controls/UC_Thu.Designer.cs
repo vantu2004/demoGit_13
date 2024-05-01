@@ -44,6 +44,10 @@
             this.btn_dong = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_gui = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.dtpr_ngayPhongVan = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dtpr_thoiGIanPhongVan = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.SuspendLayout();
             // 
             // tbx_nguoiGui
@@ -81,7 +85,7 @@
             this.rtbx_noiDung.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rtbx_noiDung.Location = new System.Drawing.Point(37, 209);
             this.rtbx_noiDung.Name = "rtbx_noiDung";
-            this.rtbx_noiDung.Size = new System.Drawing.Size(686, 275);
+            this.rtbx_noiDung.Size = new System.Drawing.Size(686, 263);
             this.rtbx_noiDung.TabIndex = 3;
             this.rtbx_noiDung.Text = "";
             // 
@@ -197,7 +201,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(32, 503);
+            this.label3.Location = new System.Drawing.Point(32, 575);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 28);
             this.label3.TabIndex = 13;
@@ -208,7 +212,7 @@
             // 
             this.lbl_ngayGui.AutoSize = true;
             this.lbl_ngayGui.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbl_ngayGui.Location = new System.Drawing.Point(132, 503);
+            this.lbl_ngayGui.Location = new System.Drawing.Point(168, 575);
             this.lbl_ngayGui.Name = "lbl_ngayGui";
             this.lbl_ngayGui.Size = new System.Drawing.Size(94, 28);
             this.lbl_ngayGui.TabIndex = 15;
@@ -250,7 +254,7 @@
             this.btn_gui.Image = global::Project_Windows_04.Properties.Resources.send_2089310;
             this.btn_gui.ImageSize = new System.Drawing.Size(30, 30);
             this.btn_gui.IndicateFocus = true;
-            this.btn_gui.Location = new System.Drawing.Point(668, 506);
+            this.btn_gui.Location = new System.Drawing.Point(668, 509);
             this.btn_gui.Name = "btn_gui";
             this.btn_gui.Size = new System.Drawing.Size(55, 55);
             this.btn_gui.TabIndex = 17;
@@ -259,10 +263,77 @@
             // 
             // guna2Separator4
             // 
-            this.guna2Separator4.Location = new System.Drawing.Point(37, 490);
+            this.guna2Separator4.Location = new System.Drawing.Point(37, 478);
             this.guna2Separator4.Name = "guna2Separator4";
             this.guna2Separator4.Size = new System.Drawing.Size(686, 10);
             this.guna2Separator4.TabIndex = 19;
+            // 
+            // dtpr_ngayPhongVan
+            // 
+            this.dtpr_ngayPhongVan.Animated = true;
+            this.dtpr_ngayPhongVan.BackColor = System.Drawing.Color.Transparent;
+            this.dtpr_ngayPhongVan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dtpr_ngayPhongVan.BorderRadius = 10;
+            this.dtpr_ngayPhongVan.BorderThickness = 1;
+            this.dtpr_ngayPhongVan.Checked = true;
+            this.dtpr_ngayPhongVan.CustomFormat = "\"dd/MM/yyyy\"";
+            this.dtpr_ngayPhongVan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dtpr_ngayPhongVan.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.dtpr_ngayPhongVan.ForeColor = System.Drawing.Color.Black;
+            this.dtpr_ngayPhongVan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpr_ngayPhongVan.IndicateFocus = true;
+            this.dtpr_ngayPhongVan.Location = new System.Drawing.Point(173, 494);
+            this.dtpr_ngayPhongVan.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpr_ngayPhongVan.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpr_ngayPhongVan.Name = "dtpr_ngayPhongVan";
+            this.dtpr_ngayPhongVan.Size = new System.Drawing.Size(208, 36);
+            this.dtpr_ngayPhongVan.TabIndex = 24;
+            this.dtpr_ngayPhongVan.UseTransparentBackground = true;
+            this.dtpr_ngayPhongVan.Value = new System.DateTime(2024, 5, 1, 0, 0, 0, 0);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(32, 494);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 28);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Interview date";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(32, 536);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 28);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Interview time";
+            // 
+            // dtpr_thoiGIanPhongVan
+            // 
+            this.dtpr_thoiGIanPhongVan.Animated = true;
+            this.dtpr_thoiGIanPhongVan.BackColor = System.Drawing.Color.Transparent;
+            this.dtpr_thoiGIanPhongVan.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dtpr_thoiGIanPhongVan.BorderRadius = 10;
+            this.dtpr_thoiGIanPhongVan.BorderThickness = 1;
+            this.dtpr_thoiGIanPhongVan.Checked = true;
+            this.dtpr_thoiGIanPhongVan.CustomFormat = "\"hh:mm:ss\"";
+            this.dtpr_thoiGIanPhongVan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dtpr_thoiGIanPhongVan.Font = new System.Drawing.Font("Segoe UI", 10.2F);
+            this.dtpr_thoiGIanPhongVan.ForeColor = System.Drawing.Color.Black;
+            this.dtpr_thoiGIanPhongVan.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpr_thoiGIanPhongVan.IndicateFocus = true;
+            this.dtpr_thoiGIanPhongVan.Location = new System.Drawing.Point(173, 536);
+            this.dtpr_thoiGIanPhongVan.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpr_thoiGIanPhongVan.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpr_thoiGIanPhongVan.Name = "dtpr_thoiGIanPhongVan";
+            this.dtpr_thoiGIanPhongVan.ShowUpDown = true;
+            this.dtpr_thoiGIanPhongVan.Size = new System.Drawing.Size(208, 36);
+            this.dtpr_thoiGIanPhongVan.TabIndex = 26;
+            this.dtpr_thoiGIanPhongVan.UseTransparentBackground = true;
+            this.dtpr_thoiGIanPhongVan.Value = new System.DateTime(2024, 5, 1, 0, 0, 0, 0);
             // 
             // UC_Thu
             // 
@@ -270,6 +341,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dtpr_thoiGIanPhongVan);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dtpr_ngayPhongVan);
             this.Controls.Add(this.guna2Separator4);
             this.Controls.Add(this.btn_dong);
             this.Controls.Add(this.btn_gui);
@@ -286,7 +361,7 @@
             this.Controls.Add(this.tbx_nguoiGui);
             this.DoubleBuffered = true;
             this.Name = "UC_Thu";
-            this.Size = new System.Drawing.Size(763, 570);
+            this.Size = new System.Drawing.Size(763, 623);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,5 +384,9 @@
         public Guna.UI2.WinForms.Guna2GradientButton btn_gui;
         public Guna.UI2.WinForms.Guna2Separator guna2Separator4;
         public Guna.UI2.WinForms.Guna2GradientButton btn_dong;
+        public System.Windows.Forms.Label label4;
+        public Guna.UI2.WinForms.Guna2DateTimePicker dtpr_ngayPhongVan;
+        public System.Windows.Forms.Label label5;
+        public Guna.UI2.WinForms.Guna2DateTimePicker dtpr_thoiGIanPhongVan;
     }
 }
