@@ -13,33 +13,71 @@ namespace Project_Windows_04
 
         public TuyenDung_ChinhSuaTin_DAO() { }
 
-        public void chinhSuaTin(TuyenDung_Tin t)
+        public void chinhSuaTinTuyenDung(TuyenDung_Tin tinTuyenDung)
         {
-            string sqlQuery_chinhSuaTin = string.Format("UPDATE JobPosTings SET IconCompany = '{0}', Job = '{1}', JobName = '{2}', Salary = '{3}', Experience = '{4}', " +
-                "WorkFormat = '{5}', DatePosted = '{6}', Deadline = '{7}', JobDescription = '{8}', Requirements = '{9}', Benefit = '{10}', Activity = '{11}', Award = '{12}', License = '{13}' WHERE IdCompany = '{14}' AND IdJobPostings = '{15}'",
-                t.LogoCongTy, t.NganhNghe, t.TenCongViec, t.Luong, t.KinhNghiem, t.HinhThucLamViec, t.NgayDang, t.HanChot, t.MoTaCongViec, t.YeuCau, t.LoiIch, t.HoatDong, t.GiaiThuong, t.GiayPhep, t.IdCompany, t.IdJobPostings);
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                // Tìm tin tuyển dụng cần chỉnh sửa
+                var tinTuyenDungCanChinhSua = dbContext.JobPostings.FirstOrDefault(jp => jp.IdCompany == tinTuyenDung.IdCompany && jp.IdJobPostings == tinTuyenDung.IdJobPostings);
 
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_chinhSuaTin);
+                if (tinTuyenDungCanChinhSua != null)
+                {
+                    // Cập nhật thông tin tin tuyển dụng
+                    tinTuyenDungCanChinhSua.IconCompany = tinTuyenDung.LogoCongTy;
+                    tinTuyenDungCanChinhSua.Job = tinTuyenDung.NganhNghe;
+                    tinTuyenDungCanChinhSua.JobName = tinTuyenDung.TenCongViec;
+                    tinTuyenDungCanChinhSua.Salary = Convert.ToDecimal(tinTuyenDung.Luong);
+                    tinTuyenDungCanChinhSua.Experience = tinTuyenDung.KinhNghiem;
+                    tinTuyenDungCanChinhSua.WorkFormat = tinTuyenDung.HinhThucLamViec;
+                    tinTuyenDungCanChinhSua.DatePosted = tinTuyenDung.NgayDang;
+                    tinTuyenDungCanChinhSua.Deadline = tinTuyenDung.HanChot;
+                    tinTuyenDungCanChinhSua.JobDescription = tinTuyenDung.MoTaCongViec;
+                    tinTuyenDungCanChinhSua.Requirements = tinTuyenDung.YeuCau;
+                    tinTuyenDungCanChinhSua.Benefit = tinTuyenDung.LoiIch;
+                    tinTuyenDungCanChinhSua.Activity = tinTuyenDung.HoatDong;
+                    tinTuyenDungCanChinhSua.Award = tinTuyenDung.GiaiThuong;
+                    tinTuyenDungCanChinhSua.License = tinTuyenDung.GiayPhep;
+
+                    dbContext.SaveChanges();
+                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Job posting not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void dinhDang_rtbx_NTD(TuyenDung_DinhDang_rtbx TD_dinhDang)
         {
-            //  xóa bộ đã tồn tại trước đó để thêm bộ mới đã chỉnh sửa vào
-            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
-            string sqlQuery_xoa_dinhDang_rtbx = string.Format("DELETE FROM DinhDang_rtbx_NTD WHERE IdCompany = '{0}' AND IdJobPostings = '{1}' AND RtbxStyle = '{2}'", TD_dinhDang.IdCompany, TD_dinhDang.IdJobPostings, TD_dinhDang.Kieu_rtbx);
-            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoa_dinhDang_rtbx);
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                // Xóa các bản ghi đã tồn tại trước đó
+                var dinhDangCu = dbContext.DinhDang_rtbx_NTD
+                    .Where(d => d.IdCompany == TD_dinhDang.IdCompany && d.IdJobPostings == TD_dinhDang.IdJobPostings && d.RtbxStyle == TD_dinhDang.Kieu_rtbx)
+                    .ToList();
+                dbContext.DinhDang_rtbx_NTD.RemoveRange(dinhDangCu);
+                dbContext.SaveChanges();
 
-            string sqlQuery_taoDinhDang = string.Format("INSERT INTO DinhDang_rtbx_NTD(IdCompany, IdJobPostings, RtbxStyle, Color, Font, FontStyle, Size) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')"
-                , TD_dinhDang.IdCompany, TD_dinhDang.IdJobPostings, TD_dinhDang.Kieu_rtbx, TD_dinhDang.MauSac, TD_dinhDang.KieuChu, TD_dinhDang.HieuUng, TD_dinhDang.KichCo);
-            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
-            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_taoDinhDang);
+                // Thêm bản ghi mới
+                var dinhDangMoi = new DinhDang_rtbx_NTD
+                {
+                    IdCompany = TD_dinhDang.IdCompany,
+                    IdJobPostings = TD_dinhDang.IdJobPostings,
+                    RtbxStyle = TD_dinhDang.Kieu_rtbx,
+                    Color = TD_dinhDang.MauSac,
+                    Font = TD_dinhDang.KieuChu,
+                    FontStyle = TD_dinhDang.HieuUng,
+                    Size = Convert.ToDecimal(TD_dinhDang.KichCo)
+                };
+                dbContext.DinhDang_rtbx_NTD.Add(dinhDangMoi);
+                dbContext.SaveChanges();
+            }
         }
 
         public TuyenDung_DinhDang_rtbx layDinhDang(string IdCompany, string IdJobPostings, string tenRtbx)
         {
-            string sqlQuery_layDinhDang = string.Format("SELECT * FROM DinhDang_rtbx_NTD WHERE IdCompany = '{0}' AND IdJobPostings = '{1}' AND RtbxStyle = '{2}'",
-                IdCompany, IdJobPostings, tenRtbx);
-            return db.thucThi_layDinhDang_NTD(sqlQuery_layDinhDang);
+            return db.thucThi_layDinhDang_NTD(IdCompany, IdJobPostings, tenRtbx);
         }
     }
 }

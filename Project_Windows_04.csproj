@@ -179,9 +179,36 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applications.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class\ChiTietCV_DAO.cs" />
     <Compile Include="Class\ChiTietTinTuyenDung_DAO.cs" />
     <Compile Include="Class\ChinhKichThuoc_rtbx.cs" />
+    <Compile Include="CVs.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai02_EDM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeTai02_EDM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai02_EDM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DeTai02_EDM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeTai02_EDM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDang_rtbx_NTD.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DinhDang_rtbx_UV.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form\Chi tiết\DinhDangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,7 +253,25 @@
     <Compile Include="Form\Đăng nhập\Main_TrangChu.Designer.cs">
       <DependentUpon>Main_TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class\LichPhongVan.cs" />
+    <Compile Include="Class\LichPV.cs" />
+    <Compile Include="JobPostings.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Letter.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LichPhongVan.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LuuCV.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LuuTin.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHATUYENDUNG.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Form\Tuyển dụng\TuyenDung_TrangChu.cs">
@@ -268,6 +313,9 @@
       <DependentUpon>ChiTietThu.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Thu.cs" />
+    <Compile Include="TAIKHOAN.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="UC_Controls\UC_BangTin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -328,6 +376,9 @@
     </Compile>
     <Compile Include="UC_Controls\UC_LichPhongVan.Designer.cs">
       <DependentUpon>UC_LichPhongVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UNGVIEN.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form\Tuyển dụng\TuyenDung_ChinhSuaTin.resx">
       <DependentUpon>TuyenDung_ChinhSuaTin.cs</DependentUpon>
@@ -391,6 +442,13 @@
     <EmbeddedResource Include="UC_Controls\UC_Thu.resx">
       <DependentUpon>UC_Thu.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="DeTai02_EDM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DeTai02_EDM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DeTai02_EDM.edmx.diagram">
+      <DependentUpon>DeTai02_EDM.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -457,6 +515,16 @@
     <None Include="Resources\512x512.png" />
     <None Include="Resources\favpng_dollar-sign-currency-symbol-united-states-dollar-icon.png" />
     <None Include="Resources\favpng_dollar-sign-currency-symbol-united-states-dollar-icon1.png" />
+    <Content Include="DeTai02_EDM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DeTai02_EDM.edmx</DependentUpon>
+      <LastGenOutput>DeTai02_EDM.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DeTai02_EDM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DeTai02_EDM.edmx</DependentUpon>
+      <LastGenOutput>DeTai02_EDM.cs</LastGenOutput>
+    </Content>
     <Content Include="Resources\kisspng-clip-art-computer-icons-scalable-vector-graphics-p-earth-location-map-world-navigation-pin-marker-svg-5bf236c7224d20.4334433015426003911405.png" />
     <None Include="Resources\kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3.5629845315234931599934.png" />
     <Content Include="Resources\kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.6946621115304120791875.png" />

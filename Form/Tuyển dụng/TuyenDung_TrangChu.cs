@@ -126,18 +126,18 @@ namespace Project_Windows_04
             }
         }
 
-        public void layDuLieu(TuyenDung NTD)
+        public void layDuLieu(NHATUYENDUNG NTD)
         {
             //  lấy Id tài khoản hiện tại đang đăng nhập
             this.IdCompany = NTD.Id;
             //  xuất toàn bộ thông tin của NTD đã đăng ký trước đó lên form
-            UC_taoTin.tbx_tenCongTy.Text = NTD.TenCongTy;
-            UC_taoTin.tbx_mangXaHoi.Text = NTD.MangXaHoi;
-            UC_taoTin.tbx_diaChi.Text = NTD.DiaChiCongTy;
-            UC_taoTin.tbx_tenHR.Text = NTD.TenHR;
-            UC_taoTin.tbx_emailHR.Text = NTD.EmailHR;
-            UC_taoTin.tbx_sdtHR.Text = NTD.SdtHR;
-            UC_taoTin.tbx_viTriCongTacHR.Text = NTD.ViTriCongTacHR;
+            UC_taoTin.tbx_tenCongTy.Text = NTD.Company;
+            UC_taoTin.tbx_mangXaHoi.Text = NTD.SocialNetwork;
+            UC_taoTin.tbx_diaChi.Text = NTD.JobLocation;
+            UC_taoTin.tbx_tenHR.Text = NTD.Fname;
+            UC_taoTin.tbx_emailHR.Text = NTD.Email;
+            UC_taoTin.tbx_sdtHR.Text = NTD.PhoneNTD;
+            UC_taoTin.tbx_viTriCongTacHR.Text = NTD.JobPos;
         }
 
         //  mặc định thông tin của 1 NTD sẽ không đổi và chỉ thay đổi đc tin tuyển dụng

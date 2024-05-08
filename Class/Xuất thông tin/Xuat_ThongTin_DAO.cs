@@ -1,5 +1,7 @@
-﻿using System;
+﻿using DevExpress.ClipboardSource.SpreadsheetML;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,72 +15,229 @@ namespace Project_Windows_04
 
         public Xuat_ThongTin_DAO() { }
 
-        public void ungTuyen(string IdCandidate, string IdCompany, string IdJobPostings)
+        public void ungTuyen(string idCandidate, string idCompany, string idJobPostings)
         {
-            string sqlQuery_ungTuyen = string.Format("INSERT INTO Applications(IdCompany, IdJobPostings, IdCandidate) VALUES ('{0}', '{1}', '{2}')", IdCompany, IdJobPostings, IdCandidate);
+            using (var context = new DeTai_02_Entities())
+            {
+                try
+                {
+                    var application = new Applications
+                    {
+                        IdCompany = idCompany,
+                        IdJobPostings = idJobPostings,
+                        IdCandidate = idCandidate
+                    };
 
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_ungTuyen);
+                    context.Applications.Add(application);
+                    context.SaveChanges();
+
+                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
-        public void xoa_tinTuyenDung(string IdCompany, string IdJobPostings)
+        public void xoaTinTuyenDung(string idCompany, string idJobPostings)
         {
-            //  vì Applications tham chiếu đến JobPostings nên phải xóa nó trước
-            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
-            string sqlQuery_xoa_DSUngVien = string.Format("DELETE FROM Applications WHERE IdCompany = '{0}' AND IdJobPostings = '{1}'", IdCompany, IdJobPostings);
-            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoa_DSUngVien);
+            using (var context = new DeTai_02_Entities())
+            {
+                try
+                {
+                    // Delete Applications records
+                    var applicationsToDelete = context.Applications.Where(a => a.IdCompany == idCompany && a.IdJobPostings == idJobPostings);
+                    context.Applications.RemoveRange(applicationsToDelete);
 
-            //  vì DinhDang_rtbx_NTD tham chiếu đến JobPostings nên phải xóa nó trước
-            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
-            string sqlQuery_xoa_dinhDang_rtbx = string.Format("DELETE FROM DinhDang_rtbx_NTD WHERE IdCompany = '{0}' AND IdJobPostings = '{1}'", IdCompany, IdJobPostings);
-            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoa_dinhDang_rtbx);
+                    // Delete DinhDang_rtbx_NTD records
+                    var dinhDangRecordsToDelete = context.DinhDang_rtbx_NTD.Where(d => d.IdCompany == idCompany && d.IdJobPostings == idJobPostings);
+                    context.DinhDang_rtbx_NTD.RemoveRange(dinhDangRecordsToDelete);
 
-            string sqlQuery_xoa_tinTuyenDung = string.Format("DELETE FROM JobPostings WHERE IdJobPostings = '{0}'", IdJobPostings);
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_xoa_tinTuyenDung);
+                    // Delete LuuCV records
+                    var luuCvRecordsToDelete = context.LuuCV.Where(l => l.IdCompany == idCompany && l.IdJobPostings == idJobPostings);
+                    context.LuuCV.RemoveRange(luuCvRecordsToDelete);
+
+                    // Delete LuuTin records
+                    var luuTinRecordsToDelete = context.LuuTin.Where(l => l.IdCompany == idCompany && l.IdJobPostings == idJobPostings);
+                    context.LuuTin.RemoveRange(luuTinRecordsToDelete);
+
+                    // Delete JobPostings record
+                    var jobPostingsToDelete = context.JobPostings.SingleOrDefault(j => j.IdJobPostings == idJobPostings);
+                    if (jobPostingsToDelete != null)
+                        context.JobPostings.Remove(jobPostingsToDelete);
+
+                    context.SaveChanges();
+                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public TuyenDung_Tin chiTietTin(string IdCompany, string IdJobPostings)
         {
-            string sqlQuery_chiTietTin = string.Format("SELECT * FROM NHATUYENDUNG INNER JOIN JobPostings ON NHATUYENDUNG.Id = JobPostings.IdCompany WHERE JobPostings.IdCompany = '{0}' AND JobPostings.IdJobPostings = '{1}'", IdCompany, IdJobPostings);
+            using (var context = new DeTai_02_Entities()) // Thay DeTai_02_Entities bằng tên DbContext thực tế của bạn
+            {
+                var chiTietTin = (from nhaTuyenDung in context.NHATUYENDUNG
+                                  join jobPostings in context.JobPostings on nhaTuyenDung.Id equals jobPostings.IdCompany
+                                  where jobPostings.IdCompany == IdCompany && jobPostings.IdJobPostings == IdJobPostings
+                                  select new
+                                  {
+                                      NhaTuyenDung = nhaTuyenDung,
+                                      JobPosting = jobPostings
+                                  }).FirstOrDefault();
 
-            return db.thucThi_chiTietTin(sqlQuery_chiTietTin);
+                if (chiTietTin != null)
+                {
+                    var t = new TuyenDung_Tin
+                    {
+                        IdCompany = chiTietTin.NhaTuyenDung.Id,
+                        IdJobPostings = chiTietTin.JobPosting.IdJobPostings,
+                        UserType = chiTietTin.NhaTuyenDung.UserType,
+                        LogoCongTy = chiTietTin.JobPosting.IconCompany,
+                        TenCongTy = chiTietTin.NhaTuyenDung.Company,
+                        MangXaHoi = chiTietTin.NhaTuyenDung.SocialNetwork,
+                        DiaChi = chiTietTin.NhaTuyenDung.JobLocation,
+                        NganhNghe = chiTietTin.JobPosting.Job,
+                        TenCongViec = chiTietTin.JobPosting.JobName,
+                        Luong = Convert.ToDouble(chiTietTin.JobPosting.Salary),
+                        KinhNghiem = chiTietTin.JobPosting.Experience,
+                        HinhThucLamViec = chiTietTin.JobPosting.WorkFormat,
+                        TenHR = chiTietTin.NhaTuyenDung.Fname,
+                        EmailHR = chiTietTin.NhaTuyenDung.Email,
+                        SdtHR = chiTietTin.NhaTuyenDung.PhoneNTD,
+                        ViTriCongTacHR = chiTietTin.NhaTuyenDung.JobPos,
+                        NgayDang = chiTietTin.JobPosting.DatePosted,
+                        HanChot = chiTietTin.JobPosting.Deadline,
+                        MoTaCongViec = chiTietTin.JobPosting.JobDescription,
+                        YeuCau = chiTietTin.JobPosting.Requirements,
+                        LoiIch = chiTietTin.JobPosting.Benefit,
+                        HoatDong = chiTietTin.JobPosting.Activity,
+                        GiaiThuong = chiTietTin.JobPosting.Award,
+                        GiayPhep = chiTietTin.JobPosting.License
+                    };
+
+                    return t;
+                }
+                else
+                {
+                    MessageBox.Show("Not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return null;
+                }
+            }
         }
 
-        public void load_DS_CV(FlowLayoutPanel flpl, string IdCompany, string IdJobPostings)
+        public void load_DS_CV(FlowLayoutPanel flpl, string idCompany, string idJobPostings)
         {
-            string sqlQuery_load_DS_CV = string.Format("SELECT * FROM Applications INNER JOIN UNGVIEN ON Applications.IdCandidate = UNGVIEN.Id WHERE Applications.IdCompany = '{0}' AND Applications.IdJobPostings = '{1}'", IdCompany, IdJobPostings);
+            using (var context = new DeTai_02_Entities())
+            {
+                var applications = (from application in context.Applications
+                                    join candidate in context.UNGVIEN on application.IdCandidate equals candidate.Id
+                                    where application.IdCompany == idCompany && application.IdJobPostings == idJobPostings
+                                    select new
+                                    {
+                                        Application = application,
+                                        Candidate = candidate
+                                    }).ToList();
 
-            db.thucThi_load_DS_CV(flpl, sqlQuery_load_DS_CV);
+                Xuat_ThongTin xuat_TT = new Xuat_ThongTin();
+
+                //  cập nhật ngày nộp là ngày hiện tại
+                DateTime dt = DateTime.Now;
+
+                foreach (var item in applications)
+                {
+                    flpl.Controls.Add(xuat_TT.them_CV(item.Application.IdCompany, item.Application.IdJobPostings, item.Application.IdCandidate, item.Candidate.Fname, dt.ToString("dd/MM/yyyy")));
+                }
+            }
         }
+
 
         public UngVien_Tin chiTiet_CV(string IdCandidate)
         {
-            string sqlQuery_chiTietCV = string.Format("SELECT * FROM UNGVIEN INNER JOIN CVs ON UNGVIEN.Id = CVs.Id WHERE UNGVIEN.Id = '{0}'", IdCandidate);
-
-            return db.thucThi_chiTietCV(sqlQuery_chiTietCV);
+            return db.thucThi_chiTietCV(IdCandidate);
         }
 
         public void xoaCV(string IdCompany, string IdJobPostings, string IdCandidate)
         {
-            string sqlQuery_xoaCV = string.Format("DELETE FROM Applications WHERE IdCompany = '{0}' AND IdJobPostings = '{1}' AND IdCandidate = '{2}'", IdCompany, IdJobPostings, IdCandidate);
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_xoaCV);
+            using (var context = new DeTai_02_Entities())
+            {
+                try
+                {
+                    var applicationToDelete = context.Applications.FirstOrDefault(a => a.IdCompany == IdCompany && a.IdJobPostings == IdJobPostings && a.IdCandidate == IdCandidate);
+                    if (applicationToDelete != null)
+                    {
+                        context.Applications.Remove(applicationToDelete);
+                        context.SaveChanges();
+                        MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Application not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
- 
+
         public void luuThu(Thu t)
         {
-            string sqlQuery_luuThu = string.Format("INSERT INTO Letter(IdCompany, IdJobPostings, IdCandidate, Sender, Receiver, Title, Content, DateSent, InterviewDate, InterviewTime) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')", 
-                t.IdCompany, t.IdJobPostings, t.IdCandidate, t.NguoiGui, t.NguoiNhan, t.ChuDe, t.NoiDung, t.NgayGui, t.NgayPhongVan, t.ThoiGianPhongVan);
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_luuThu);
+            using (var context = new DeTai_02_Entities())
+            {
+                try
+                {
+                    // Lưu thư
+                    context.Letter.Add(new Letter
+                    {
+                        IdCompany = t.IdCompany,
+                        IdJobPostings = t.IdJobPostings,
+                        IdCandidate = t.IdCandidate,
+                        Sender = t.NguoiGui,
+                        Receiver = t.NguoiNhan,
+                        Title = t.ChuDe,
+                        Content = t.NoiDung,
+                        DateSent = t.NgayGui,
+                        InterviewDate = t.NgayPhongVan,
+                        InterViewTime = t.ThoiGianPhongVan
+                    });
 
-            //  tận dụng hàm thucThi_chiTietTin bên dbConnection để lấy UpdateDate, JobName
-            TuyenDung_Tin tt = chiTietTin(t.IdCompany, t.IdJobPostings);
+                    context.SaveChanges();
 
-            //  tận dụng hàm thucThi_chiTietCV bên dbConnection để lấy LinkAvatar, CandidateName
-            UngVien_Tin u = chiTiet_CV(t.IdCandidate);
+                    // Lấy thông tin về công việc
+                    var jobDetails = chiTietTin(t.IdCompany, t.IdJobPostings);
 
-            //  lưu lịch phỏng vấn
-            string sqlQuery_luuLichPhongVan = string.Format("INSERT INTO LichPhongVan(IdCompany, IdJobPostings, IdCandidate, LinkAvatar, UpdateDate, InterviewDate, InterviewTime, JobName, CandidateName) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')",
-                t.IdCompany, t.IdJobPostings, t.IdCandidate, u.AnhDaiDien, tt.NgayDang, t.NgayPhongVan, t.ThoiGianPhongVan, tt.TenCongViec, u.TenUV);
-            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_luuLichPhongVan);
+                    // Lấy thông tin về ứng viên
+                    var candidateDetails = chiTiet_CV(t.IdCandidate);
+
+                    // Lưu lịch phỏng vấn
+                    context.LichPhongVan.Add(new LichPhongVan
+                    {
+                        IdCompany = t.IdCompany,
+                        IdJobPostings = t.IdJobPostings,
+                        IdCandidate = t.IdCandidate,
+                        LinkAvatar = candidateDetails.AnhDaiDien,
+                        UpdateDate = jobDetails.NgayDang,
+                        InterviewDate = t.NgayPhongVan,
+                        InterviewTime = t.ThoiGianPhongVan,
+                        JobName = jobDetails.TenCongViec,
+                        CandidateName = candidateDetails.TenUV
+                    });
+
+                    context.SaveChanges();
+
+                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void luuTin(string tableName, string IdCompany, string IdJobPostings, string IdCandidate)

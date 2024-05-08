@@ -127,7 +127,7 @@ namespace Project_Windows_04
                     UC_taoTin.tbx_tenHR.Text, UC_taoTin.tbx_emailHR.Text, UC_taoTin.tbx_sdtHR.Text, UC_taoTin.tbx_viTriCongTacHR.Text, UC_taoTin.dtpr_ngayDang.Value.ToShortDateString(),
                     UC_taoTin.dtpr_hanChot.Value.ToShortDateString(), UC_taoTin.rtbx_moTaCongViec.Text, UC_taoTin.rtbx_yeuCauUngVien.Text, UC_taoTin.rtbx_quyenLoi.Text, UC_taoTin.rtbx_hoatDong.Text, UC_taoTin.rtbx_giaiThuong.Text, this.linkGiayPhep);
 
-                TD_CST_DAO.chinhSuaTin(t);
+                TD_CST_DAO.chinhSuaTinTuyenDung(t);
 
                 //  buộc phải tạo tin trước mới được tạo định dạng cho rtbx
                 taoDinhDang();

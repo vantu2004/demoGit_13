@@ -15,6 +15,7 @@ namespace Project_Windows_04
         private string hieuUng;
         private double kichCo;
 
+        public UngVien_DinhDang_rtbx() { }
         public UngVien_DinhDang_rtbx(string id, string kieu_rtbx, string mauSac, string kieuChu, string hieuUng, double kichCo)
         {
             Id = id;

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,73 +17,188 @@ namespace Project_Windows_04
 
         public void dangKy(UngVien uv, TaiKhoan tk)
         {
-            string sqlQuery_UV = string.Format("INSERT INTO UNGVIEN(Id, UserType, Fname, Phone, BirthDate, Link, Email, Address_C, Gender) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')"
-                , uv.Id, uv.UserType, uv.Ten, uv.Sdt, uv.NgaySinh, uv.MangXaHoi, uv.Email, uv.DiaChi, uv.GioiTinh);
-            string sqlQuery_TK = string.Format("INSERT INTO TAIKHOAN(Id, UserType, UserName, UserPassword) VALUES ('{0}', '{1}', '{2}', '{3}')"
-                , tk.Id, tk.UserType, tk.TenDangNhap, tk.MatKhau);
+            using (var context = new DeTai_02_Entities())
+            {
+                try
+                {
+                    context.UNGVIEN.Add(new UNGVIEN
+                    {
+                        Id = uv.Id,
+                        UserType = uv.UserType,
+                        Fname = uv.Ten,
+                        Phone = uv.Sdt,
+                        BirthDate = uv.NgaySinh,
+                        Link = uv.MangXaHoi,
+                        Email = uv.Email,
+                        Address_C = uv.DiaChi,
+                        Gender = uv.GioiTinh
+                    });
 
-            db.thucThi_dangKy(sqlQuery_UV, sqlQuery_TK);
+                    context.TAIKHOAN.Add(new TAIKHOAN
+                    {
+                        Id = tk.Id,
+                        UserType = tk.UserType,
+                        UserName = tk.TenDangNhap,
+                        UserPassword = tk.MatKhau
+                    });
+
+                    context.SaveChanges();
+
+                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void taoTin(UngVien_Tin u)
         {
-            string sqlQuery_taoTin = string.Format("INSERT INTO CVs(Id, Avatar, JobPos, CareerGoal, Education, Experience, Activity, Award, Certificate, UploadDate) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}')",
-                u.Id, u.AnhDaiDien, u.ViTriUngTuyen, u.MucTieuNgheNghiep, u.HocVan, u.KinhNghiem, u.HoatDong, u.GiaiThuong, u.ChungChi, u.NgayCapNhatCV);
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                try
+                {
+                    dbContext.CVs.Add(new CVs
+                    {
+                        Id = u.Id,
+                        Avatar = u.AnhDaiDien,
+                        JobPos = u.ViTriUngTuyen,
+                        CareerGoal = u.MucTieuNgheNghiep,
+                        Education = u.HocVan,
+                        Experience = u.KinhNghiem,
+                        Activity = u.HoatDong,
+                        Award = u.GiaiThuong,
+                        Certificate = u.ChungChi,
+                        UploadDate = u.NgayCapNhatCV
+                    });
 
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_taoTin);
+                    dbContext.SaveChanges();
+
+                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void chinhSuaTin(UngVien_Tin u)
         {
-            string sqlQuery_chinhSuaTin_CVs = string.Format("UPDATE CVs SET Avatar = '{0}', JobPos = '{1}', CareerGoal = '{2}', Education = '{3}', Experience = '{4}', Activity = '{5}', Award = '{6}', Certificate = '{7}', UploadDate = '{8}' WHERE Id = '{9}'",
-                u.AnhDaiDien, u.ViTriUngTuyen, u.MucTieuNgheNghiep, u.HocVan, u.KinhNghiem, u.HoatDong, u.GiaiThuong, u.ChungChi, u.NgayCapNhatCV, u.Id);
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                try
+                {
+                    var cv = dbContext.CVs.FirstOrDefault(c => c.Id == u.Id);
+                    var ungVien = dbContext.UNGVIEN.FirstOrDefault(uv => uv.Id == u.Id);
 
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_chinhSuaTin_CVs);
+                    if (cv != null && ungVien != null)
+                    {
+                        cv.Avatar = u.AnhDaiDien;
+                        cv.JobPos = u.ViTriUngTuyen;
+                        cv.CareerGoal = u.MucTieuNgheNghiep;
+                        cv.Education = u.HocVan;
+                        cv.Experience = u.KinhNghiem;
+                        cv.Activity = u.HoatDong;
+                        cv.Award = u.GiaiThuong;
+                        cv.Certificate = u.ChungChi;
+                        cv.UploadDate = u.NgayCapNhatCV;
 
-            string sqlQuery_chinhSuaTin_UNGVIEN = string.Format("UPDATE UNGVIEN SET Fname = '{0}', Phone = '{1}', BirthDate = '{2}', Link = '{3}', Email = '{4}', Address_C = '{5}', Gender = '{6}' WHERE Id = '{7}'",
-                u.TenUV, u.SdtUV, u.NgaySinhUV, u.MangXaHoi, u.EmailUV, u.DiaChi, u.GioiTinhUV, u.Id);
+                        ungVien.Fname = u.TenUV;
+                        ungVien.Phone = u.SdtUV;
+                        ungVien.BirthDate = u.NgaySinhUV;
+                        ungVien.Link = u.MangXaHoi;
+                        ungVien.Email = u.EmailUV;
+                        ungVien.Address_C = u.DiaChi;
+                        ungVien.Gender = u.GioiTinhUV;
 
-            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_chinhSuaTin_UNGVIEN);
+                        dbContext.SaveChanges();
+                        MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("CV not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
-        public void load_tinTuyenDung(FlowLayoutPanel flowLayoutPanel, string kieuNguoiDung)
-        {
-            string sqlQuery_xuat_tinTuyenDung = string.Format("SELECT * FROM NHATUYENDUNG INNER JOIN JobPostings ON NHATUYENDUNG.Id = JobPostings.IdCompany");
 
-            db.thucThi_load_tinTuyenDung(sqlQuery_xuat_tinTuyenDung, flowLayoutPanel, kieuNguoiDung);
+        public void load_tinTuyenDung(FlowLayoutPanel flpl, string kieuNguoiDung)
+        {
+            db.thucThi_load_tinTuyenDung(flpl, kieuNguoiDung);
         }
 
         public void load_thuXacNhan(FlowLayoutPanel flpl, string Id)
         {
-            string sqlQuery_xuat_thuXacNhan = string.Format("SELECT * FROM Letter INNER JOIN JobPostings ON Letter.IdCompany = JobPostings.IdCompany AND Letter.IdJobPostings = JobPostings.IdJobPostings WHERE Letter.IdCandidate = '{0}'", Id);
-            db.thucThi_load_thuXacNhan(sqlQuery_xuat_thuXacNhan, flpl);
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                try
+                {
+                    var thuXacNhanList = (from letter in dbContext.Letter
+                                          join jobPosting in dbContext.JobPostings on new { letter.IdCompany, letter.IdJobPostings } equals new { jobPosting.IdCompany, jobPosting.IdJobPostings }
+                                          where letter.IdCandidate == Id
+                                          select new
+                                          {
+                                              Letter = letter,
+                                              JobPosting = jobPosting
+                                          }).ToList();
+
+                    Xuat_ThongTin xuat_TT = new Xuat_ThongTin();
+
+                    foreach (var lt in thuXacNhanList)
+                    {
+                        Thu t = new Thu(lt.Letter.IdCompany, lt.Letter.IdJobPostings, lt.Letter.IdCandidate, lt.Letter.Sender, lt.Letter.Receiver, lt.Letter.Title, lt.Letter.Content, lt.Letter.DateSent, lt.Letter.InterviewDate, lt.Letter.InterViewTime);
+                        flpl.Controls.Add(xuat_TT.them_thuXacNhan(lt.JobPosting.JobName, lt.JobPosting.DatePosted, t));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public UngVien_Tin chiTiet_CV(string IdCandidate)
         {
-            string sqlQuery_chiTietCV = string.Format("SELECT * FROM UNGVIEN INNER JOIN CVs ON UNGVIEN.Id = CVs.Id WHERE UNGVIEN.Id = '{0}'", IdCandidate);
-
-            return db.thucThi_chiTietCV(sqlQuery_chiTietCV);
+            return db.thucThi_chiTietCV(IdCandidate);
         }
 
         public void dinhDang_rtbx_UV(UngVien_DinhDang_rtbx UV_dinhDang)
         {
-            //  xóa bộ đã tồn tại trước đó để thêm bộ mới đã chỉnh sửa vào
-            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
-            string sqlQuery_xoa_dinhDang_rtbx = string.Format("DELETE FROM DinhDang_rtbx_UV WHERE Id = '{0}' AND RtbxStyle = '{1}'", UV_dinhDang.Id, UV_dinhDang.Kieu_rtbx);
-            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_xoa_dinhDang_rtbx);
+            using (var context = new DeTai_02_Entities())
+            {
+                // Xóa các bản ghi tồn tại trước đó
+                var existingRecords = context.DinhDang_rtbx_UV
+                                             .Where(d => d.Id == UV_dinhDang.Id && d.RtbxStyle == UV_dinhDang.Kieu_rtbx)
+                                             .ToList();
+                context.DinhDang_rtbx_UV.RemoveRange(existingRecords);
 
-            string sqlQuery_taoDinhDang = string.Format("INSERT INTO DinhDang_rtbx_UV(Id, RtbxStyle, Color, Font, FontStyle, Size) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')"
-                , UV_dinhDang.Id, UV_dinhDang.Kieu_rtbx, UV_dinhDang.MauSac, UV_dinhDang.KieuChu, UV_dinhDang.HieuUng, UV_dinhDang.KichCo);
-            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
-            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_taoDinhDang);
+                // Thêm bản ghi mới
+                var newRecord = new DinhDang_rtbx_UV
+                {
+                    Id = UV_dinhDang.Id,
+                    RtbxStyle = UV_dinhDang.Kieu_rtbx,
+                    Color = UV_dinhDang.MauSac,
+                    Font = UV_dinhDang.KieuChu,
+                    FontStyle = UV_dinhDang.HieuUng,
+                    Size = Convert.ToDecimal(UV_dinhDang.KichCo)
+                };
+                context.DinhDang_rtbx_UV.Add(newRecord);
+
+                context.SaveChanges();
+            }
         }
 
         public UngVien_DinhDang_rtbx layDinhDang(string Id, string tenRtbx)
         {
-            string sqlQuery_layDinhDang = string.Format("SELECT * FROM DinhDang_rtbx_UV WHERE Id = '{0}' AND RtbxStyle = '{1}'",
-                Id, tenRtbx);
-            return db.thucThi_layDinhDang_UV(sqlQuery_layDinhDang);
+            return db.thucThi_layDinhDang_UV(Id, tenRtbx);
         }
+
     }
 }

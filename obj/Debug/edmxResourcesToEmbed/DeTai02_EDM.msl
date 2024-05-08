@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DeTai_02_ModelStoreContainer" CdmEntityContainer="DeTai_02_Entities">
     <EntitySetMapping Name="Applications">
-      <EntityTypeMapping TypeName="DeTai_02_Model.Application">
+      <EntityTypeMapping TypeName="DeTai_02_Model.Applications">
         <MappingFragment StoreEntitySet="Applications">
           <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
           <ScalarProperty Name="IdJobPostings" ColumnName="IdJobPostings" />
@@ -11,7 +11,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CVs">
-      <EntityTypeMapping TypeName="DeTai_02_Model.CV">
+      <EntityTypeMapping TypeName="DeTai_02_Model.CVs">
         <MappingFragment StoreEntitySet="CVs">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Avatar" ColumnName="Avatar" />
@@ -52,7 +52,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="JobPostings">
-      <EntityTypeMapping TypeName="DeTai_02_Model.JobPosting">
+      <EntityTypeMapping TypeName="DeTai_02_Model.JobPostings">
         <MappingFragment StoreEntitySet="JobPostings">
           <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
           <ScalarProperty Name="IdJobPostings" ColumnName="IdJobPostings" />
@@ -73,7 +73,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Letters">
+    <EntitySetMapping Name="Letter">
       <EntityTypeMapping TypeName="DeTai_02_Model.Letter">
         <MappingFragment StoreEntitySet="Letter">
           <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
@@ -84,10 +84,47 @@
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Content" ColumnName="Content" />
           <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+          <ScalarProperty Name="InterviewDate" ColumnName="InterviewDate" />
+          <ScalarProperty Name="InterViewTime" ColumnName="InterViewTime" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NHATUYENDUNGs">
+    <EntitySetMapping Name="LichPhongVan">
+      <EntityTypeMapping TypeName="DeTai_02_Model.LichPhongVan">
+        <MappingFragment StoreEntitySet="LichPhongVan">
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="IdJobPostings" ColumnName="IdJobPostings" />
+          <ScalarProperty Name="IdCandidate" ColumnName="IdCandidate" />
+          <ScalarProperty Name="LinkAvatar" ColumnName="LinkAvatar" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="InterviewDate" ColumnName="InterviewDate" />
+          <ScalarProperty Name="InterviewTime" ColumnName="InterviewTime" />
+          <ScalarProperty Name="JobName" ColumnName="JobName" />
+          <ScalarProperty Name="CandidateName" ColumnName="CandidateName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LuuCV">
+      <EntityTypeMapping TypeName="DeTai_02_Model.LuuCV">
+        <MappingFragment StoreEntitySet="LuuCV">
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="IdJobPostings" ColumnName="IdJobPostings" />
+          <ScalarProperty Name="IdCandidate" ColumnName="IdCandidate" />
+          <ScalarProperty Name="Follow" ColumnName="Follow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LuuTin">
+      <EntityTypeMapping TypeName="DeTai_02_Model.LuuTin">
+        <MappingFragment StoreEntitySet="LuuTin">
+          <ScalarProperty Name="IdCompany" ColumnName="IdCompany" />
+          <ScalarProperty Name="IdJobPostings" ColumnName="IdJobPostings" />
+          <ScalarProperty Name="IdCandidate" ColumnName="IdCandidate" />
+          <ScalarProperty Name="Follow" ColumnName="Follow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHATUYENDUNG">
       <EntityTypeMapping TypeName="DeTai_02_Model.NHATUYENDUNG">
         <MappingFragment StoreEntitySet="NHATUYENDUNG">
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -102,7 +139,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TAIKHOANs">
+    <EntitySetMapping Name="TAIKHOAN">
       <EntityTypeMapping TypeName="DeTai_02_Model.TAIKHOAN">
         <MappingFragment StoreEntitySet="TAIKHOAN">
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -112,7 +149,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="UNGVIENs">
+    <EntitySetMapping Name="UNGVIEN">
       <EntityTypeMapping TypeName="DeTai_02_Model.UNGVIEN">
         <MappingFragment StoreEntitySet="UNGVIEN">
           <ScalarProperty Name="Id" ColumnName="Id" />

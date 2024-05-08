@@ -87,6 +87,46 @@
     <Property Name="Title" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="Content" Type="text" Nullable="false" />
     <Property Name="DateSent" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="InterviewDate" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="InterViewTime" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LichPhongVan">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+      <PropertyRef Name="IdCandidate" />
+    </Key>
+    <Property Name="IdCompany" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdCandidate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LinkAvatar" Type="varchar" MaxLength="200" />
+    <Property Name="UpdateDate" Type="varchar" MaxLength="100" />
+    <Property Name="InterviewDate" Type="varchar" MaxLength="100" />
+    <Property Name="InterviewTime" Type="varchar" MaxLength="100" />
+    <Property Name="JobName" Type="varchar" MaxLength="100" />
+    <Property Name="CandidateName" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="LuuCV">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+      <PropertyRef Name="IdCandidate" />
+    </Key>
+    <Property Name="IdCompany" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdCandidate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Follow" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LuuTin">
+    <Key>
+      <PropertyRef Name="IdCompany" />
+      <PropertyRef Name="IdJobPostings" />
+      <PropertyRef Name="IdCandidate" />
+    </Key>
+    <Property Name="IdCompany" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdCandidate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Follow" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="NHATUYENDUNG">
     <Key>
@@ -201,18 +241,54 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Letter__1387E197">
-    <End Role="Applications" Type="Self.Applications" Multiplicity="1" />
-    <End Role="Letter" Type="Self.Letter" Multiplicity="0..1" />
+  <Association Name="FK__LuuCV__70FDBF69">
+    <End Role="JobPostings" Type="Self.JobPostings" Multiplicity="1" />
+    <End Role="LuuCV" Type="Self.LuuCV" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Applications">
+      <Principal Role="JobPostings">
         <PropertyRef Name="IdCompany" />
         <PropertyRef Name="IdJobPostings" />
-        <PropertyRef Name="IdCandidate" />
       </Principal>
-      <Dependent Role="Letter">
+      <Dependent Role="LuuCV">
         <PropertyRef Name="IdCompany" />
         <PropertyRef Name="IdJobPostings" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LuuCV__IdCandida__71F1E3A2">
+    <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
+    <End Role="LuuCV" Type="Self.LuuCV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LuuCV">
+        <PropertyRef Name="IdCandidate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LuuTin__3AA1AEB8">
+    <End Role="JobPostings" Type="Self.JobPostings" Multiplicity="1" />
+    <End Role="LuuTin" Type="Self.LuuTin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobPostings">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+      </Principal>
+      <Dependent Role="LuuTin">
+        <PropertyRef Name="IdCompany" />
+        <PropertyRef Name="IdJobPostings" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LuuTin__IdCandid__3B95D2F1">
+    <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
+    <End Role="LuuTin" Type="Self.LuuTin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LuuTin">
         <PropertyRef Name="IdCandidate" />
       </Dependent>
     </ReferentialConstraint>
@@ -248,6 +324,9 @@
     <EntitySet Name="DinhDang_rtbx_UV" EntityType="Self.DinhDang_rtbx_UV" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="JobPostings" EntityType="Self.JobPostings" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Letter" EntityType="Self.Letter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LichPhongVan" EntityType="Self.LichPhongVan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LuuCV" EntityType="Self.LuuCV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LuuTin" EntityType="Self.LuuTin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NHATUYENDUNG" EntityType="Self.NHATUYENDUNG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UNGVIEN" EntityType="Self.UNGVIEN" Schema="dbo" store:Type="Tables" />
@@ -275,9 +354,21 @@
       <End Role="NHATUYENDUNG" EntitySet="NHATUYENDUNG" />
       <End Role="JobPostings" EntitySet="JobPostings" />
     </AssociationSet>
-    <AssociationSet Name="FK__Letter__1387E197" Association="Self.FK__Letter__1387E197">
-      <End Role="Applications" EntitySet="Applications" />
-      <End Role="Letter" EntitySet="Letter" />
+    <AssociationSet Name="FK__LuuCV__70FDBF69" Association="Self.FK__LuuCV__70FDBF69">
+      <End Role="JobPostings" EntitySet="JobPostings" />
+      <End Role="LuuCV" EntitySet="LuuCV" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LuuCV__IdCandida__71F1E3A2" Association="Self.FK__LuuCV__IdCandida__71F1E3A2">
+      <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+      <End Role="LuuCV" EntitySet="LuuCV" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LuuTin__3AA1AEB8" Association="Self.FK__LuuTin__3AA1AEB8">
+      <End Role="JobPostings" EntitySet="JobPostings" />
+      <End Role="LuuTin" EntitySet="LuuTin" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LuuTin__IdCandid__3B95D2F1" Association="Self.FK__LuuTin__IdCandid__3B95D2F1">
+      <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+      <End Role="LuuTin" EntitySet="LuuTin" />
     </AssociationSet>
     <AssociationSet Name="FK__NHATUYENDUNG__Id__6A30C649" Association="Self.FK__NHATUYENDUNG__Id__6A30C649">
       <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />

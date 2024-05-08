@@ -26,6 +26,7 @@ namespace Project_Windows_04
         private string giaiThuong;
         private string chungChi;
 
+        public UngVien_Tin() { }
         public UngVien_Tin(string id, string anhDaiDien, string tenUV, string ngaySinhUV, string gioiTinhUV, string diaChi, string mangXaHoi, string sdtUV, string emailUV, 
             string viTriUngTuyen, string ngayCapNhatCV, string mucTieuNgheNghiep, string hocVan, string kinhNghiem, string hoatDong, string giaiThuong, string chungChi)
         {

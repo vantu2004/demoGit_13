@@ -13,11 +13,16 @@ namespace Project_Windows_04
 
         public TrangChu_DAO() { }
 
-        public void load_tinTuyenDung(FlowLayoutPanel flowLayoutPanel, string userType)
-        {
-            string sqlQuery_xuat_tinTuyenDung = string.Format("SELECT * FROM NHATUYENDUNG INNER JOIN JobPostings ON NHATUYENDUNG.Id = JobPostings.IdCompany");
+        //public void load_tinTuyenDung(FlowLayoutPanel flowLayoutPanel, string userType)
+        //{
+        //    string sqlQuery_xuat_tinTuyenDung = string.Format("SELECT * FROM NHATUYENDUNG INNER JOIN JobPostings ON NHATUYENDUNG.Id = JobPostings.IdCompany");
 
-            db.thucThi_load_tinTuyenDung(sqlQuery_xuat_tinTuyenDung, flowLayoutPanel, userType);
+        //    db.thucThi_load_tinTuyenDung(sqlQuery_xuat_tinTuyenDung, flowLayoutPanel, userType);
+        //}
+
+        public void load_tinTuyenDung(FlowLayoutPanel flpl, string userType)
+        {
+            db.thucThi_load_tinTuyenDung(flpl, userType);
         }
     }
 }

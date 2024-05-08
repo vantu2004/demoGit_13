@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,48 +16,153 @@ namespace Project_Windows_04
 
         public void dangKy(TuyenDung t, TaiKhoan tk)
         {
-            string sqlQuery_NTD = string.Format("INSERT INTO NHATUYENDUNG(Id, UserType, Fname, Email, PhoneNTD, JobPos, Company, JobLocation, SocialNetwork) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')"
-                , t.Id, t.UserType, t.TenHR, t.EmailHR, t.SdtHR, t.ViTriCongTacHR, t.TenCongTy, t.DiaChiCongTy, t.MangXaHoi);
-            string sqlQuery_TK = string.Format("INSERT INTO TAIKHOAN(Id, UserType, UserName, UserPassword) VALUES ('{0}', '{1}', '{2}', '{3}')"
-                , tk.Id, tk.UserType, tk.TenDangNhap, tk.MatKhau);
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                try
+                {
+                    dbContext.NHATUYENDUNG.Add(new NHATUYENDUNG
+                    {
+                        Id = t.Id,
+                        UserType = t.UserType,
+                        Fname = t.TenHR,
+                        Email = t.EmailHR,
+                        PhoneNTD = t.SdtHR,
+                        JobPos = t.ViTriCongTacHR,
+                        Company = t.TenCongTy,
+                        JobLocation = t.DiaChiCongTy,
+                        SocialNetwork = t.MangXaHoi
+                    });
 
-            db.thucThi_dangKy(sqlQuery_NTD, sqlQuery_TK);
+                    dbContext.TAIKHOAN.Add(new TAIKHOAN
+                    {
+                        Id = tk.Id,
+                        UserType = tk.UserType,
+                        UserName = tk.TenDangNhap,
+                        UserPassword = tk.MatKhau
+                    });
+
+                    dbContext.SaveChanges();
+
+                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void taoTin(TuyenDung_Tin t)
         {
-            string sqlQuery_taoTin = string.Format("INSERT INTO JobPostings(IdCompany, IdJobPostings, IconCompany, Job, JobName, Salary, Experience, WorkFormat, DatePosted, Deadline, JobDescription, Requirements, Benefit, Activity, Award, License) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}')",
-                t.IdCompany, t.IdJobPostings, t.LogoCongTy, t.NganhNghe, t.TenCongViec, t.Luong, t.KinhNghiem, t.HinhThucLamViec, t.NgayDang, t.HanChot, t.MoTaCongViec, t.YeuCau, t.LoiIch, t.HoatDong, t.GiaiThuong, t.GiayPhep);
-            db.thucThi_taoTin_chinhSuaTin(sqlQuery_taoTin);
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                try
+                {
+                    dbContext.JobPostings.Add(new JobPostings
+                    {
+                        IdCompany = t.IdCompany,
+                        IconCompany = t.LogoCongTy,
+                        Job = t.NganhNghe,
+                        JobName = t.TenCongViec,
+                        Salary = Convert.ToDecimal(t.Luong),
+                        Experience = t.KinhNghiem,
+                        WorkFormat = t.HinhThucLamViec,
+                        DatePosted = t.NgayDang,
+                        Deadline = t.HanChot,
+                        JobDescription = t.MoTaCongViec,
+                        Requirements = t.YeuCau,
+                        Benefit = t.LoiIch,
+                        Activity = t.HoatDong,
+                        Award = t.GiaiThuong,
+                        License = t.GiayPhep
+                    });
+
+                    dbContext.SaveChanges();
+
+                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
-        public void load_tinTuyenDung(FlowLayoutPanel flowLayoutPanel, string kieuNguoiDung)
+        public void load_tinTuyenDung(FlowLayoutPanel flpl, string kieuNguoiDung)
         {
-            string sqlQuery_xuat_tinTuyenDung = string.Format("SELECT * FROM NHATUYENDUNG INNER JOIN JobPostings ON NHATUYENDUNG.Id = JobPostings.IdCompany");
-
-            db.thucThi_load_tinTuyenDung(sqlQuery_xuat_tinTuyenDung, flowLayoutPanel, kieuNguoiDung);
+            db.thucThi_load_tinTuyenDung(flpl, kieuNguoiDung);
         }
 
-        public void load_tinDaDang(FlowLayoutPanel flowLayoutPanel, string Id)
+        public void load_tinDaDang(FlowLayoutPanel flpl, string Id)
         {
-            string sqlQuery_xuat_tinDaDang = string.Format("SELECT * FROM JobPostings WHERE IdCompany = '{0}'", Id);
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                try
+                {
+                    var jobPostings = dbContext.JobPostings.Where(j => j.IdCompany == Id).ToList();
 
-            db.thucThi_load_tinDaDang(sqlQuery_xuat_tinDaDang, flowLayoutPanel);
+                    Xuat_ThongTin xuat_TT = new Xuat_ThongTin();
+
+                    foreach (var jobPosting in jobPostings)
+                    {
+                        flpl.Controls.Add(xuat_TT.them_tinDaDang(jobPosting.IdCompany, jobPosting.IdJobPostings, jobPosting.JobName, jobPosting.DatePosted));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void dinhDang_rtbx_NTD(TuyenDung_DinhDang_rtbx TD_dinhDang)
         {
-            string sqlQuery_taoDinhDang = string.Format("INSERT INTO DinhDang_rtbx_NTD(IdCompany, IdJobPostings, RtbxStyle, Color, Font, FontStyle, Size) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')"
-                , TD_dinhDang.IdCompany, TD_dinhDang.IdJobPostings, TD_dinhDang.Kieu_rtbx, TD_dinhDang.MauSac, TD_dinhDang.KieuChu, TD_dinhDang.HieuUng, TD_dinhDang.KichCo);
-            //  gọi hàm này để thực thi sqlQuery mà ko xuất messagebox
-            db.thucThi_taoTin_chinhSuaTin_koMessageBox(sqlQuery_taoDinhDang);
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                try
+                {
+                    dbContext.DinhDang_rtbx_NTD.Add(new DinhDang_rtbx_NTD
+                    {
+                        IdCompany = TD_dinhDang.IdCompany,
+                        IdJobPostings = TD_dinhDang.IdJobPostings,
+                        RtbxStyle = TD_dinhDang.Kieu_rtbx,
+                        Color = TD_dinhDang.MauSac,
+                        Font = TD_dinhDang.KieuChu,
+                        FontStyle = TD_dinhDang.HieuUng,
+                        Size = Convert.ToDecimal(TD_dinhDang.KichCo)
+                    });
+
+                    dbContext.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         public void load_lichPhongVan(FlowLayoutPanel flpl, string IdCompany)
         {
-            string sqlQuery_lichPhongVan = string.Format("SELECT * FROM LichPhongVan WHERE IdCompany = '{0}'", IdCompany);
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                try
+                {
+                    var lichPhongVanList = dbContext.LichPhongVan.Where(l => l.IdCompany == IdCompany).ToList();
 
-            db.thucThi_load_lichPhongVan(sqlQuery_lichPhongVan, flpl);
+                    Xuat_ThongTin xuat_TT = new Xuat_ThongTin();
+
+                    foreach (var lichPhongVan in lichPhongVanList)
+                    {
+                        LichPV lichPV = new LichPV(lichPhongVan.LinkAvatar, lichPhongVan.UpdateDate, lichPhongVan.InterviewDate + " " + lichPhongVan.InterviewTime, lichPhongVan.JobName, lichPhongVan.CandidateName);
+                        flpl.Controls.Add(xuat_TT.them_lichPhongVan(lichPV));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
+
     }
 }

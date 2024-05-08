@@ -134,7 +134,7 @@ namespace Project_Windows_04
         //  xóa 1 tin tuyển dụng trong danh sách tin đã đăng
         private void Btn_xoaTin_Click(string IdCompany, string IdJobPostings)
         {
-            xuatTT_DAO.xoa_tinTuyenDung(IdCompany, IdJobPostings);
+            xuatTT_DAO.xoaTinTuyenDung(IdCompany, IdJobPostings);
         }
 
         //  sửa 1 tin tuyển dụng trong danh sách tin đã đăng
@@ -244,7 +244,7 @@ namespace Project_Windows_04
             chiTiet_thu.ShowDialog();
         }
 
-        public UC_LichPhongVan them_lichPhongVan(LichPhongVan lichPV)
+        public UC_LichPhongVan them_lichPhongVan(LichPV lichPV)
         {
             UC_LichPhongVan uc_lichPV = new UC_LichPhongVan();
 

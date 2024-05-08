@@ -36,7 +36,7 @@ namespace Project_Windows_04
             string tdn = tbx_tenDangNhap.Text;
             string mk = tbx_matKhau.Text;
 
-            DK_DN_DAO.dangNhap(tdn, mk);
+            DK_DN_DAO.DangNhap(tdn, mk);
         }
     }
 }
