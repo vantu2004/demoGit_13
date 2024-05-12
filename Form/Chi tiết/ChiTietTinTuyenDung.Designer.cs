@@ -86,6 +86,12 @@
             this.lbl_tenCongTy = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pbx_logoCongTy = new System.Windows.Forms.PictureBox();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.flpl_tinLienQuan = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -108,6 +114,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logoCongTy)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,7 +126,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(411, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(727, 1055);
+            this.panel1.Size = new System.Drawing.Size(954, 1055);
             this.panel1.TabIndex = 30;
             // 
             // tabControl1
@@ -131,8 +138,8 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(728, 1034);
-            this.tabControl1.TabIndex = 62;
+            this.tabControl1.Size = new System.Drawing.Size(910, 1055);
+            this.tabControl1.TabIndex = 64;
             // 
             // tabPage1
             // 
@@ -143,7 +150,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 37);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(720, 993);
+            this.tabPage1.Size = new System.Drawing.Size(902, 1014);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Detail";
             // 
@@ -167,7 +174,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(714, 987);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(896, 1008);
             this.flowLayoutPanel1.TabIndex = 32;
             // 
             // label4
@@ -189,7 +196,7 @@
             this.rtbx_moTaCongViec.Location = new System.Drawing.Point(3, 34);
             this.rtbx_moTaCongViec.Name = "rtbx_moTaCongViec";
             this.rtbx_moTaCongViec.ReadOnly = true;
-            this.rtbx_moTaCongViec.Size = new System.Drawing.Size(639, 100);
+            this.rtbx_moTaCongViec.Size = new System.Drawing.Size(775, 100);
             this.rtbx_moTaCongViec.TabIndex = 72;
             this.rtbx_moTaCongViec.Text = "";
             // 
@@ -200,7 +207,7 @@
             this.guna2Separator1.FillThickness = 3;
             this.guna2Separator1.Location = new System.Drawing.Point(3, 140);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(675, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(869, 10);
             this.guna2Separator1.TabIndex = 73;
             // 
             // label6
@@ -222,7 +229,7 @@
             this.rtbx_yeuCauUngVien.Location = new System.Drawing.Point(3, 187);
             this.rtbx_yeuCauUngVien.Name = "rtbx_yeuCauUngVien";
             this.rtbx_yeuCauUngVien.ReadOnly = true;
-            this.rtbx_yeuCauUngVien.Size = new System.Drawing.Size(639, 100);
+            this.rtbx_yeuCauUngVien.Size = new System.Drawing.Size(775, 100);
             this.rtbx_yeuCauUngVien.TabIndex = 75;
             this.rtbx_yeuCauUngVien.Text = "";
             // 
@@ -233,7 +240,7 @@
             this.guna2Separator2.FillThickness = 3;
             this.guna2Separator2.Location = new System.Drawing.Point(3, 293);
             this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(675, 10);
+            this.guna2Separator2.Size = new System.Drawing.Size(869, 10);
             this.guna2Separator2.TabIndex = 89;
             // 
             // label1
@@ -255,7 +262,7 @@
             this.rtbx_quyenLoi.Location = new System.Drawing.Point(3, 340);
             this.rtbx_quyenLoi.Name = "rtbx_quyenLoi";
             this.rtbx_quyenLoi.ReadOnly = true;
-            this.rtbx_quyenLoi.Size = new System.Drawing.Size(639, 100);
+            this.rtbx_quyenLoi.Size = new System.Drawing.Size(775, 100);
             this.rtbx_quyenLoi.TabIndex = 91;
             this.rtbx_quyenLoi.Text = "";
             // 
@@ -266,7 +273,7 @@
             this.guna2Separator3.FillThickness = 3;
             this.guna2Separator3.Location = new System.Drawing.Point(3, 446);
             this.guna2Separator3.Name = "guna2Separator3";
-            this.guna2Separator3.Size = new System.Drawing.Size(675, 10);
+            this.guna2Separator3.Size = new System.Drawing.Size(869, 10);
             this.guna2Separator3.TabIndex = 102;
             // 
             // label10
@@ -288,7 +295,7 @@
             this.rtbx_hoatDong.Location = new System.Drawing.Point(3, 493);
             this.rtbx_hoatDong.Name = "rtbx_hoatDong";
             this.rtbx_hoatDong.ReadOnly = true;
-            this.rtbx_hoatDong.Size = new System.Drawing.Size(639, 100);
+            this.rtbx_hoatDong.Size = new System.Drawing.Size(775, 100);
             this.rtbx_hoatDong.TabIndex = 104;
             this.rtbx_hoatDong.Text = "";
             // 
@@ -299,7 +306,7 @@
             this.guna2Separator4.FillThickness = 3;
             this.guna2Separator4.Location = new System.Drawing.Point(3, 599);
             this.guna2Separator4.Name = "guna2Separator4";
-            this.guna2Separator4.Size = new System.Drawing.Size(675, 10);
+            this.guna2Separator4.Size = new System.Drawing.Size(869, 10);
             this.guna2Separator4.TabIndex = 112;
             // 
             // label12
@@ -321,7 +328,7 @@
             this.rtbx_giaiThuong.Location = new System.Drawing.Point(3, 646);
             this.rtbx_giaiThuong.Name = "rtbx_giaiThuong";
             this.rtbx_giaiThuong.ReadOnly = true;
-            this.rtbx_giaiThuong.Size = new System.Drawing.Size(639, 100);
+            this.rtbx_giaiThuong.Size = new System.Drawing.Size(775, 100);
             this.rtbx_giaiThuong.TabIndex = 114;
             this.rtbx_giaiThuong.Text = "";
             // 
@@ -334,17 +341,18 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 37);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(720, 1014);
+            this.tabPage2.Size = new System.Drawing.Size(902, 1014);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "License";
             // 
             // pbx_giayPhep
             // 
-            this.pbx_giayPhep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbx_giayPhep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbx_giayPhep.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbx_giayPhep.Image = global::Project_Windows_04.Properties.Resources.Lovepik_com_400306429_photo_album;
             this.pbx_giayPhep.Location = new System.Drawing.Point(3, 3);
             this.pbx_giayPhep.Name = "pbx_giayPhep";
-            this.pbx_giayPhep.Size = new System.Drawing.Size(714, 1008);
+            this.pbx_giayPhep.Size = new System.Drawing.Size(903, 1008);
             this.pbx_giayPhep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_giayPhep.TabIndex = 0;
             this.pbx_giayPhep.TabStop = false;
@@ -792,16 +800,131 @@
             this.pbx_logoCongTy.TabIndex = 24;
             this.pbx_logoCongTy.TabStop = false;
             // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientButton1.Animated = true;
+            this.guna2GradientButton1.AutoRoundedCorners = true;
+            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.BorderColor = System.Drawing.Color.Green;
+            this.guna2GradientButton1.BorderRadius = 20;
+            this.guna2GradientButton1.BorderThickness = 2;
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2GradientButton1.IndicateFocus = true;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(1303, 1114);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.Size = new System.Drawing.Size(217, 43);
+            this.guna2GradientButton1.TabIndex = 122;
+            this.guna2GradientButton1.Text = "Company";
+            this.guna2GradientButton1.UseTransparentBackground = true;
+            // 
+            // guna2GradientButton2
+            // 
+            this.guna2GradientButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientButton2.Animated = true;
+            this.guna2GradientButton2.AutoRoundedCorners = true;
+            this.guna2GradientButton2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton2.BorderColor = System.Drawing.Color.Green;
+            this.guna2GradientButton2.BorderRadius = 20;
+            this.guna2GradientButton2.BorderThickness = 2;
+            this.guna2GradientButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton2.FillColor = System.Drawing.Color.White;
+            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2GradientButton2.IndicateFocus = true;
+            this.guna2GradientButton2.Location = new System.Drawing.Point(1837, 1114);
+            this.guna2GradientButton2.Name = "guna2GradientButton2";
+            this.guna2GradientButton2.Size = new System.Drawing.Size(217, 43);
+            this.guna2GradientButton2.TabIndex = 124;
+            this.guna2GradientButton2.Text = "Job";
+            this.guna2GradientButton2.UseTransparentBackground = true;
+            // 
+            // guna2GradientButton3
+            // 
+            this.guna2GradientButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientButton3.Animated = true;
+            this.guna2GradientButton3.AutoRoundedCorners = true;
+            this.guna2GradientButton3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton3.BorderColor = System.Drawing.Color.Green;
+            this.guna2GradientButton3.BorderRadius = 20;
+            this.guna2GradientButton3.BorderThickness = 2;
+            this.guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton3.FillColor = System.Drawing.Color.White;
+            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.White;
+            this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.guna2GradientButton3.IndicateFocus = true;
+            this.guna2GradientButton3.Location = new System.Drawing.Point(1567, 1114);
+            this.guna2GradientButton3.Name = "guna2GradientButton3";
+            this.guna2GradientButton3.Size = new System.Drawing.Size(217, 43);
+            this.guna2GradientButton3.TabIndex = 125;
+            this.guna2GradientButton3.Text = "Salary";
+            this.guna2GradientButton3.UseTransparentBackground = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.flpl_tinLienQuan);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(1365, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(559, 1055);
+            this.panel3.TabIndex = 131;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(6, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(225, 45);
+            this.label3.TabIndex = 135;
+            this.label3.Text = "Related news";
+            // 
+            // flpl_tinLienQuan
+            // 
+            this.flpl_tinLienQuan.AutoScroll = true;
+            this.flpl_tinLienQuan.BackColor = System.Drawing.Color.White;
+            this.flpl_tinLienQuan.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flpl_tinLienQuan.Location = new System.Drawing.Point(0, 156);
+            this.flpl_tinLienQuan.Name = "flpl_tinLienQuan";
+            this.flpl_tinLienQuan.Size = new System.Drawing.Size(559, 899);
+            this.flpl_tinLienQuan.TabIndex = 136;
+            // 
             // ChiTietTinTuyenDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1142, 1055);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.guna2GradientButton3);
+            this.Controls.Add(this.guna2GradientButton2);
+            this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Name = "ChiTietTinTuyenDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detail";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ChiTietTinTuyenDung_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -829,6 +952,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_logoCongTy)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -874,6 +999,10 @@
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator3;
+        public Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        public Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        public Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
@@ -893,5 +1022,7 @@
         public System.Windows.Forms.RichTextBox rtbx_giaiThuong;
         private System.Windows.Forms.TabPage tabPage2;
         public System.Windows.Forms.PictureBox pbx_giayPhep;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.FlowLayoutPanel flpl_tinLienQuan;
     }
 }

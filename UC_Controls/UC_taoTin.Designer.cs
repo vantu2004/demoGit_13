@@ -575,7 +575,7 @@
             this.dtpr_hanChot.Size = new System.Drawing.Size(306, 36);
             this.dtpr_hanChot.TabIndex = 93;
             this.dtpr_hanChot.UseTransparentBackground = true;
-            this.dtpr_hanChot.Value = new System.DateTime(2024, 3, 7, 8, 22, 15, 29);
+            this.dtpr_hanChot.Value = new System.DateTime(2024, 5, 9, 0, 0, 0, 0);
             // 
             // dtpr_ngayDang
             // 
@@ -595,7 +595,7 @@
             this.dtpr_ngayDang.Size = new System.Drawing.Size(306, 36);
             this.dtpr_ngayDang.TabIndex = 92;
             this.dtpr_ngayDang.UseTransparentBackground = true;
-            this.dtpr_ngayDang.Value = new System.DateTime(2024, 3, 7, 8, 22, 15, 29);
+            this.dtpr_ngayDang.Value = new System.DateTime(2024, 5, 9, 0, 0, 0, 0);
             // 
             // label7
             // 

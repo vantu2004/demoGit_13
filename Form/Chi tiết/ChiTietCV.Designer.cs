@@ -146,7 +146,7 @@
             // 
             this.rtbx_mucTieuNgheNghiep.BackColor = System.Drawing.Color.White;
             this.rtbx_mucTieuNgheNghiep.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbx_mucTieuNgheNghiep.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_mucTieuNgheNghiep.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rtbx_mucTieuNgheNghiep.Location = new System.Drawing.Point(3, 34);
             this.rtbx_mucTieuNgheNghiep.Name = "rtbx_mucTieuNgheNghiep";
             this.rtbx_mucTieuNgheNghiep.ReadOnly = true;
@@ -179,7 +179,7 @@
             // 
             this.rtbx_hocVan.BackColor = System.Drawing.Color.White;
             this.rtbx_hocVan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbx_hocVan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_hocVan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rtbx_hocVan.Location = new System.Drawing.Point(3, 187);
             this.rtbx_hocVan.Name = "rtbx_hocVan";
             this.rtbx_hocVan.ReadOnly = true;
@@ -212,7 +212,7 @@
             // 
             this.rtbx_kinhNghiem.BackColor = System.Drawing.Color.White;
             this.rtbx_kinhNghiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbx_kinhNghiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_kinhNghiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rtbx_kinhNghiem.Location = new System.Drawing.Point(3, 340);
             this.rtbx_kinhNghiem.Name = "rtbx_kinhNghiem";
             this.rtbx_kinhNghiem.ReadOnly = true;
@@ -245,7 +245,7 @@
             // 
             this.rtbx_hoatDong.BackColor = System.Drawing.Color.White;
             this.rtbx_hoatDong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbx_hoatDong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_hoatDong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rtbx_hoatDong.Location = new System.Drawing.Point(3, 493);
             this.rtbx_hoatDong.Name = "rtbx_hoatDong";
             this.rtbx_hoatDong.ReadOnly = true;
@@ -278,7 +278,7 @@
             // 
             this.rtbx_giaiThuong.BackColor = System.Drawing.Color.White;
             this.rtbx_giaiThuong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbx_giaiThuong.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_giaiThuong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rtbx_giaiThuong.Location = new System.Drawing.Point(3, 646);
             this.rtbx_giaiThuong.Name = "rtbx_giaiThuong";
             this.rtbx_giaiThuong.ReadOnly = true;
@@ -311,7 +311,7 @@
             // 
             this.rtbx_chungChi.BackColor = System.Drawing.Color.White;
             this.rtbx_chungChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbx_chungChi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.rtbx_chungChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.rtbx_chungChi.Location = new System.Drawing.Point(3, 799);
             this.rtbx_chungChi.Name = "rtbx_chungChi";
             this.rtbx_chungChi.ReadOnly = true;

@@ -89,7 +89,7 @@ namespace Project_Windows_04
 
         public UngVien_Tin thucThi_chiTietCV(string IdCandidate)
         {
-            using (var context = new DeTai_02_Entities()) // Thay YourDbContext bằng tên DbContext thực tế của bạn
+            using (var context = new DeTai_02_Entities())
             {
                 var ungVienTin = (from ungVien in context.UNGVIEN
                                   join cv in context.CVs on ungVien.Id equals cv.Id

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using DevExpress.Data.ODataLinq.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
@@ -134,6 +136,38 @@ namespace Project_Windows_04
             db.thucThi_load_tinTuyenDung(flpl, kieuNguoiDung);
         }
 
+        public void load_tinXinViec(FlowLayoutPanel flpl, Panel pnl_chiTietTinXinViec, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox, string Id)
+        {
+            using (var context = new DeTai_02_Entities())
+            {
+                try
+                {
+                    var tinXinViec = context.TinXinViec
+                                            .Where(t => t.Id == Id)
+                                            .ToList();
+
+                    foreach (var i in tinXinViec)
+                    {
+                        //  thiết lập và add tin xin việc đã đăng vào flpl_tinDaDang
+                        UC_TInXinViec_DaDang uc_TinXinViec_DaDang = new UC_TInXinViec_DaDang();
+                        
+                        uc_TinXinViec_DaDang.pbx_avatar.Image = Image.FromFile(i.Avatar);
+                        uc_TinXinViec_DaDang.lbl_tenUV.Text = i.Name;
+                        uc_TinXinViec_DaDang.lbl_thoiGian.Text = i.DatePosted;
+
+                        uc_TinXinViec_DaDang.Click += (s, ev) => Uc_TinXinViec_DaDang_Click(s, ev, pnl_chiTietTinXinViec, flpl_danhSachTinNhan, pnl_chatBox, i.Id, i.DatePosted);
+                        uc_TinXinViec_DaDang.btn_xoaTin.Click += (s, ev) => Btn_xoaTin_Click(s, ev, i.Id, i.DatePosted);
+
+                        flpl.Controls.Add(uc_TinXinViec_DaDang);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         public void load_thuXacNhan(FlowLayoutPanel flpl, string Id)
         {
             using (var dbContext = new DeTai_02_Entities())
@@ -200,5 +234,212 @@ namespace Project_Windows_04
             return db.thucThi_layDinhDang_UV(Id, tenRtbx);
         }
 
+        public void Btn_gui_Click(object sender, EventArgs e, FlowLayoutPanel flpl_tinDaDang, Panel pnl_chiTietTinXinViec, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox, UngVien_Tin uv, UC_TinXinViec uc)
+        {
+            using (var dbContext = new DeTai_02_Entities())
+            {
+                try
+                {
+                    string thoiGian = DateTime.Now.ToString();
+
+                    if (!string.IsNullOrEmpty(uc.rtbx_noiDung.Text))
+                    {
+                        dbContext.TinXinViec.Add(new TinXinViec
+                        {
+                            Id = uv.Id,
+                            Avatar = uv.AnhDaiDien,
+                            DatePosted = thoiGian,
+                            Name = uv.TenUV,
+                            Content = uc.rtbx_noiDung.Text
+                        });
+
+                        dbContext.SaveChanges();
+
+                        //  thiết lập và add tin xin việc đã đăng vào flpl_tinDaDang
+                        UC_TInXinViec_DaDang uc_TinXinViec_DaDang = new UC_TInXinViec_DaDang();
+
+                        uc_TinXinViec_DaDang.pbx_avatar.Image = Image.FromFile(uv.AnhDaiDien);
+                        uc_TinXinViec_DaDang.lbl_tenUV.Text = uv.TenUV;
+                        uc_TinXinViec_DaDang.lbl_thoiGian.Text = thoiGian;
+
+                        uc_TinXinViec_DaDang.Click += (s, ev) => Uc_TinXinViec_DaDang_Click(s, ev, pnl_chiTietTinXinViec, flpl_danhSachTinNhan, pnl_chatBox, uv.Id, thoiGian);
+                        uc_TinXinViec_DaDang.btn_xoaTin.Click += (s, ev) => Btn_xoaTin_Click(s, ev, uv.Id, thoiGian);
+
+                        flpl_tinDaDang.Controls.Add(uc_TinXinViec_DaDang);
+
+                        MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show("You must fill in all information!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("The article was posted previously!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void Btn_xoaTin_Click(object sender, EventArgs e, string Id, string thoiGian)
+        {
+            using (var context = new DeTai_02_Entities())
+            {
+                var tinCanXoa = context.TinXinViec.Where(a => a.Id == Id && a.DatePosted == thoiGian).ToList();
+                var tinNhanCanXoa = context.TinNhan.Where(a => a.IdCandidate == Id && a.DatePosted_up == thoiGian).ToList();
+
+                if (tinCanXoa.Any())
+                {
+                    context.TinXinViec.RemoveRange(tinCanXoa);
+                    context.SaveChanges();
+
+                    context.TinNhan.RemoveRange(tinNhanCanXoa);
+                    context.SaveChanges();
+
+                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No records found to delete.", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void Uc_TinXinViec_DaDang_Click(object sender, EventArgs e, Panel pnl_chiTietXinViec, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox, string Id, string thoiGian)
+        {
+            pnl_chiTietXinViec.Controls.Clear();
+
+            using (var context = new DeTai_02_Entities())
+            {
+                var t = (from tin in context.TinXinViec
+                         where tin.Id == Id && tin.DatePosted == thoiGian
+                         select tin).FirstOrDefault();
+
+                if (t == null)
+                {
+                    MessageBox.Show("Not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                UC_TinXinViec uc = new UC_TinXinViec();
+
+                uc.pbx_avatar.Image = Image.FromFile(t.Avatar);
+                uc.lbl_tenUV.Text = t.Name;
+                uc.lbl_thoiGianDang.Text = t.DatePosted;
+                uc.rtbx_noiDung.Text = t.Content;
+                //  phải gọi hàm này để tùy chỉnh lại kích thước cho phù hợp, nếu ko gọi hàm này thì khi gõ chữ thì sự kiện textchange mới xảy ra
+                uc.loadRtbx(uc.rtbx_noiDung);
+
+                uc.Dock = DockStyle.Top;
+
+                uc.btn_gui.Enabled = true;
+                uc.btn_chinhSua.Click += (s, ev) => Btn_chinhSua_Click(s, ev, Id, thoiGian, uc);
+                uc.btn_binhLuan.Click += (s, ev) => Btn_binhLuan_Click(s, ev, Id, thoiGian, flpl_danhSachTinNhan, pnl_chatBox);
+
+                flpl_danhSachTinNhan.Controls.Clear();
+                pnl_chatBox.Controls.Clear();
+                pnl_chiTietXinViec.Controls.Add(uc);
+            }
+        }
+
+        private void Btn_binhLuan_Click(object sender, EventArgs e, string Id, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox)
+        {
+            flpl_danhSachTinNhan.Controls.Clear();
+
+            UC_ChatBox uc_chatBox = new UC_ChatBox();
+
+            uc_chatBox.btn_gui.Click += (s, ev) => Btn_guiTinNhan_Click(s, ev, Id, thoiGian, uc_chatBox.rtbx_boxChat, flpl_danhSachTinNhan, pnl_chatBox);
+
+            pnl_chatBox.Controls.Add(uc_chatBox);
+
+            load_danhSachTinNhan(Id, thoiGian, flpl_danhSachTinNhan);
+        }
+
+        private void Btn_guiTinNhan_Click(object sender, EventArgs e, string Id, string thoiGian, RichTextBox rtbx, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox)
+        {
+            using (var context = new DeTai_02_Entities())
+            {
+                var t = (from tin in context.TinXinViec
+                         where tin.Id == Id && tin.DatePosted == thoiGian
+                         select tin).FirstOrDefault();
+
+                string time = DateTime.Now.ToString();
+
+                context.TinNhan.Add(new TinNhan
+                {
+                    IdCandidate = Id,
+                    DatePosted_up = thoiGian,
+                    DateSent = time,
+                    Avatar = t.Avatar,
+                    Name = t.Name,
+                    Content = rtbx.Text
+                });
+
+                context.SaveChanges();
+
+                UC_TinNhan uc_tinNhan = new UC_TinNhan();
+                uc_tinNhan.pbx_avatar.Image = Image.FromFile(t.Avatar);
+                uc_tinNhan.lbl_tenUV.Text = t.Name;
+                uc_tinNhan.lbl_thoiGianDang.Text = time;
+                uc_tinNhan.rtbx_noiDung.Text = rtbx.Text;
+
+                uc_tinNhan.loadRtbx(uc_tinNhan.rtbx_noiDung);
+
+                flpl_danhSachTinNhan.Controls.Add(uc_tinNhan);
+
+                rtbx.Text = "";
+            }
+        }
+
+        private void load_danhSachTinNhan(string Id, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan)
+        {
+            using (var context = new DeTai_02_Entities())
+            {
+                var t = (from tin in context.TinNhan
+                         where tin.IdCandidate == Id && tin.DatePosted_up == thoiGian
+                         select tin).ToList();
+
+                foreach (var i in t)
+                {
+                    UC_TinNhan uc_tinNhan = new UC_TinNhan();
+                    uc_tinNhan.pbx_avatar.Image = Image.FromFile(i.Avatar);
+                    uc_tinNhan.lbl_tenUV.Text = i.Name;
+                    uc_tinNhan.lbl_thoiGianDang.Text = i.DateSent;
+                    uc_tinNhan.rtbx_noiDung.Text = i.Content;
+
+                    uc_tinNhan.loadRtbx(uc_tinNhan.rtbx_noiDung);
+
+                    flpl_danhSachTinNhan.Controls.Add(uc_tinNhan);
+                }
+            }
+        }
+
+        public void Btn_chinhSua_Click(object sender, EventArgs e, string Id, string thoiGian, UC_TinXinViec uc)
+        {
+            using (var context = new DeTai_02_Entities())
+            {
+                try
+                {
+                    var t = (from tin in context.TinXinViec
+                             where tin.Id == Id && tin.DatePosted == thoiGian
+                             select tin).FirstOrDefault();
+
+                    if (t != null)
+                    {
+                        t.Content = uc.rtbx_noiDung.Text;
+
+                        context.SaveChanges();
+
+                        MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not found!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

@@ -50,6 +50,7 @@
             this.Name = "Main_TrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_TrangChu_Load);
             this.ResumeLayout(false);
 

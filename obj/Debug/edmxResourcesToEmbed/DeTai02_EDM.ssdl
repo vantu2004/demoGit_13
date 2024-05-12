@@ -15,7 +15,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Avatar" Type="varchar" MaxLength="100" />
+    <Property Name="Avatar" Type="varchar" MaxLength="500" />
     <Property Name="JobPos" Type="nvarchar" MaxLength="62" />
     <Property Name="CareerGoal" Type="text" />
     <Property Name="Education" Type="text" />
@@ -58,7 +58,7 @@
     </Key>
     <Property Name="IdCompany" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="IconCompany" Type="varchar" MaxLength="100" />
+    <Property Name="IconCompany" Type="varchar" MaxLength="500" />
     <Property Name="Job" Type="nvarchar" MaxLength="30" />
     <Property Name="JobName" Type="nvarchar" MaxLength="62" />
     <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
@@ -150,6 +150,30 @@
     <Property Name="UserType" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="UserName" Type="varchar" MaxLength="32" Nullable="false" />
     <Property Name="UserPassword" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TinNhan">
+    <Key>
+      <PropertyRef Name="IdCandidate" />
+      <PropertyRef Name="DatePosted_up" />
+      <PropertyRef Name="DateSent" />
+    </Key>
+    <Property Name="IdCandidate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DatePosted_up" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateSent" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Avatar" Type="varchar" MaxLength="200" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="Content" Type="text" />
+  </EntityType>
+  <EntityType Name="TinXinViec">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DatePosted" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DatePosted" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Avatar" Type="varchar" MaxLength="200" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="Content" Type="text" />
   </EntityType>
   <EntityType Name="UNGVIEN">
     <Key>
@@ -305,6 +329,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__TinNhan__IdCandi__3F3159AB">
+    <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
+    <End Role="TinNhan" Type="Self.TinNhan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TinNhan">
+        <PropertyRef Name="IdCandidate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TinXinViec__Id__2C1E8537">
+    <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
+    <End Role="TinXinViec" Type="Self.TinXinViec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TinXinViec">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__UNGVIEN__Id__6E01572D">
     <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
     <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="0..1" />
@@ -329,6 +377,8 @@
     <EntitySet Name="LuuTin" EntityType="Self.LuuTin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NHATUYENDUNG" EntityType="Self.NHATUYENDUNG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinNhan" EntityType="Self.TinNhan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinXinViec" EntityType="Self.TinXinViec" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UNGVIEN" EntityType="Self.UNGVIEN" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Applicati__IdCan__42ACE4D4" Association="Self.FK__Applicati__IdCan__42ACE4D4">
       <End Role="UNGVIEN" EntitySet="UNGVIEN" />
@@ -373,6 +423,14 @@
     <AssociationSet Name="FK__NHATUYENDUNG__Id__6A30C649" Association="Self.FK__NHATUYENDUNG__Id__6A30C649">
       <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
       <End Role="NHATUYENDUNG" EntitySet="NHATUYENDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TinNhan__IdCandi__3F3159AB" Association="Self.FK__TinNhan__IdCandi__3F3159AB">
+      <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+      <End Role="TinNhan" EntitySet="TinNhan" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TinXinViec__Id__2C1E8537" Association="Self.FK__TinXinViec__Id__2C1E8537">
+      <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+      <End Role="TinXinViec" EntitySet="TinXinViec" />
     </AssociationSet>
     <AssociationSet Name="FK__UNGVIEN__Id__6E01572D" Association="Self.FK__UNGVIEN__Id__6E01572D">
       <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />

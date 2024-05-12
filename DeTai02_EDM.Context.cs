@@ -37,5 +37,7 @@ namespace Project_Windows_04
         public virtual DbSet<NHATUYENDUNG> NHATUYENDUNG { get; set; }
         public virtual DbSet<TAIKHOAN> TAIKHOAN { get; set; }
         public virtual DbSet<UNGVIEN> UNGVIEN { get; set; }
+        public virtual DbSet<TinXinViec> TinXinViec { get; set; }
+        public virtual DbSet<TinNhan> TinNhan { get; set; }
     }
 }

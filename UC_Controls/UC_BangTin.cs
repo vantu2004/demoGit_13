@@ -16,6 +16,7 @@ namespace Project_Windows_04
         public UC_BangTin()
         {
             InitializeComponent();
+            
         }
 
         public void cbx_loc_Luong_SelectedIndexChanged(object sender, EventArgs e)
@@ -103,6 +104,14 @@ namespace Project_Windows_04
             return false;
         }
 
+        private void btn_taiLai_Click(object sender, EventArgs e)
+        {
+            foreach (Control control in flpl_danhSachTinTuyenDung.Controls)
+            {
+                control.Visible = true;
+            }
+        }
+
         public void cbx_loc_sapXep_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedRange = cbx_loc_sapXep.SelectedItem.ToString();
@@ -130,14 +139,43 @@ namespace Project_Windows_04
                     flpl_danhSachTinTuyenDung.Controls.Add(uc);
                 }
             }
+            sapXep();
         }
 
-        private void btn_taiLai_Click(object sender, EventArgs e)
+        public void sapXep()
         {
+            List<UserControl> visibleControls = new List<UserControl>();
+            List<UserControl> hiddenControls = new List<UserControl>();
+
             foreach (Control control in flpl_danhSachTinTuyenDung.Controls)
             {
-                control.Visible = true;
+                if (control is UC_TinTuyenDung ucTinTuyenDung)
+                {
+                    if (ucTinTuyenDung.pbx_hanChot.Visible)
+                    {
+                        visibleControls.Add(ucTinTuyenDung);
+                    }
+                    else
+                    {
+                        hiddenControls.Add(ucTinTuyenDung);
+                    }
+                }
+            }
+            // Xóa tất cả các UserControl hiện có trong flpl_danhSachTinTuyenDung
+            flpl_danhSachTinTuyenDung.Controls.Clear();
+
+            // Thêm các UserControl không hiện vào trước
+            foreach (UserControl control in hiddenControls)
+            {
+                flpl_danhSachTinTuyenDung.Controls.Add(control);
+            }
+
+            // Thêm các UserControl hiện vào sau
+            foreach (UserControl control in visibleControls)
+            {
+                flpl_danhSachTinTuyenDung.Controls.Add(control);
             }
         }
+
     }
 }

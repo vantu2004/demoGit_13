@@ -133,6 +133,16 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5f42baf641b1ee000404b6f8 {
+            get {
+                object obj = ResourceManager.GetObject("5f42baf641b1ee000404b6f8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _CITYPNG_COM_Flat_Green_Like_Heart_Icon_Silhouette_Transparent_Background___4000x4000 {
             get {
                 object obj = ResourceManager.GetObject("[CITYPNG.COM]Flat Green Like Heart Icon Silhouette Transparent Background - 4000x" +
@@ -204,6 +214,16 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cv {
+            get {
+                object obj = ResourceManager.GetObject("cv", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap date_and_time_icon {
             get {
                 object obj = ResourceManager.GetObject("date-and-time-icon", resourceCulture);
@@ -224,6 +244,16 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap expired_stamp_png {
+            get {
+                object obj = ResourceManager.GetObject("expired-stamp-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap favpng_dollar_sign_currency_symbol_united_states_dollar_icon {
             get {
                 object obj = ResourceManager.GetObject("favpng_dollar-sign-currency-symbol-united-states-dollar-icon", resourceCulture);
@@ -237,6 +267,26 @@ namespace Project_Windows_04.Properties {
         internal static System.Drawing.Bitmap favpng_dollar_sign_currency_symbol_united_states_dollar_icon1 {
             get {
                 object obj = ResourceManager.GetObject("favpng_dollar-sign-currency-symbol-united-states-dollar-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap filter_44_32 {
+            get {
+                object obj = ResourceManager.GetObject("filter-44-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap filter_icon_download_free_png_images_70360 {
+            get {
+                object obj = ResourceManager.GetObject("filter-icon-download-free-png-images-70360", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -382,6 +432,17 @@ namespace Project_Windows_04.Properties {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3." +
                         "5629845315234931599934", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_chat_room_online_chat_web_chat_message_box_5acea927f288e31 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e31" +
+                        "", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -720,6 +781,16 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap klipartz1 {
+            get {
+                object obj = ResourceManager.GetObject("klipartz1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lovepik_com_400306429_photo_album {
             get {
                 object obj = ResourceManager.GetObject("Lovepik_com-400306429-photo-album", resourceCulture);
@@ -900,6 +971,36 @@ namespace Project_Windows_04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngegg123 {
+            get {
+                object obj = ResourceManager.GetObject("pngegg123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngegg12345 {
+            get {
+                object obj = ResourceManager.GetObject("pngegg12345", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngfind_com_bell_icon_png_49203 {
+            get {
+                object obj = ResourceManager.GetObject("pngfind.com-bell-icon-png-49203", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngfind_com_ticket_icon_png_3159127 {
             get {
                 object obj = ResourceManager.GetObject("pngfind.com-ticket-icon-png-3159127", resourceCulture);
@@ -983,6 +1084,16 @@ namespace Project_Windows_04.Properties {
         internal static System.Drawing.Bitmap pngwing4 {
             get {
                 object obj = ResourceManager.GetObject("pngwing4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reload_icon {
+            get {
+                object obj = ResourceManager.GetObject("reload-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1084,6 +1195,16 @@ namespace Project_Windows_04.Properties {
         internal static System.Drawing.Bitmap user_login_avatar_11925 {
             get {
                 object obj = ResourceManager.GetObject("user-login-avatar-11925", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vecteezy_bell_icon_png_transparent_notification_png_10366215 {
+            get {
+                object obj = ResourceManager.GetObject("vecteezy_bell-icon-png-transparent-notification-png_10366215", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

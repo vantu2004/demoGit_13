@@ -48,6 +48,11 @@ namespace Project_Windows_04
             UC_Main_TrangChu.btn_dangXuat.Hide();
 
             TC_DAO.load_tinTuyenDung(UC_Main_TrangChu.flpl_danhSachTinTuyenDung, "null");
+            UC_Main_TrangChu.sapXep();
+
+            //  load biểu đồ cột, tròn cho bảng tin
+            ThongKe.thucThi_load_BieuDoTron_BangTin(UC_Main_TrangChu.chart_soCV_theoNganh);
+            ThongKe.thucThi_load_BieuDoCot_BangTin(UC_Main_TrangChu.chart_soCongViec_soUV_theoThang);
         }
     }
 }

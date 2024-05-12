@@ -20,6 +20,8 @@ namespace Project_Windows_04
             this.Applications = new HashSet<Applications>();
             this.LuuTin = new HashSet<LuuTin>();
             this.LuuCV = new HashSet<LuuCV>();
+            this.TinXinViec = new HashSet<TinXinViec>();
+            this.TinNhan = new HashSet<TinNhan>();
         }
     
         public string Id { get; set; }
@@ -40,5 +42,9 @@ namespace Project_Windows_04
         public virtual TAIKHOAN TAIKHOAN { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LuuCV> LuuCV { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TinXinViec> TinXinViec { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TinNhan> TinNhan { get; set; }
     }
 }

@@ -26,6 +26,7 @@ namespace Project_Windows_04
             UC_BangTin_NTD.btn_dangTinTuyenDung.Hide();
             UC_BangTin_NTD.btn_dangNhap.Hide();
             UC_BangTin_NTD.btn_dangKy.Hide();
+           
 
             //  load toàn bộ dữ liệu của NHATUYENDUNG và JobPostings lên flowlayoutpanel, click vào để xem chi tiết tin, truyền IdCompany và Employer để xác định mỗi tin đc đăng
             NTD_DAO.load_tinTuyenDung(UC_BangTin_NTD.flpl_danhSachTinTuyenDung, "Employer");
@@ -36,8 +37,22 @@ namespace Project_Windows_04
             //  load cụ thể 1 vài thông tin về CV đã gửi mail, đồng thời hiện lịch phỏng vấn
             NTD_DAO.load_lichPhongVan(flpl_lichPhongVan, IdCompany);
 
+            // load toàn bộ tin xin việc lên flpl_tinXinViecDaDang
+            NTD_DAO.load_tinXinViec(flpl_tinDaDang01, flpl_chiTietTinXinViec, flpl_tinNhan, pnl_chatBox, IdCompany);
+
             //  tạo IdJobPostings để dùng cho các hàm định dạng rtbx và hàm hoàn tất
             tao_IdJobPostings();
+
+            //  sắp tin trong bảng tin, mặc định tin hết hạn bị đẩy xuống dưới
+            UC_BangTin_NTD.sapXep();
+
+            // load biểu đồ hình tròn, cột
+            load_BieuDoTron();
+            load_BieuDoCot();
+
+            //  load biểu đồ tròn, cột cho bảng tin
+            ThongKe.thucThi_load_BieuDoTron_BangTin(UC_BangTin_NTD.chart_soCV_theoNganh);
+            ThongKe.thucThi_load_BieuDoCot_BangTin(UC_BangTin_NTD.chart_soCongViec_soUV_theoThang);
         }
 
         private void tao_IdJobPostings()
@@ -153,7 +168,7 @@ namespace Project_Windows_04
 
                 //  mặc định khi tạo tin thì cũng add 1 UC_tinTuyenDung và 1 UC_tinDaDang vào flowlayoupanel
                 UC_BangTin_NTD.flpl_danhSachTinTuyenDung.Controls.Add(xuat_TT.them_tinTuyenDung(t, t.UserType));
-                flpl_tinDaDang.Controls.Add(xuat_TT.them_tinDaDang(t.IdCompany, t.IdJobPostings, t.TenCongViec, t.NgayDang));
+                flpl_tinDaDang.Controls.Add(xuat_TT.them_tinDaDang(t.IdCompany, t.IdJobPostings, t.TenCongViec, t.NgayDang, t.HanChot));
 
                 NTD_DAO.taoTin(t);
 
@@ -179,6 +194,58 @@ namespace Project_Windows_04
             {
                 NTD_DAO.dinhDang_rtbx_NTD(i);
             }
+        }
+
+        //  lọc ngày trong lịch phỏng vấn
+        private void btn_locTheoNgay_Click(object sender, EventArgs e)
+        {
+            hienFullLichPV();
+
+            foreach (Control ctl in flpl_lichPhongVan.Controls)
+            {
+                if (ctl is UC_LichPhongVan uc)
+                {
+                    if (Convert.ToDateTime(uc.lbl_ngayPhongVan.Text).ToShortDateString() != dtpr_locTheoNgay.Value.ToShortDateString())
+                        uc.Visible = false;
+                }   
+            }    
+        }
+
+        private void btn_reload_lichPV_Click(object sender, EventArgs e)
+        {
+            NTD_DAO.sapXepLichPV(hienFullLichPV());
+        }
+
+        //  vì sự kiện click lọc theo ngày đã ẩn đi 1 số UC_lichPhongVan nên hàm này giúp hiện lại toàn bộ lịch phỏng vấn
+        private FlowLayoutPanel hienFullLichPV()
+        {
+            foreach (Control ctl in flpl_lichPhongVan.Controls)
+            {
+                if (ctl is UC_LichPhongVan uc)
+                {
+                    uc.Visible = true;
+                }
+            }
+            return flpl_lichPhongVan;
+        }
+        
+        private void load_BieuDoTron()
+        {
+            ThongKe.thucThi_load_BieuDoTron(chart_soCV_theoNganh, this.IdCompany);
+        }
+
+        private void load_BieuDoCot()
+        {
+            ThongKe.thucThi_load_BieuDoCot(chart_soCongViec_soUV_theoThang, this.IdCompany);
+        }
+
+        private void btn_newChat_Click(object sender, EventArgs e)
+        {
+            flpl_chiTietTinXinViec.Controls.Clear();
+            flpl_tinNhan.Controls.Clear();
+            pnl_chatBox.Controls.Clear();
+
+            NTD_DAO.load_tinXinViec(flpl_tinDaDang, flpl_chiTietTinXinViec, flpl_tinNhan, pnl_chatBox, this.IdCompany);
         }
     }
 }

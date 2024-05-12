@@ -17,7 +17,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Avatar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="JobPos" Type="String" MaxLength="62" FixedLength="false" Unicode="true" />
     <Property Name="CareerGoal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="Education" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -64,7 +64,7 @@
     </Key>
     <Property Name="IdCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="IdJobPostings" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="IconCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IconCompany" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="Job" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="JobName" Type="String" MaxLength="62" FixedLength="false" Unicode="true" />
     <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" />
@@ -188,6 +188,8 @@
     <NavigationProperty Name="LuuTin" Relationship="Self.FK__LuuTin__IdCandid__3B95D2F1" FromRole="UNGVIEN" ToRole="LuuTin" />
     <NavigationProperty Name="TAIKHOAN" Relationship="Self.FK__UNGVIEN__Id__6E01572D" FromRole="UNGVIEN" ToRole="TAIKHOAN" />
     <NavigationProperty Name="LuuCV" Relationship="DeTai_02_Model.FK__LuuCV__IdCandida__71F1E3A2" FromRole="UNGVIEN" ToRole="LuuCV" />
+    <NavigationProperty Name="TinXinViec" Relationship="DeTai_02_Model.FK__TinXinViec__Id__2C1E8537" FromRole="UNGVIEN" ToRole="TinXinViec" />
+    <NavigationProperty Name="TinNhan" Relationship="DeTai_02_Model.FK__TinNhan__IdCandi__3F3159AB" FromRole="UNGVIEN" ToRole="TinNhan" />
   </EntityType>
   <Association Name="FK__Applicati__IdCan__42ACE4D4">
     <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
@@ -376,6 +378,16 @@
       <End Role="UNGVIEN" EntitySet="UNGVIEN" />
       <End Role="LuuCV" EntitySet="LuuCV" />
     </AssociationSet>
+    <EntitySet Name="TinXinViec" EntityType="DeTai_02_Model.TinXinViec" />
+    <AssociationSet Name="FK__TinXinViec__Id__2C1E8537" Association="DeTai_02_Model.FK__TinXinViec__Id__2C1E8537">
+      <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+      <End Role="TinXinViec" EntitySet="TinXinViec" />
+    </AssociationSet>
+    <EntitySet Name="TinNhan" EntityType="DeTai_02_Model.TinNhan" />
+    <AssociationSet Name="FK__TinNhan__IdCandi__3F3159AB" Association="DeTai_02_Model.FK__TinNhan__IdCandi__3F3159AB">
+      <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+      <End Role="TinNhan" EntitySet="TinNhan" />
+    </AssociationSet>
   </EntityContainer>
   <Association Name="FK__LuuCV__70FDBF69">
     <End Type="DeTai_02_Model.JobPostings" Role="JobPostings" Multiplicity="1" />
@@ -399,6 +411,56 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="LuuCV">
+        <PropertyRef Name="IdCandidate" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TinXinViec">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DatePosted" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DatePosted" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Avatar" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UNGVIEN" Relationship="DeTai_02_Model.FK__TinXinViec__Id__2C1E8537" FromRole="TinXinViec" ToRole="UNGVIEN" />
+  </EntityType>
+  <Association Name="FK__TinXinViec__Id__2C1E8537">
+    <End Type="DeTai_02_Model.UNGVIEN" Role="UNGVIEN" Multiplicity="1" />
+    <End Type="DeTai_02_Model.TinXinViec" Role="TinXinViec" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TinXinViec">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TinNhan">
+    <Key>
+      <PropertyRef Name="IdCandidate" />
+      <PropertyRef Name="DatePosted_up" />
+      <PropertyRef Name="DateSent" />
+    </Key>
+    <Property Name="IdCandidate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DatePosted_up" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateSent" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Avatar" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="UNGVIEN" Relationship="DeTai_02_Model.FK__TinNhan__IdCandi__3F3159AB" FromRole="TinNhan" ToRole="UNGVIEN" />
+  </EntityType>
+  <Association Name="FK__TinNhan__IdCandi__3F3159AB">
+    <End Type="DeTai_02_Model.UNGVIEN" Role="UNGVIEN" Multiplicity="1" />
+    <End Type="DeTai_02_Model.TinNhan" Role="TinNhan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNGVIEN">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TinNhan">
         <PropertyRef Name="IdCandidate" />
       </Dependent>
     </ReferentialConstraint>

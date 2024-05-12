@@ -20,7 +20,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Avatar" Type="varchar" MaxLength="100" />
+          <Property Name="Avatar" Type="varchar" MaxLength="500" />
           <Property Name="JobPos" Type="nvarchar" MaxLength="62" />
           <Property Name="CareerGoal" Type="text" />
           <Property Name="Education" Type="text" />
@@ -63,7 +63,7 @@
           </Key>
           <Property Name="IdCompany" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="IconCompany" Type="varchar" MaxLength="100" />
+          <Property Name="IconCompany" Type="varchar" MaxLength="500" />
           <Property Name="Job" Type="nvarchar" MaxLength="30" />
           <Property Name="JobName" Type="nvarchar" MaxLength="62" />
           <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
@@ -155,6 +155,30 @@
           <Property Name="UserType" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="UserName" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="UserPassword" Type="varchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TinNhan">
+          <Key>
+            <PropertyRef Name="IdCandidate" />
+            <PropertyRef Name="DatePosted_up" />
+            <PropertyRef Name="DateSent" />
+          </Key>
+          <Property Name="IdCandidate" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DatePosted_up" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateSent" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Avatar" Type="varchar" MaxLength="200" />
+          <Property Name="Name" Type="varchar" MaxLength="500" />
+          <Property Name="Content" Type="text" />
+        </EntityType>
+        <EntityType Name="TinXinViec">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="DatePosted" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DatePosted" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Avatar" Type="varchar" MaxLength="200" />
+          <Property Name="Name" Type="varchar" MaxLength="500" />
+          <Property Name="Content" Type="text" />
         </EntityType>
         <EntityType Name="UNGVIEN">
           <Key>
@@ -310,6 +334,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__TinNhan__IdCandi__3F3159AB">
+          <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
+          <End Role="TinNhan" Type="Self.TinNhan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNGVIEN">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TinNhan">
+              <PropertyRef Name="IdCandidate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TinXinViec__Id__2C1E8537">
+          <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
+          <End Role="TinXinViec" Type="Self.TinXinViec" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNGVIEN">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TinXinViec">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__UNGVIEN__Id__6E01572D">
           <End Role="TAIKHOAN" Type="Self.TAIKHOAN" Multiplicity="1" />
           <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="0..1" />
@@ -334,6 +382,8 @@
           <EntitySet Name="LuuTin" EntityType="Self.LuuTin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NHATUYENDUNG" EntityType="Self.NHATUYENDUNG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TinNhan" EntityType="Self.TinNhan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TinXinViec" EntityType="Self.TinXinViec" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UNGVIEN" EntityType="Self.UNGVIEN" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Applicati__IdCan__42ACE4D4" Association="Self.FK__Applicati__IdCan__42ACE4D4">
             <End Role="UNGVIEN" EntitySet="UNGVIEN" />
@@ -379,6 +429,14 @@
             <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
             <End Role="NHATUYENDUNG" EntitySet="NHATUYENDUNG" />
           </AssociationSet>
+          <AssociationSet Name="FK__TinNhan__IdCandi__3F3159AB" Association="Self.FK__TinNhan__IdCandi__3F3159AB">
+            <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+            <End Role="TinNhan" EntitySet="TinNhan" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TinXinViec__Id__2C1E8537" Association="Self.FK__TinXinViec__Id__2C1E8537">
+            <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+            <End Role="TinXinViec" EntitySet="TinXinViec" />
+          </AssociationSet>
           <AssociationSet Name="FK__UNGVIEN__Id__6E01572D" Association="Self.FK__UNGVIEN__Id__6E01572D">
             <End Role="TAIKHOAN" EntitySet="TAIKHOAN" />
             <End Role="UNGVIEN" EntitySet="UNGVIEN" />
@@ -405,7 +463,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Avatar" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="JobPos" Type="String" MaxLength="62" FixedLength="false" Unicode="true" />
           <Property Name="CareerGoal" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Education" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -452,7 +510,7 @@
           </Key>
           <Property Name="IdCompany" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="IdJobPostings" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="IconCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IconCompany" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Job" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="JobName" Type="String" MaxLength="62" FixedLength="false" Unicode="true" />
           <Property Name="Salary" Type="Decimal" Precision="10" Scale="2" />
@@ -576,6 +634,8 @@
           <NavigationProperty Name="LuuTin" Relationship="Self.FK__LuuTin__IdCandid__3B95D2F1" FromRole="UNGVIEN" ToRole="LuuTin" />
           <NavigationProperty Name="TAIKHOAN" Relationship="Self.FK__UNGVIEN__Id__6E01572D" FromRole="UNGVIEN" ToRole="TAIKHOAN" />
           <NavigationProperty Name="LuuCV" Relationship="DeTai_02_Model.FK__LuuCV__IdCandida__71F1E3A2" FromRole="UNGVIEN" ToRole="LuuCV" />
+          <NavigationProperty Name="TinXinViec" Relationship="DeTai_02_Model.FK__TinXinViec__Id__2C1E8537" FromRole="UNGVIEN" ToRole="TinXinViec" />
+          <NavigationProperty Name="TinNhan" Relationship="DeTai_02_Model.FK__TinNhan__IdCandi__3F3159AB" FromRole="UNGVIEN" ToRole="TinNhan" />
         </EntityType>
         <Association Name="FK__Applicati__IdCan__42ACE4D4">
           <End Role="UNGVIEN" Type="Self.UNGVIEN" Multiplicity="1" />
@@ -764,6 +824,16 @@
             <End Role="UNGVIEN" EntitySet="UNGVIEN" />
             <End Role="LuuCV" EntitySet="LuuCV" />
           </AssociationSet>
+          <EntitySet Name="TinXinViec" EntityType="DeTai_02_Model.TinXinViec" />
+          <AssociationSet Name="FK__TinXinViec__Id__2C1E8537" Association="DeTai_02_Model.FK__TinXinViec__Id__2C1E8537">
+            <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+            <End Role="TinXinViec" EntitySet="TinXinViec" />
+          </AssociationSet>
+          <EntitySet Name="TinNhan" EntityType="DeTai_02_Model.TinNhan" />
+          <AssociationSet Name="FK__TinNhan__IdCandi__3F3159AB" Association="DeTai_02_Model.FK__TinNhan__IdCandi__3F3159AB">
+            <End Role="UNGVIEN" EntitySet="UNGVIEN" />
+            <End Role="TinNhan" EntitySet="TinNhan" />
+          </AssociationSet>
         </EntityContainer>
         <Association Name="FK__LuuCV__70FDBF69">
           <End Type="DeTai_02_Model.JobPostings" Role="JobPostings" Multiplicity="1" />
@@ -787,6 +857,56 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="LuuCV">
+              <PropertyRef Name="IdCandidate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TinXinViec">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="DatePosted" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DatePosted" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Avatar" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UNGVIEN" Relationship="DeTai_02_Model.FK__TinXinViec__Id__2C1E8537" FromRole="TinXinViec" ToRole="UNGVIEN" />
+        </EntityType>
+        <Association Name="FK__TinXinViec__Id__2C1E8537">
+          <End Type="DeTai_02_Model.UNGVIEN" Role="UNGVIEN" Multiplicity="1" />
+          <End Type="DeTai_02_Model.TinXinViec" Role="TinXinViec" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNGVIEN">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TinXinViec">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TinNhan">
+          <Key>
+            <PropertyRef Name="IdCandidate" />
+            <PropertyRef Name="DatePosted_up" />
+            <PropertyRef Name="DateSent" />
+          </Key>
+          <Property Name="IdCandidate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DatePosted_up" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateSent" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Avatar" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UNGVIEN" Relationship="DeTai_02_Model.FK__TinNhan__IdCandi__3F3159AB" FromRole="TinNhan" ToRole="UNGVIEN" />
+        </EntityType>
+        <Association Name="FK__TinNhan__IdCandi__3F3159AB">
+          <End Type="DeTai_02_Model.UNGVIEN" Role="UNGVIEN" Multiplicity="1" />
+          <End Type="DeTai_02_Model.TinNhan" Role="TinNhan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UNGVIEN">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TinNhan">
               <PropertyRef Name="IdCandidate" />
             </Dependent>
           </ReferentialConstraint>
@@ -957,6 +1077,29 @@
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Address_C" ColumnName="Address_C" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TinXinViec">
+            <EntityTypeMapping TypeName="DeTai_02_Model.TinXinViec">
+              <MappingFragment StoreEntitySet="TinXinViec">
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TinNhan">
+            <EntityTypeMapping TypeName="DeTai_02_Model.TinNhan">
+              <MappingFragment StoreEntitySet="TinNhan">
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+                <ScalarProperty Name="DatePosted_up" ColumnName="DatePosted_up" />
+                <ScalarProperty Name="IdCandidate" ColumnName="IdCandidate" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

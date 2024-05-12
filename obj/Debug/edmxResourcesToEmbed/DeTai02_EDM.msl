@@ -164,5 +164,28 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TinXinViec">
+      <EntityTypeMapping TypeName="DeTai_02_Model.TinXinViec">
+        <MappingFragment StoreEntitySet="TinXinViec">
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TinNhan">
+      <EntityTypeMapping TypeName="DeTai_02_Model.TinNhan">
+        <MappingFragment StoreEntitySet="TinNhan">
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+          <ScalarProperty Name="DatePosted_up" ColumnName="DatePosted_up" />
+          <ScalarProperty Name="IdCandidate" ColumnName="IdCandidate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

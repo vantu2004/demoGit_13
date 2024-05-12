@@ -44,13 +44,18 @@
     <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraScheduler.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v22.2.Core.Desktop, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -167,6 +172,7 @@
       <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -316,6 +322,25 @@
     <Compile Include="TAIKHOAN.cs">
       <DependentUpon>DeTai02_EDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="ThongKe.cs" />
+    <Compile Include="TinNhan.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TinXinViec.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ChatBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ChatBox.Designer.cs">
+      <DependentUpon>UC_ChatBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Controls\UC_ChiTietCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_ChiTietCV.Designer.cs">
+      <DependentUpon>UC_ChiTietCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_Controls\UC_BangTin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -377,6 +402,30 @@
     <Compile Include="UC_Controls\UC_LichPhongVan.Designer.cs">
       <DependentUpon>UC_LichPhongVan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Controls\UC_TinLienQuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TinLienQuan.Designer.cs">
+      <DependentUpon>UC_TinLienQuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TinXinViec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TinXinViec.Designer.cs">
+      <DependentUpon>UC_TinXinViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TInXinViec_DaDang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TInXinViec_DaDang.Designer.cs">
+      <DependentUpon>UC_TInXinViec_DaDang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TinNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Controls\UC_TinNhan.Designer.cs">
+      <DependentUpon>UC_TinNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UNGVIEN.cs">
       <DependentUpon>DeTai02_EDM.tt</DependentUpon>
     </Compile>
@@ -407,6 +456,7 @@
     <EmbeddedResource Include="Form\Ứng viên\UngVien_TrangChu.resx">
       <DependentUpon>UngVien_TrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -418,8 +468,14 @@
     <EmbeddedResource Include="Form\Chi tiết\ChiTietThu.resx">
       <DependentUpon>ChiTietThu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_ChatBox.resx">
+      <DependentUpon>UC_ChatBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Controls\UC_BangTin.resx">
       <DependentUpon>UC_BangTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_ChiTietCV.resx">
+      <DependentUpon>UC_ChiTietCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Controls\UC_LichPhongVan.resx">
       <DependentUpon>UC_LichPhongVan.cs</DependentUpon>
@@ -441,6 +497,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Controls\UC_Thu.resx">
       <DependentUpon>UC_Thu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_TinLienQuan.resx">
+      <DependentUpon>UC_TinLienQuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_TinXinViec.resx">
+      <DependentUpon>UC_TinXinViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_TInXinViec_DaDang.resx">
+      <DependentUpon>UC_TInXinViec_DaDang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Controls\UC_TinNhan.resx">
+      <DependentUpon>UC_TinNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="DeTai02_EDM.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -472,6 +540,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\vecteezy_bell-icon-png-transparent-notification-png_10366215.png" />
     <None Include="Resources\z5011919728665_08ca092652c4fe51aa8a16cc1aac04a1.jpg" />
     <None Include="Resources\z4468612678019_a1ed4c31f8a777a04d3d7f81b4d58e66.jpg" />
     <None Include="Resources\Screenshot 2024-04-19 093538.png" />
@@ -525,8 +594,14 @@
       <DependentUpon>DeTai02_EDM.edmx</DependentUpon>
       <LastGenOutput>DeTai02_EDM.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\expired-stamp-png.png" />
+    <None Include="Resources\filter-icon-download-free-png-images-70360.png" />
+    <None Include="Resources\filter-44-32.png" />
+    <None Include="Resources\cv.png" />
+    <None Include="Resources\5f42baf641b1ee000404b6f8.png" />
     <Content Include="Resources\kisspng-clip-art-computer-icons-scalable-vector-graphics-p-earth-location-map-world-navigation-pin-marker-svg-5bf236c7224d20.4334433015426003911405.png" />
     <None Include="Resources\kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3.5629845315234931599934.png" />
+    <None Include="Resources\kisspng-computer-icons-chat-room-online-chat-web-chat-message-box-5acea927f288e3.56298453152349315999341.png" />
     <Content Include="Resources\kisspng-computer-icons-door-symbol-building-5b383c2f2dc4f1.6946621115304120791875.png" />
     <None Include="Resources\noun-experience-2036014.png" />
     <None Include="Resources\pngegg %2816%29.png" />
@@ -557,6 +632,7 @@
     <None Include="Resources\kisspng-computer-icons-public-key-certificate-font-awesome-5b2e4473618a98.7364413415297588353995.png" />
     <None Include="Resources\Lovepik_com-400306429-photo-album.png" />
     <None Include="Resources\kisspng-template-green-frame-5a7fd510f0a857.8461228615183270569857.png" />
+    <None Include="Resources\klipartz.com %281%291.png" />
     <Content Include="Resources\Lovepik_com-401714979-characters-of-different-professions.png" />
     <None Include="Resources\name-icon.png" />
     <None Include="Resources\NicePng_hamburger-menu-png_1276180.png" />
@@ -584,6 +660,10 @@
     <None Include="Resources\pngfind.com-ticket-icon-png-3159127.png" />
     <None Include="Resources\Roundicons-100-Free-Solid-Cancel.512.png" />
     <None Include="Resources\salary.png" />
+    <None Include="Resources\reload-icon.png" />
+    <None Include="Resources\pngfind.com-bell-icon-png-49203.png" />
+    <None Include="Resources\pngegg123.png" />
+    <None Include="Resources\pngegg12345.png" />
     <Content Include="Resources\Screenshot 2024-03-05 204513.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

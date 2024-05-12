@@ -16,5 +16,10 @@ namespace Project_Windows_04
         {
             InitializeComponent();
         }
+
+        private void UC_TinTuyenDung_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace Project_Windows_04
             UC_BangTin_UV.btn_dangTinTuyenDung.Hide();
             UC_BangTin_UV.btn_dangNhap.Hide();
             UC_BangTin_UV.btn_dangKy.Hide();
-
+            
             //  gọi sự kiện định dạng rtbx
             //  không thể ép sender về rtbx rồi dùng rtbx.Name nên buộc phải truyền vậy để lấy thuộc tính khóa RtbxStyle
             btn_mucTieuNgheNghiep.Click += (s, ev) => UngVien_ApDung_DinhDang_rtbx.Btn_dinhDang_rtbx_Click(s, ev, rtbx_mucTieuNgheNghiep, this.Id, list_UV_dinhDang);
@@ -52,6 +52,14 @@ namespace Project_Windows_04
             //  thay vì truyền userType thì truyền Id để dùng cho hàm Btn_ungTuyen_Click bên Xuat_ThongTin
             UV_DAO.load_tinTuyenDung(UC_BangTin_UV.flpl_danhSachTinTuyenDung, this.Id);
             UV_DAO.load_thuXacNhan(flpl_thuXacNhan, this.Id);
+            UV_DAO.load_tinXinViec(flpl_tinDaDang, pnl_chiTietTin, flpl_tinNhan, pnl_chatBox, this.Id);
+
+            //  sắp xếp các tin trong bảng tin, đẩy các tin hết hạn xuống dưới
+            UC_BangTin_UV.sapXep();
+
+            //  load biểu đồ cột, tròn cho bảng tin
+            ThongKe.thucThi_load_BieuDoTron_BangTin(UC_BangTin_UV.chart_soCV_theoNganh);
+            ThongKe.thucThi_load_BieuDoCot_BangTin(UC_BangTin_UV.chart_soCongViec_soUV_theoThang);
         }
 
         //  load hàm chức năng của phần lọc trong bảng tin
@@ -199,5 +207,28 @@ namespace Project_Windows_04
             if (dd != null)
                 UngVien_ApDung_DinhDang_rtbx.apDungDinhDang(rtbx, dd);
         }
+
+        private void btn_newChat_Click(object sender, EventArgs e)
+        {
+            pnl_chiTietTin.Controls.Clear();
+
+            //  lấy link avatar
+            UngVien_Tin uv = UV_DAO.chiTiet_CV(this.Id);
+
+            //  thiết lập và add chi tiết tin xin việc vào pnl_chiTietTin
+            UC_TinXinViec uc = new UC_TinXinViec();
+
+            uc.pbx_avatar.Image = Image.FromFile(uv.AnhDaiDien);
+            uc.lbl_tenUV.Text = uv.TenUV;
+            uc.Dock = DockStyle.Top;
+
+            uc.btn_gui.Click += (s, ev) => UV_DAO.Btn_gui_Click(s, ev, flpl_tinDaDang, pnl_chiTietTin, flpl_tinNhan, pnl_chatBox, uv, uc);
+            uc.btn_chinhSua.Enabled = true;
+
+            pnl_chiTietTin.Controls.Add(uc);
+
+        }
+
+
     }
 }

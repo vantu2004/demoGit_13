@@ -1,11 +1,13 @@
 ﻿using DevExpress.ClipboardSource.SpreadsheetML;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace Project_Windows_04
 {
@@ -35,7 +37,7 @@ namespace Project_Windows_04
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Applyed! \n" , "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -130,7 +132,7 @@ namespace Project_Windows_04
             }
         }
 
-        public void load_DS_CV(FlowLayoutPanel flpl, string idCompany, string idJobPostings)
+        public void load_DS_CV(FlowLayoutPanel flpl, Panel pnl, string idCompany, string idJobPostings)
         {
             using (var context = new DeTai_02_Entities())
             {
@@ -150,8 +152,8 @@ namespace Project_Windows_04
 
                 foreach (var item in applications)
                 {
-                    flpl.Controls.Add(xuat_TT.them_CV(item.Application.IdCompany, item.Application.IdJobPostings, item.Application.IdCandidate, item.Candidate.Fname, dt.ToString("dd/MM/yyyy")));
-                }
+                    flpl.Controls.Add(xuat_TT.them_CV(pnl, item.Application.IdCompany, item.Application.IdJobPostings, item.Application.IdCandidate, item.Candidate.Fname, dt.ToString("dd/MM/yyyy")));
+                }   
             }
         }
 
@@ -186,59 +188,97 @@ namespace Project_Windows_04
             }
         }
 
-        public void luuThu(Thu t)
+        //  trả true false để biết là có lưu thư thành công hay ko, nếu có thì hiện pbx_daGuiThu
+        public bool luuThu(Thu t)
+        {
+            using (var context = new DeTai_02_Entities())
+            {
+                string time = Convert.ToDateTime(t.NgayPhongVan).ToShortDateString() + " " + Convert.ToDateTime(t.ThoiGianPhongVan).ToShortTimeString();
+;
+                try
+                {
+                    if (kiemTraTrungLichHen(time, t.IdCompany, t.IdJobPostings))
+                    {
+                        // Lưu thư
+                        context.Letter.Add(new Letter
+                        {
+                            IdCompany = t.IdCompany,
+                            IdJobPostings = t.IdJobPostings,
+                            IdCandidate = t.IdCandidate,
+                            Sender = t.NguoiGui,
+                            Receiver = t.NguoiNhan,
+                            Title = t.ChuDe,
+                            Content = t.NoiDung,
+                            DateSent = t.NgayGui,
+                            InterviewDate = t.NgayPhongVan,
+                            InterViewTime = t.ThoiGianPhongVan
+                        });
+
+                        context.SaveChanges();
+
+                        // Lấy thông tin về công việc
+                        var jobDetails = chiTietTin(t.IdCompany, t.IdJobPostings);
+
+                        // Lấy thông tin về ứng viên
+                        var candidateDetails = chiTiet_CV(t.IdCandidate);
+
+                        // Lưu lịch phỏng vấn
+                        context.LichPhongVan.Add(new LichPhongVan
+                        {
+                            IdCompany = t.IdCompany,
+                            IdJobPostings = t.IdJobPostings,
+                            IdCandidate = t.IdCandidate,
+                            LinkAvatar = candidateDetails.AnhDaiDien,
+                            UpdateDate = jobDetails.NgayDang,
+                            InterviewDate = t.NgayPhongVan,
+                            InterviewTime = t.ThoiGianPhongVan,
+                            JobName = jobDetails.TenCongViec,
+                            CandidateName = candidateDetails.TenUV
+                        });
+                        context.SaveChanges();
+                        MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Appointment schedule overlapped!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("You have made an appointment with this employee. \n" , "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+            }
+        }
+
+        private bool kiemTraTrungLichHen(string time, string IdCompany, string IdJobPostings)
         {
             using (var context = new DeTai_02_Entities())
             {
                 try
                 {
-                    // Lưu thư
-                    context.Letter.Add(new Letter
+                    var allLetters = context.Letter
+                                            .Where(l => l.IdCompany == IdCompany && l.IdJobPostings == IdJobPostings)
+                                            .ToList();
+
+                    foreach (var l in allLetters)
                     {
-                        IdCompany = t.IdCompany,
-                        IdJobPostings = t.IdJobPostings,
-                        IdCandidate = t.IdCandidate,
-                        Sender = t.NguoiGui,
-                        Receiver = t.NguoiNhan,
-                        Title = t.ChuDe,
-                        Content = t.NoiDung,
-                        DateSent = t.NgayGui,
-                        InterviewDate = t.NgayPhongVan,
-                        InterViewTime = t.ThoiGianPhongVan
-                    });
+                        string time1 = Convert.ToDateTime(l.InterviewDate).ToShortDateString() + " " + Convert.ToDateTime(l.InterViewTime).ToShortTimeString();
 
-                    context.SaveChanges();
-
-                    // Lấy thông tin về công việc
-                    var jobDetails = chiTietTin(t.IdCompany, t.IdJobPostings);
-
-                    // Lấy thông tin về ứng viên
-                    var candidateDetails = chiTiet_CV(t.IdCandidate);
-
-                    // Lưu lịch phỏng vấn
-                    context.LichPhongVan.Add(new LichPhongVan
-                    {
-                        IdCompany = t.IdCompany,
-                        IdJobPostings = t.IdJobPostings,
-                        IdCandidate = t.IdCandidate,
-                        LinkAvatar = candidateDetails.AnhDaiDien,
-                        UpdateDate = jobDetails.NgayDang,
-                        InterviewDate = t.NgayPhongVan,
-                        InterviewTime = t.ThoiGianPhongVan,
-                        JobName = jobDetails.TenCongViec,
-                        CandidateName = candidateDetails.TenUV
-                    });
-
-                    context.SaveChanges();
-
-                    MessageBox.Show("Success!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (time == time1)
+                            return false;
+                    }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error! \n" + ex.Message, "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            return true;
         }
+
 
         public void luuTin(string tableName, string IdCompany, string IdJobPostings, string IdCandidate)
         {
@@ -261,5 +301,58 @@ namespace Project_Windows_04
 
             return db.thucThi_trangThai_checkChanged(sqlQuery_trangThai_checkChanged);
         }
+
+        public bool kiemTra_daGuiThu(string IdCompany, string IdJobPostings, string IdCandidate)
+        {
+            using (var context = new DeTai_02_Entities())
+            {
+                try
+                {
+                    // Kiểm tra xem có thư từ nào tồn tại trong cơ sở dữ liệu với các Id đã cung cấp không
+                    var letterExists = context.Letter
+                                            .Any(l => l.IdCompany == IdCompany &&
+                                                      l.IdJobPostings == IdJobPostings &&
+                                                      l.IdCandidate == IdCandidate);
+
+                    return letterExists;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi! \n" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+        }
+
+        public int demSoUV(string IdCompany, string IdJobPostings)
+        {
+            using (var dbContext = new DeTai_02_Entities()) // Thay YourDbContext bằng tên của DbContext của bạn
+            {
+                // Sử dụng LINQ để đếm số lượng bản ghi phù hợp
+                var count = dbContext.Applications
+                                     .Where(app => app.IdCompany == IdCompany && app.IdJobPostings == IdJobPostings)
+                                     .Count();
+                return count;
+            }
+        }
+
+        //public bool KiemTraBoMoiThemVao(string IdCompany, string IdJobPostings)
+        //{
+        //    using (var context = new DeTai_02_Entities())
+        //    {
+        //        // Lấy ra tất cả các bản ghi được thêm mới vào context và thuộc bảng "Applications"
+        //        var addedApplications = context.ChangeTracker.Entries<Applications>()
+        //                                    .Where(e => e.State == EntityState.Added &&
+        //                                                e.Entity.IdCompany == IdCompany &&
+        //                                                e.Entity.IdJobPostings == IdJobPostings)
+        //                                    .Select(e => e.Entity) // Chọn thực thể từ các bản ghi
+        //                                    .ToList();
+
+        //        // Kiểm tra xem có bản ghi nào thỏa mãn điều kiện được thêm mới không
+        //        return addedApplications.Any();
+        //    }
+        //}
+
+
     }
 }

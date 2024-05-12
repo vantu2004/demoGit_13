@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btn_dangKy = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_dangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -36,8 +44,6 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.cbx_loc_sapXep = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_loc_sapXep = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.flpl_danhSachTinTuyenDung = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.cbx_loc_nganhNghe = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbx_loc_kinhNghiem = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -52,15 +58,25 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbx_loc_diaChi = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.flpl_danhSachTinTuyenDung = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.chart_soCongViec_soUV_theoThang = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart_soCV_theoNganh = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2GradientPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_soCongViec_soUV_theoThang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_soCV_theoNganh)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -73,7 +89,7 @@
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1332, 70);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(1912, 70);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // btn_dangKy
@@ -93,7 +109,7 @@
             this.btn_dangKy.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_dangKy.ForeColor = System.Drawing.Color.White;
             this.btn_dangKy.IndicateFocus = true;
-            this.btn_dangKy.Location = new System.Drawing.Point(915, 12);
+            this.btn_dangKy.Location = new System.Drawing.Point(1495, 12);
             this.btn_dangKy.Name = "btn_dangKy";
             this.btn_dangKy.Size = new System.Drawing.Size(149, 46);
             this.btn_dangKy.TabIndex = 11;
@@ -117,7 +133,7 @@
             this.btn_dangNhap.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_dangNhap.ForeColor = System.Drawing.Color.White;
             this.btn_dangNhap.IndicateFocus = true;
-            this.btn_dangNhap.Location = new System.Drawing.Point(760, 11);
+            this.btn_dangNhap.Location = new System.Drawing.Point(1340, 11);
             this.btn_dangNhap.Name = "btn_dangNhap";
             this.btn_dangNhap.Size = new System.Drawing.Size(149, 46);
             this.btn_dangNhap.TabIndex = 10;
@@ -141,7 +157,7 @@
             this.btn_dangTinTuyenDung.Font = new System.Drawing.Font("Segoe UI", 10.8F);
             this.btn_dangTinTuyenDung.ForeColor = System.Drawing.Color.White;
             this.btn_dangTinTuyenDung.IndicateFocus = true;
-            this.btn_dangTinTuyenDung.Location = new System.Drawing.Point(1070, 13);
+            this.btn_dangTinTuyenDung.Location = new System.Drawing.Point(1650, 13);
             this.btn_dangTinTuyenDung.Name = "btn_dangTinTuyenDung";
             this.btn_dangTinTuyenDung.Size = new System.Drawing.Size(250, 46);
             this.btn_dangTinTuyenDung.TabIndex = 2;
@@ -208,25 +224,6 @@
             this.btn_loc_sapXep.Size = new System.Drawing.Size(46, 44);
             this.btn_loc_sapXep.TabIndex = 9;
             this.btn_loc_sapXep.UseTransparentBackground = true;
-            // 
-            // guna2GradientPanel3
-            // 
-            this.guna2GradientPanel3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.guna2GradientPanel3.Controls.Add(this.flpl_danhSachTinTuyenDung);
-            this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(314, 70);
-            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(1018, 633);
-            this.guna2GradientPanel3.TabIndex = 2;
-            // 
-            // flpl_danhSachTinTuyenDung
-            // 
-            this.flpl_danhSachTinTuyenDung.AutoScroll = true;
-            this.flpl_danhSachTinTuyenDung.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpl_danhSachTinTuyenDung.Location = new System.Drawing.Point(0, 0);
-            this.flpl_danhSachTinTuyenDung.Name = "flpl_danhSachTinTuyenDung";
-            this.flpl_danhSachTinTuyenDung.Size = new System.Drawing.Size(1018, 633);
-            this.flpl_danhSachTinTuyenDung.TabIndex = 0;
             // 
             // label1
             // 
@@ -337,10 +334,11 @@
             // 
             this.btn_taiLai.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_taiLai.Animated = true;
+            this.btn_taiLai.AutoRoundedCorners = true;
             this.btn_taiLai.BackColor = System.Drawing.Color.Transparent;
-            this.btn_taiLai.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_taiLai.BorderRadius = 10;
-            this.btn_taiLai.BorderThickness = 2;
+            this.btn_taiLai.BorderColor = System.Drawing.Color.Green;
+            this.btn_taiLai.BorderRadius = 22;
+            this.btn_taiLai.BorderThickness = 1;
             this.btn_taiLai.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_taiLai.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_taiLai.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -350,21 +348,24 @@
             this.btn_taiLai.FillColor2 = System.Drawing.Color.White;
             this.btn_taiLai.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_taiLai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_taiLai.IndicateFocus = true;
             this.btn_taiLai.Location = new System.Drawing.Point(12, 579);
             this.btn_taiLai.Name = "btn_taiLai";
             this.btn_taiLai.Size = new System.Drawing.Size(296, 46);
             this.btn_taiLai.TabIndex = 13;
             this.btn_taiLai.Text = "Reset";
+            this.btn_taiLai.UseTransparentBackground = true;
             this.btn_taiLai.Click += new System.EventHandler(this.btn_taiLai_Click);
             // 
             // btn_dangXuat
             // 
             this.btn_dangXuat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_dangXuat.Animated = true;
+            this.btn_dangXuat.AutoRoundedCorners = true;
             this.btn_dangXuat.BackColor = System.Drawing.Color.Transparent;
-            this.btn_dangXuat.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btn_dangXuat.BorderRadius = 10;
-            this.btn_dangXuat.BorderThickness = 2;
+            this.btn_dangXuat.BorderColor = System.Drawing.Color.Green;
+            this.btn_dangXuat.BorderRadius = 22;
+            this.btn_dangXuat.BorderThickness = 1;
             this.btn_dangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_dangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_dangXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -374,11 +375,13 @@
             this.btn_dangXuat.FillColor2 = System.Drawing.Color.White;
             this.btn_dangXuat.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_dangXuat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_dangXuat.IndicateFocus = true;
             this.btn_dangXuat.Location = new System.Drawing.Point(12, 527);
             this.btn_dangXuat.Name = "btn_dangXuat";
             this.btn_dangXuat.Size = new System.Drawing.Size(296, 46);
             this.btn_dangXuat.TabIndex = 12;
             this.btn_dangXuat.Text = "Log out";
+            this.btn_dangXuat.UseTransparentBackground = true;
             // 
             // pictureBox5
             // 
@@ -515,19 +518,102 @@
             // 
             this.guna2Elipse1.BorderRadius = 20;
             // 
+            // flpl_danhSachTinTuyenDung
+            // 
+            this.flpl_danhSachTinTuyenDung.AutoScroll = true;
+            this.flpl_danhSachTinTuyenDung.BackColor = System.Drawing.Color.White;
+            this.flpl_danhSachTinTuyenDung.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flpl_danhSachTinTuyenDung.Location = new System.Drawing.Point(0, 0);
+            this.flpl_danhSachTinTuyenDung.Name = "flpl_danhSachTinTuyenDung";
+            this.flpl_danhSachTinTuyenDung.Size = new System.Drawing.Size(1018, 633);
+            this.flpl_danhSachTinTuyenDung.TabIndex = 0;
+            // 
+            // guna2GradientPanel3
+            // 
+            this.guna2GradientPanel3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2GradientPanel3.Controls.Add(this.flpl_danhSachTinTuyenDung);
+            this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(314, 70);
+            this.guna2GradientPanel3.Name = "guna2GradientPanel3";
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(1018, 633);
+            this.guna2GradientPanel3.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.chart_soCV_theoNganh);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(1332, 70);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(580, 398);
+            this.panel1.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.chart_soCongViec_soUV_theoThang);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(1332, 468);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(580, 580);
+            this.panel2.TabIndex = 4;
+            // 
+            // chart_soCongViec_soUV_theoThang
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart_soCongViec_soUV_theoThang.ChartAreas.Add(chartArea2);
+            this.chart_soCongViec_soUV_theoThang.Dock = System.Windows.Forms.DockStyle.Top;
+            legend2.Name = "Legend1";
+            this.chart_soCongViec_soUV_theoThang.Legends.Add(legend2);
+            this.chart_soCongViec_soUV_theoThang.Location = new System.Drawing.Point(0, 0);
+            this.chart_soCongViec_soUV_theoThang.Name = "chart_soCongViec_soUV_theoThang";
+            this.chart_soCongViec_soUV_theoThang.Size = new System.Drawing.Size(580, 400);
+            this.chart_soCongViec_soUV_theoThang.TabIndex = 6;
+            this.chart_soCongViec_soUV_theoThang.Text = "|| Number of candidates by month";
+            title2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            title2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            title2.Name = "Title02";
+            title2.Text = "Candidate statistics";
+            this.chart_soCongViec_soUV_theoThang.Titles.Add(title2);
+            // 
+            // chart_soCV_theoNganh
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart_soCV_theoNganh.ChartAreas.Add(chartArea1);
+            this.chart_soCV_theoNganh.Dock = System.Windows.Forms.DockStyle.Top;
+            legend1.Name = "Legend1";
+            this.chart_soCV_theoNganh.Legends.Add(legend1);
+            this.chart_soCV_theoNganh.Location = new System.Drawing.Point(0, 0);
+            this.chart_soCV_theoNganh.Name = "chart_soCV_theoNganh";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series_chart01";
+            series1.Points.Add(dataPoint1);
+            series1.YValueMembers = "0";
+            this.chart_soCV_theoNganh.Series.Add(series1);
+            this.chart_soCV_theoNganh.Size = new System.Drawing.Size(580, 400);
+            this.chart_soCV_theoNganh.TabIndex = 5;
+            title1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            title1.Name = "Title01";
+            title1.Text = "Job statistics";
+            this.chart_soCV_theoNganh.Titles.Add(title1);
+            // 
             // UC_BangTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2GradientPanel3);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Name = "UC_BangTin";
-            this.Size = new System.Drawing.Size(1332, 703);
+            this.Size = new System.Drawing.Size(1912, 703);
             this.guna2GradientPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -535,6 +621,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2GradientPanel3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart_soCongViec_soUV_theoThang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_soCV_theoNganh)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -543,7 +634,6 @@
 
         public Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         public Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        public Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
         public Guna.UI2.WinForms.Guna2GradientButton btn_dangTinTuyenDung;
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label label1;
@@ -561,9 +651,14 @@
         public Guna.UI2.WinForms.Guna2GradientButton btn_dangKy;
         public Guna.UI2.WinForms.Guna2GradientButton btn_dangNhap;
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        public System.Windows.Forms.FlowLayoutPanel flpl_danhSachTinTuyenDung;
         public Guna.UI2.WinForms.Guna2GradientButton btn_dangXuat;
         public Guna.UI2.WinForms.Guna2GradientButton btn_taiLai;
+        public System.Windows.Forms.FlowLayoutPanel flpl_danhSachTinTuyenDung;
+        public Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
+        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chart_soCV_theoNganh;
+        private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chart_soCongViec_soUV_theoThang;
     }
 }
 
