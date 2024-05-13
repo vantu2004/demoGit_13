@@ -3,43 +3,75 @@
   "WorkspaceRootPath": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\form\\\u1EE9ng vi\u00EAn\\ungvien_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:form\\\u1EE9ng vi\u00EAn\\ungvien_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\form\\\u1EE9ng vi\u00EAn\\ungvien_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:form\\\u1EE9ng vi\u00EAn\\ungvien_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\class\\\u1EE9ng vi\u00EAn\\ungvien_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\\u1EE9ng vi\u00EAn\\ungvien_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\uc_controls\\uc_tinnhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:uc_controls\\uc_tinnhan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\uc_controls\\uc_chatbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:uc_controls\\uc_chatbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\form\\tuy\u1EC3n d\u1EE5ng\\tuyendung_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:form\\tuy\u1EC3n d\u1EE5ng\\tuyendung_trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\form\\\u0111\u0103ng nh\u1EADp\\dangky_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:form\\\u0111\u0103ng nh\u1EADp\\dangky_dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\form\\\u1EE9ng vi\u00EAn\\ungvien_dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:form\\\u1EE9ng vi\u00EAn\\ungvien_dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\form\\tuy\u1EC3n d\u1EE5ng\\tuyendung_dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:form\\tuy\u1EC3n d\u1EE5ng\\tuyendung_dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\class\\xu\u1EA5t th\u00F4ng tin\\xuat_thongtin_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\xu\u1EA5t th\u00F4ng tin\\xuat_thongtin_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\class\\chitietcv_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\chitietcv_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\class\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\class\\chitiettintuyendung_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\class\\chitiettintuyendung_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\chitiettintuyendung_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\class\\chitietcv_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\chitietcv_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\class\\xu\u1EA5t th\u00F4ng tin\\xuat_thongtin_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\xu\u1EA5t th\u00F4ng tin\\xuat_thongtin_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\class\\\u1EE9ng vi\u00EAn\\ungvien_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\\u1EE9ng vi\u00EAn\\ungvien_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\class\\tuy\u1EC3n d\u1EE5ng\\tuyendung_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\class\\tuy\u1EC3n d\u1EE5ng\\tuyendung_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\tuy\u1EC3n d\u1EE5ng\\tuyendung_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\class\\tuy\u1EC3n d\u1EE5ng\\tuyendung_chinhsuatin_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\class\\tuy\u1EC3n d\u1EE5ng\\tuyendung_chinhsuatin_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\tuy\u1EC3n d\u1EE5ng\\tuyendung_chinhsuatin_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\class\\t\u00E0i kho\u1EA3n\\trangchu_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\class\\t\u00E0i kho\u1EA3n\\trangchu_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\t\u00E0i kho\u1EA3n\\trangchu_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\class\\t\u00E0i kho\u1EA3n\\dangky_dangnhap_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\class\\t\u00E0i kho\u1EA3n\\dangky_dangnhap_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:class\\t\u00E0i kho\u1EA3n\\dangky_dangnhap_dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|d:\\workspace\\document\\window\\week_09\\demogit_12-master\\demogit_12-master\\detai02_edm.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "AbsoluteMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\detai02_edm.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{02A87476-D1ED-4CAE-8213-3890068D4DA4}|Project_Windows_04.csproj|solutionrelative:detai02_edm.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
   ],
@@ -50,21 +82,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 220,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dbConnection.cs",
-              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\dbConnection.cs",
-              "RelativeDocumentMoniker": "Class\\dbConnection.cs",
-              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\dbConnection.cs",
-              "RelativeToolTip": "Class\\dbConnection.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAuwH4AAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:23:46.973Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -87,46 +106,68 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UngVien_TrangChu.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\\u1EE8ng vi\u00EAn\\UngVien_TrangChu.cs",
+              "RelativeDocumentMoniker": "Form\\\u1EE8ng vi\u00EAn\\UngVien_TrangChu.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\\u1EE8ng vi\u00EAn\\UngVien_TrangChu.cs",
+              "RelativeToolTip": "Form\\\u1EE8ng vi\u00EAn\\UngVien_TrangChu.cs",
+              "ViewState": "AQIAAMcAAAAAAAAAAAAqwN0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T04:10:52.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ChiTietTinTuyenDung_DAO.cs",
-              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\ChiTietTinTuyenDung_DAO.cs",
-              "RelativeDocumentMoniker": "Class\\ChiTietTinTuyenDung_DAO.cs",
-              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\ChiTietTinTuyenDung_DAO.cs",
-              "RelativeToolTip": "Class\\ChiTietTinTuyenDung_DAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAtAAAA",
+              "Title": "UngVien_TrangChu.cs [Design]",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\\u1EE8ng vi\u00EAn\\UngVien_TrangChu.cs",
+              "RelativeDocumentMoniker": "Form\\\u1EE8ng vi\u00EAn\\UngVien_TrangChu.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\\u1EE8ng vi\u00EAn\\UngVien_TrangChu.cs [Design]",
+              "RelativeToolTip": "Form\\\u1EE8ng vi\u00EAn\\UngVien_TrangChu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:26:47.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ChiTietCV_DAO.cs",
-              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\ChiTietCV_DAO.cs",
-              "RelativeDocumentMoniker": "Class\\ChiTietCV_DAO.cs",
-              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\ChiTietCV_DAO.cs",
-              "RelativeToolTip": "Class\\ChiTietCV_DAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:26:40.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Xuat_ThongTin_DAO.cs",
-              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\Xu\u1EA5t th\u00F4ng tin\\Xuat_ThongTin_DAO.cs",
-              "RelativeDocumentMoniker": "Class\\Xu\u1EA5t th\u00F4ng tin\\Xuat_ThongTin_DAO.cs",
-              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\Xu\u1EA5t th\u00F4ng tin\\Xuat_ThongTin_DAO.cs",
-              "RelativeToolTip": "Class\\Xu\u1EA5t th\u00F4ng tin\\Xuat_ThongTin_DAO.cs",
-              "ViewState": "AQIAACMBAAAAAAAAAAAUwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:26:09.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-13T04:08:03.709Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "UC_ChatBox.cs [Design]",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\UC_Controls\\UC_ChatBox.cs",
+              "RelativeDocumentMoniker": "UC_Controls\\UC_ChatBox.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\UC_Controls\\UC_ChatBox.cs [Design]",
+              "RelativeToolTip": "UC_Controls\\UC_ChatBox.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T03:58:17.702Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UC_TinNhan.cs [Design]",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\UC_Controls\\UC_TinNhan.cs",
+              "RelativeDocumentMoniker": "UC_Controls\\UC_TinNhan.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\UC_Controls\\UC_TinNhan.cs [Design]",
+              "RelativeToolTip": "UC_Controls\\UC_TinNhan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T03:57:31.963Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DangKy_DangNhap.cs [Design]",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\\u0110\u0103ng nh\u1EADp\\DangKy_DangNhap.cs",
+              "RelativeDocumentMoniker": "Form\\\u0110\u0103ng nh\u1EADp\\DangKy_DangNhap.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\\u0110\u0103ng nh\u1EADp\\DangKy_DangNhap.cs [Design]",
+              "RelativeToolTip": "Form\\\u0110\u0103ng nh\u1EADp\\DangKy_DangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T02:24:23.655Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UngVien_DAO.cs",
               "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\\u1EE8ng vi\u00EAn\\UngVien_DAO.cs",
               "RelativeDocumentMoniker": "Class\\\u1EE8ng vi\u00EAn\\UngVien_DAO.cs",
@@ -139,7 +180,95 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UngVien_DangKy.cs [Design]",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\\u1EE8ng vi\u00EAn\\UngVien_DangKy.cs",
+              "RelativeDocumentMoniker": "Form\\\u1EE8ng vi\u00EAn\\UngVien_DangKy.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\\u1EE8ng vi\u00EAn\\UngVien_DangKy.cs [Design]",
+              "RelativeToolTip": "Form\\\u1EE8ng vi\u00EAn\\UngVien_DangKy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T02:19:19.587Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TuyenDung_DangKy.cs [Design]",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_DangKy.cs",
+              "RelativeDocumentMoniker": "Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_DangKy.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_DangKy.cs [Design]",
+              "RelativeToolTip": "Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_DangKy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T02:18:52.684Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "TuyenDung_TrangChu.cs [Design]",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_TrangChu.cs",
+              "RelativeDocumentMoniker": "Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_TrangChu.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_TrangChu.cs [Design]",
+              "RelativeToolTip": "Form\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_TrangChu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-13T01:25:13.697Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "dbConnection.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\dbConnection.cs",
+              "RelativeDocumentMoniker": "Class\\dbConnection.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\dbConnection.cs",
+              "RelativeToolTip": "Class\\dbConnection.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAuwH4AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T15:23:46.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChiTietTinTuyenDung_DAO.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\ChiTietTinTuyenDung_DAO.cs",
+              "RelativeDocumentMoniker": "Class\\ChiTietTinTuyenDung_DAO.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\ChiTietTinTuyenDung_DAO.cs",
+              "RelativeToolTip": "Class\\ChiTietTinTuyenDung_DAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T15:26:47.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ChiTietCV_DAO.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\ChiTietCV_DAO.cs",
+              "RelativeDocumentMoniker": "Class\\ChiTietCV_DAO.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\ChiTietCV_DAO.cs",
+              "RelativeToolTip": "Class\\ChiTietCV_DAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T15:26:40.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Xuat_ThongTin_DAO.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\Xu\u1EA5t th\u00F4ng tin\\Xuat_ThongTin_DAO.cs",
+              "RelativeDocumentMoniker": "Class\\Xu\u1EA5t th\u00F4ng tin\\Xuat_ThongTin_DAO.cs",
+              "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\Xu\u1EA5t th\u00F4ng tin\\Xuat_ThongTin_DAO.cs",
+              "RelativeToolTip": "Class\\Xu\u1EA5t th\u00F4ng tin\\Xuat_ThongTin_DAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T15:26:09.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "TuyenDung_DAO.cs",
               "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_DAO.cs",
               "RelativeDocumentMoniker": "Class\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_DAO.cs",
@@ -147,12 +276,11 @@
               "RelativeToolTip": "Class\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_DAO.cs",
               "ViewState": "AQIAACkBAAAAAAAAAAAiwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:24:18.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T15:24:18.327Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "TuyenDung_ChinhSuaTin_DAO.cs",
               "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_ChinhSuaTin_DAO.cs",
               "RelativeDocumentMoniker": "Class\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_ChinhSuaTin_DAO.cs",
@@ -160,12 +288,11 @@
               "RelativeToolTip": "Class\\Tuy\u1EC3n d\u1EE5ng\\TuyenDung_ChinhSuaTin_DAO.cs",
               "ViewState": "AQIAACoAAAAAAAAAAAAYwE8AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:23:56.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T15:23:56.654Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "TrangChu_DAO.cs",
               "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\T\u00E0i kho\u1EA3n\\TrangChu_DAO.cs",
               "RelativeDocumentMoniker": "Class\\T\u00E0i kho\u1EA3n\\TrangChu_DAO.cs",
@@ -173,12 +300,11 @@
               "RelativeToolTip": "Class\\T\u00E0i kho\u1EA3n\\TrangChu_DAO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:23:44.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T15:23:44.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "DangKy_DangNhap_DAO.cs",
               "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\Class\\T\u00E0i kho\u1EA3n\\DangKy_DangNhap_DAO.cs",
               "RelativeDocumentMoniker": "Class\\T\u00E0i kho\u1EA3n\\DangKy_DangNhap_DAO.cs",
@@ -186,20 +312,18 @@
               "RelativeToolTip": "Class\\T\u00E0i kho\u1EA3n\\DangKy_DangNhap_DAO.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:23:35.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-12T15:23:35.482Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "DeTai02_EDM.edmx [Diagram1]",
               "DocumentMoniker": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\DeTai02_EDM.edmx",
               "RelativeDocumentMoniker": "DeTai02_EDM.edmx",
               "ToolTip": "D:\\WorkSpace\\Document\\Window\\Week_09\\demoGit_12-master\\demoGit_12-master\\DeTai02_EDM.edmx [Diagram1]",
               "RelativeToolTip": "DeTai02_EDM.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-05-12T15:23:24.593Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2024-05-12T15:23:24.593Z"
             }
           ]
         }

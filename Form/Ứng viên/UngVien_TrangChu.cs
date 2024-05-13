@@ -211,6 +211,8 @@ namespace Project_Windows_04
         private void btn_newChat_Click(object sender, EventArgs e)
         {
             pnl_chiTietTin.Controls.Clear();
+            flpl_tinNhan.Controls.Clear();
+            pnl_chatBox.Controls.Clear();
 
             //  lấy link avatar
             UngVien_Tin uv = UV_DAO.chiTiet_CV(this.Id);

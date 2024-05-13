@@ -329,10 +329,10 @@
     <Compile Include="TinXinViec.cs">
       <DependentUpon>DeTai02_EDM.tt</DependentUpon>
     </Compile>
-    <Compile Include="UC_ChatBox.cs">
+    <Compile Include="UC_Controls\UC_ChatBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_ChatBox.Designer.cs">
+    <Compile Include="UC_Controls\UC_ChatBox.Designer.cs">
       <DependentUpon>UC_ChatBox.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Controls\UC_ChiTietCV.cs">
@@ -468,7 +468,7 @@
     <EmbeddedResource Include="Form\Chi tiết\ChiTietThu.resx">
       <DependentUpon>ChiTietThu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_ChatBox.resx">
+    <EmbeddedResource Include="UC_Controls\UC_ChatBox.resx">
       <DependentUpon>UC_ChatBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Controls\UC_BangTin.resx">

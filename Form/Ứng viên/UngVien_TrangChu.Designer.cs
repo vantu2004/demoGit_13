@@ -81,9 +81,6 @@
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.flpl_tinNhan = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.pnl_chatBox = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnl_chiTietTin = new System.Windows.Forms.Panel();
@@ -91,6 +88,8 @@
             this.flpl_tinDaDang = new System.Windows.Forms.FlowLayoutPanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btn_newChat = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.flpl_tinNhan = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -101,12 +100,11 @@
             this.guna2TabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.flpl_tinNhan.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.pnl_chiTietTin.SuspendLayout();
             this.flpl_tinDaDang.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.flpl_tinNhan.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -972,7 +970,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage4.BackColor = System.Drawing.Color.White;
             this.tabPage4.Controls.Add(this.panel1);
             this.tabPage4.Location = new System.Drawing.Point(184, 4);
             this.tabPage4.Name = "tabPage4";
@@ -984,42 +982,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.flpl_tinNhan);
             this.panel1.Controls.Add(this.pnl_chatBox);
             this.panel1.Controls.Add(this.flowLayoutPanel2);
             this.panel1.Controls.Add(this.flpl_tinDaDang);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1377, 1041);
+            this.panel1.Size = new System.Drawing.Size(1521, 1041);
             this.panel1.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.flpl_tinNhan);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(930, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(447, 946);
-            this.panel7.TabIndex = 11;
-            // 
-            // flpl_tinNhan
-            // 
-            this.flpl_tinNhan.AutoScroll = true;
-            this.flpl_tinNhan.BackColor = System.Drawing.Color.White;
-            this.flpl_tinNhan.Controls.Add(this.panel11);
-            this.flpl_tinNhan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpl_tinNhan.Location = new System.Drawing.Point(0, 0);
-            this.flpl_tinNhan.Name = "flpl_tinNhan";
-            this.flpl_tinNhan.Size = new System.Drawing.Size(447, 946);
-            this.flpl_tinNhan.TabIndex = 13;
-            // 
-            // panel11
-            // 
-            this.panel11.Location = new System.Drawing.Point(3, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(441, 37);
-            this.panel11.TabIndex = 1;
             // 
             // pnl_chatBox
             // 
@@ -1027,7 +998,7 @@
             this.pnl_chatBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_chatBox.Location = new System.Drawing.Point(930, 946);
             this.pnl_chatBox.Name = "pnl_chatBox";
-            this.pnl_chatBox.Size = new System.Drawing.Size(447, 95);
+            this.pnl_chatBox.Size = new System.Drawing.Size(591, 95);
             this.pnl_chatBox.TabIndex = 10;
             // 
             // flowLayoutPanel2
@@ -1104,6 +1075,24 @@
             this.btn_newChat.UseTransparentBackground = true;
             this.btn_newChat.Click += new System.EventHandler(this.btn_newChat_Click);
             // 
+            // flpl_tinNhan
+            // 
+            this.flpl_tinNhan.AutoScroll = true;
+            this.flpl_tinNhan.BackColor = System.Drawing.Color.White;
+            this.flpl_tinNhan.Controls.Add(this.panel11);
+            this.flpl_tinNhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpl_tinNhan.Location = new System.Drawing.Point(930, 0);
+            this.flpl_tinNhan.Name = "flpl_tinNhan";
+            this.flpl_tinNhan.Size = new System.Drawing.Size(591, 946);
+            this.flpl_tinNhan.TabIndex = 15;
+            // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(585, 37);
+            this.panel11.TabIndex = 1;
+            // 
             // UngVien_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1127,12 +1116,11 @@
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.flpl_tinNhan.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.pnl_chiTietTin.ResumeLayout(false);
             this.flpl_tinDaDang.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
+            this.flpl_tinNhan.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1193,14 +1181,13 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Panel panel7;
         public System.Windows.Forms.FlowLayoutPanel flpl_tinDaDang;
-        public System.Windows.Forms.FlowLayoutPanel flpl_tinNhan;
         public System.Windows.Forms.Panel pnl_chiTietTin;
         private System.Windows.Forms.Panel panel10;
         private Guna.UI2.WinForms.Guna2GradientButton btn_newChat;
-        private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel9;
         public System.Windows.Forms.Panel pnl_chatBox;
+        public System.Windows.Forms.FlowLayoutPanel flpl_tinNhan;
+        private System.Windows.Forms.Panel panel11;
     }
 }

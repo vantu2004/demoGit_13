@@ -83,7 +83,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label15);
@@ -163,6 +163,7 @@
             this.tbx_nhapLaiMatKhau_TD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbx_nhapLaiMatKhau_TD.Name = "tbx_nhapLaiMatKhau_TD";
             this.tbx_nhapLaiMatKhau_TD.PasswordChar = '●';
+            this.tbx_nhapLaiMatKhau_TD.PlaceholderForeColor = System.Drawing.Color.Green;
             this.tbx_nhapLaiMatKhau_TD.PlaceholderText = "Re-enter password";
             this.tbx_nhapLaiMatKhau_TD.SelectedText = "";
             this.tbx_nhapLaiMatKhau_TD.Size = new System.Drawing.Size(291, 55);
@@ -199,6 +200,7 @@
             this.tbx_matKhau_TD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbx_matKhau_TD.Name = "tbx_matKhau_TD";
             this.tbx_matKhau_TD.PasswordChar = '●';
+            this.tbx_matKhau_TD.PlaceholderForeColor = System.Drawing.Color.Green;
             this.tbx_matKhau_TD.PlaceholderText = "Password";
             this.tbx_matKhau_TD.SelectedText = "";
             this.tbx_matKhau_TD.Size = new System.Drawing.Size(291, 55);
@@ -234,6 +236,7 @@
             this.tbx_tenDangNhap_TD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbx_tenDangNhap_TD.Name = "tbx_tenDangNhap_TD";
             this.tbx_tenDangNhap_TD.PasswordChar = '\0';
+            this.tbx_tenDangNhap_TD.PlaceholderForeColor = System.Drawing.Color.Green;
             this.tbx_tenDangNhap_TD.PlaceholderText = "User name";
             this.tbx_tenDangNhap_TD.SelectedText = "";
             this.tbx_tenDangNhap_TD.Size = new System.Drawing.Size(291, 55);
