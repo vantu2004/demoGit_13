@@ -45,13 +45,17 @@
             this.flpl_lichPhongVan = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.UC_BangTin_NTD = new Project_Windows_04.UC_BangTin();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.UC_taoTin = new Project_Windows_04.UC_taoTin();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.chart_soCongViec_soUV_theoThang = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart_soCV_theoNganh = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.flpl_tinDaDang = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.flpl_tinNhan = new System.Windows.Forms.FlowLayoutPanel();
             this.pnl_chatBox = new System.Windows.Forms.Panel();
             this.flpl_chiTietTinXinViec = new System.Windows.Forms.FlowLayoutPanel();
             this.flpl_tinDaDang01 = new System.Windows.Forms.FlowLayoutPanel();
@@ -62,10 +66,6 @@
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.UC_BangTin_NTD = new Project_Windows_04.UC_BangTin();
-            this.UC_taoTin = new Project_Windows_04.UC_taoTin();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.flpl_tinNhan = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage4.SuspendLayout();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -75,9 +75,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart_soCV_theoNganh)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.flpl_tinDaDang01.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage4
@@ -156,6 +156,7 @@
             // dtpr_locTheoNgay
             // 
             this.dtpr_locTheoNgay.Animated = true;
+            this.dtpr_locTheoNgay.BackColor = System.Drawing.Color.Transparent;
             this.dtpr_locTheoNgay.BorderRadius = 20;
             this.dtpr_locTheoNgay.Checked = true;
             this.dtpr_locTheoNgay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -225,6 +226,16 @@
             this.tabPage3.Text = "News";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // UC_BangTin_NTD
+            // 
+            this.UC_BangTin_NTD.BackColor = System.Drawing.Color.White;
+            this.UC_BangTin_NTD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UC_BangTin_NTD.Location = new System.Drawing.Point(3, 3);
+            this.UC_BangTin_NTD.Name = "UC_BangTin_NTD";
+            this.UC_BangTin_NTD.Size = new System.Drawing.Size(1730, 1041);
+            this.UC_BangTin_NTD.TabIndex = 0;
+            this.UC_BangTin_NTD.Load += new System.EventHandler(this.UC_BangTin_NTD_Load);
+            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.UC_taoTin);
@@ -235,6 +246,15 @@
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Create news";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // UC_taoTin
+            // 
+            this.UC_taoTin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UC_taoTin.Location = new System.Drawing.Point(3, 3);
+            this.UC_taoTin.Name = "UC_taoTin";
+            this.UC_taoTin.Size = new System.Drawing.Size(1730, 1041);
+            this.UC_taoTin.TabIndex = 0;
+            this.UC_taoTin.Load += new System.EventHandler(this.UC_taoTin_Load);
             // 
             // tabPage2
             // 
@@ -260,7 +280,7 @@
             this.chart_soCongViec_soUV_theoThang.Legends.Add(legend1);
             this.chart_soCongViec_soUV_theoThang.Location = new System.Drawing.Point(1150, 469);
             this.chart_soCongViec_soUV_theoThang.Name = "chart_soCongViec_soUV_theoThang";
-            this.chart_soCongViec_soUV_theoThang.Size = new System.Drawing.Size(578, 450);
+            this.chart_soCongViec_soUV_theoThang.Size = new System.Drawing.Size(578, 441);
             this.chart_soCongViec_soUV_theoThang.TabIndex = 2;
             this.chart_soCongViec_soUV_theoThang.Text = "|| Number of candidates by month";
             title1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -287,7 +307,7 @@
             series1.Points.Add(dataPoint1);
             series1.YValueMembers = "0";
             this.chart_soCV_theoNganh.Series.Add(series1);
-            this.chart_soCV_theoNganh.Size = new System.Drawing.Size(578, 450);
+            this.chart_soCV_theoNganh.Size = new System.Drawing.Size(578, 441);
             this.chart_soCV_theoNganh.TabIndex = 1;
             title2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             title2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -328,6 +348,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1518, 1041);
             this.panel1.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.flpl_tinNhan);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(930, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(588, 946);
+            this.panel7.TabIndex = 12;
+            // 
+            // flpl_tinNhan
+            // 
+            this.flpl_tinNhan.AutoScroll = true;
+            this.flpl_tinNhan.BackColor = System.Drawing.Color.White;
+            this.flpl_tinNhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpl_tinNhan.Location = new System.Drawing.Point(0, 0);
+            this.flpl_tinNhan.Name = "flpl_tinNhan";
+            this.flpl_tinNhan.Size = new System.Drawing.Size(588, 946);
+            this.flpl_tinNhan.TabIndex = 15;
             // 
             // pnl_chatBox
             // 
@@ -411,44 +450,6 @@
             // 
             this.guna2Elipse4.BorderRadius = 10;
             // 
-            // UC_BangTin_NTD
-            // 
-            this.UC_BangTin_NTD.BackColor = System.Drawing.Color.White;
-            this.UC_BangTin_NTD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UC_BangTin_NTD.Location = new System.Drawing.Point(3, 3);
-            this.UC_BangTin_NTD.Name = "UC_BangTin_NTD";
-            this.UC_BangTin_NTD.Size = new System.Drawing.Size(1730, 1041);
-            this.UC_BangTin_NTD.TabIndex = 0;
-            this.UC_BangTin_NTD.Load += new System.EventHandler(this.UC_BangTin_NTD_Load);
-            // 
-            // UC_taoTin
-            // 
-            this.UC_taoTin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UC_taoTin.Location = new System.Drawing.Point(3, 3);
-            this.UC_taoTin.Name = "UC_taoTin";
-            this.UC_taoTin.Size = new System.Drawing.Size(1730, 1041);
-            this.UC_taoTin.TabIndex = 0;
-            this.UC_taoTin.Load += new System.EventHandler(this.UC_taoTin_Load);
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.flpl_tinNhan);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(930, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(588, 946);
-            this.panel7.TabIndex = 12;
-            // 
-            // flpl_tinNhan
-            // 
-            this.flpl_tinNhan.AutoScroll = true;
-            this.flpl_tinNhan.BackColor = System.Drawing.Color.White;
-            this.flpl_tinNhan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpl_tinNhan.Location = new System.Drawing.Point(0, 0);
-            this.flpl_tinNhan.Name = "flpl_tinNhan";
-            this.flpl_tinNhan.Size = new System.Drawing.Size(588, 946);
-            this.flpl_tinNhan.TabIndex = 15;
-            // 
             // TuyenDung_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -469,9 +470,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart_soCV_theoNganh)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.flpl_tinDaDang01.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -13,9 +13,9 @@ namespace Project_Windows_04
 
         public TrangChu_DAO() { }
 
-        public void load_tinTuyenDung(FlowLayoutPanel flpl, string userType)
+        public void load_tinTuyenDung(FlowLayoutPanel flpl, string userType, string IdCompany)
         {
-            db.thucThi_load_tinTuyenDung(flpl, userType);
+            db.thucThi_load_tinTuyenDung(flpl, userType, IdCompany);
         }
     }
 }

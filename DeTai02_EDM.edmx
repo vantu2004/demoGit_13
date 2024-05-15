@@ -169,6 +169,19 @@
           <Property Name="Name" Type="varchar" MaxLength="500" />
           <Property Name="Content" Type="text" />
         </EntityType>
+        <EntityType Name="TinNhan_ChiTietTin">
+          <Key>
+            <PropertyRef Name="IdJobPostings" />
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="DateSent" />
+          </Key>
+          <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateSent" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Avatar" Type="varchar" MaxLength="200" />
+          <Property Name="Name" Type="varchar" MaxLength="500" />
+          <Property Name="Content" Type="text" />
+        </EntityType>
         <EntityType Name="TinXinViec">
           <Key>
             <PropertyRef Name="Id" />
@@ -383,6 +396,7 @@
           <EntitySet Name="NHATUYENDUNG" EntityType="Self.NHATUYENDUNG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TinNhan" EntityType="Self.TinNhan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TinNhan_ChiTietTin" EntityType="Self.TinNhan_ChiTietTin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TinXinViec" EntityType="Self.TinXinViec" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UNGVIEN" EntityType="Self.UNGVIEN" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Applicati__IdCan__42ACE4D4" Association="Self.FK__Applicati__IdCan__42ACE4D4">
@@ -834,6 +848,7 @@
             <End Role="UNGVIEN" EntitySet="UNGVIEN" />
             <End Role="TinNhan" EntitySet="TinNhan" />
           </AssociationSet>
+          <EntitySet Name="TinNhan_ChiTietTin" EntityType="DeTai_02_Model.TinNhan_ChiTietTin" />
         </EntityContainer>
         <Association Name="FK__LuuCV__70FDBF69">
           <End Type="DeTai_02_Model.JobPostings" Role="JobPostings" Multiplicity="1" />
@@ -911,6 +926,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="TinNhan_ChiTietTin">
+          <Key>
+            <PropertyRef Name="IdJobPostings" />
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="DateSent" />
+          </Key>
+          <Property Name="IdJobPostings" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateSent" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Avatar" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1100,6 +1128,18 @@
                 <ScalarProperty Name="DateSent" ColumnName="DateSent" />
                 <ScalarProperty Name="DatePosted_up" ColumnName="DatePosted_up" />
                 <ScalarProperty Name="IdCandidate" ColumnName="IdCandidate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TinNhan_ChiTietTin">
+            <EntityTypeMapping TypeName="DeTai_02_Model.TinNhan_ChiTietTin">
+              <MappingFragment StoreEntitySet="TinNhan_ChiTietTin">
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+                <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdJobPostings" ColumnName="IdJobPostings" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

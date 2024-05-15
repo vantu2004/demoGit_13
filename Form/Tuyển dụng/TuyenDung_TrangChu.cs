@@ -29,7 +29,7 @@ namespace Project_Windows_04
            
 
             //  load toàn bộ dữ liệu của NHATUYENDUNG và JobPostings lên flowlayoutpanel, click vào để xem chi tiết tin, truyền IdCompany và Employer để xác định mỗi tin đc đăng
-            NTD_DAO.load_tinTuyenDung(UC_BangTin_NTD.flpl_danhSachTinTuyenDung, "Employer");
+            NTD_DAO.load_tinTuyenDung(UC_BangTin_NTD.flpl_danhSachTinTuyenDung, "Employer", IdCompany);
 
             //  load toàn bộ tin đã đăng của 1 NTD lên flowlayoutpanel, click vào để xem danh sách ứng viên đã nộp CV, truyền IdCompany để xác định mỗi tin đc đăng
             NTD_DAO.load_tinDaDang(flpl_tinDaDang, IdCompany);
@@ -167,7 +167,7 @@ namespace Project_Windows_04
                     UC_taoTin.dtpr_hanChot.Value.ToShortDateString(), UC_taoTin.rtbx_moTaCongViec.Text, UC_taoTin.rtbx_yeuCauUngVien.Text, UC_taoTin.rtbx_quyenLoi.Text, UC_taoTin.rtbx_hoatDong.Text, UC_taoTin.rtbx_giaiThuong.Text, this.linkGiayPhep);
 
                 //  mặc định khi tạo tin thì cũng add 1 UC_tinTuyenDung và 1 UC_tinDaDang vào flowlayoupanel
-                UC_BangTin_NTD.flpl_danhSachTinTuyenDung.Controls.Add(xuat_TT.them_tinTuyenDung(t, t.UserType));
+                UC_BangTin_NTD.flpl_danhSachTinTuyenDung.Controls.Add(xuat_TT.them_tinTuyenDung(t, t.UserType, "null"));
                 flpl_tinDaDang.Controls.Add(xuat_TT.them_tinDaDang(t.IdCompany, t.IdJobPostings, t.TenCongViec, t.NgayDang, t.HanChot));
 
                 NTD_DAO.taoTin(t);
@@ -241,6 +241,7 @@ namespace Project_Windows_04
 
         private void btn_newChat_Click(object sender, EventArgs e)
         {
+            //  khi click nút reset thì xóa hết trong 3 flpl, pnl bên dưới và gọi hàm load để load lại tin
             flpl_chiTietTinXinViec.Controls.Clear();
             flpl_tinNhan.Controls.Clear();
             pnl_chatBox.Controls.Clear();

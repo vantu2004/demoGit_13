@@ -164,6 +164,19 @@
     <Property Name="Name" Type="varchar" MaxLength="500" />
     <Property Name="Content" Type="text" />
   </EntityType>
+  <EntityType Name="TinNhan_ChiTietTin">
+    <Key>
+      <PropertyRef Name="IdJobPostings" />
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="DateSent" />
+    </Key>
+    <Property Name="IdJobPostings" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateSent" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Avatar" Type="varchar" MaxLength="200" />
+    <Property Name="Name" Type="varchar" MaxLength="500" />
+    <Property Name="Content" Type="text" />
+  </EntityType>
   <EntityType Name="TinXinViec">
     <Key>
       <PropertyRef Name="Id" />
@@ -378,6 +391,7 @@
     <EntitySet Name="NHATUYENDUNG" EntityType="Self.NHATUYENDUNG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TAIKHOAN" EntityType="Self.TAIKHOAN" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TinNhan" EntityType="Self.TinNhan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinNhan_ChiTietTin" EntityType="Self.TinNhan_ChiTietTin" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TinXinViec" EntityType="Self.TinXinViec" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UNGVIEN" EntityType="Self.UNGVIEN" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Applicati__IdCan__42ACE4D4" Association="Self.FK__Applicati__IdCan__42ACE4D4">

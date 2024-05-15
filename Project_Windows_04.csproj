@@ -326,6 +326,9 @@
     <Compile Include="TinNhan.cs">
       <DependentUpon>DeTai02_EDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="TinNhan_ChiTietTin.cs">
+      <DependentUpon>DeTai02_EDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="TinXinViec.cs">
       <DependentUpon>DeTai02_EDM.tt</DependentUpon>
     </Compile>
@@ -426,6 +429,18 @@
     <Compile Include="UC_Controls\UC_TinNhan.Designer.cs">
       <DependentUpon>UC_TinNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_ChatBox_ChiTietTin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ChatBox_ChiTietTin.Designer.cs">
+      <DependentUpon>UC_ChatBox_ChiTietTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_TinNhan_ChiTietTin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_TinNhan_ChiTietTin.Designer.cs">
+      <DependentUpon>UC_TinNhan_ChiTietTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UNGVIEN.cs">
       <DependentUpon>DeTai02_EDM.tt</DependentUpon>
     </Compile>
@@ -509,6 +524,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Controls\UC_TinNhan.resx">
       <DependentUpon>UC_TinNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ChatBox_ChiTietTin.resx">
+      <DependentUpon>UC_ChatBox_ChiTietTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_TinNhan_ChiTietTin.resx">
+      <DependentUpon>UC_TinNhan_ChiTietTin.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="DeTai02_EDM.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

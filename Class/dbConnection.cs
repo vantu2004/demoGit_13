@@ -39,7 +39,7 @@ namespace Project_Windows_04
             }
         }
 
-        public void thucThi_load_tinTuyenDung(FlowLayoutPanel flowLayoutPanel, string kieuNguoiDung)
+        public void thucThi_load_tinTuyenDung(FlowLayoutPanel flowLayoutPanel, string kieuNguoiDung, string IdCompany)
         {
             using (var dbContext = new DeTai_02_Entities())
             {
@@ -82,7 +82,7 @@ namespace Project_Windows_04
                         GiayPhep        = tinTD.JobPosting.License
                     };
 
-                    flowLayoutPanel.Controls.Add(xuat_TT.them_tinTuyenDung(t, kieuNguoiDung));
+                    flowLayoutPanel.Controls.Add(xuat_TT.them_tinTuyenDung(t, kieuNguoiDung, IdCompany));
                 }
             }
         }

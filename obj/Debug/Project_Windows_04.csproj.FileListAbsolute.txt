@@ -281,3 +281,5 @@ D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\bin\Deb
 D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\bin\Debug\DevExpress.XtraRichEdit.v22.2.xml
 D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.UC_TinNhan.resources
 D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.UC_ChatBox.resources
+D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.UC_ChatBox_ChiTietTin.resources
+D:\WorkSpace\Document\Window\Week_09\demoGit_12-master\demoGit_12-master\obj\Debug\Project_Windows_04.UC_TinNhan_ChiTietTin.resources

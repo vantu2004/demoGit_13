@@ -48,6 +48,9 @@
             this.rtbx_giaiThuong = new System.Windows.Forms.RichTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pbx_giayPhep = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
@@ -92,12 +95,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.flpl_tinLienQuan = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnl_chatBox = new System.Windows.Forms.Panel();
+            this.flpl_danhSachTinNhan = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_giayPhep)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -133,6 +141,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.tabControl1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -356,6 +365,36 @@
             this.pbx_giayPhep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbx_giayPhep.TabIndex = 0;
             this.pbx_giayPhep.TabStop = false;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.panel5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 37);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(902, 1014);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Discuss";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pnl_chatBox);
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(896, 1008);
+            this.panel5.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.flpl_danhSachTinNhan);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(896, 824);
+            this.panel7.TabIndex = 2;
             // 
             // label8
             // 
@@ -909,6 +948,25 @@
             this.flpl_tinLienQuan.Size = new System.Drawing.Size(559, 899);
             this.flpl_tinLienQuan.TabIndex = 136;
             // 
+            // pnl_chatBox
+            // 
+            this.pnl_chatBox.BackColor = System.Drawing.Color.White;
+            this.pnl_chatBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_chatBox.Location = new System.Drawing.Point(0, 824);
+            this.pnl_chatBox.Name = "pnl_chatBox";
+            this.pnl_chatBox.Size = new System.Drawing.Size(896, 103);
+            this.pnl_chatBox.TabIndex = 4;
+            // 
+            // flpl_danhSachTinNhan
+            // 
+            this.flpl_danhSachTinNhan.AutoScroll = true;
+            this.flpl_danhSachTinNhan.BackColor = System.Drawing.Color.White;
+            this.flpl_danhSachTinNhan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpl_danhSachTinNhan.Location = new System.Drawing.Point(0, 0);
+            this.flpl_danhSachTinNhan.Name = "flpl_danhSachTinNhan";
+            this.flpl_danhSachTinNhan.Size = new System.Drawing.Size(896, 824);
+            this.flpl_danhSachTinNhan.TabIndex = 1;
+            // 
             // ChiTietTinTuyenDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -934,6 +992,9 @@
             this.flowLayoutPanel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbx_giayPhep)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1024,5 +1085,10 @@
         public System.Windows.Forms.PictureBox pbx_giayPhep;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.FlowLayoutPanel flpl_tinLienQuan;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel7;
+        public System.Windows.Forms.Panel pnl_chatBox;
+        public System.Windows.Forms.FlowLayoutPanel flpl_danhSachTinNhan;
     }
 }

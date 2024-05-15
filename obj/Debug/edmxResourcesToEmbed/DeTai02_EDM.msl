@@ -187,5 +187,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TinNhan_ChiTietTin">
+      <EntityTypeMapping TypeName="DeTai_02_Model.TinNhan_ChiTietTin">
+        <MappingFragment StoreEntitySet="TinNhan_ChiTietTin">
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdJobPostings" ColumnName="IdJobPostings" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

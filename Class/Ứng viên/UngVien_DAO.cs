@@ -133,7 +133,7 @@ namespace Project_Windows_04
 
         public void load_tinTuyenDung(FlowLayoutPanel flpl, string kieuNguoiDung)
         {
-            db.thucThi_load_tinTuyenDung(flpl, kieuNguoiDung);
+            db.thucThi_load_tinTuyenDung(flpl, kieuNguoiDung, "null");
         }
 
         public void load_tinXinViec(FlowLayoutPanel flpl, Panel pnl_chiTietTinXinViec, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox, string Id)
@@ -332,7 +332,7 @@ namespace Project_Windows_04
 
                 uc.btn_gui.Enabled = true;
                 uc.btn_chinhSua.Click += (s, ev) => Btn_chinhSua_Click(s, ev, Id, thoiGian, uc);
-                uc.btn_binhLuan.Click += (s, ev) => Btn_binhLuan_Click(s, ev, Id, thoiGian, flpl_danhSachTinNhan, pnl_chatBox);
+                uc.btn_binhLuan.Click += (s, ev) => Btn_binhLuan_Click(s, ev, Id, t.Name, thoiGian, flpl_danhSachTinNhan, pnl_chatBox);
 
                 flpl_danhSachTinNhan.Controls.Clear();
                 pnl_chatBox.Controls.Clear();
@@ -340,7 +340,7 @@ namespace Project_Windows_04
             }
         }
 
-        private void Btn_binhLuan_Click(object sender, EventArgs e, string Id, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox)
+        private void Btn_binhLuan_Click(object sender, EventArgs e, string Id, string ten, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox)
         {
             flpl_danhSachTinNhan.Controls.Clear();
 
@@ -350,7 +350,7 @@ namespace Project_Windows_04
 
             pnl_chatBox.Controls.Add(uc_chatBox);
 
-            load_danhSachTinNhan(Id, thoiGian, flpl_danhSachTinNhan);
+            load_danhSachTinNhan(Id, ten, thoiGian, flpl_danhSachTinNhan);
         }
 
         private void Btn_guiTinNhan_Click(object sender, EventArgs e, string Id, string thoiGian, RichTextBox rtbx, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox)
@@ -377,9 +377,12 @@ namespace Project_Windows_04
 
                 UC_TinNhan uc_tinNhan = new UC_TinNhan();
                 uc_tinNhan.pbx_avatar.Image = Image.FromFile(t.Avatar);
-                uc_tinNhan.lbl_tenUV.Text = t.Name;
                 uc_tinNhan.lbl_thoiGianDang.Text = time;
                 uc_tinNhan.rtbx_noiDung.Text = rtbx.Text;
+
+                //  tên chủ bài viết đc chuyển màu đỏ
+                uc_tinNhan.lbl_tenUV.Text = t.Name + " (Writer)";
+                uc_tinNhan.lbl_tenUV.ForeColor = Color.Red;
 
                 uc_tinNhan.loadRtbx(uc_tinNhan.rtbx_noiDung);
 
@@ -389,7 +392,7 @@ namespace Project_Windows_04
             }
         }
 
-        private void load_danhSachTinNhan(string Id, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan)
+        private void load_danhSachTinNhan(string Id, string ten, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan)
         {
             using (var context = new DeTai_02_Entities())
             {
@@ -404,6 +407,13 @@ namespace Project_Windows_04
                     uc_tinNhan.lbl_tenUV.Text = i.Name;
                     uc_tinNhan.lbl_thoiGianDang.Text = i.DateSent;
                     uc_tinNhan.rtbx_noiDung.Text = i.Content;
+
+                    //  tên chủ bài viết đc chuyển màu đỏ
+                    if (i.Name == ten && i.DatePosted_up == thoiGian)
+                    {
+                        uc_tinNhan.lbl_tenUV.Text = i.Name + " (Writer)";
+                        uc_tinNhan.lbl_tenUV.ForeColor = Color.Red;
+                    }
 
                     uc_tinNhan.loadRtbx(uc_tinNhan.rtbx_noiDung);
 

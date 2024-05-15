@@ -10,6 +10,7 @@ using static DevExpress.Skins.SolidColorHelper;
 using Guna.UI2.WinForms;
 using System.Drawing.Imaging;
 using TheArtOfDevHtmlRenderer.Adapters;
+using DevExpress.Internal.WinApi.Windows.UI.Notifications;
 
 namespace Project_Windows_04
 {
@@ -23,7 +24,7 @@ namespace Project_Windows_04
         public Xuat_ThongTin() { }
 
         //  up tin lên trang chủ
-        public UC_TinTuyenDung them_tinTuyenDung(TuyenDung_Tin t, string userType)
+        public UC_TinTuyenDung them_tinTuyenDung(TuyenDung_Tin t, string userType, string IdCom)
         {
             UC_TinTuyenDung UC_tinTuyenDung = new UC_TinTuyenDung();
 
@@ -54,7 +55,8 @@ namespace Project_Windows_04
            
             //  truyền IdCompany, IdJobPostings, và userType(nếu đăng nhập bằng acc ứng viên thì userType lúc này là IdCandidate) để lưu vào table lưu tin
             UC_tinTuyenDung.cbx_theoDoi.CheckedChanged += (sender, e) => Cbx_theoDoi_CheckedChanged1(sender, e, "LuuTin", t.IdCompany, t.IdJobPostings, userType);
-            UC_tinTuyenDung.Click += (sender, e) => UC_tinTuyenDung_Click(sender, e, t);
+            //  khi ứng viên đăng nhập thì usertype là IdCandidate
+            UC_tinTuyenDung.Click += (sender, e) => UC_tinTuyenDung_Click(sender, e, t, userType, IdCom);
 
             //  mặc định quá hạn bài đăng là đánh dấu
             if (Convert.ToDateTime(t.HanChot) < DateTime.Now)
@@ -76,7 +78,7 @@ namespace Project_Windows_04
         }
 
         //  xem chi tiết tin tuyển dụng
-        private void UC_tinTuyenDung_Click(object sender, EventArgs e, TuyenDung_Tin t)
+        private void UC_tinTuyenDung_Click(object sender, EventArgs e, TuyenDung_Tin t, string IdCandidate, string IdCom)
         {
             //  lấy Id của công ty đã đăng tin này và Id của tin đó
             this.IdCompany = t.IdCompany;
@@ -93,7 +95,8 @@ namespace Project_Windows_04
                 chiTiet_tin.btn_ungTuyen.Click += Btn_ungTuyen_Click;
             }
 
-            load_tinLienQuan(t, chiTiet_tin.flpl_tinLienQuan);
+            load_tinLienQuan(t, chiTiet_tin.flpl_tinLienQuan, IdCandidate, IdCom);
+            load_tinNhan_chiTietTin(t, IdCandidate, chiTiet_tin.flpl_danhSachTinNhan, chiTiet_tin.pnl_chatBox, IdCom);
 
             //  xuất dữ liệu lên controls trong ChiTietTinTuyenDung
             chiTiet_tin.xuatDuLieu(t);
@@ -101,7 +104,7 @@ namespace Project_Windows_04
             chiTiet_tin.Show();
         }
 
-        private void load_tinLienQuan(TuyenDung_Tin t, FlowLayoutPanel flpl)
+        private void load_tinLienQuan(TuyenDung_Tin t, FlowLayoutPanel flpl, string IdCandidate, string IdCom)
         {
             using (var dbContext = new DeTai_02_Entities())
             {
@@ -158,9 +161,137 @@ namespace Project_Windows_04
                     if (Convert.ToDateTime(tt.HanChot) < DateTime.Now)
                         uc.pbx_hanChot.Visible = true;
 
-                    uc.Click += (sender, e) => UC_tinTuyenDung_Click(sender, e, tt);
+                    uc.Click += (sender, e) => UC_tinTuyenDung_Click(sender, e, tt, IdCandidate, IdCom);
 
                     flpl.Controls.Add(uc);
+                }
+            }
+        }
+
+        private void load_tinNhan_chiTietTin(TuyenDung_Tin t, string IdCandidate, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox, string IdCom)
+        {
+            if (IdCandidate != "null")
+            {
+                UC_ChatBox_ChiTietTin uc_cbx = new UC_ChatBox_ChiTietTin();
+
+                uc_cbx.Dock = DockStyle.Fill;
+
+                uc_cbx.btn_gui.Click += (s, ev) => Btn_gui_Click1(s, ev, t, IdCandidate, flpl_danhSachTinNhan, uc_cbx.rtbx_boxChat, IdCom);
+
+                pnl_chatBox.Controls.Add(uc_cbx);
+            }
+            using (var context = new DeTai_02_Entities())
+            {
+                var tin = (from temp in context.TinNhan_ChiTietTin
+                         where temp.IdJobPostings == t.IdJobPostings
+                         select temp).ToList();
+
+                foreach (var i in tin)
+                {
+                    UC_TinNhan_ChiTietTin uc_tinNhan = new UC_TinNhan_ChiTietTin();
+                    uc_tinNhan.pbx_avatar.Image = Image.FromFile(i.Avatar);
+                    uc_tinNhan.lbl_tenUV.Text = i.Name;
+                    
+                    //  tên chủ bài viết đc chuyển màu đỏ
+                    if (i.Id == IdCandidate || i.Id == IdCom)
+                    {
+                        uc_tinNhan.pnl_tinNhan.BackColor = Color.FromArgb(192, 255, 192);
+                        uc_tinNhan.rtbx_noiDung.BackColor = Color.FromArgb(192, 255, 192);
+                        uc_tinNhan.pnl_tinNhan.Dock = DockStyle.Right;
+                    }
+
+                    uc_tinNhan.lbl_thoiGianDang.Text = i.DateSent;
+                    uc_tinNhan.rtbx_noiDung.Text = i.Content;
+
+                    uc_tinNhan.loadRtbx(uc_tinNhan.rtbx_noiDung);
+
+                    flpl_danhSachTinNhan.Controls.Add(uc_tinNhan);
+                }
+            }
+        }
+
+        private void Btn_gui_Click1(object sender, EventArgs e, TuyenDung_Tin t, string IdCandidate, FlowLayoutPanel flpl_danhSachTinNhan, RichTextBox rtbx, string IdCom)
+        {
+            using (var context = new DeTai_02_Entities())
+            {
+                UC_TinNhan_ChiTietTin uc_tinNhan = new UC_TinNhan_ChiTietTin();
+
+                //  thời gian gửi là hiện tại
+                string time = DateTime.Now.ToString();
+
+                if (IdCandidate != "Employer")
+                {
+                    //  lấy logo công ty và tên công ty
+                    var result = (from cv in context.CVs
+                                  join uv in context.UNGVIEN on cv.Id equals uv.Id
+                                  where cv.Id == IdCandidate
+                                  select new
+                                  {
+                                      avatar = cv.Avatar,
+                                      ten = uv.Fname
+                                  }).FirstOrDefault();
+
+                    if (result != null)
+                    {
+                        context.TinNhan_ChiTietTin.Add(new TinNhan_ChiTietTin
+                        {
+                            IdJobPostings = t.IdJobPostings,
+                            Id = IdCandidate,
+                            DateSent = time,
+                            Avatar = result.avatar,
+                            Name = result.ten,
+                            Content = rtbx.Text
+                        });
+
+                        uc_tinNhan.pbx_avatar.Image = Image.FromFile(result.avatar);
+                        uc_tinNhan.lbl_tenUV.Text = result.ten;
+
+                        context.SaveChanges();
+
+                        uc_tinNhan.lbl_thoiGianDang.Text = time;
+                        uc_tinNhan.rtbx_noiDung.Text = rtbx.Text;
+                        uc_tinNhan.loadRtbx(uc_tinNhan.rtbx_noiDung);
+
+                        uc_tinNhan.pnl_tinNhan.BackColor = Color.FromArgb(192, 255, 192);
+                        uc_tinNhan.rtbx_noiDung.BackColor = Color.FromArgb(192, 255, 192);
+                        uc_tinNhan.pnl_tinNhan.Dock = DockStyle.Right;
+
+                        flpl_danhSachTinNhan.Controls.Add(uc_tinNhan);
+
+                        rtbx.Text = "";
+                    }    
+                }
+                else
+                {
+                    if (t.IdCompany == IdCom)
+                    {
+                        context.TinNhan_ChiTietTin.Add(new TinNhan_ChiTietTin
+                        {
+                            IdJobPostings = t.IdJobPostings,
+                            Id = t.IdCompany,
+                            DateSent = time,
+                            Avatar = t.LogoCongTy,
+                            Name = t.TenCongTy,
+                            Content = rtbx.Text
+                        });
+
+                        uc_tinNhan.pbx_avatar.Image = Image.FromFile(t.LogoCongTy);
+                        uc_tinNhan.lbl_tenUV.Text = t.TenCongTy;
+
+                        context.SaveChanges();
+
+                        uc_tinNhan.lbl_thoiGianDang.Text = time;
+                        uc_tinNhan.rtbx_noiDung.Text = rtbx.Text;
+                        uc_tinNhan.loadRtbx(uc_tinNhan.rtbx_noiDung);
+
+                        uc_tinNhan.pnl_tinNhan.BackColor = Color.FromArgb(192, 255, 192);
+                        uc_tinNhan.rtbx_noiDung.BackColor = Color.FromArgb(192, 255, 192);
+                        uc_tinNhan.pnl_tinNhan.Dock = DockStyle.Right;
+
+                        flpl_danhSachTinNhan.Controls.Add(uc_tinNhan);
+
+                        rtbx.Text = "";
+                    }    
                 }
             }
         }

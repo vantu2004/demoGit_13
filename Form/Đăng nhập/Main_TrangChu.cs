@@ -47,7 +47,7 @@ namespace Project_Windows_04
             //  ẩn nút đăng xuất
             UC_Main_TrangChu.btn_dangXuat.Hide();
 
-            TC_DAO.load_tinTuyenDung(UC_Main_TrangChu.flpl_danhSachTinTuyenDung, "null");
+            TC_DAO.load_tinTuyenDung(UC_Main_TrangChu.flpl_danhSachTinTuyenDung, "null", "null");
             UC_Main_TrangChu.sapXep();
 
             //  load biểu đồ cột, tròn cho bảng tin

@@ -39,5 +39,6 @@ namespace Project_Windows_04
         public virtual DbSet<UNGVIEN> UNGVIEN { get; set; }
         public virtual DbSet<TinXinViec> TinXinViec { get; set; }
         public virtual DbSet<TinNhan> TinNhan { get; set; }
+        public virtual DbSet<TinNhan_ChiTietTin> TinNhan_ChiTietTin { get; set; }
     }
 }

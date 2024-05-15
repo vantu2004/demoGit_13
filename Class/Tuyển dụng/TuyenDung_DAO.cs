@@ -94,9 +94,9 @@ namespace Project_Windows_04
             }
         }
 
-        public void load_tinTuyenDung(FlowLayoutPanel flpl, string kieuNguoiDung)
+        public void load_tinTuyenDung(FlowLayoutPanel flpl, string kieuNguoiDung, string IdCompany)
         {
-            db.thucThi_load_tinTuyenDung(flpl, kieuNguoiDung);
+            db.thucThi_load_tinTuyenDung(flpl, kieuNguoiDung, IdCompany);
         }
 
         public void load_tinDaDang(FlowLayoutPanel flpl, string Id)
@@ -170,7 +170,7 @@ namespace Project_Windows_04
             }    
         }
 
-        private UC_TinXinViec chiTiet_tinXinViec(string Id, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl, string IdCompany)
+        private UC_TinXinViec chiTiet_tinXinViec(string Id, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox, string IdCompany)
         {
             using (var context = new DeTai_02_Entities())
             {
@@ -197,26 +197,26 @@ namespace Project_Windows_04
 
                 uc.btn_gui.Hide();
                 uc.btn_chinhSua.Hide();
-                uc.btn_binhLuan.Click += (sender, e) => Btn_binhLuan_Click(sender, e, Id, thoiGian, flpl_danhSachTinNhan, pnl, IdCompany);
+                uc.btn_binhLuan.Click += (sender, e) => Btn_binhLuan_Click(sender, e, Id, t.Name, thoiGian, flpl_danhSachTinNhan, pnl_chatBox, IdCompany);
 
                 return uc;
             }
         }
 
-        private void Btn_binhLuan_Click(object sender, EventArgs e, string Id, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl, string IdCompany)
+        private void Btn_binhLuan_Click(object sender, EventArgs e, string Id, string ten, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl_chatBox, string IdCompany)
         {
             flpl_danhSachTinNhan.Controls.Clear();
 
             UC_ChatBox uc_chatBox = new UC_ChatBox();
 
-            uc_chatBox.btn_gui.Click += (s, ev) => Btn_gui_Click(s, ev, Id, thoiGian, uc_chatBox.rtbx_boxChat, flpl_danhSachTinNhan, pnl, IdCompany);
+            uc_chatBox.btn_gui.Click += (s, ev) => Btn_gui_Click(s, ev, Id, thoiGian, uc_chatBox.rtbx_boxChat, flpl_danhSachTinNhan, IdCompany);
 
-            pnl.Controls.Add(uc_chatBox);
+            pnl_chatBox.Controls.Add(uc_chatBox);
 
-            load_danhSachTinNhan(Id, thoiGian, flpl_danhSachTinNhan);
+            load_danhSachTinNhan(Id, IdCompany, ten, thoiGian, flpl_danhSachTinNhan);
         }
 
-        private void load_danhSachTinNhan(string Id, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan)
+        private void load_danhSachTinNhan(string Id, string IdCompany, string ten, string thoiGian, FlowLayoutPanel flpl_danhSachTinNhan)
         {
             using (var context = new DeTai_02_Entities())
             {
@@ -228,7 +228,14 @@ namespace Project_Windows_04
                 {
                     UC_TinNhan uc_tinNhan = new UC_TinNhan();
                     uc_tinNhan.pbx_avatar.Image = Image.FromFile(i.Avatar);
-                    uc_tinNhan.lbl_tenUV.Text = i.Name;
+
+                    //  tên chủ bài viết đc chuyển màu đỏ
+                    if (i.Name == ten && i.DatePosted_up == thoiGian)
+                    {
+                        uc_tinNhan.lbl_tenUV.Text = i.Name + " (Writer)";
+                        uc_tinNhan.lbl_tenUV.ForeColor = Color.Red;
+                    }
+
                     uc_tinNhan.lbl_thoiGianDang.Text = i.DateSent;
                     uc_tinNhan.rtbx_noiDung.Text = i.Content;
 
@@ -239,10 +246,11 @@ namespace Project_Windows_04
             }
         }
 
-        private void Btn_gui_Click(object sender, EventArgs e, string Id, string thoiGian, RichTextBox rtbx, FlowLayoutPanel flpl_danhSachTinNhan, Panel pnl, string IdCompany)
+        private void Btn_gui_Click(object sender, EventArgs e, string Id, string thoiGian, RichTextBox rtbx, FlowLayoutPanel flpl_danhSachTinNhan, string IdCompany)
         {
             using (var context = new DeTai_02_Entities())
             {
+                //  lấy logo công ty và tên công ty
                 var result = (from jobPosting in context.JobPostings
                               join company in context.NHATUYENDUNG on jobPosting.IdCompany equals company.Id
                               where jobPosting.IdCompany == IdCompany
@@ -252,6 +260,7 @@ namespace Project_Windows_04
                                   Company = company.Company
                               }).FirstOrDefault();
 
+                //  thời gian gửi là hiện tại
                 string time = DateTime.Now.ToString();
 
                 context.TinNhan.Add(new TinNhan
